@@ -1,0 +1,30 @@
+---
+eleventyComputed:
+  docTitle: "{{ titlePre }}{{ title | default: 'no title' }}{{ titlePost }}"
+  defaultDescription: "{{ summary | default: site.description }}"
+  docDescription: "{{ description | default: defaultDescription }}"
+  docStyle: "{{ site.cssPath }}{{ style | default: site.style }}"
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ docTitle }}</title>
+  <meta name="description" content="{{ docDescription | mdI | strip_html | strip }}">
+  <link rel="stylesheet" href="{{ docStyle }}">
+
+  {% unless isSocialPreview %}
+    {% include 'head/opengraph' %}
+  {% endunless %}
+</head>
+<body>
+  {{ content }}
+
+  {% comment %} temp {% endcomment %}
+  {% unless isSocialPreview %}
+    <a href="/social{{ page.url }}">social image page</a>
+  {% endunless %}
+</body>
+</html>

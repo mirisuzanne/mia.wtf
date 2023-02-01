@@ -1,0 +1,14 @@
+---
+isSocialPreview: true
+titlePre: 'OpenGraph: '
+style: 'social.css'
+pagination:
+  data: collections.all
+  size: 1
+  alias: source
+permalink: "social{{ source.url }}index.html"
+eleventyExcludeFromCollections: true
+---
+
+<h1>{{ source.data.title | mdI }}</h1>
+<p>From MiriamSuzanne.com</p>

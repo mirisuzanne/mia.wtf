@@ -1,0 +1,7 @@
+html {
+  color-scheme: dark light;
+
+  &::before {
+    content: 'the social preview';
+  }
+}

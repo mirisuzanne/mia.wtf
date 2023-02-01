@@ -1,67 +1,41 @@
-// 11ty Plugins
-const socialImages = require("@11tyrocks/eleventy-plugin-social-images");
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const pluginRss = require("@11ty/eleventy-plugin-rss");
+// External Plugins
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const pluginRss = require('@11ty/eleventy-plugin-rss');
 
-// Helper packages
-const slugify = require("slugify");
-const markdownIt = require("markdown-it");
-const markdownItAnchor = require("markdown-it-anchor");
-
-// Local utilities/data
-const packageVersion = require("./package.json").version;
+// Internal Plugins
+const markdown = require('./plugins/markdown');
+const time = require('./plugins/time');
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPlugin(socialImages);
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRss);
 
-  eleventyConfig.addWatchTarget("./src/sass/");
+  eleventyConfig.addPlugin(markdown);
+  eleventyConfig.addPlugin(time);
 
-  eleventyConfig.addPassthroughCopy("./src/css");
-  eleventyConfig.addPassthroughCopy("./src/fonts");
-  eleventyConfig.addPassthroughCopy("./src/img");
-  eleventyConfig.addPassthroughCopy("./src/favicon.png");
-
-  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
-  eleventyConfig.addShortcode("packageVersion", () => `v${packageVersion}`);
-
-  eleventyConfig.addFilter("slug", (str) => {
-    if (!str) {
-      return;
+  eleventyConfig.addFilter("ogImage", (image, url) => {
+    if (image) {
+      return `/images/${image}`;
     }
 
-    return slugify(str, {
-      lower: true,
-      strict: true,
-      remove: /["]/g,
-    });
+    const api = 'https://screenshot-api.miriam.codes/';
+    const baseUrl = process.env.URL || 'https://miriamsuzanne.com';
+    const encoded = encodeURIComponent(`${baseUrl}/social/${url}`);
+    return `${api}${encoded}/opengraph/`;
   });
+  eleventyConfig.addLiquidFilter("absoluteUrl", pluginRss.absoluteUrl);
 
-  /* Markdown Overrides */
-  let markdownLibrary = markdownIt({
-    html: true,
-  }).use(markdownItAnchor, {
-    permalink: markdownItAnchor.permalink.ariaHidden({
-      class: "tdbc-anchor",
-      space: false,
-    }),
-    level: [1, 2, 3],
-    slugify: (str) =>
-      slugify(str, {
-        lower: true,
-        strict: true,
-        remove: /["]/g,
-      }),
-  });
-  eleventyConfig.setLibrary("md", markdownLibrary);
+  eleventyConfig.addPassthroughCopy({'./src/_fonts': 'fonts'});
+
+  eleventyConfig.addWatchTarget('./src/sass/');
+  eleventyConfig.setLiquidOptions({jsTruthy: true});
 
   return {
     passthroughFileCopy: true,
     dir: {
-      input: "src",
-      output: "public",
-      layouts: "_layouts",
+      input: 'src',
+      output: 'public',
+      layouts: '_layouts',
     },
   };
 };
