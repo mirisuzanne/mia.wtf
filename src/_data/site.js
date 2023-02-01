@@ -1,9 +1,7 @@
 module.exports = {
-  url: process.env.URL || "https://miriamsuzanne.com",
+  url: process.env.URL || "http://localhost:8080",
   title: "Miriam Suzanne",
-  description: `
-    Art and code and digital artifacts from my life, webbed together as a site.
-  `,
+  description: `Art & code & other digital artifacts of my life.`,
   author: "Miriam Suzanne",
   cssPath: "/css/",
   style: "style.css",

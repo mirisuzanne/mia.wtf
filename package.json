@@ -6,8 +6,7 @@
   "scripts": {
     "watch:sass": "sass --watch src/_sass:public/css",
     "watch:eleventy": "eleventy --serve --incremental",
-    "build:sass-site": "sass src/_sass/style.scss public/css/style.css",
-    "build:sass": "npm-run-all --parallel build:sass-site",
+    "build:sass": "sass src/_sass:public/css",
     "build:eleventy": "eleventy",
     "start": "ELEVENTY_ENV=dev npm-run-all build:sass --parallel watch:*",
     "build": "ELEVENTY_ENV=prod npm-run-all build:sass build:eleventy",
