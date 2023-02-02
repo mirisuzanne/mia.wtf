@@ -4,9 +4,9 @@
   "description": "Starting over on a personal site with 11ty 2.0",
   "main": "index.html",
   "scripts": {
-    "watch:sass": "sass --watch src/_sass:public/css",
+    "watch:sass": "sass --watch src/_sass:_site/css",
     "watch:eleventy": "eleventy --serve --incremental",
-    "build:sass": "sass src/_sass:public/css",
+    "build:sass": "sass src/_sass:_site/css",
     "build:eleventy": "eleventy",
     "start": "ELEVENTY_ENV=dev npm-run-all build:sass --parallel watch:*",
     "build": "ELEVENTY_ENV=prod npm-run-all build:sass build:eleventy",
@@ -37,5 +37,8 @@
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard": "^24.0.0",
     "stylelint-scss": "^4.1.0"
+  },
+  "dependencies": {
+    "netlify-plugin-cache": "^1.0.3"
   }
 }

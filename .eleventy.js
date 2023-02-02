@@ -1,30 +1,22 @@
 // External Plugins
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const pluginRss = require('@11ty/eleventy-plugin-rss');
 
 // Internal Plugins
+const images = require('./plugins/images');
 const markdown = require('./plugins/markdown');
+const social = require('./plugins/social');
 const time = require('./plugins/time');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
-  eleventyConfig.addPlugin(pluginRss);
 
+  // internal plugins
+  eleventyConfig.addPlugin(images);
   eleventyConfig.addPlugin(markdown);
+  eleventyConfig.addPlugin(social);
   eleventyConfig.addPlugin(time);
 
-  eleventyConfig.addFilter("ogImage", (image, url) => {
-    if (image) {
-      return `/images/${image}`;
-    }
-
-    const api = 'https://screenshot-api.miriam.codes/';
-    const baseUrl = process.env.URL || 'https://miriamsuzanne.com';
-    const encoded = encodeURIComponent(`${baseUrl}/social/${url}`);
-    return `${api}${encoded}/opengraph/`;
-  });
-  eleventyConfig.addLiquidFilter("absoluteUrl", pluginRss.absoluteUrl);
-
+  // config
   eleventyConfig.addPassthroughCopy({'./src/_fonts': 'fonts'});
 
   eleventyConfig.addWatchTarget('./src/sass/');
@@ -34,7 +26,6 @@ module.exports = function (eleventyConfig) {
     passthroughFileCopy: true,
     dir: {
       input: 'src',
-      output: 'public',
       layouts: '_layouts',
     },
   };

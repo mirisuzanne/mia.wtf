@@ -2,12 +2,11 @@
 node_modules
 
 # build artefacts
-public
-src/css
-social
+_site
 
 # secrets and errors
 .env
+.cache
 .log
 
 # macOS related files
