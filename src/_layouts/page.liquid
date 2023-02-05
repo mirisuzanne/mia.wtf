@@ -2,7 +2,10 @@
 layout: base
 ---
 
-<h1>{{ title }}</h1>
-<main>
+{% include 'page/header' %}
+
+<main id="content">
   {{ content }}
 </main>
+
+{% include 'page/footer' %}

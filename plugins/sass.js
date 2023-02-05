@@ -1,7 +1,13 @@
 const sass = require("sass");
 const path = require("node:path");
 
-module.exports = function(eleventyConfig) {
+module.exports = function(eleventyConfig, options = {}) {
+  const opts = {
+    sassIn: 'sass',
+    cssOut: 'css',
+    ...options,
+  };
+
   eleventyConfig.addTemplateFormats("scss");
 
   eleventyConfig.addExtension("scss", {
@@ -9,7 +15,12 @@ module.exports = function(eleventyConfig) {
 
     compileOptions: {
       permalink: function(contents, inputPath) {
-        return (data) => `css/${data.page.fileSlug}.css`;
+        return (data) => {
+          let cssPath = data.page.filePathStem.startsWith(`/${opts.sassIn}/`)
+            ? data.page.filePathStem.replace(`/${opts.sassIn}/`, '')
+            : data.page.filePathStem.replace('/', '');
+          return `${path.join(opts.cssOut, cssPath)}.css`;
+        };
       }
     },
 

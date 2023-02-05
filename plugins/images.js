@@ -1,72 +1,55 @@
 const Image = require('@11ty/eleventy-img');
 const path = require('path');
 
-const IMG_SRC = './src/_images/';
-const LOCAL_OUT = 'local';
-const REMOTE_OUT = 'remote';
-
-const imgOptions = (out) => ({
-  formats: ['avif', 'jpeg'],
-  widths: [640, 960, 1600],
-  urlPath: `/img/${out || LOCAL_OUT}/`,
-  outputDir: `./_site/img/${out || LOCAL_OUT}/`,
-});
-
-const imgAttrs = {
-  loading: 'lazy',
-  decoding: 'async',
-}
-
-const getSizes = (sizes) => {
-  const defaultSizes = {
-    default: '(min-width: 65em) 60vw, 95vw',
-    hero: '(min-width: 75em) 75vw, 95vw',
-    gallery: '(min-width: 65em) 30vw, (min-width: 30em) 45vw, 95vw',
-    media: '(min-width: 65em) 15vw, (min-width: 30em) 30vw, 50vw',
+module.exports = function(eleventyConfig, options = {}) {
+  const imgFolder = options.imgFolder;
+  const imgOutput = { ...options.output };
+  const imgSizes = {
+    default: '100vw',
+    ...options.sizes,
   };
+  const imgAttrs = {
+    loading: 'lazy',
+    decoding: 'async',
+    ...(options.attrs || {}),
+  }
 
-  return sizes && defaultSizes[sizes]
-    ? defaultSizes[sizes]
-    : sizes || defaultSizes.default;
-};
+  async function getImageData(src) {
+    const imgSrc = imgFolder && !src.includes('://')
+      ? path.join(imgFolder, src)
+      : src;
 
-async function getImage(src) {
-  const isRemote = src.includes('://');
-  let imgSrc = isRemote
-    ? src
-    : path.join(IMG_SRC, src);
-  let imgOpts = isRemote
-    ? imgOptions(REMOTE_OUT)
-    : imgOptions();
+    const metadata = await Image(imgSrc, imgOutput);
+    return metadata;
+  }
 
-  let metadata = await Image(imgSrc, imgOpts);
-  return metadata;
-}
+  async function imageHtml(src, alt, sizes, attrs) {
+    let metadata = await getImageData(src);
 
-async function imageHtml(src, alt, sizes, attrs) {
-  let metadata = await getImage(src);
+    let sizesAttr = sizes || imgSizes.default;
+    let namedSizes = sizes && imgSizes[sizes];
 
-  let imageAttributes = {
-    alt,
-    sizes: getSizes(sizes),
-    ...imgAttrs,
-    ...attrs,
-  };
+    const imageAttributes = {
+      alt,
+      sizes: namedSizes || sizesAttr,
+      ...imgAttrs,
+      ...attrs,
+    };
 
-  // You bet we throw an error on missing alt in `imageAttributes` (alt=' works okay)
-  return Image.generateHTML(metadata, imageAttributes, {
-    whitespaceMode: 'inline',
-  });
-}
+    if (namedSizes) { imageAttributes['data-img'] = namedSizes; }
 
-async function imageSrc(src) {
-  let metadata = await getImage(src);
-  const img = metadata.jpeg[metadata.jpeg.length - 1];
+    // You bet we throw an error on missing alt in `imageAttributes` (alt=' works okay)
+    return Image.generateHTML(metadata, imageAttributes, {
+      whitespaceMode: 'inline',
+    });
+  }
 
-  return img.url;
-}
+  async function imageSrc(src) {
+    const metadata = await getImageData(src);
+    const img = metadata.jpeg[metadata.jpeg.length - 1];
+    return img.url;
+  }
 
-module.exports = function(eleventyConfig) {
   eleventyConfig.addAsyncFilter('img', imageHtml);
   eleventyConfig.addAsyncFilter('src', imageSrc);
   eleventyConfig.addAsyncShortcode('img', imageHtml);

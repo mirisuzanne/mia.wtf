@@ -9,8 +9,8 @@ const SERVICE_BASE = `https://v1.indieweb-avatar.11ty.dev/:url:/`
 const imgOptions = {
   widths: [200, 'auto'],
   formats: ['auto'],
-  urlPath: '/img/icon/',
-  outputDir: `./_site/img/icon/`,
+  urlPath: '/fav/',
+  outputDir: `./_site/fav/`,
 };
 
 const imageAttributes = {
