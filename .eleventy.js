@@ -24,6 +24,7 @@ module.exports = function (eleventyConfig) {
 
   // config
   eleventyConfig.addPassthroughCopy({'./src/_fonts': 'fonts'});
+  eleventyConfig.addPassthroughCopy({'./src/_favicons/*.*': './'});
   eleventyConfig.setLiquidOptions({jsTruthy: true});
 
   return {
