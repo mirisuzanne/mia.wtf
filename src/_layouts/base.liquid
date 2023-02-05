@@ -4,6 +4,7 @@ eleventyComputed:
   defaultDescription: "{{ summary | default: site.description }}"
   docDescription: "{{ description | default: defaultDescription }}"
   docStyle: "{{ site.cssPath }}{{ style | default: site.style }}"
+  docOg: "/_og{{ page.url }}"
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -15,16 +16,17 @@ eleventyComputed:
   <meta name="description" content="{{ docDescription | mdI | strip_html | strip }}">
   <link rel="stylesheet" href="{{ docStyle }}">
 
-  {% unless isSocialPreview %}
-    {% include 'head/opengraph' %}
-  {% endunless %}
+  {% include 'head/icons' %}
+  {% unless isSocialPreview -%}
+    {% include 'head/open-graph' %}
+  {%- endunless %}
 </head>
 <body>
   {{ content }}
 
   {% comment %} temp {% endcomment %}
   {% unless isSocialPreview %}
-    <a href="/social{{ page.url }}">social image page</a>
+    <a href="{{ docOg }}">social image page</a>
   {% endunless %}
 </body>
 </html>

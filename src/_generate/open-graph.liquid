@@ -1,4 +1,5 @@
 ---
+layout: base
 isSocialPreview: true
 titlePre: 'OpenGraph: '
 style: 'social.css'
@@ -6,8 +7,7 @@ pagination:
   data: collections.all
   size: 1
   alias: source
-permalink: "social{{ source.url }}index.html"
-eleventyExcludeFromCollections: true
+permalink: "_og/{{ source.url }}/index.html"
 ---
 
 <h1>{{ source.data.title | mdI }}</h1>

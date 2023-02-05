@@ -7,7 +7,7 @@ const ogImage = (image, url) => {
 
   const api = 'https://screenshot-api.miriam.codes/';
   const baseUrl = process.env.URL || 'https://miriamsuzanne.com';
-  const encoded = encodeURIComponent(`${baseUrl}/social/${url}`);
+  const encoded = encodeURIComponent(`${baseUrl}${url}`);
   return `${api}${encoded}/opengraph/`;
 }
 

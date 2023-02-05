@@ -1,0 +1,9 @@
+@use 'sass:meta';
+
+@layer something {
+  @include meta.load-css('partial');
+}
+
+html {
+  color-scheme: dark light;
+}
