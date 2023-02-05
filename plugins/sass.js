@@ -7,6 +7,12 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addExtension("scss", {
     outputFileExtension: "css",
 
+    compileOptions: {
+      permalink: function(contents, inputPath) {
+        return (data) => `css/${data.page.fileSlug}.css`;
+      }
+    },
+
     compile: async function (inputContent, inputPath) {
       let parsed = path.parse(inputPath);
 

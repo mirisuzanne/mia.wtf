@@ -2,7 +2,7 @@
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 // Internal Plugins
-const drafts = require('./plugins/drafts');
+const build = require('./plugins/build');
 const icons = require('./plugins/icons');
 const images = require('./plugins/images');
 const markdown = require('./plugins/markdown');
@@ -14,7 +14,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
 
   // internal plugins
-  eleventyConfig.addPlugin(drafts);
+  eleventyConfig.addPlugin(build);
   eleventyConfig.addPlugin(icons);
   eleventyConfig.addPlugin(images);
   eleventyConfig.addPlugin(markdown);
