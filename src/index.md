@@ -1,6 +1,8 @@
 ---
+type: home
 layout: page
 title: Mia.wtf
+lastmod: 2023-02-06T00:56:25.101Z
 ---
 
 ## Hello World

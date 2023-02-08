@@ -1,0 +1,169 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "default",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "name": "title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "summary",
+          "type": "string",
+          "required": true
+        },
+        {
+          "title": "PubDate",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true,
+          "required": true
+        },
+        {
+          "title": "Last modified",
+          "name": "lastmod",
+          "type": "datetime",
+          "isModifiedDate": true
+        },
+        {
+          "name": "hero",
+          "type": "image",
+          "isPreviewImage": true
+        },
+        {
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "name": "tags",
+          "type": "tags"
+        }
+      ]
+    },
+    {
+      "name": "org",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "name": "type",
+          "type": "string",
+          "single": true
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "single": true,
+          "required": true
+        },
+        {
+          "name": "sub",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "PubDate",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true,
+          "required": true
+        },
+        {
+          "name": "hero",
+          "type": "image"
+        },
+        {
+          "name": "categories",
+          "type": "categories"
+        },
+        {
+          "name": "summary",
+          "type": "string",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "project",
+      "pageBundle": true,
+      "previewPath": null,
+      "fields": [
+        {
+          "name": "title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "summary",
+          "type": "string",
+          "required": true
+        },
+        {
+          "title": "PubDate",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true,
+          "required": true
+        },
+        {
+          "name": "hero",
+          "type": "image"
+        },
+        {
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "name": "type",
+          "type": "string",
+          "single": true
+        }
+      ]
+    }
+  ],
+  "frontMatter.framework.id": "11ty",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "src",
+      "path": "[[workspace]]/src",
+      "filePrefix": null
+    },
+    {
+      "title": "orgs",
+      "path": "[[workspace]]/src/orgs",
+      "filePrefix": null,
+      "contentTypes": []
+    },
+    {
+      "title": "projects",
+      "path": "[[workspace]]/src/projects",
+      "filePrefix": null,
+      "contentTypes": []
+    }
+  ],
+  "frontMatter.content.snippets": {
+    "img": {
+      "description": "add an image",
+      "body": "{{ '[[&mediaUrl]]' | img: '[[alt]]'  }}",
+      "isMediaSnippet": true
+    }
+  }
+}
