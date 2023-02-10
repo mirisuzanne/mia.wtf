@@ -47,8 +47,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(time, dateFormats);
   eleventyConfig.addPlugin(images, imgOpts);
   eleventyConfig.addPlugin(sass, { sassIn: '_sass' });
-  eleventyConfig.addPassthroughCopy({'./src/_assets/fonts': 'fonts'});
-  eleventyConfig.addPassthroughCopy({'./src/_assets/favicons/*.*': './'});
+  eleventyConfig.addPassthroughCopy({
+    './src/_assets/fonts': 'fonts',
+    './src/_assets/favicons/*.*': './',
+    './src/admin/config.yml': './admin/config.yml',
+  });
 
   // config
   eleventyConfig.setLiquidOptions({jsTruthy: true});

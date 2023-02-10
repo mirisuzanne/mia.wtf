@@ -14,3 +14,6 @@ _site
 
 #IDE
 .idea
+
+# Local Netlify folder
+.netlify
