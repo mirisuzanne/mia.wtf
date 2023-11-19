@@ -1,0 +1,45 @@
+---
+layout: base
+---
+
+<tag-nav
+  webc:if="page.url != '/'"
+  webc:keep
+  data-layout
+  :@tags="tags"
+  :@collections="collections"
+>
+  <a
+    href="/"
+    rel="home"
+    @text="site.home"
+  ></a>
+</tag-nav>
+
+<main id="main" data-layout>
+  <div webc:if="summary"
+    id="summary"
+    :class="micro.summary" >
+    <try-if :@content="summary"></try-if>
+  </div>
+
+  <page-header
+    :@title="banner || title"
+    :@subtitle="sub"
+    :@date="tags ? page.date : null"
+  ></page-header>
+
+  <div
+    id="content"
+    @html="content"
+  ></div>
+</main>
+
+<site-footer
+  webc:keep
+  id="content-info"
+  data-layout
+  :@site="site"
+  :@og-src="ogSrc"
+></site-footer>
+

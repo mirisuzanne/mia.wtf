@@ -3,5 +3,9 @@ html {
 
   &::before {
     content: 'the social preview';
+    background-color: maroon;
+    color: white;
+    padding: 2em;
+    display: block;
   }
 }

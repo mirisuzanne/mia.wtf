@@ -40,7 +40,8 @@ async function iconLink(url, text, alt) {
 }
 
 module.exports = (eleventyConfig) => {
-  eleventyConfig.addAsyncFilter('fav', iconLink);
+  eleventyConfig.addAsyncFilter('favIcon', iconImg);
+  eleventyConfig.addAsyncFilter('favLink', iconLink);
   eleventyConfig.addPairedAsyncShortcode('fav', (text, url, alt) =>
     iconLink(url, text, alt)
   );

@@ -1,0 +1,14 @@
+<nav>
+  <slot></slot>
+
+  <span
+    webc:if="this.tags"
+    @text="'|'"
+  ></span>
+
+  <a
+    webc:for="tag of (this.tags || [])"
+    :href="tagLink(tag, this.collections)"
+    @text="tag"
+  ></a>
+</nav>

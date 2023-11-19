@@ -1,0 +1,9 @@
+@mixin vars {
+  --os-serif: palatino, palatino linotype, palatino lt std, book antiqua, georgia;
+  --os-code: sfmono-regular, consolas, monaco;
+
+  --serif: var(--var-serif, var(--os-serif, ui-monospace)), serif;
+  --code: var(--var-code, var(--os-code, ui-serif)), monospace, serif;
+
+  --code-adjust: 0.45;
+}

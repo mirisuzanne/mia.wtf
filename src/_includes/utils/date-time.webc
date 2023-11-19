@@ -1,0 +1,5 @@
+<time
+  :datetime="dateFormat(this.date, 'iso')"
+  @text="this.as || dateFormat(this.date, this.format || 'default')"
+  @attributes
+></time>

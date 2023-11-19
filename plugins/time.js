@@ -19,5 +19,5 @@ module.exports = function (eleventyConfig, options = {}) {
     dateFormat(utcToZonedTime(date, '+00:00'), formats[format] || format);
 
   eleventyConfig.addShortcode('year', year);
-  eleventyConfig.addFilter('date', formatDate);
+  eleventyConfig.addFilter('dateFormat', formatDate);
 };

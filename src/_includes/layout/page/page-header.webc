@@ -1,0 +1,14 @@
+<header id="page-header">
+  <date-time
+    webc:if="this.date"
+    :@date="this.date"
+    pubdate
+  ></date-time>
+
+  <h1 id="title" @html="mdI(this.title)"></h1>
+
+  <div
+    webc:if="this.subtitle"
+    class="subtitle"
+  ><try-if :@content="this.subtitle"></try-if></div>
+</header>

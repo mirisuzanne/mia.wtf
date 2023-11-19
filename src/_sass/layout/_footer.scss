@@ -1,0 +1,13 @@
+#content-info {
+  background-color: var(--shadow);
+  grid-area: footer;
+  padding-block: var(--spacer);
+
+  footer {
+    --column: extra;
+  }
+
+  time {
+    font-style: normal;
+  }
+}

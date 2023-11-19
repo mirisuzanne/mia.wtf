@@ -1,0 +1,28 @@
+nav {
+  --column: extra;
+
+  [rel=home] {
+    font-style: italic;
+  }
+
+  a {
+    &:any-link {
+      display: inline-block;
+      text-align: center;
+      position: relative;
+      text-decoration: none;
+    }
+
+    &[aria-current='page'] {
+      text-decoration: revert-layer;
+      text-decoration-style: solid;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      text-decoration: revert-layer;
+      text-decoration-style: wavy;
+    }
+  }
+}

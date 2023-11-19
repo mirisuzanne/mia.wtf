@@ -1,0 +1,25 @@
+---
+layout: base
+isOg: true
+style: 'social.css'
+hero:
+  src: 2012/desk-cables.jpg
+  alt: Messy cables under a makeshift desk
+---
+
+<script webc:setup>
+  const pageHero = (source) => source.data.hero || hero;
+</script>
+
+<img
+  webc:is="u-img"
+  :src="pageHero(source).src"
+  :alt="pageHero(source).alt"
+  sizes="hero">
+
+<h1 @html="mdI(source.data.title)"></h1>
+<p>From MiriamSuzanne.com</p>
+
+<footer>
+  (<a :href="source.url" @text="`back to '${source.url}' »`"></a>)
+</footer>

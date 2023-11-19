@@ -3,7 +3,7 @@ const path = require("node:path");
 
 module.exports = function(eleventyConfig, options = {}) {
   const opts = {
-    sassIn: 'sass',
+    sassIn: '_sass',
     cssOut: 'css',
     ...options,
   };

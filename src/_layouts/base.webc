@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title @text="title || site.title"></title>
+
+    <link rel="stylesheet"
+      webc:keep
+      :href="`${site.cssPath}${style || site.style}`"
+    >
+    <style @raw="getBundle('css')" webc:keep></style>
+
+    <meta webc:is="meta-icons" :@theme="theme">
+    <meta webc:is="open-graph" webc:if="!isOg"
+      :@page="page"
+      :@site="site"
+      :@og="og"
+      :@desc="description || summary || site.description"
+    >
+  </head>
+  <body>
+    <template
+      @raw="content"
+      webc:nokeep
+    ></template>
+
+    <script
+      @raw="getBundle('js')"
+      webc:keep
+    ></script>
+  </body>
+</html>

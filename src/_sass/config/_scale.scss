@@ -1,0 +1,16 @@
+@mixin vars {
+  --step--1: clamp(0.9375rem, 0.8638rem + 0.3685vw, 1.1494rem);
+  --step-0: clamp(1.125rem, 0.9511rem + 0.8696vw, 1.625rem);
+  --step-1: clamp(1.35rem, 1.0204rem + 1.6478vw, 2.2975rem);
+  --step-2: clamp(1.62rem, 1.0535rem + 2.8326vw, 3.2488rem);
+  --step-3: clamp(1.9438rem, 1.0218rem + 4.6098vw, 4.5944rem);
+
+  --small: var(--step--1);
+  --normal: var(--step-0);
+  --medium: var(--step-1);
+  --large: var(--step-2);
+  --h1: var(--step-3);
+
+  --gap: var(--step--1);
+  --spacer: clamp(1rem, 12vw, 3rem);
+}

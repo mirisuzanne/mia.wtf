@@ -1,0 +1,17 @@
+---
+layout: page
+---
+
+<template
+  webc:nokeep
+  @html="content"
+></template>
+
+<ul>
+  <li webc:for="item of collections[listOf]">
+    <a
+      :href="item.url"
+      @text="item.data.banner || item.data.title"
+    ></a>
+  </li>
+</ul>

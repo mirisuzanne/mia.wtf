@@ -1,0 +1,7 @@
+<footer>
+  <p>
+    Copyright &copy; <time @text="year()"></time>
+    <strong @text="site.author"></strong>
+  </p>
+  <a webc:if="ogSrc" :href="ogSrc">(social image)</a>
+</footer>

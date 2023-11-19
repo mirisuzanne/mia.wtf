@@ -1,0 +1,16 @@
+<script webc:setup>
+  const getRecent = (pages) => (pages || [])
+    .sort((a, b) => b.date - a.date)
+    .slice(0, 4);
+</script>
+
+<article
+  webc:root
+  data-item="area"
+>
+  <h3 @text="this.areaName"></h3>
+  <a
+    webc:for="page of getRecent(areaPages)"
+    :href="page.url"
+    @text="page.data.title"></a>
+</article>

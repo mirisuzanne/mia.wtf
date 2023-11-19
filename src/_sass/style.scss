@@ -1,9 +1,32 @@
 @use 'sass:meta';
 
-@layer something {
-  @include meta.load-css('partial');
+@layer reset {
+  * { box-sizing: border-box; }
+  html { height: 100%; }
+  body {
+    margin: 0;
+    min-height: 100%;
+  }
+  button { font: inherit; }
+  [hidden] { display: none !important; }
 }
 
-html {
-  color-scheme: dark light;
+@layer base {
+  @include meta.load-css('base/root');
+  @include meta.load-css('base/type');
+  @include meta.load-css('base/link');
+}
+
+@layer atoms {
+  @include meta.load-css('atoms/inline');
+  @include meta.load-css('atoms/btn');
+  @include meta.load-css('atoms/icons');
+}
+
+@layer layout {
+  @include meta.load-css('layout/body');
+  @include meta.load-css('layout/nav');
+  @include meta.load-css('layout/content');
+  @include meta.load-css('layout/page-header');
+  @include meta.load-css('layout/footer');
 }

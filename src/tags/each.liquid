@@ -1,0 +1,13 @@
+---
+layout: list
+sub: '[see all tags](/tags/)'
+pagination:
+  data: collections
+  size: 1
+  alias: listOf
+permalink: /tags/{{ listOf }}/
+eleventyExcludeFromCollections: true
+eleventyComputed:
+  title: 'Everything `{{ listOf }}`'
+---
+

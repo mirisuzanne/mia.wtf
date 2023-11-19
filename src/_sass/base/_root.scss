@@ -1,0 +1,13 @@
+@use '../config/colors';
+@use '../config/fonts';
+@use '../config/scale';
+
+html {
+  @include colors.vars;
+  @include fonts.vars;
+  @include scale.vars;
+
+  accent-color: var(--accent);
+  color-scheme: dark light;
+  scroll-padding: var(--gap);
+}

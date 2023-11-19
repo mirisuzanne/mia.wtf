@@ -142,11 +142,6 @@
   "frontMatter.framework.id": "11ty",
   "frontMatter.content.pageFolders": [
     {
-      "title": "src",
-      "path": "[[workspace]]/src",
-      "filePrefix": null
-    },
-    {
       "title": "orgs",
       "path": "[[workspace]]/src/orgs",
       "filePrefix": null,
@@ -165,5 +160,6 @@
       "body": "{{ '[[&mediaUrl]]' | img: '[[alt]]'  }}",
       "isMediaSnippet": true
     }
-  }
+  },
+  "frontMatter.preview.host": "http://localhost:8080"
 }

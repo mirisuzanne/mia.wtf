@@ -1,0 +1,37 @@
+@mixin vars {
+  --accent-light: hotpink;
+  --on-accent-light: black;
+  --border-light: powderblue;
+  --shadow-light: silver;
+
+  --accent-dark: mediumvioletred;
+  --on-accent-dark: white;
+  --border-dark: teal;
+  --shadow-dark: black;
+
+  --accent: var(--accent-light);
+  --on-accent: var(--on-accent-light);
+  --border: var(--border-light);
+  --shadow: var(--shadow-dark);
+
+  @media (prefers-color-scheme: light) {
+    --accent: var(--accent-dark);
+    --on-accent: var(--on-accent-dark);
+    --border: var(--border-dark);
+    --shadow: var(--shadow-light);
+  }
+
+  --feature:
+    var(--accent),
+    var(--border),
+    var(--accent)
+  ;
+
+  --mark-gradient: linear-gradient(
+    -85deg,
+    transparent,
+    var(--mark, var(--shadow)) 3% 98%,
+    transparent
+  );
+  --mark-bg: var(--mark-gradient) no-repeat 0 100% / 100% 60%;
+}

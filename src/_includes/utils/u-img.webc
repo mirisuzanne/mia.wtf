@@ -1,0 +1,1 @@
+<template webc:nokeep @html="img(src, alt, sizes, attrs)"></template>

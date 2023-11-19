@@ -1,0 +1,36 @@
+[data-btn] {
+  background: transparent;
+  border: var(--btn-border, 0);
+  padding: var(--btn-padding, 0);
+  font-size: 0.75em;
+}
+
+[data-btn='text'] {
+  --btn-padding: 0.2em 0.5em;
+  --btn-border: thin solid var(--accent);
+  border-radius: 0.25em;
+
+  &:hover,
+  &:active {
+    border-color: white;
+  }
+}
+
+[data-btn='icon'] {
+  font-style: normal;
+  transition: filter 100ms ease;
+
+  &:hover,
+  &:active {
+    filter: drop-shadow(
+      var(--btn-press, 0.125em)
+      var(--btn-press, 0.125em)
+      0
+      var(--accent)
+    );
+  }
+
+  &:active {
+    --btn-press: 1px;
+  }
+}

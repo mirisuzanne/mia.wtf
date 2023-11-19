@@ -1,0 +1,37 @@
+body {
+  display: grid;
+  grid-template:
+    'nav' auto
+    'main' 1fr
+    'footer' auto;
+  gap: var(--gap);
+  padding-block-start: var(--gap);
+  overflow-x: hidden;
+}
+
+@property --column {
+  syntax: "*";
+  inherits: false;
+  initial-value: content;
+}
+
+[data-layout] {
+  --wide-column: minmax(0, var(--spacer));
+  container: layout / inline-size;
+  display: grid;
+  grid-template-columns:
+    [full-start] var(--gap)
+    [margin-start] minmax(0, 1fr)
+    [extra-start] minmax(0, 1fr)
+    [wide-start] var(--wide-column)
+    [content-start] minmax(min-content, 70ch) [content-end]
+    var(--wide-column) [wide-end]
+    minmax(0, 1fr) [extra-end]
+    minmax(0, 1fr) [margin-end]
+    var(--gap) [full-end]
+  ;
+
+  > * {
+    grid-column: var(--column, content);
+  }
+}

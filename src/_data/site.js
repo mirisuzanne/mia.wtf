@@ -3,6 +3,7 @@ module.exports = {
   title: 'Miriam Suzanne',
   description: 'Art & code & other digital artifacts of my life.',
   author: 'Miriam Suzanne',
+  home: 'mia',
   cssPath: '/css/',
   style: 'style.css',
 };

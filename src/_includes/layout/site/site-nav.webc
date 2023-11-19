@@ -1,0 +1,18 @@
+<script webc:setup>
+  const sortNav = (nav) => nav.sort((a, b) => a.data.nav - b.data.nav);
+</script>
+
+<nav id="sitenav">
+  <a
+    href="/"
+    rel="home"
+    :aria-current="this.current === '/' ? 'page' : false"
+    @text="this.home"></a>
+  <a
+    webc:for="item of sortNav(this.nav)"
+    :href="item.url"
+    :aria-current="item.url === this.current ? 'page' : false"
+    :data-area="item.data.area"
+    @text="item.data.area"
+  ></a>
+</nav>
