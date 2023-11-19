@@ -1,0 +1,14 @@
+#summary {
+  --column: wide;
+  font-size: var(--large);
+  font-style: italic;
+  margin-block: var(--spacer);
+
+  code {
+    font-style: normal;
+  }
+
+  em {
+    background: var(--mark-bg, var(--shadow));
+  }
+}

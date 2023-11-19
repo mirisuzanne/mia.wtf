@@ -2,19 +2,24 @@
 layout: base
 ---
 
-<tag-nav
-  webc:if="page.url != '/'"
-  webc:keep
-  data-layout
-  :@tags="tags"
-  :@collections="collections"
->
-  <a
-    href="/"
-    rel="home"
-    @text="site.home"
-  ></a>
-</tag-nav>
+<div id="topbar" data-layout>
+  <header>
+    <theme-toggle></theme-toggle>
+
+    <tag-nav
+      webc:if="page.url != '/'"
+      webc:keep
+      :@tags="tags"
+      :@collections="collections"
+    >
+      <a
+        href="/"
+        rel="home"
+        @text="site.home"
+      ></a>
+    </tag-nav>
+  </header>
+</div>
 
 <main id="main" data-layout>
   <div webc:if="summary"
@@ -23,11 +28,19 @@ layout: base
     <try-if :@content="summary"></try-if>
   </div>
 
-  <page-header
-    :@title="banner || title"
-    :@subtitle="sub"
-    :@date="tags ? page.date : null"
-  ></page-header>
+  <header id="page-header">
+    <date-time
+      webc:if="tags"
+      :@date="page.date"
+      pubdate
+    ></date-time>
+
+    <title-group
+      webc:keep
+      :@title="banner || title"
+      :@subtitle="sub"
+    ></title-group>
+  </header>
 
   <div
     id="content"

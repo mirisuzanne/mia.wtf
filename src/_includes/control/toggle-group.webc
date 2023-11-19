@@ -1,0 +1,61 @@
+<script type="module">
+  window.customElements.define('toggle-group', class extends HTMLElement {
+    forTarget;
+    toggleBtns;
+    pressed;
+
+    doPress = (value) => {
+      this.forTarget.dataset[this.dataset.set] = value;
+      this.pressed = value;
+
+      this.toggleBtns.forEach((btn) => {
+        if (btn.dataset.value === this.pressed) {
+          btn.setAttribute('aria-pressed', true);
+        } else {
+          btn.setAttribute('aria-pressed', false);
+        }
+      });
+    }
+
+    init = () => {
+      // error on missing attributes
+      if (!this.dataset.set) {
+        console.error('Toggle group needs a `data-set` attribute');
+      }
+
+      // default to root
+      this.forTarget = document.querySelector(this.dataset.for || ':root');
+
+      // error if target is missing
+      if (!this.forTarget) {
+        console.error(`Failed to find target element '${this.dataset.for}'`)
+      }
+
+      // set missing values
+      this
+        .querySelectorAll(':scope button:not([data-value])')
+        .forEach((btn) => btn.dataset.value = btn.innerText);
+
+      // get all the available buttons
+      this.toggleBtns = this.querySelectorAll(':scope button[data-value]');
+
+      // active is first pressed, or first
+      let initBtn =
+        this.querySelector(':scope button[data-value][aria-pressed]')
+        || this.toggleBtns[0];
+
+      // activate the first press
+      this.doPress(initBtn.dataset.value);
+    }
+
+    connectedCallback() {
+      this.init();
+
+      this.toggleBtns.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+          this.doPress(btn.dataset.value);
+        });
+      });
+    };
+  });
+</script>

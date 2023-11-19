@@ -6,13 +6,13 @@
 }
 
 [data-btn='text'] {
-  --btn-padding: 0.2em 0.5em;
+  --btn-padding: 0.25em 0.75em;
   --btn-border: thin solid var(--accent);
   border-radius: 0.25em;
 
   &:hover,
   &:active {
-    border-color: white;
+    border-color: var(--border);
   }
 }
 
@@ -33,4 +33,29 @@
   &:active {
     --btn-press: 1px;
   }
+}
+
+toggle-group {
+  --toggle-group-radius: 0.125em;
+  align-items: stretch;
+  border: thin solid var(--accent);
+  border-radius: var(--toggle-group-radius);
+  display: flex;
+
+  button {
+    background: transparent;
+    border: 0;
+    color: inherit;
+    flex: auto;
+    padding: 0.125em 0.75em;
+  }
+
+  button + button {
+    border-inline-start: inherit;
+  }
+}
+
+[aria-pressed=true] {
+  background: var(--accent);
+  color: var(--on-accent);
 }

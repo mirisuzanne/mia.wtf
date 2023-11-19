@@ -1,0 +1,11 @@
+<h1
+  id="title"
+  @html="mdI(this.title)"
+></h1>
+
+<div
+  webc:if="this.subtitle"
+  class="subtitle"
+><try-if
+  :@content="this.subtitle"
+></try-if></div>

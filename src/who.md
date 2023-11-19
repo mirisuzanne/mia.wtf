@@ -1,3 +1,4 @@
 ---
-title: About Miriam
+title: Bios & Photos
+sub: My least favorite page
 ---

@@ -32,10 +32,10 @@ summary:
     [No More Police](https://bookshop.org/p/books/no-more-police-a-case-for-abolition-mariame-kaba/17396993?ean=9781620977323)
     by _Mariame Kaba_ & _Andrea Ritchie_
   - >
-    `» Hello. I am Miriam(Bot).
+    `» Hello. I am Miriam (Bot).
     Beep boop boop beep.
     Clock Escapement.
-    The Cascade.
+    Cascading Styles.
     Fuck the police.
     Join a union.`
 ---

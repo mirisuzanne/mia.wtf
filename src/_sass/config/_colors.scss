@@ -1,29 +1,25 @@
 @mixin vars {
   --accent-light: hotpink;
+  --complement-light: powderblue;
   --on-accent-light: black;
-  --border-light: powderblue;
-  --shadow-light: silver;
+  --border-light: cadetblue;
+  --shadow-light: lavenderblush;
 
   --accent-dark: mediumvioletred;
   --on-accent-dark: white;
-  --border-dark: teal;
+  --complement-dark: teal;
+  --border-dark: darkcyan;
   --shadow-dark: black;
 
   --accent: var(--accent-light);
+  --complement: var(--complement-light);
   --on-accent: var(--on-accent-light);
   --border: var(--border-light);
   --shadow: var(--shadow-dark);
 
-  @media (prefers-color-scheme: light) {
-    --accent: var(--accent-dark);
-    --on-accent: var(--on-accent-dark);
-    --border: var(--border-dark);
-    --shadow: var(--shadow-light);
-  }
-
   --feature:
     var(--accent),
-    var(--border),
+    var(--complement),
     var(--accent)
   ;
 
@@ -34,4 +30,18 @@
     transparent
   );
   --mark-bg: var(--mark-gradient) no-repeat 0 100% / 100% 60%;
+
+
+  &[data-theme=dark] {
+    color-scheme: dark;
+  }
+
+  &[data-theme=light] {
+    color-scheme: light;
+    --accent: var(--accent-dark);
+    --on-accent: var(--on-accent-dark);
+    --complement: var(--complement-dark);
+    --border: var(--border-dark);
+    --shadow: var(--shadow-light);
+  }
 }

@@ -1,6 +1,24 @@
-nav {
-  --column: extra;
+#topbar {
+  grid-area: nav;
 
+  header {
+    --column: extra;
+    align-items: center;
+    display: grid;
+    grid-template: 'nav theme' auto / 1fr auto;
+  }
+
+  tag-nav {
+    grid-area: nav;
+  }
+
+  [data-set=theme] {
+    grid-area: theme;
+    font-size: var(--small);
+  }
+}
+
+nav {
   [rel=home] {
     font-style: italic;
   }

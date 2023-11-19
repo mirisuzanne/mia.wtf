@@ -27,6 +27,7 @@
   @include meta.load-css('layout/body');
   @include meta.load-css('layout/nav');
   @include meta.load-css('layout/content');
+  @include meta.load-css('layout/summary');
   @include meta.load-css('layout/page-header');
   @include meta.load-css('layout/footer');
 }

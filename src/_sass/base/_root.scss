@@ -7,7 +7,7 @@ html {
   @include fonts.vars;
   @include scale.vars;
 
-  accent-color: var(--accent);
   color-scheme: dark light;
+  accent-color: var(--accent);
   scroll-padding: var(--gap);
 }

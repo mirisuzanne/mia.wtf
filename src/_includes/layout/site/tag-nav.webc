@@ -3,7 +3,7 @@
 
   <span
     webc:if="this.tags"
-    @text="'|'"
+    @text="'//'"
   ></span>
 
   <a
