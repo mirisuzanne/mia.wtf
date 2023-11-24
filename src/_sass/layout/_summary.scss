@@ -10,5 +10,6 @@
 
   em {
     background: var(--mark-bg, var(--shadow));
+    text-shadow: 0 1px 0 var(--full-bg);
   }
 }

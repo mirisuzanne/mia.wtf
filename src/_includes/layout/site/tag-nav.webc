@@ -8,6 +8,7 @@
 
   <a
     webc:for="tag of (this.tags || [])"
+    rel="tag"
     :href="tagLink(tag, this.collections)"
     @text="tag"
   ></a>

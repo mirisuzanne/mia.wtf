@@ -7,16 +7,20 @@ layout: base
     <theme-toggle></theme-toggle>
 
     <tag-nav
-      webc:if="page.url != '/'"
       webc:keep
       :@tags="tags"
       :@collections="collections"
     >
       <a
+        webc:if="page.url == '/'"
+        :href="site.feed"
+        rel="alternate"
+      >📡 <i>rss</i></a>
+      <a
+        webc:else
         href="/"
         rel="home"
-        @text="site.home"
-      ></a>
+      >👩🏼‍🎤 <i @text="site.home"></i></a>
     </tag-nav>
   </header>
 </div>

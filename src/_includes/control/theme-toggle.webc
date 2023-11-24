@@ -1,4 +1,4 @@
-<toggle-group data-set="theme">
+<toggle-group data-set="theme" data-local="theme">
   <button data-value="dark">night</button>
   <button data-value="light">day</button>
 </toggle-group>

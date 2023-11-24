@@ -1,15 +1,21 @@
 <script type="module">
   window.customElements.define('toggle-group', class extends HTMLElement {
-    forTarget;
+    targetEl;
     toggleBtns;
-    pressed;
 
     doPress = (value) => {
-      this.forTarget.dataset[this.dataset.set] = value;
-      this.pressed = value;
+      if (!value) { return; }
+
+      this.targetEl.dataset[this.dataset.set] = value;
+
+      if (this.dataset.local) {
+        localStorage.setItem(this.dataset.set, value);
+      } else if (this.dataset.session) {
+        sessionStorage.setItem(this.dataset.set, value);
+      }
 
       this.toggleBtns.forEach((btn) => {
-        if (btn.dataset.value === this.pressed) {
+        if (btn.dataset.value === value) {
           btn.setAttribute('aria-pressed', true);
         } else {
           btn.setAttribute('aria-pressed', false);
@@ -24,10 +30,10 @@
       }
 
       // default to root
-      this.forTarget = document.querySelector(this.dataset.for || ':root');
+      this.targetEl = document.querySelector(this.dataset.for || ':root');
 
       // error if target is missing
-      if (!this.forTarget) {
+      if (!this.targetEl) {
         console.error(`Failed to find target element '${this.dataset.for}'`)
       }
 
@@ -39,13 +45,25 @@
       // get all the available buttons
       this.toggleBtns = this.querySelectorAll(':scope button[data-value]');
 
-      // active is first pressed, or first
-      let initBtn =
-        this.querySelector(':scope button[data-value][aria-pressed]')
-        || this.toggleBtns[0];
+      // find a good initial value
+      let initValue;
+
+      if (this.dataset.local) {
+        initValue = localStorage.getItem(this.dataset.set);
+      } else if (this.dataset.session) {
+        initValue = sessionStorage.getItem(this.dataset.set);
+      }
+
+      if (!initValue) {
+        const onTarget = this.targetEl.dataset[this.dataset.set];
+        const pressedBtn = this.querySelector(':scope button[aria-pressed]');
+        initValue = onTarget || (pressedBtn || this.toggleBtns[0]).dataset.value;
+      }
+
+      console.log(initValue);
 
       // activate the first press
-      this.doPress(initBtn.dataset.value);
+      this.doPress(initValue);
     }
 
     connectedCallback() {

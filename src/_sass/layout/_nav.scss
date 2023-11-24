@@ -19,10 +19,6 @@
 }
 
 nav {
-  [rel=home] {
-    font-style: italic;
-  }
-
   a {
     &:any-link {
       display: inline-block;

@@ -13,7 +13,7 @@ summary:
     [music](/music/)
     and [theater](/theater/)
     and [web software](/code/),
-    but these days I'm into
+    but these days I'm also into
     _yarn_
     and _pottery_
     and _mechanical clocks_.
@@ -23,8 +23,6 @@ summary:
     and explore outside them.
     We grasp at stability and form,
     but always come up short.
-    _Because understanding is not
-    a pre-requisite for beauty._
   - >
     Someone told me that my home page
     should always be selling something.
@@ -36,7 +34,7 @@ summary:
     Beep boop boop beep.
     Clock Escapement.
     Cascading Styles.
-    Fuck the police.
+    Ned Ludd was right.
     Join a union.`
 ---
 

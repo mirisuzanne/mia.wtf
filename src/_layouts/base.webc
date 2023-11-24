@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title @text="title || site.title"></title>
 
+    <script>
+      const THEME_KEY = 'theme';
+      const storedValue = localStorage.getItem(THEME_KEY);
+
+      if (storedValue) {
+        document.documentElement.dataset[THEME_KEY] = storedValue;
+      }
+    </script>
+
     <link rel="stylesheet"
       webc:keep
       :href="`${site.cssPath}${style || site.style}`"
