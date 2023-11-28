@@ -1,14 +1,15 @@
 ---
-layout: page
+layout: is/default
+is: list
 ---
 
 <template
   webc:nokeep
-  @html="content"
+  @raw="content"
 ></template>
 
 <ul>
-  <li webc:for="item of collections[listOf]">
+  <li webc:for="item of collections[listOf || index]">
     <a
       :href="item.url"
       @text="item.data.banner || item.data.title"

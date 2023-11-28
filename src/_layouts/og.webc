@@ -3,23 +3,44 @@ layout: base
 isOg: true
 style: 'social.css'
 hero:
-  src: 2012/desk-cables.jpg
-  alt: Messy cables under a makeshift desk
+  src: _mia/bw.jpg
 ---
 
 <script webc:setup>
-  const pageHero = (source) => source.data.hero || hero;
+  const pageHero = (source) =>
+    source.data.og?.image
+    || source.data.hero
+    || hero;
+
+  const subTitle = (source) => {
+    if (source.data.sub) {
+      return typeof source.data.sub === 'string'
+        ? source.data.sub
+        : source.data.sub[0]
+    }
+    return null;
+  }
 </script>
 
 <img
   webc:is="u-img"
   :src="pageHero(source).src"
-  :alt="pageHero(source).alt"
+  :alt="pageHero(source).alt || ''"
   sizes="hero">
 
-<h1 @html="mdI(source.data.title)"></h1>
-<p>From MiriamSuzanne.com</p>
+<header>
+  <h1><span @html="mdI(source.data.title)"></span></h1>
+  <h2 webc:if="subTitle(source)">
+    <span>//</span>
+    <span @html="mdI(subTitle(source))"></span>
+  </h2>
+  <page-date
+    webc:if="source.data.is !== 'list'"
+    :@date="source.date"
+    :@end="source.data.end"
+  ></page-date>
+</header>
 
 <footer>
-  (<a :href="source.url" @text="`back to '${source.url}' »`"></a>)
+  <a :href="source.url">MiriamSuzanne.com</a>
 </footer>

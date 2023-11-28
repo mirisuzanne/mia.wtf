@@ -25,32 +25,11 @@ layout: base
   </header>
 </div>
 
-<main id="main" data-layout>
-  <div webc:if="summary"
-    id="summary"
-    :class="micro.summary" >
-    <try-if :@content="summary"></try-if>
-  </div>
-
-  <header id="page-header">
-    <date-time
-      webc:if="tags"
-      :@date="page.date"
-      pubdate
-    ></date-time>
-
-    <title-group
-      webc:keep
-      :@title="banner || title"
-      :@subtitle="sub"
-    ></title-group>
-  </header>
-
-  <div
-    id="content"
-    @html="content"
-  ></div>
-</main>
+<main
+  id="main"
+  data-layout
+  @raw="content"
+></main>
 
 <site-footer
   webc:keep

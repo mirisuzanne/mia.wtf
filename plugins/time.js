@@ -1,4 +1,4 @@
-const dateFormat = require('date-fns/format');
+const dF = require('date-fns/format');
 const { utcToZonedTime } = require('date-fns-tz');
 
 const year = () => `${new Date().getFullYear()}`;
@@ -16,7 +16,7 @@ module.exports = function (eleventyConfig, options = {}) {
   };
 
   const formatDate = (date, format = 'default') =>
-    dateFormat(utcToZonedTime(date, '+00:00'), formats[format] || format);
+    dF(utcToZonedTime(date, '+00:00'), formats[format] || format);
 
   eleventyConfig.addShortcode('year', year);
   eleventyConfig.addFilter('dateFormat', formatDate);

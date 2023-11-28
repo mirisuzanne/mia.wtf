@@ -2,6 +2,8 @@
 @use '../config/fonts';
 @use '../config/scale';
 
+@include fonts.webfonts;
+
 html {
   @include colors.vars;
   @include fonts.vars;

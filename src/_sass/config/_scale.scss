@@ -12,5 +12,6 @@
   --h1: var(--step-3);
 
   --gap: var(--step--1);
+  --shim: calc(var(--gap) / 2);
   --spacer: clamp(1rem, 12vw, 3rem);
 }

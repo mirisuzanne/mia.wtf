@@ -3,6 +3,7 @@ const removeMd = require('remove-markdown');
 
 const mdIt = markdownIt({
   html: true,
+  breaks: false,
   typographer: true,
 });
 

@@ -1,6 +1,4 @@
-import { log } from 'console';
-
-var qs = require('querystring');
+const qs = require('querystring');
 
 const { Octokit } = require("@octokit/rest");
 const octokit = new Octokit({
@@ -34,6 +32,7 @@ export default async (event, context) => {
     .map((item) => `${item}: ${data[item]}`)
     .join('\n');
 
+  const filePath = data.date.replaceAll('-', '/').replace('T', '/T');
   const fileContent = `---
 ${postMeta}
 ---
@@ -46,12 +45,11 @@ ${data.content || ''}
   return octokit.repos.createOrUpdateFileContents({
     owner: "mirisuzanne",
     repo: "mia.wtf",
-    message: (`Adding micro entry: ${data.date}`),
-    path: `src/micro/${data.date}.md`,
+    message: (`Adding micro entry: ${data.title || data.date}`),
+    path: `src/micro/${filePath}.md`,
     content: Buffer.from(fileContent).toString("base64")
   }).then((response) => {
     return Response.json({
-      body: "Success!",
       post_url: `${process.env.URL}`,
     });
   }).catch((error) => {

@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 @mixin vars {
   --accent-light: hotpink;
   --complement-light: powderblue;
@@ -5,6 +7,7 @@
   --border-light: cadetblue;
   --shadow-light: lavenderblush;
   --full-bg-light: white;
+  --mark-light: #{color.mix(hotpink, white, 20%)};
 
   --accent-dark: mediumvioletred;
   --on-accent-dark: white;
@@ -12,6 +15,7 @@
   --border-dark: darkcyan;
   --full-bg-dark: black;
   --shadow-dark: var(--full-bg-dark);
+  --mark-dark: #{color.mix(mediumvioletred, black, 20%)};
 
   --accent: var(--accent-light);
   --complement: var(--complement-light);
@@ -19,6 +23,7 @@
   --border: var(--border-light);
   --shadow: var(--shadow-dark);
   --full-bg: var(--full-bg-dark);
+  --mark: var(--mark-dark);
 
   --feature:
     var(--accent),
@@ -47,5 +52,6 @@
     --border: var(--border-dark);
     --shadow: var(--shadow-light);
     --full-bg: var(--full-bg-light);
+    --mark: var(--mark-light);
   }
 }

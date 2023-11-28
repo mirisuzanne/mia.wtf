@@ -1,0 +1,29 @@
+---
+layout: page
+---
+
+<div webc:if="summary"
+  id="summary"
+  :class="micro.summary"
+>
+  <try-if :@content="summary"></try-if>
+</div>
+
+<header id="page-header">
+  <page-date
+    webc:if="is !== 'list'"
+    :@date="page.date"
+    :@end="end"
+  ></page-date>
+
+  <title-group
+    webc:keep
+    :@title="banner || title"
+    :@subtitle="org ? `${org} | _${sub}_` : sub"
+  ></title-group>
+</header>
+
+<div
+  id="content"
+  @html="content"
+></div>

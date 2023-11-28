@@ -1,8 +1,10 @@
 ---
-org: co-founder
+role: co-founder
 title: OddBird
 sub: custom web applications & consulting
 date: 2008-07-06
+logo: oddbird
+index: org:oddbird
 tags:
   - area:code
 summary: >

@@ -3,6 +3,7 @@ order: 2
 title: >
   &c. (anything)
 area: etc
+index: area:etc
 summary: >
   I wish simple, childish things --
   roller skates,

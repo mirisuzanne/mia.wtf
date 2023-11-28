@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" :data-theme="theme || 'dark'">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title @text="title || site.title"></title>
 
-    <script>
+    <script webc:if="!theme">
       const THEME_KEY = 'theme';
       const storedValue = localStorage.getItem(THEME_KEY);
 

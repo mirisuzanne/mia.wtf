@@ -1,18 +1,14 @@
 <script webc:setup>
-const getAreas = (pages, only) => {
-  const get = typeof only === 'string' ? [only] : (only || []);
-
-  return get.length === 0
-    ? pages
-    : pages.filter((page) => get.includes(page.data.area));
-};
+  const getAreas = (collections) => collections.area.sort(
+    (a, b) => a.data.order - b.data.order
+  );
 </script>
 
-<section webc:if="getAreas(this.collections.areas, this.only)">
+<template webc:root>
   <h2>Areas</h2>
   <area-item
-    webc:for="area of getAreas(this.collections.areas, this.only)"
-    :@area-name="area.data.area"
-    :@area-pages="this.collections[`area:${area.data.area}`]"
+    webc:for="item of getAreas(this.collections)"
+    :@area-item="item"
+    :@area-pages="this.collections[`area:${item.data.area}`]"
   ></area-item>
-</section>
+</template>

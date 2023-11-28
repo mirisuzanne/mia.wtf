@@ -1,4 +1,5 @@
 ---
+is: list
 title: Miriam Eric Suzanne
 sub:
   - a.k.a. terrible mia
@@ -12,7 +13,8 @@ summary:
     I often make
     [music](/music/)
     and [theater](/theater/)
-    and [web software](/code/),
+    and [web software](/code/) --
+    or [teach web development](/code/teaching/) --
     but these days I'm also into
     _yarn_
     and _pottery_
@@ -26,9 +28,7 @@ summary:
   - >
     Someone told me that my home page
     should always be selling something.
-    I recommend
-    [No More Police](https://bookshop.org/p/books/no-more-police-a-case-for-abolition-mariame-kaba/17396993?ean=9781620977323)
-    by _Mariame Kaba_ & _Andrea Ritchie_
+    Oops.
   - >
     `» Hello. I am Miriam (Bot).
     Beep boop boop beep.
@@ -38,24 +38,13 @@ summary:
     Join a union.`
 ---
 
-## Orgs
+<h2>Orgs</h2>
 
 <ul>
   <li webc:for="org of collections['is:org']">
     <a
       :href="org.url"
       @text="org.data.banner || org.data.title"
-    ></a>
-  </li>
-</ul>
-
-## Areas
-
-<ul>
-  <li webc:for="area of collections.area.sort((a, b) => a.data.order - b.data.order)">
-    <a
-      :href="area.url"
-      @text="area.data.banner || area.data.title"
     ></a>
   </li>
 </ul>
