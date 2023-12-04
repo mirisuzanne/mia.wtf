@@ -12,8 +12,10 @@ layout: page
 <header id="page-header">
   <page-date
     webc:if="is !== 'list'"
+    class="pre-header"
     :@date="page.date"
     :@end="end"
+    pubdate
   ></page-date>
 
   <title-group
@@ -24,6 +26,6 @@ layout: page
 </header>
 
 <div
-  id="content"
+  webc:nokeep
   @html="content"
 ></div>

@@ -5,5 +5,6 @@ index: art:music
 permalink: '/music/index.html'
 summary: >
   Everything else drops away,
-  and there is only the feeling.
+  and there is only the feeling
+  that resonates through a body.
 ---

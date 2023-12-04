@@ -1,11 +1,11 @@
 ---
-role: core team
-title: Sass
+role: member
+title: Sass Core Team
 sub: CSS with superpowers
-url: https://sass-lang.com/
+at: https://sass-lang.com/
 logo: sass
 date: 2017-07-05
-index: team:sass
+index: org:sass
 tags:
   - area:code
   - org:oddbird

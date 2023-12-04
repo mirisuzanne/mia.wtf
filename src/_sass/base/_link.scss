@@ -1,6 +1,6 @@
 a {
   &:any-link {
-    color: var(--accent);
+    color: var(--link-color, var(--accent));
     text-underline-offset: 0.12em;
     text-decoration-color: var(--border);
   }
@@ -9,6 +9,7 @@ a {
   &:hover,
   &:active {
     text-decoration-style: wavy;
+    color: var(--link-hover, var(--accent));
   }
 }
 

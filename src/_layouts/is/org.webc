@@ -1,0 +1,48 @@
+---
+layout: page
+---
+
+<div webc:if="summary"
+  id="summary"
+  :class="micro.summary"
+>
+  <try-if :@content="summary"></try-if>
+</div>
+
+<header id="page-header">
+  <div class="pre-header">
+    <a
+      webc:if="this.at || this.logo"
+      :href="this.at"
+      class="u-url"
+    >
+      <logo-icon
+        class="p-logo"
+        :at="this.at"
+        :logo="this.logo"
+      ></logo-icon>
+      <span @text="new URL(this.at).hostname"></span>
+    </a>
+  </div>
+
+  <title-group
+    webc:keep
+    :@title="banner || title"
+    :@subtitle="org ? `${org} | _${sub}_` : sub"
+  ></title-group>
+
+  <div class="post-header">
+    <span @text="role"></span>
+    |
+    <page-date
+      webc:if="is !== 'list'"
+      :@date="page.date"
+      :@end="end"
+    ></page-date>
+  </div>
+</header>
+
+<div
+  id="content"
+  @html="content"
+></div>

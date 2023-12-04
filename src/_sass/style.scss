@@ -1,20 +1,16 @@
 @use 'sass:meta';
 
 @layer reset {
-  * { box-sizing: border-box; }
-  html { height: 100%; }
-  body {
-    margin: 0;
-    min-height: 100%;
-  }
-  button { font: inherit; }
-  [hidden] { display: none !important; }
+  @include meta.load-css('reset/box');
+  @include meta.load-css('reset/root');
+  @include meta.load-css('reset/more');
 }
 
 @layer base {
   @include meta.load-css('base/root');
   @include meta.load-css('base/type');
   @include meta.load-css('base/link');
+  @include meta.load-css('base/media');
 }
 
 @layer atoms {
@@ -30,4 +26,8 @@
   @include meta.load-css('layout/summary');
   @include meta.load-css('layout/page-header');
   @include meta.load-css('layout/footer');
+}
+
+@layer objects {
+  @include meta.load-css('objects/org');
 }

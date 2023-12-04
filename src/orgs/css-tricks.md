@@ -2,11 +2,11 @@
 role: staff writer
 title: CSS Tricks
 sub: for people who make websites
-url: https://css-tricks.com/author/miriam/
+at: https://css-tricks.com/author/miriam/
 logo: css-tricks
 date: 2016-10-15
 end: 2022-03-01
-index: team:css-tricks
+index: org:css-tricks
 tags:
   - area:code
   - code:teaching

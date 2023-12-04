@@ -1,9 +1,10 @@
 @use 'config/colors';
 @use 'config/fonts';
 @use 'config/scale';
+@use 'sass:meta';
 
 @layer reset {
-  * { box-sizing: border-box; }
+  @include meta.load-css('reset/box');
 }
 
 @layer base {
@@ -22,7 +23,7 @@
   body {
     aspect-ratio: 120/63;
     font-family: var(--serif);
-    font-size: var(--large);
+    font-size: var(--xlarge);
     line-height: 1.3;
     margin: 0;
     text-shadow: 0 1px 0 var(--shadow);

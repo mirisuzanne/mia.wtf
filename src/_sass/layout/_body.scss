@@ -16,7 +16,9 @@ body {
 }
 
 [data-layout] {
-  --wide-column: minmax(0, var(--spacer));
+  --wide-column: minmax(0, clamp(1rem, 12vw, 6rem));
+  --main-column: minmax(min-content, 60ch);
+
   container: layout / inline-size;
   display: grid;
   grid-template-columns:
@@ -24,7 +26,7 @@ body {
     [margin-start] minmax(0, 1fr)
     [extra-start] minmax(0, 1fr)
     [wide-start] var(--wide-column)
-    [content-start] minmax(min-content, 70ch) [content-end]
+    [content-start] var(--main-column) [content-end]
     var(--wide-column) [wide-end]
     minmax(0, 1fr) [extra-end]
     minmax(0, 1fr) [margin-end]

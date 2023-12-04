@@ -1,0 +1,6 @@
+<h1 webc:if="parseInt(this.level) === 1" @attributes><slot></slot></h1>
+<h2 webc:if="parseInt(this.level) === 2" @attributes><slot></slot></h2>
+<h3 webc:if="parseInt(this.level) === 3" @attributes><slot></slot></h3>
+<h4 webc:if="parseInt(this.level) === 4" @attributes><slot></slot></h4>
+<h5 webc:if="parseInt(this.level) === 5" @attributes><slot></slot></h5>
+<h6 webc:if="parseInt(this.level) === 6" @attributes><slot></slot></h6>

@@ -1,6 +1,13 @@
+[data-favicon],
+svg {
+  max-inline-size: 100%;
+}
+
+logo-icon [data-logo],
 [data-favicon] {
-  inline-size: 1em;
-  block-size: 1em;
+  aspect-ratio: auto;
+  block-size: var(--logo-height, 1em);
+  inline-size: auto;
   margin-inline-end: 0.2em;
   vertical-align: middle;
 }

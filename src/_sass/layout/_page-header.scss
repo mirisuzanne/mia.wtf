@@ -1,22 +1,35 @@
 #page-header {
   --column: extra;
   --banner-border: 2px solid var(--border);
+  --logo-height: var(--spacer);
 
   &:first-child {
     margin-block-start: var(--spacer);
   }
 
-  page-date {
-    align-items: center;
-    display: flex;
+}
 
-    &::after {
-      border-bottom: var(--banner-border);
-      content: '';
-      flex: 1;
-      margin-inline-start: var(--gap);
-    }
+.pre-header,
+.post-header {
+  --link-color: currentColor;
+  align-items: center;
+  display: flex;
+  gap: 1ch;
+  margin: 0;
+
+  &::before,
+  &::after {
+    border-bottom: var(--banner-border);
+    flex: 1;
   }
+}
+
+.pre-header::after {
+  content: '';
+}
+
+.post-header::before {
+  content: '';
 }
 
 title-group {

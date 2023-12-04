@@ -1,0 +1,26 @@
+<script webc:setup>
+  const getOrgs = (all, time, founder) => {
+    let collect = founder
+      ? all.filter((page) => {
+        isFounder = hasTag(page, 'role:founder')
+        return founder === 'no'
+          ? !isFounder
+          : isFounder;
+      })
+      : all;
+
+    if (time === 'current') {
+      collect = collect.filter((page) => page.data.end === 'ongoing');
+    }
+
+    return collect.sort((a, b) => a.date - b.date);
+  }
+</script>
+
+<template webc:root>
+  <org-item
+    webc:for="org of getOrgs(this.orgs, this.time, this.founder)"
+    :@heading-level="this.headingLevel || 3"
+    :@org="org"
+  ></org-item>
+</template>

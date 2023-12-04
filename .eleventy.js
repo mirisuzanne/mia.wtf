@@ -23,7 +23,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginWebc, {
-    components: "src/_includes/**/*.webc",
+    components: [
+      "src/_includes/**/*.webc",
+      "src/_includes/**/*.svg",
+    ],
   });
 
   eleventyConfig.addPlugin(build);

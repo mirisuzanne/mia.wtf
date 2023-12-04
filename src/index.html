@@ -38,13 +38,8 @@ summary:
     Join a union.`
 ---
 
-<h2>Orgs</h2>
-
-<ul>
-  <li webc:for="org of collections['is:org']">
-    <a
-      :href="org.url"
-      @text="org.data.banner || org.data.title"
-    ></a>
-  </li>
-</ul>
+<h2>Co-Belligerents</h2>
+<org-list
+  :@orgs="collections['is:org']"
+  @time="current"
+></org-list>

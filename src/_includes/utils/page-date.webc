@@ -1,0 +1,43 @@
+<script webc:setup>
+  const rangeFormat = (start, end, get) => {
+    const startYear = start.getFullYear();
+
+    if (end === 'ongoing') {
+      return startYear === year()
+        ? 'MMMM y'
+        : 'y';
+    }
+
+    if (startYear === end.getFullYear()) {
+      if (start.getMonth() === end.getMonth()) {
+        return get === 'start'
+          ? 'MMMM d'
+          : 'd, y';
+      }
+
+      return get === 'start'
+          ? 'MMM d'
+          : 'default';
+    }
+
+    return 'y';
+  }
+</script>
+
+<template webc:root>
+  <i webc:if="this.end === 'ongoing'">since</i>
+  <date-time
+    :@date="this.date"
+    :@format="this.end
+      ? rangeFormat(this.date, this.end, 'start')
+      : 'default'"
+    :pubdate="this.pubdate"
+  ></date-time>
+  <template webc:if="this.end && this.end !== 'ongoing'" webc:nokeep>
+    –
+    <date-time
+      :@date="this.end"
+      :@format="rangeFormat(this.date, this.end, 'end')"
+    ></date-time>
+  </template>
+</template>

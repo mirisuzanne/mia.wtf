@@ -1,0 +1,22 @@
+<article webc:root class="h-card p-org">
+  <logo-icon
+    class="p-logo"
+    :logo="this.org.data.logo"
+    :at="this.org.data.at"
+  ></logo-icon>
+
+  <h
+    class="p-name"
+    :@level="this.headingLevel || 3"
+  >
+    <a
+      :href="this.org.url"
+      class="u-url"
+      @text="this.org.data.banner || this.org.data.title"
+    ></a>
+  </h>
+  <p
+    class="p-note"
+    @html="mdI(this.org.data.sub)"
+  ></p>
+</article>
