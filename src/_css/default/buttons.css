@@ -46,8 +46,10 @@ button {
 [data-btn=emoji] {
   ---btn-bg: var(--bg);
   ---btn-border: var(--full-bg);
+  align-items: center;
   aspect-ratio: 1;
   border-radius: 0.25lh;
+  display: inline-flex;
   vertical-align: middle;
 }
 

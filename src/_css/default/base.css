@@ -140,6 +140,7 @@ svg {
 [data-icon] {
   display: inline-block;
   inline-size: 1em;
+  vertical-align: middle;
 }
 
 emo-ji {

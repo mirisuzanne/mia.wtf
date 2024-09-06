@@ -5,7 +5,7 @@
         href="/"
         :aria-current="$data.page.url === `/` ? 'page' : false"
         rel="home"
-      >(home)</a>
+      >home</a>
     </li>
     <li webc:for="item of $data.slash">
       <a

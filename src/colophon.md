@@ -1,27 +1,32 @@
 ---
 layout: is/markdown
-title: A colophon
-sub: as much for me as it is for you
+title: What's in a website?
+sub: the nerds call this a [colophon](https://en.wikipedia.org/wiki/Colophon_(publishing))
 summary:
   This site uses the
-  [remix icon](https://remixicon.com) set --
+  [Remix Icon](https://remixicon.com) set --
   which is free,
   and doesn't require any attribution.
-  That sentence was entirely unnecessary.
-  But I have to write it down here,
+  That sentence was entirely discretionary.
+  Literally _uncalled for_.
+  But I have to write it down somewhere,
   so that I remember it later.
 ---
 
-I also used:
+I also used more than my share of HTML & CSS,
+with some JS thrown in for good luck.
+There are CSS features that I invented,
+and then used on this site!
+<emo-ji>🤯</emo-ji>
+I also developed a number of custom elements, which was fun.
 
-- HTML & CSS with some JS
-- Custom elements, some of them external…
-  - `toggle-control`, `switch-control`, and `input-control`
-    for various UI controls (especially the theme dialog)
-  - `eight-ball` for randomized content
-- [Eleventy](https://www.11ty.dev/) static site generator
+Here are some things that other people built
+(and I used (with permission)):
+
+- [Eleventy](https://www.11ty.dev/),
+  with several official plugins
 - [WebC](https://www.11ty.dev/docs/languages/webc/) template language
-- Occasional [microformats](https://microformats.org)
+- [Remix Icon](https://remixicon.com)
 - [Alegreya](https://www.huertatipografica.com/en/fonts/alegreya-ht-pro)
   variable,
   [Alegreya Sans](https://www.huertatipografica.com/en/fonts/alegreya-sans-ht),

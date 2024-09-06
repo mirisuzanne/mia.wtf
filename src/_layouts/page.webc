@@ -21,7 +21,9 @@ layout: base
     href="/"
     rel="home"
     :aria-current="this.page.url === '/' ? 'page' : false"
-  >mia</a>
+  >
+    <and-amp>&c</and-amp>
+  </a>
   <dialog-toggle>
     <button
       aria-controls="theme-controls"

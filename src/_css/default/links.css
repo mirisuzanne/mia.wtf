@@ -35,7 +35,8 @@ a {
   }
 
   &[aria-current=page] {
-    ---link-line-style: wavy;
+    ---link-line-style: dotted;
+    ---link-state: currentColor;
   }
 
   &[skip-link] {
