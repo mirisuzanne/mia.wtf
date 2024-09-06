@@ -1,9 +1,0 @@
-org-item { display: block; }
-
-  org-item * {
-    margin: unset;
-  }
-org-list {
-    display: grid;
-    gap: var(--gap);
-  }

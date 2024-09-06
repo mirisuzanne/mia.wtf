@@ -1,14 +1,15 @@
 ---
 layout: is/markdown
 title: A colophon
-sub: as much for me as for you
+sub: as much for me as it is for you
 summary:
   This site uses the
   [remix icon](https://remixicon.com) set --
   which is free,
-  and doesn't require this attribution.
-  But I have to write it down,
-  so that I remember later.
+  and doesn't require any attribution.
+  That sentence was entirely unnecessary.
+  But I have to write it down here,
+  so that I remember it later.
 ---
 
 I also used:

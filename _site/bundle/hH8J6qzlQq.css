@@ -1,8 +1,0 @@
-#main {
-  &[data-erase] { visibility: hidden; }
-  black-out, mark { visibility: visible; }
-  mark {
-    background-color: unset;
-    color: unset;
-  }
-}
