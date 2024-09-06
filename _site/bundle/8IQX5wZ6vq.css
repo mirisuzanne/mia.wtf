@@ -1,0 +1,13 @@
+project-item { display: block; }
+
+  project-item * {
+    margin: unset;
+  }
+
+  item-title {
+    font-size: inherit;
+  }
+project-list {
+    display: grid;
+    gap: var(--gap);
+  }

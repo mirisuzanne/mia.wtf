@@ -1,0 +1,12 @@
+#summary {
+    font-size: min(1em + 1vi, 1.5em);
+    margin-inline: auto;
+    max-inline-size: 28em;
+
+    code { font-style: normal; }
+  }
+#banner {
+    display: flex;
+    gap: var(--gap);
+    justify-content: space-between;
+  }

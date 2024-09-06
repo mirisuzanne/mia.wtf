@@ -1,0 +1,97 @@
+---
+title: Miriam in Words & Photos
+sub: >
+  ~~My~~ Her least favorite page
+summary: >
+  Miriam is a human person
+  with skin that covers a wide array of emotions.
+  She wrote this in _third person_, _past-tense_,
+  but now regrets those decisions.
+bios:
+  intro: >
+    Miriam is a cross-media artist
+    and web developer
+    based in Denver, CO.
+  orgs: >
+    She makes websites with [OddBird](https://oddbird.net),
+    music with [Teacup Gorilla](https://teacupgorilla.com),
+    and hybrid theater with [Grapefruit lab](https://grapefruitlab.com).
+  web: >
+    Miriam is an Invited Expert on the
+    W3C CSS Working group,
+    a member of the Sass core team,
+    and a teacher --
+    providing workshops and training
+    to companies and conferences around the world.
+    She had a lead role in developing
+    several new CSS features
+    like _cascade layers_, _container queries_, and _scope_.
+  art: >
+    Miriam is the author of _Riding SideSaddle*_
+    (SpringGun Press, 2015),
+    and won the True West Award for
+    _10 Myths on the Proper Application of Beauty Products_
+    (Buntport Theater, 2016).
+    Recent productions include _Strange Bird, Queer Bird_
+    (Grapefruit Lab, 2023)
+    and _Letters of Suresh_
+    (Curious Theater, 2023).
+  life: >
+    These days,
+    Miriam is also making
+    pottery, socks, and mechanical clocks.
+    It's fun to make things.
+photos:
+  - src: _mia/cssday-23.webp
+    alt: >
+      On stage at CSS Day,
+      wearing black-and-white patterns
+      and a headset
+  - src: _mia/lightning.jpg
+    alt: >
+      Selfie with neon pink lightning earrings
+      and a black jumpsuit
+  - src: _mia/smashing.jpg
+    alt: >
+      On stage behind a laptop at Smashing Conf,
+      wearing a yellow leather jacket
+      and headset
+  - src: _mia/debate.jpg
+    alt: >
+      At a mic wearing flannel,
+      with letters on the screen behind
+---
+
+<h2 id="bio">Build-A-Bio Workshop (fun!)</h2>
+<dl>
+  <d-i
+    webc:for="(key, text) in bios"
+  >
+    <dt @raw="key"></dt>
+    <dd @html="mdI(text)"></dd>
+  </d-i>
+</dl>
+
+<h2>Current Teams</h2>
+<org-list
+  @time="current"
+></org-list>
+
+<h2>Photos</h2>
+
+<figure>
+  <figcaption>
+    For speaking gigs, etc…
+  </figcaption>
+  <img
+    webc:for="item of photos"
+    webc:is="u-img"
+    :src="item.src"
+    :alt="item.alt">
+</figure>
+
+<h2>Past Teams</h2>
+<org-list
+  @time="past"
+></org-list>
+

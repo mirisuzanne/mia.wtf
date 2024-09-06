@@ -1,0 +1,12 @@
+<style
+  webc:keep
+  webc:if="this.layer"
+  :data-layer="this.layer"
+  @raw="`@import url('${getBundleFileUrl('css', this.layer)}') layer(${this.layer});`"
+></style>
+<style
+  webc:keep
+  webc:else
+  data-layer="raw"
+  @raw="getBundle('css')"
+></style>

@@ -1,0 +1,65 @@
+button {
+  ---btn-bg: var(--bg);
+  ---btn-border: var(--border);
+  ---btn-text: var(--text);
+  background: var(---btn-state-bg, var(---btn-bg));
+  color: var(---btn-state-text, var(---btn-text));
+  border: thin solid var(---btn-state-border, var(---btn-border));
+  border-radius: 0.125em;
+
+  &:focus,
+  &:hover,
+  &:active {
+    ---btn-state-border: var(--accent);
+  }
+
+  &:not(
+    [data-btn],
+    [is-switch]
+  ) {
+    align-items: center;
+    display: inline-flex;
+    gap: 0.5ch;
+    padding: 0.25cap 1.5ch;
+  }
+
+  &[aria-pressed=true],
+  &[aria-expanded=true] {
+    ---btn-state-bg: var(--feature);
+    ---btn-state-text: var(--bg);
+    ---btn-state-border: var(--border);
+    box-shadow: unset;
+  }
+
+  &[is-switch] {
+    --switch-border-pressed: var(--text);
+    --switch-thumb-pressed: var(--bg);
+    --switch-track-pressed: var(--accent);
+  }
+}
+
+[data-btn],
+[is-switch] {
+  font-size: inherit;
+}
+
+[data-btn=emoji] {
+  ---btn-bg: var(--bg);
+  ---btn-border: var(--full-bg);
+  aspect-ratio: 1;
+  border-radius: 0.25lh;
+  vertical-align: middle;
+}
+
+[is-switch] {
+  --switch-block: 1cap;
+
+  :is(p, li) & {
+    margin-inline: 0.4ch;
+  }
+}
+
+switch-text {
+  align-self: baseline;
+  font-style: italic;
+}

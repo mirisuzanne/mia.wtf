@@ -1,0 +1,163 @@
+<css-toggle
+  data-local="site-styles"
+  id="site-styles"
+>Site styles</css-toggle>
+
+<switch-control
+  data-prop="--bg-texture"
+  data-on="var(--theme-texture)"
+  data-off="var(--bg)"
+  data-local="css-texture"
+  id="site-texture"
+><button
+  is-switch
+  aria-pressed="true"
+><switch-text>Background texture</switch-text></button></switch-control>
+
+<control-label>Vibes</control-label>
+<toggle-control
+  id="site-vibes"
+  data-attr="data-theme"
+  data-local="css-theme"
+  data-off="mia"
+>
+  <button>browser</button>
+  <button aria-pressed="true">mia</button>
+  <button>tech</button>
+</toggle-control>
+
+<control-label>Light/Dark</control-label>
+<toggle-control
+  id="color-scheme"
+  data-prop="color-scheme"
+  data-local="css-scheme"
+  data-off="dark light"
+>
+  <button data-value="dark light" aria-pressed="true">auto</button>
+  <button>dark</button>
+  <button>light</button>
+</toggle-control>
+
+<control-label>Font Size</control-label>
+<toggle-control
+  id="font-size"
+  data-prop="font-size"
+  data-local="css-font-size"
+  data-off="unset"
+>
+  <button data-value="unset">auto</button>
+  <button>small</button>
+  <button>medium</button>
+  <button>large</button>
+  <button>x-large</button>
+  <button>xx-large</button>
+</toggle-control>
+
+<control-label>Font scaling</control-label>
+<toggle-control
+  id="fluid-scale"
+  data-prop="--fluid-scale"
+  data-local="css-fluid-scale"
+  data-off="unset"
+>
+  <button data-value="unset">off</button>
+  <button data-value="0.5vi" aria-pressed="true">some</button>
+  <button data-value="0.75vi">extra</button>
+</toggle-control>
+
+<control-label>Filters*</control-label>
+<input-control
+  data-prop="--filter-brightness"
+  data-local="css-filter-brightness"
+>
+  <label for="filter-brightness">Brightness</label>
+  <input id="filter-brightness" type="range" min="0.2" value="1" max="2" step="0.1">
+  <output for="filter-brightness"></output>
+  <button data-btn="emoji" data-reset="filter-brightness">
+    <reset-left-line></reset-left-line>
+    <visually-hidden>reset</visually-hidden>
+  </button>
+</input-control>
+<input-control
+  data-prop="--filter-contrast"
+  data-local="css-filter-contrast"
+>
+  <label for="filter-contrast">Contrast</label>
+  <input id="filter-contrast" type="range" min="0.5" value="1" max="2" step="0.1">
+  <output for="filter-contrast"></output>
+  <button data-btn="emoji" data-reset="filter-contrast">
+    <reset-left-line></reset-left-line>
+    <visually-hidden>reset</visually-hidden>
+  </button>
+</input-control>
+<input-control
+  data-prop="--filter-hue"
+  data-local="css-filter-hue"
+>
+  <label for="filter-hue">Hue Shift</label>
+  <input id="filter-hue" type="range" min="0" value="0" max="360">
+  <output for="filter-hue"></output>
+  <button data-btn="emoji" data-reset="filter-hue">
+    <reset-left-line></reset-left-line>
+    <visually-hidden>reset</visually-hidden>
+  </button>
+</input-control>
+<input-control
+  data-prop="--filter-sepia"
+  data-local="css-filter-sepia"
+>
+  <label for="filter-sepia">Sepia</label>
+  <input id="filter-sepia" type="range" min="0" value="0" max="1" step="0.1">
+  <output for="filter-sepia"></output>
+  <button data-btn="emoji" data-reset="filter-sepia">
+    <reset-left-line></reset-left-line>
+    <visually-hidden>reset</visually-hidden>
+  </button>
+</input-control>
+<input-control
+  data-prop="--filter-blur"
+  data-local="css-filter-blur"
+>
+  <label for="filter-blur">blur</label>
+  <input id="filter-blur" type="range" min="0" value="0" max="12">
+  <output for="filter-blur"></output>
+  <button data-btn="emoji" data-reset="filter-blur">
+    <reset-left-line></reset-left-line>
+    <visually-hidden>reset</visually-hidden>
+  </button>
+</input-control>
+<p><small>* Not applied to background texture</small></p>
+
+<button data-reset="site-styles site-texture site-vibes color-scheme font-size fluid-scale filter-brightness filter-contrast filter-hue filter-sepia filter-blur">
+  <reset-left-line></reset-left-line>
+  <btn-text>reset all</btn-text>
+</button>
+
+<style webc:bucket="layout">
+  css-toggle {
+    margin-block-end: var(--shim);
+  }
+
+  input-control {
+    column-gap: var(--shim);
+    display: flex;
+    flex-wrap: wrap;
+    margin-block-end: var(--shim);
+
+    & input { flex: auto; }
+    & output { min-width: 3ch; }
+  }
+
+  toggle-control {
+    display: flex;
+    flex-wrap: wrap;
+    margin-block-end: var(--shim);
+    gap: var(--shim) 3px;
+  }
+
+  control-label {
+    display: block;
+    font-variant-caps: all-small-caps;
+    font-weight: bold;
+  }
+</style>

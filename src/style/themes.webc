@@ -1,0 +1,29 @@
+---
+colors:
+  - full-bg
+  - bg
+  - text
+  - accent
+  - highlight
+  - border
+  - mark
+---
+
+<color-palette>
+  <color-swatch
+    webc:for="color of colors"
+    :style="`background: var(--${color})`"
+  ></color-swatch>
+</color-palette>
+
+<style>
+  color-palette {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+    padding: 1em;
+  }
+
+  color-swatch {
+    aspect-ratio: 1;
+  }
+</style>

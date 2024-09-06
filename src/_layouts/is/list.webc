@@ -1,5 +1,5 @@
 ---
-layout: is/default
+layout: main
 is: list
 ---
 
@@ -8,7 +8,7 @@ is: list
   @raw="content"
 ></template>
 
-<ul>
+<ul webc:if="(listOf || index) && !(autoList === 'hide')">
   <li webc:for="item of collections[listOf || index]">
     <a
       :href="item.url"

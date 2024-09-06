@@ -1,0 +1,63 @@
+<button
+  type="button"
+  is-switch
+  aria-pressed="true"
+><switch-text><slot>CSS</slot></switch-text></button>
+
+<link
+  rel="stylesheet"
+  href="../../../node_modules/@terriblemia/ground-control/switch-control.css"
+  webc:bucket="tools"
+>
+<script
+  src="../../../node_modules/@terriblemia/ground-control/ground-control-raw.js"
+></script>
+<script
+  src="../../../node_modules/@terriblemia/ground-control/switch-control-raw.js"
+></script>
+<script>
+class CSSToggle extends SwitchControl {
+  static register(tagName) {
+    if ('customElements' in window) {
+      customElements.define(tagName || 'css-toggle', CSSToggle);
+    }
+  };
+
+  set CSS(enable) {
+    const embed = document.querySelectorAll('style');
+    const link = document.querySelectorAll('link[rel=stylesheet]');
+    const styles = [...embed, ...link];
+
+    styles.forEach((sheet) => sheet.disabled = !enable);
+  };
+
+  constructor() {
+    super();
+    GroundControl.blockDisplay(this);
+    this.onPress = () => this.CSS = true;
+    this.onUnPress = () => this.CSS = false;
+  };
+
+  connectedCallback() {
+    this.#findToggle();
+
+    if (this.storedValue) {
+      this.pressed = this.#isPressedValue(this.storedValue);
+    }
+
+    this.doToggleActions();
+  };
+
+  #isPressedValue = (value) => this.dataset.on === value;
+
+  #findToggle = () => {
+    const foundToggle = this.dataset.id
+      ? this.querySelector(`button[id='${this.dataset.id}']`)
+      : this.querySelector('button');
+
+    this.toggle = foundToggle;
+  };
+}
+
+CSSToggle.register();
+</script>

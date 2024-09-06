@@ -1,7 +1,0 @@
-<a @attributes :aria-current="ariaCurrent"><template
-  webc:nokeep
-  @html="favIcon(this.href, this.alt)"
-></template><slot><template
-  webc:nokeep
-  @text="this.as || this.href"
-></template></slot></a>

@@ -3,13 +3,15 @@ role: co-founder
 title: Grapefruit Lab
 sub: hybrid performance laboratory
 at: https://grapefruitlab.com/
+logo: grapefruit
 date: 2008-02-06
 index: org:grapefruit-lab
 tags:
   - area:art
-  - art:theater
+  - as:theater
   - role:founder
 summary: >
   Performance is an embodied process
-  for imagining, exploring, and deepening our humanity.
+  for imagining, exploring,
+  and _deepening our humanity_.
 ---

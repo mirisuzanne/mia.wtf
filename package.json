@@ -1,11 +1,11 @@
 {
   "name": "mia-wtf",
   "version": "0.0.1",
-  "description": "Starting over on a personal site with 11ty 2.0",
+  "description": "Starting over on a personal site with 11ty 3.0",
+  "type": "module",
   "main": "index.html",
   "scripts": {
     "dev": "eleventy --serve",
-    "start": "eleventy --serve --incremental",
     "build": "eleventy"
   },
   "repository": {
@@ -20,25 +20,30 @@
     "url": "https://github.com/mirisuzanne/mia.wtf/issues"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-fetch": "^4.0.0",
-    "@11ty/eleventy-img": "^3.1.1",
+    "@11ty/eleventy": "^3.0.0-beta.1",
+    "@11ty/eleventy-fetch": "^4.0.1",
+    "@11ty/eleventy-img": "^4.0.2",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "@11ty/eleventy-plugin-webc": "^0.11.1",
-    "@fontsource-variable/alegreya": "^5.0.9",
-    "@fontsource-variable/jetbrains-mono": "^5.0.18",
-    "@octokit/rest": "^20.0.2",
-    "@sindresorhus/slugify": "^2.2.1",
+    "@11ty/eleventy-plugin-webc": "^0.11.2",
+    "@fontsource-variable/alegreya": "^5.0.15",
+    "@fontsource-variable/victor-mono": "^5.0.6",
+    "@fontsource/alegreya-sans": "^5.0.14",
+    "@octokit/rest": "^20.1.1",
+    "@terriblemia/eight-ball": "^0.1.0",
+    "@terriblemia/ground-control": "^0.2.1",
     "date-fns": "^2.30.0",
-    "date-fns-tz": "^2.0.0",
-    "dotenv": "^16.3.1",
+    "date-fns-tz": "^2.0.1",
+    "dotenv": "^16.4.5",
     "js-yaml": "^4.1.0",
     "markdown-it": "^13.0.2",
-    "markdown-it-anchor": "^8.6.7",
+    "markdown-it-mark": "^4.0.0",
     "netlify-plugin-cache": "^1.0.3",
     "prism-themes": "^1.9.0",
     "remove-markdown": "^0.5.0",
-    "sass": "^1.68.0"
+    "sass": "^1.77.6"
+  },
+  "dependencies": {
+    "@11ty/is-land": "^4.0.0"
   }
 }

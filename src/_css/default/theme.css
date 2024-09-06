@@ -1,0 +1,75 @@
+html {
+  --bg-gradient: linear-gradient(
+    to bottom right,
+    var(--bg),
+    var(--full-bg) 200%
+  ) no-repeat fixed;
+
+  --theme-texture: var(--bg-gradient);
+  --bg-texture: var(--theme-texture);
+
+  filter:
+    brightness(var(--filter-brightness))
+    contrast(var(--filter-contrast))
+    hue-rotate(calc(var(--filter-hue, 0) * 1deg))
+    sepia(var(--filter-sepia))
+    blur(calc(var(--filter-blur, 0) * 1px))
+  ;
+
+  @supports (fill: light-dark(red, red)) {
+    --full-bg: light-dark(white, black);
+  }
+}
+
+[data-theme=mia] {
+  --body-font: var(--fonts-serif, var(--fonts-serif--));
+  --title-font: var(--fonts-serif, var(--fonts-serif--));
+  --code-font: var(--fonts-code, var(--fonts-code--));
+  --theme-texture:
+    var(--bg-gradient),
+    url('/img/_site/paint.jpg') no-repeat fixed
+  ;
+
+  @supports (fill: light-dark(red, red)) {
+    --bg: light-dark(
+      color-mix(in oklch, powderblue, oklch(1 0 none) 75%),
+      color-mix(in oklch, darkSlateGray, oklch(0 0 none) 50%)
+    );
+    --accent: light-dark(mediumVioletRed, hotPink);
+    --feature: light-dark(teal, powderBlue);
+    --border: cadetBlue;
+    --mark: color-mix(
+      in oklch,
+      var(--accent),
+      light-dark(oklch(1 0 none), oklch(0 0.2 none)) 75%
+    );
+  }
+}
+
+[data-theme=tech] {
+  --line-length: 30em;
+  --body-font: var(--fonts-code, var(--fonts-code--));
+  --title-font: var(--fonts-code, var(--fonts-code--));
+  --code-font: var(--fonts-code, var(--fonts-code--));
+  --theme-texture:
+    repeating-linear-gradient(
+      to bottom,
+      #2822 0 1px,
+      transparent 1px 1em
+    ) no-repeat fixed,
+    var(--bg-gradient)
+  ;
+  --bg-blend: normal;
+
+  @supports (fill: light-dark(red, red)) {
+    --bg: light-dark(
+      color-mix(in oklch, forestGreen, oklch(1 0 none) 90%),
+      color-mix(in oklch, darkGreen, oklch(0 0 none) 65%)
+    );
+    --accent: light-dark(forestGreen, lime);
+    --text: light-dark(darkGreen, limeGreen);
+    --feature: var(--accent);
+    --border: var(--text);
+    --mark: var(--bg);
+  }
+}

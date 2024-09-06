@@ -1,22 +1,56 @@
-<article webc:root class="h-card p-org">
-  <logo-icon
-    class="p-logo"
-    :logo="this.org.data.logo"
-    :at="this.org.data.at"
-  ></logo-icon>
+<script webc:setup>
+  const getArea = (tags) => {
+    const area = tagType(tags, 'area')[0];
+    const media = tagType(tags, 'as')[0];
+    return media ? `${area}:${media}` : area;
+  }
+</script>
 
-  <h
-    class="p-name"
-    :@level="this.headingLevel || 3"
-  >
-    <a
-      :href="this.org.url"
-      class="u-url"
-      @text="this.org.data.banner || this.org.data.title"
-    ></a>
-  </h>
-  <p
-    class="p-note"
-    @html="mdI(this.org.data.sub)"
-  ></p>
-</article>
+<div webc:root class="h-card p-org">
+  <header>
+    <h3 item-title>
+      <a
+        :href="this.org.url"
+        class="p-name u-url"
+        @text="this.org.data.banner || this.org.data.title"
+      ></a>
+    </h3>
+
+    [<p-category
+      class="p-category"
+      @text="getArea(this.org.data.tags)"
+    ></p-category>]
+  </header>
+
+  <p item-summary>
+    <p-note
+      class="p-note"
+      @html="mdI(this.org.data.sub)"
+    ></p-note>
+    (
+    <p-role class="p-role"
+      webc:if="this.org.data.role"
+      @text="this.org.data.role"
+    ></p-role>,
+    <i webc:if="this.org.data.end === 'ongoing'">since</i>
+    <date-time
+      :@date="this.org.data.date"
+      @format="year"
+    ></date-time>
+    <date-time
+      webc:if="this.org.data.end !== 'ongoing'"
+      :@date="this.org.data.end"
+      @format="year"
+      @prefix="--"
+    ></date-time>
+    )
+  </p>
+</div>
+
+<style webc:bucket="object">
+  org-item { display: block; }
+
+  org-item * {
+    margin: unset;
+  }
+</style>

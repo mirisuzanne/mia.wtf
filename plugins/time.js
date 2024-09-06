@@ -1,9 +1,9 @@
-const dF = require('date-fns/format');
-const { utcToZonedTime } = require('date-fns-tz');
+import { format } from "date-fns";
+import { utcToZonedTime } from 'date-fns-tz';
 
 const year = () => `${new Date().getFullYear()}`;
 
-module.exports = function (eleventyConfig, options = {}) {
+export default function (eleventyConfig, options = {}) {
   // https://date-fns.org/v2.21.2/docs/format
   const formats = {
     day: 'd',
@@ -15,8 +15,11 @@ module.exports = function (eleventyConfig, options = {}) {
     ...options,
   };
 
-  const formatDate = (date, format = 'default') =>
-    dF(utcToZonedTime(date, '+00:00'), formats[format] || format);
+  const formatDate = (date, style = 'default') =>
+    format(
+      utcToZonedTime(date || new Date(), '+00:00'),
+      formats[style] || style
+    );
 
   eleventyConfig.addShortcode('year', year);
   eleventyConfig.addFilter('year', year);

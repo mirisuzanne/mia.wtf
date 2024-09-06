@@ -9,7 +9,7 @@ const tagLink = (tag, collections) => {
     : `/tags/${tag}/`;
 };
 
-module.exports = (eleventyConfig) => {
+export default (eleventyConfig) => {
   eleventyConfig.addAsyncFilter('tagLink', tagLink);
 
   eleventyConfig.addCollection('area', (collection) =>

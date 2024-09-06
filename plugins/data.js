@@ -1,4 +1,4 @@
-const yaml = require('js-yaml');
+import { load } from 'js-yaml';
 
 const shuffle = (items) => items
   .map(value => ({ value, sort: Math.random() }))
@@ -15,9 +15,17 @@ const withTag = (pages, tag) => pages.filter((page) => hasTag(page, tag));
 const withEveryTag = (pages, tags) => pages.filter((page) => everyTag(page, tags));
 const withAnyTag = (pages, tags) => pages.filter((page) => anyTag(page, tags));
 
-module.exports = (eleventyConfig) => {
+const tagType = (tags, prefix) => tags
+  .filter((tag) => tag.startsWith(prefix))
+  .map((tag) => tag.replaceAll(`${prefix}:`, ''));
+
+const findIndex = (pages, tag) => pages.find((page) => page.data.index === tag);
+
+export default (eleventyConfig) => {
   eleventyConfig.addAsyncFilter('shuffle', shuffle);
   eleventyConfig.addAsyncFilter('merge', merge);
+
+  eleventyConfig.addAsyncFilter('tagType', tagType);
 
   eleventyConfig.addAsyncFilter('hasTag', hasTag);
   eleventyConfig.addAsyncFilter('everyTag', everyTag);
@@ -27,7 +35,9 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addAsyncFilter('withEveryTag', withEveryTag);
   eleventyConfig.addAsyncFilter('withAnyTag', withAnyTag);
 
+  eleventyConfig.addAsyncFilter('findIndex', findIndex);
+
   eleventyConfig.addDataExtension('yml, yaml', (contents) =>
-    yaml.load(contents),
+    load(contents),
   );
 }

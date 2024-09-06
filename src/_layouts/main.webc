@@ -1,0 +1,57 @@
+---
+layout: page
+---
+
+<section
+  webc:if="summary"
+  id="summary"
+  aria-label="page summary"
+  line-length
+  :class="micro.summary"
+><roll-if
+  :@content="this.summary"
+></roll-if></section>
+
+<hr webc:if="summary" aria-hidden="true">
+
+<header id="header" line-length>
+  <title-group
+    webc:keep
+    :@title="banner || title"
+    :@subtitle="org ? `${org} | _${sub}_` : sub"
+  ></title-group>
+</header>
+
+<section
+  id="content"
+  line-length
+  @raw="this.content"
+></section>
+
+<style webc:bucket="layout">
+  #summary {
+    --italic: true;
+    font-size: min(1em + 0.5vi, 1.5em);
+    font-style: italic;
+    margin-block: var(--spacer);
+    text-wrap: pretty;
+
+    code { font-style: normal; }
+  }
+
+  #header {
+    margin-block: var(--double);
+  }
+
+  hr[aria-hidden=true] {
+    border-block-start: thin dotted var(--border);
+    border-image: linear-gradient(
+      to right,
+      transparent,
+      var(--accent),
+      var(--border),
+      transparent
+    ) 1;
+    rotate: -1.5deg;
+  }
+</style>

@@ -1,0 +1,15 @@
+---
+order: 2
+title: >
+  &c. (anything)
+area: etc
+index: area:etc
+summary: >
+  Plate tectonics.
+  _The movements of the crust and upper mantle_.
+  Continental boundaries that drift apart,
+  and grind back together.
+permalink: '/etc/index.html'
+eleventyImport:
+  collections: ["area:etc"]
+---

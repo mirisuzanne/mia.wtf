@@ -1,0 +1,45 @@
+<button
+  type="button"
+  is-switch
+><switch-text><slot>blackout</slot></switch-text></button>
+
+<style webc:bucket="object">
+#main {
+  &[data-erase=erase] { visibility: hidden; }
+  black-out, mark { visibility: visible; }
+  mark {
+    background-color: unset;
+    color: unset;
+  }
+}
+</style>
+
+<link
+  rel="stylesheet"
+  href="../../../node_modules/@terriblemia/ground-control/switch-control.css"
+  webc:bucket="tools"
+>
+<script
+  src="../../../node_modules/@terriblemia/ground-control/ground-control-raw.js"
+></script>
+<script
+  src="../../../node_modules/@terriblemia/ground-control/switch-control-raw.js"
+></script>
+<script>
+class BlackOut extends SwitchControl {
+  static register(tagName) {
+    if ('customElements' in window) {
+      customElements.define(tagName || 'black-out', BlackOut);
+    }
+  }
+
+  constructor() {
+    super();
+    this.dataset.for = '#main';
+    this.dataset.attr = 'data-erase';
+    this.dataset.on = 'erase';
+  }
+}
+
+BlackOut.register();
+</script>

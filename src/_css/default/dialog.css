@@ -1,0 +1,39 @@
+dialog {
+  background-color: var(--bg, Canvas);
+  border: thin solid var(--border);
+  opacity: 0;
+  transition:
+    translate 150ms ease-out,
+    opacity 150ms ease-out,
+    display 150ms ease-out allow-discrete;
+  translate: 0 -2lh;
+}
+
+dialog[open] {
+  opacity: 1;
+  translate: 0 0;
+}
+
+@starting-style {
+  dialog[open] {
+    opacity: 0;
+    translate: 0 -2lh;
+  }
+}
+
+dialog[in-flow] {
+  background-color: transparent;
+  border-block: thin dotted var(--border);
+  border-inline: unset;
+  color: inherit;
+  height: unset;
+  inset: unset;
+  margin-block: var(--gap);
+  padding: var(--gap) 0;
+  position: unset;
+  width: unset;
+}
+
+form[method=dialog] {
+  margin-block-start: unset;
+}

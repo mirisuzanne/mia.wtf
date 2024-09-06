@@ -1,0 +1,8 @@
+---
+layout: base
+---
+
+<template
+  webc:nokeep
+  @raw="this.content"
+></template>

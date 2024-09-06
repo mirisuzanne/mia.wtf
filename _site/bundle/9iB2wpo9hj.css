@@ -1,0 +1,5 @@
+org-item { display: block; }
+org-list {
+    display: grid;
+    gap: var(--gap);
+  }

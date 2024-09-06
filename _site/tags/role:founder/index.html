@@ -1,0 +1,886 @@
+<!doctype html>
+<html lang="en" data-theme="mia">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everything `role:founder`</title>
+
+    <!-- alternate styles -->
+
+<!-- default page styles/layers -->
+
+<style>
+  @layer reset, default, tools, layout, objects, utility;
+</style>
+<style data-layer="reset">
+  @import url('/css/reset.css') layer(reset);
+</style>
+<style data-layer="default">
+  @import url('/css/default/base.css') layer(default);
+  @import url('/css/default/fonts.css') layer(default);
+  @import url('/css/default/theme.css') layer(default);
+  @import url('/css/default/buttons.css') layer(default);
+  @import url('/css/default/links.css') layer(default);
+  @import url('/css/default/dialog.css') layer(default);
+</style>
+
+
+<!-- styles from includes -->
+<style data-layer="layout">@import url('/bundle/TGF9haYETq.css') layer(layout);</style>
+
+
+<style data-layer="tools">@import url('/bundle/XJzzdb3ucs.css') layer(tools);</style>
+
+
+<style data-layer="object">@import url('') layer(object);</style>
+
+
+
+<style data-layer="raw">slash-nav {
+    display: block;
+  }
+
+  slash-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 2ch;
+  }</style>
+
+
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="hotpink">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="mediumvioletred">
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#a71f63">
+<meta name="msapplication-TileColor" content="#f4f0f2">
+
+    <link href="https://screenshot-api.miriam.codes" rel="preconnect" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:title">
+<meta property="og:image" content="https://screenshot-api.miriam.codes/http%3A%2F%2Flocalhost%3A8080%2Ftags%2Frole%3Afounder%2F/opengraph/">
+<meta property="og:url" content="/tags/role:founder/">
+<meta property="og:site_name" content="Mia Culpa">
+<meta property="og:description" content="Art &amp; CSS &amp; other digital artifacts of my life">
+<meta name="description" content="Art &amp; CSS &amp; other digital artifacts of my life">
+
+
+    <link rel="preload" href="/fonts/alegreya-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  </head>
+  <body>
+    <div skip-link><a href="#main">skip to content</a></div>
+
+    
+
+    <dialog in-flow line-length="wide" id="theme-controls">
+  <form method="dialog">
+    <button>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px" aria-hidden="true" focusable="false" data-icon="close-line" fill="currentColor"><path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"></path></svg>
+
+      <btn-text>close</btn-text>
+    </button>
+  </form>
+  <theme-controls><css-toggle data-local="site-styles" id="site-styles"><button type="button" is-switch aria-pressed="true"><switch-text>Site styles</switch-text></button>
+
+
+
+
+
+</css-toggle>
+
+<switch-control data-prop="--bg-texture" data-on="var(--theme-texture)" data-off="var(--bg)" data-local="css-texture" id="site-texture">
+
+<button is-switch aria-pressed="true"><switch-text>Background texture</switch-text></button></switch-control>
+
+<control-label>Vibes</control-label>
+<toggle-control id="site-vibes" data-attr="data-theme" data-local="css-theme" data-off="mia">
+
+
+  <button>browser</button>
+  <button aria-pressed="true">mia</button>
+  <button>tech</button>
+</toggle-control>
+
+<control-label>Light/Dark</control-label>
+<toggle-control id="color-scheme" data-prop="color-scheme" data-local="css-scheme" data-off="dark light">
+
+
+  <button data-value="dark light" aria-pressed="true">auto</button>
+  <button>dark</button>
+  <button>light</button>
+</toggle-control>
+
+<control-label>Font Size</control-label>
+<toggle-control id="font-size" data-prop="font-size" data-local="css-font-size" data-off="unset">
+
+
+  <button data-value="unset">auto</button>
+  <button>small</button>
+  <button>medium</button>
+  <button>large</button>
+  <button>x-large</button>
+  <button>xx-large</button>
+</toggle-control>
+
+<control-label>Font scaling</control-label>
+<toggle-control id="fluid-scale" data-prop="--fluid-scale" data-local="css-fluid-scale" data-off="unset">
+
+
+  <button data-value="unset">off</button>
+  <button data-value="0.5vi" aria-pressed="true">some</button>
+  <button data-value="0.75vi">extra</button>
+</toggle-control>
+
+<control-label>Filters*</control-label>
+<input-control data-prop="--filter-brightness" data-local="css-filter-brightness">
+
+
+  <label for="filter-brightness">Brightness</label>
+  <input id="filter-brightness" type="range" min="0.2" value="1" max="2" step="0.1">
+  <output for="filter-brightness"></output>
+  <button data-btn="emoji" data-reset="filter-brightness">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px" aria-hidden="true" focusable="false" data-icon="reset-left-line" fill="currentColor"><path d="M22 12C22 17.5228 17.5229 22 12 22C6.4772 22 2 17.5228 2 12C2 6.47715 6.4772 2 12 2V4C7.5817 4 4 7.58172 4 12C4 16.4183 7.5817 20 12 20C16.4183 20 20 16.4183 20 12C20 9.25022 18.6127 6.82447 16.4998 5.38451L16.5 8H14.5V2L20.5 2V4L18.0008 3.99989C20.4293 5.82434 22 8.72873 22 12Z"></path></svg>
+
+    <visually-hidden>reset</visually-hidden>
+  </button>
+</input-control>
+<input-control data-prop="--filter-contrast" data-local="css-filter-contrast">
+
+
+  <label for="filter-contrast">Contrast</label>
+  <input id="filter-contrast" type="range" min="0.5" value="1" max="2" step="0.1">
+  <output for="filter-contrast"></output>
+  <button data-btn="emoji" data-reset="filter-contrast">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px" aria-hidden="true" focusable="false" data-icon="reset-left-line" fill="currentColor"><path d="M22 12C22 17.5228 17.5229 22 12 22C6.4772 22 2 17.5228 2 12C2 6.47715 6.4772 2 12 2V4C7.5817 4 4 7.58172 4 12C4 16.4183 7.5817 20 12 20C16.4183 20 20 16.4183 20 12C20 9.25022 18.6127 6.82447 16.4998 5.38451L16.5 8H14.5V2L20.5 2V4L18.0008 3.99989C20.4293 5.82434 22 8.72873 22 12Z"></path></svg>
+
+    <visually-hidden>reset</visually-hidden>
+  </button>
+</input-control>
+<input-control data-prop="--filter-hue" data-local="css-filter-hue">
+
+
+  <label for="filter-hue">Hue Shift</label>
+  <input id="filter-hue" type="range" min="0" value="0" max="360">
+  <output for="filter-hue"></output>
+  <button data-btn="emoji" data-reset="filter-hue">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px" aria-hidden="true" focusable="false" data-icon="reset-left-line" fill="currentColor"><path d="M22 12C22 17.5228 17.5229 22 12 22C6.4772 22 2 17.5228 2 12C2 6.47715 6.4772 2 12 2V4C7.5817 4 4 7.58172 4 12C4 16.4183 7.5817 20 12 20C16.4183 20 20 16.4183 20 12C20 9.25022 18.6127 6.82447 16.4998 5.38451L16.5 8H14.5V2L20.5 2V4L18.0008 3.99989C20.4293 5.82434 22 8.72873 22 12Z"></path></svg>
+
+    <visually-hidden>reset</visually-hidden>
+  </button>
+</input-control>
+<input-control data-prop="--filter-sepia" data-local="css-filter-sepia">
+
+
+  <label for="filter-sepia">Sepia</label>
+  <input id="filter-sepia" type="range" min="0" value="0" max="1" step="0.1">
+  <output for="filter-sepia"></output>
+  <button data-btn="emoji" data-reset="filter-sepia">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px" aria-hidden="true" focusable="false" data-icon="reset-left-line" fill="currentColor"><path d="M22 12C22 17.5228 17.5229 22 12 22C6.4772 22 2 17.5228 2 12C2 6.47715 6.4772 2 12 2V4C7.5817 4 4 7.58172 4 12C4 16.4183 7.5817 20 12 20C16.4183 20 20 16.4183 20 12C20 9.25022 18.6127 6.82447 16.4998 5.38451L16.5 8H14.5V2L20.5 2V4L18.0008 3.99989C20.4293 5.82434 22 8.72873 22 12Z"></path></svg>
+
+    <visually-hidden>reset</visually-hidden>
+  </button>
+</input-control>
+<input-control data-prop="--filter-blur" data-local="css-filter-blur">
+
+
+  <label for="filter-blur">blur</label>
+  <input id="filter-blur" type="range" min="0" value="0" max="12">
+  <output for="filter-blur"></output>
+  <button data-btn="emoji" data-reset="filter-blur">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px" aria-hidden="true" focusable="false" data-icon="reset-left-line" fill="currentColor"><path d="M22 12C22 17.5228 17.5229 22 12 22C6.4772 22 2 17.5228 2 12C2 6.47715 6.4772 2 12 2V4C7.5817 4 4 7.58172 4 12C4 16.4183 7.5817 20 12 20C16.4183 20 20 16.4183 20 12C20 9.25022 18.6127 6.82447 16.4998 5.38451L16.5 8H14.5V2L20.5 2V4L18.0008 3.99989C20.4293 5.82434 22 8.72873 22 12Z"></path></svg>
+
+    <visually-hidden>reset</visually-hidden>
+  </button>
+</input-control>
+<p><small>* Not applied to background texture</small></p>
+
+<button data-reset="site-styles site-texture site-vibes color-scheme font-size fluid-scale filter-brightness filter-contrast filter-hue filter-sepia filter-blur">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px" aria-hidden="true" focusable="false" data-icon="reset-left-line" fill="currentColor"><path d="M22 12C22 17.5228 17.5229 22 12 22C6.4772 22 2 17.5228 2 12C2 6.47715 6.4772 2 12 2V4C7.5817 4 4 7.58172 4 12C4 16.4183 7.5817 20 12 20C16.4183 20 20 16.4183 20 12C20 9.25022 18.6127 6.82447 16.4998 5.38451L16.5 8H14.5V2L20.5 2V4L18.0008 3.99989C20.4293 5.82434 22 8.72873 22 12Z"></path></svg>
+
+  <btn-text>reset all</btn-text>
+</button>
+
+
+</theme-controls>
+</dialog>
+
+<header id="banner" line-length>
+  <a href="/" rel="home">mia</a>
+  <dialog-toggle>
+
+    <button aria-controls="theme-controls" data-btn="emoji">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px" aria-hidden="true" focusable="false" data-icon="paint-fill" fill="currentColor"><path d="M19.2277 18.7323L20.9955 16.9645L22.7632 18.7323C23.7395 19.7086 23.7395 21.2915 22.7632 22.2678C21.7869 23.2441 20.204 23.2441 19.2277 22.2678C18.2514 21.2915 18.2514 19.7086 19.2277 18.7323ZM8.87861 1.07971L20.1923 12.3934C20.5828 12.7839 20.5828 13.4171 20.1923 13.8076L11.707 22.2929C11.3165 22.6834 10.6833 22.6834 10.2928 22.2929L1.80754 13.8076C1.41702 13.4171 1.41702 12.7839 1.80754 12.3934L9.58572 4.61525L7.4644 2.49393L8.87861 1.07971ZM10.9999 6.02946L3.92886 13.1005H18.071L10.9999 6.02946Z"></path></svg>
+
+      <visually-hidden>style</visually-hidden>
+    </button>
+  </dialog-toggle>
+</header>
+
+<main id="main" tabindex="-1">
+
+
+
+<header id="header" line-length>
+  <title-group><h1 id="title">Everything <code>role:founder</code></h1>
+
+<sub-title><p><a href="/tags/">see all tags</a></p>
+
+
+
+</sub-title>
+
+
+</title-group>
+</header>
+
+<section id="content" line-length>
+
+
+<ul>
+  <li>
+    <a href="/orgs/grapefruit-lab/">Grapefruit Lab</a>
+  </li>
+<li>
+    <a href="/orgs/oddbird/">OddBird</a>
+  </li>
+<li>
+    <a href="/orgs/teacup-gorilla/">Teacup Gorilla</a>
+  </li>
+</ul>
+</section>
+
+
+</main>
+
+<slash-nav line-length><nav>
+  <ul role="list">
+    <li>
+      <a href="/" rel="home">(home)</a>
+    </li>
+    <li>
+      <a href="/about/">/about</a>
+    </li>
+<li>
+      <a href="/follow/">/follow</a>
+    </li>
+<li>
+      <a href="/why/">/why</a>
+    </li>
+<li>
+      <a href="/contact/">/contact</a>
+    </li>
+  </ul>
+</nav>
+
+
+</slash-nav>
+
+<footer id="content-info" line-length>
+  <p>
+    ©
+    <em>Miriam Eric Suzanne</em>,
+    <time>2024</time>
+  </p>
+
+  <a href="/_og/tags/role:founder/">(social image)</a>
+</footer>
+
+
+
+
+    <script type="module">class GroundControl extends HTMLElement {
+  static register(tagName) {
+    if ('customElements' in window) {
+      customElements.define(
+        tagName || 'ground-control',
+        GroundControl
+      );
+    }
+  };
+
+  static observedAttributes = [
+    'data-for', // <selector-list> of elements to update…
+    // by setting either…
+    'data-attr', // <attribute-name>
+    'data-prop', // <css-property-name>
+    // and optionally storing the value for later…
+    'data-local', // <localStorage key>
+    'data-session', // <sessionStorage key>
+    // override event listeners (mainly for inputs)
+    'data-event',
+    // provide an 'off' value (mainly for toggles)
+    'data-off',
+  ];
+
+  static _appendShadowTemplate = (node) => {
+    const template = document.createElement('template');
+    const shadowRoot = node.attachShadow({ mode: 'open' });
+    template.innerHTML = `<slot></slot>`;
+    shadowRoot.appendChild(template.content.cloneNode(true));
+  };
+
+  static _adoptShadowStyles = (node) => {
+    const shadowStyle = new CSSStyleSheet();
+    shadowStyle.replaceSync(`:host { display: block }`);
+    node.shadowRoot.adoptedStyleSheets = [shadowStyle];
+  };
+
+  static blockDisplay = (node) => {
+    GroundControl._appendShadowTemplate(node);
+    GroundControl._adoptShadowStyles(node);
+  };
+
+  #related = {};
+  #inputId;
+  #currentValue;
+  hasInput;
+  initialValue;
+
+  constructor() {
+    super();
+  };
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    if (newValue === oldValue) return;
+
+    switch (name) {
+      case 'data-for':
+        this.targets = newValue;
+        break;
+      case 'data-local':
+        localStorage.removeItem(oldValue);
+        break;
+      case 'data-session':
+        sessionStorage.removeItem(oldValue);
+        break;
+      case 'data-event':
+        if (this.onEventChange) this.onEventChange();
+        break;
+    }
+    this.broadCast();
+  };
+
+  connectedCallback() {
+    this.targets = this.dataset.for;
+  };
+
+  disconnectedCallback() {
+    this.#removeResetListener();
+  };
+
+  // getters and setters
+  set value(newValue) {
+    this.#currentValue = newValue;
+    if (this.onValueChange) this.onValueChange();
+    this.broadCast();
+  };
+
+  get value() { return this.#currentValue; }
+  get usedValue() { return this.value || this.dataset.off; }
+
+  set inputId(value) {
+    this.#inputId = value;
+
+    this.#removeResetListener();
+    this.#related.resets = this.#findAll(
+      `button[data-reset~=${value}]`
+    );
+    this.#addResetListener();
+
+    this.#related.displays = this.#findAll(
+      `output[for=${value}]`
+    );
+  };
+
+  get inputId() { return this.#inputId; }
+
+  set targets(to) {
+    this.#related.targets = (to && typeof to === 'object')
+      ? to
+      : this.#findAll(to || ':root');
+  };
+
+  get targets() { return this.#related.targets || []; }
+  get displays() { return this.#related.displays || []; }
+
+  get storedValue() {
+    return sessionStorage.getItem(this.dataset.session)
+      || localStorage.getItem(this.dataset.local);
+  };
+
+  set storedValue(value) {
+    const clearWhen = [
+      this.initialValue,
+      undefined, 'undefined',
+    ];
+
+    this.#updateStorage(clearWhen.includes(value));
+  };
+
+  // public methods
+  onValueChange;
+  onEventChange;
+
+  onReset = () => {
+    this.value = this.initialValue;
+  };
+
+  broadCast = () => {
+    if (!this.hasInput) { return; }
+    this.storedValue = this.value;
+
+    this.targets.forEach((el) => {
+      if (this.dataset.prop) {
+        if (this.usedValue) {
+          el.style.setProperty(this.dataset.prop, this.usedValue);
+        } else {
+          el.style.removeProperty(this.dataset.prop);
+        }
+      }
+      if (this.dataset.attr) {
+        if (this.usedValue) {
+          el.setAttribute(this.dataset.attr, this.usedValue);
+        } else {
+          el.removeAttribute(this.dataset.attr);
+        }
+      }
+    });
+
+    this.displays.forEach((el) => {
+      el.value = this.usedValue;
+    });
+  };
+
+  #updateStorage = (clear) => {
+    if (this.dataset.local) {
+      clear
+        ? localStorage.removeItem(this.dataset.local)
+        : localStorage.setItem(this.dataset.local, this.value);
+    }
+
+    if (this.dataset.session) {
+      clear
+        ? sessionStorage.removeItem(this.dataset.session)
+        : sessionStorage.setItem(this.dataset.session, this.value);
+    }
+  };
+
+  // private methods
+  #findAll = (selector) => [
+    ...document.querySelectorAll(selector)
+  ];
+
+  #addResetListener = () => {
+    this.#related.resets.forEach((resetBtn) => {
+      resetBtn.addEventListener('click', this.onReset);
+    });
+  };
+
+  #removeResetListener = () => {
+    if (!this.#related.resets) { return; }
+
+    this.#related.resets.forEach((resetBtn) => {
+      resetBtn.removeEventListener('click', this.onReset);
+    });
+  };
+}
+class SwitchControl extends GroundControl {
+  static register(tagName) {
+    if ("customElements" in window) {
+      customElements.define(tagName || "switch-control", SwitchControl);
+    }
+  };
+
+  static observedAttributes = [
+    ...super.observedAttributes,
+    'data-on',
+    'data-id',
+  ];
+
+  #toggle;
+  target;
+
+  onPress;
+  onUnPress;
+
+  get toggle() { return this.#toggle; };
+
+  set toggle(el) {
+    if (!el) throw 'A toggle is required';
+    if (el.tagName !== 'BUTTON') throw 'The toggle must be a button';
+    if (this.#toggle) this.#removeToggleListener(this.#toggle);
+
+    el.setAttribute('type', 'button');
+    if (!el.hasAttribute('aria-pressed')) {
+      el.setAttribute('aria-pressed', 'false');
+    }
+
+    this.#toggle = el;
+
+    if (!this.dataset.on) {
+      this.dataset.on = el.dataset.value || el.innerText;
+    }
+
+    this.initialValue = this.pressedValue;
+
+    this.#addToggleListener(el);
+    if (el.id) this.inputId = el.id;
+    this.hasInput = true;
+  };
+
+  get pressed() {
+    return this.toggle.getAttribute('aria-pressed') === 'true';
+  };
+
+  set pressed(to) {
+    this.toggle.setAttribute('aria-pressed', to ? 'true' : 'false');
+  };
+
+  get pressedValue() {
+    return this.pressed
+      ? this.dataset.on
+      : this.dataset.off || 'false';
+  };
+
+  constructor() {
+    super();
+  };
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    super.attributeChangedCallback(name, oldValue, newValue);
+
+    switch (name) {
+      case 'data-id':
+        this.#findToggle();
+        break;
+    }
+
+    this.doToggleActions();
+  };
+
+  connectedCallback() {
+    super.connectedCallback();
+    this.#findToggle();
+
+    if (this.storedValue) {
+      this.pressed = this.#isPressedValue(this.storedValue);
+    }
+
+    this.doToggleActions();
+  };
+
+  disconnectedCallback() {
+    this.#removeToggleListener(this.toggle);
+  };
+
+  onTogglePress = () => {
+    this.pressed = !this.pressed;
+    this.doToggleActions();
+  };
+
+  doToggleActions = () => {
+    if (!this.toggle) return;
+
+    this.value = this.pressedValue;
+
+    if (this.pressed && this.onPress) this.onPress();
+    if (!this.pressed && this.onUnPress) this.onUnPress();
+  };
+
+  onValueChange = () => {
+    if (this.usedValue !== this.pressedValue) {
+      this.pressed = this.#isPressedValue(this.usedValue);
+    }
+  };
+
+  onReset = () => {
+    this.pressed = this.#isPressedValue(this.initialValue);
+    this.doToggleActions();
+  };
+
+  #isPressedValue = (value) => this.dataset.on === value;
+
+  #findToggle = () => {
+    const foundToggle = this.dataset.id
+      ? this.querySelector(`button[id='${this.dataset.id}']`)
+      : this.querySelector('button');
+
+    this.toggle = foundToggle;
+  };
+
+  #addToggleListener = (el) => {
+    el.addEventListener('click', this.onTogglePress);
+  };
+
+  #removeToggleListener = (el) => {
+    el.removeEventListener('click', this.onTogglePress);
+  };
+}
+
+SwitchControl.register();
+class CSSToggle extends SwitchControl {
+  static register(tagName) {
+    if ('customElements' in window) {
+      customElements.define(tagName || 'css-toggle', CSSToggle);
+    }
+  };
+
+  set CSS(enable) {
+    const embed = document.querySelectorAll('style');
+    const link = document.querySelectorAll('link[rel=stylesheet]');
+    const styles = [...embed, ...link];
+
+    styles.forEach((sheet) => sheet.disabled = !enable);
+  };
+
+  constructor() {
+    super();
+    GroundControl.blockDisplay(this);
+    this.onPress = () => this.CSS = true;
+    this.onUnPress = () => this.CSS = false;
+  };
+
+  connectedCallback() {
+    this.#findToggle();
+
+    if (this.storedValue) {
+      this.pressed = this.#isPressedValue(this.storedValue);
+    }
+
+    this.doToggleActions();
+  };
+
+  #isPressedValue = (value) => this.dataset.on === value;
+
+  #findToggle = () => {
+    const foundToggle = this.dataset.id
+      ? this.querySelector(`button[id='${this.dataset.id}']`)
+      : this.querySelector('button');
+
+    this.toggle = foundToggle;
+  };
+}
+
+CSSToggle.register();
+class ToggleControl extends GroundControl {
+  static register(tagName) {
+    if ('customElements' in window) {
+      customElements.define(
+        tagName || 'toggle-control',
+        ToggleControl
+      );
+    }
+  };
+
+  toggles = [];
+
+  set pressed(target) {
+    this.toggles.forEach((btn) => {
+      btn.setAttribute(
+        'aria-pressed',
+        target === btn ? 'true' : 'false'
+      );
+    });
+  };
+
+  get pressed() {
+    return this.toggles.find(
+      (btn) => btn.getAttribute('aria-pressed') === 'true'
+    );
+  };
+
+  get pressedValue() {
+    return this.pressed?.dataset.value;
+  };
+
+  constructor() {
+    super();
+    GroundControl.blockDisplay(this);
+    this.addEventListener('click', this.onTogglePress);
+  };
+
+  connectedCallback() {
+    super.connectedCallback();
+    if (this.id) this.inputId = this.id;
+
+    this.toggles = this.#findToggles();
+
+    if (!this.toggles) {
+      console.error('No toggle buttons found for toggle-control');
+      return;
+    }
+
+    this.hasInput = true;
+
+    this.toggles.forEach((btn) => {
+      btn.setAttribute('type', 'button');
+
+      if (!btn.dataset.value) {
+        btn.dataset.value = btn.innerText;
+      }
+    });
+
+    this.pressed = this.pressed;
+    this.initialValue = this.pressedValue || this.dataset.off;
+
+    this.value = this.storedValue || this.initialValue;
+  };
+
+  onTogglePress = (event) => {
+    this.doPress(event.target);
+    this.value = this.pressedValue;
+  };
+
+  onValueChange = () => {
+    if (this.usedValue !== this.pressedValue) {
+      this.pressed = this.#toggleFromValue();
+    }
+  };
+
+  doPress = (target) => {
+    if (!this.toggles.includes(target)) return;
+
+    const isUnPress = this.pressed === target;
+    const allowUnPress = this.dataset.off || this.toggles.length === 1;
+
+    if (isUnPress && allowUnPress) {
+      this.pressed = undefined;
+    } else {
+      this.pressed = target;
+    }
+  };
+
+  #toggleFromValue = () => this.toggles.find(
+    (btn) => btn.dataset.value === this.usedValue
+  );
+
+  #findToggles = () => [
+    ...this.querySelectorAll('button:not([for-reset])')
+  ];
+}
+
+ToggleControl.register();
+class InputControl extends GroundControl {
+  static register(tagName) {
+    if ('customElements' in window) {
+      customElements.define(
+        tagName || 'input-control',
+        InputControl
+      );
+    }
+  }
+
+  static rejectInputTypes = [
+    'file',
+    'submit', 'reset', 'button', 'image',
+    'checkbox', 'radio'
+  ];
+
+  #input;
+
+  constructor() {
+    super();
+    GroundControl.blockDisplay(this);
+
+    this.addEventListener('change', this.onInputChange);
+    this.addEventListener('input', this.onInputChange);
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+    this.#input = this.#findInput();
+
+    if (!this.#input) {
+      console.error('No input found for input-control');
+      return;
+    }
+
+    this.hasInput = true;
+    if (this.#input.id) this.inputId = this.#input.id;
+
+    this.initialValue = this.#input.value;
+    this.value = this.storedValue || this.initialValue;
+  }
+
+  onInputChange = (event) => {
+    const onType = this.dataset.event || 'change';
+    if (onType !== event.type) return;
+
+    this.value = this.#input.value;
+  }
+
+  onValueChange = () => {
+    this.#input.value = this.value;
+  }
+
+  #findInput = () => {
+    const inputSelect = InputControl.rejectInputTypes.reduce(
+      (all, type) => {
+        const item = `[type=${type}]`;
+        return all ? `${all}, ${item}` : item;
+      }
+    );
+
+    return this.querySelector(`select, input:not(${inputSelect})`);
+  }
+}
+
+InputControl.register();
+class DialogToggle extends HTMLElement {
+    static register(tagName) {
+      if ('customElements' in window) {
+        customElements.define(tagName || 'dialog-toggle', DialogToggle);
+      }
+    }
+
+    toggle;
+    target;
+
+    get expanded() {
+      return this.toggle.getAttribute('aria-expanded') === 'true';
+    };
+
+    set expanded(to) {
+      this.toggle.setAttribute('aria-expanded', to ? 'true' : 'false');
+
+      if (to) {
+        this.target.show();
+      } else if (this.target.open) {
+        this.target.close();
+      }
+    };
+
+    togglePress = () => {
+      this.expanded = !this.expanded;
+    }
+
+    #initialAttrs = () => {
+      if (!this.toggle.hasAttribute('aria-expanded')) {
+        this.expanded = this.target.getAttribute('open');
+      }
+    }
+
+    connectedCallback() {
+      this.toggle = this.querySelector(':scope > button');
+      this.target = document.getElementById(this.toggle.getAttribute('aria-controls'));
+
+      this.#initialAttrs();
+
+      this.toggle.addEventListener('click', this.togglePress);
+      this.target.addEventListener("close", () => this.expanded = false);
+    }
+
+    disconnectedCallback() {
+      this.toggle.removeEventListener('click', this.togglePress);
+    }
+  }
+
+  DialogToggle.register();</script>
+  
+
+</body>
+</html>

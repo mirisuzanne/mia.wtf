@@ -1,0 +1,132 @@
+@property --title-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: true;
+}
+
+@property --title-offset {
+  syntax: '<length-percentage>';
+  initial-value: 50%;
+  inherits: true;
+}
+
+/* headings */
+h1, h2, h3, h4, h5, h6 {
+  /* @include mixins.gradient-text; */
+  --link-color: currentColor;
+  text-wrap: balance;
+}
+
+h1,
+h2 {
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    background: var(
+      --text-gradient,
+      linear-gradient(var(--text-angle, to bottom right), var(--feature))
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    max-inline-size: max-content;
+  }
+}
+
+h1 {
+  --title-angle: -1deg;
+  --title-gap: 2%;
+  --title-offset: 33%;
+  --title-stops:
+    var(--accent) var(--title-offset),
+    transparent var(--title-offset) calc(var(--title-offset) + var(--title-gap)),
+    var(--complement) calc(var(--title-offset) + var(--title-gap))
+  ;
+  --text-gradient: linear-gradient(var(--title-angle), var(--title-stops));
+
+  font-size: var(--xlarge);
+  line-height: 1.2;
+  margin-block: 1.5rlh 0;
+  transition:
+    --title-angle ease-in 300ms,
+    --title-offset ease-out 300ms
+  ;
+
+  &:hover {
+    --title-angle: -3deg;
+    --title-offset: 40%;
+  }
+}
+
+h2 {
+  font-size: var(--large);
+  font-weight: normal;
+  margin-block: 1.5rlh 0.5rlh;
+}
+
+h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: normal;
+}
+
+h3 {
+  font-style: italic;
+}
+
+/* sectioning */
+
+nav {
+  display: flex;
+  flex-flow: wrap;
+  gap: var(--gap);
+}
+
+/* prose */
+ul,
+ol,
+p {
+  margin-block-start: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+li, p {
+  text-wrap: pretty;
+}
+
+li::marker {
+  color: var(--border);
+}
+
+dt {
+  font-variant: small-caps;
+
+  &::after { content: ' —'; }
+}
+
+dl {
+  margin-block-start: unset;
+}
+
+blockquote {
+  &::before {
+    content: open-quote;
+  }
+  &::after {
+    content: close-quote;
+  }
+}
+
+hr {
+  /* --column: full; */
+  border: unset;
+  border-block-end: medium dotted var(--border);
+  /* rotate: -3deg; */
+  margin-block: var(--gap);
+}
+
+::selection {
+  background: mediumvioletred;
+  color: white;
+}

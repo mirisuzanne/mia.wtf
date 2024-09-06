@@ -1,43 +1,51 @@
 <!DOCTYPE html>
-<html lang="en" :data-theme="theme || 'dark'">
+<html lang="en" :data-theme="theme.default || 'mia'">
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title @text="title || site.title"></title>
 
-    <script webc:if="!theme">
-      const THEME_KEY = 'theme';
-      const storedValue = localStorage.getItem(THEME_KEY);
+    <meta webc:is="site-styles" webc:nokeep>
+    <meta webc:is="color-scheme" webc:nokeep>
 
-      if (storedValue) {
-        document.documentElement.dataset[THEME_KEY] = storedValue;
-      }
-    </script>
-
-    <link rel="stylesheet"
-      webc:keep
-      :href="`${site.cssPath}${style || site.style}`"
-    >
-    <style @raw="getBundle('css')" webc:keep></style>
-
-    <meta webc:is="meta-icons" :@theme="theme">
-    <meta webc:is="open-graph" webc:if="!isOg"
+    <meta webc:nokeep webc:is="fav-icons" :@theme="theme">
+    <meta webc:nokeep webc:is="open-graph" webc:if="!isOg"
       :@page="page"
       :@site="site"
       :@og="og"
       :@desc="description || summary || site.description"
     >
+
+    <link
+      rel="preload"
+      href="/fonts/alegreya-latin-wght-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin>
   </head>
   <body>
+    <div skip-link><a href="#main">skip to content</a></div>
+
+    <style webc:bucket="layout">
+      [skip-link] {
+        background: var(--bg);
+        opacity: 0;
+        position: absolute;
+        translate: 0 -50%;
+        transition: opacity 150ms ease-out, translate 150ms ease-out;
+      }
+
+      [skip-link]:focus-within {
+        opacity: 1;
+        translate: 0 0;
+      }
+    </style>
+
     <template
-      @raw="content"
       webc:nokeep
+      @raw="this.content"
     ></template>
 
-    <script
-      @raw="getBundle('js')"
-      webc:keep
-    ></script>
+    <script webc:keep type="module" @raw="getBundle('js')"></script>
   </body>
 </html>

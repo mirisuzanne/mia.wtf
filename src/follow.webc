@@ -1,0 +1,12 @@
+---
+title: Follow This Website
+sub: All the feeds we can feed you
+---
+
+<a
+  :href="this.site.feed"
+  rel="alternate"
+>
+  <rss-fill></rss-fill>
+  <link-text>rss</link-text>
+</a>

@@ -1,0 +1,184 @@
+html {
+  --gap: clamp(12px, 10px + 2vi, 24px);
+  --shim: calc(var(--gap) / 2);
+  --double: calc(var(--gap) * 2);
+  --spacer: min(var(--double) + 3vi, var(--gap) * 5);
+
+  --bg: Canvas;
+  --text: CanvasText;
+  --accent: LinkText;
+  --accent-text: var(--bg);
+  --feature: ActiveText;
+  --border: gray;
+  --shadow: black;
+  --full-bg: var(--bg);
+  --mark: Highlight;
+
+  /* from https://modernfontstacks.com/ */
+  --fonts-serif--: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
+  --fonts-sans--:  system-ui, sans-serif;
+  --fonts-slab--: Rockwell, 'Rockwell Nova', 'Roboto Slab', 'DejaVu Serif', 'Sitka Small', serif;
+  --fonts-code--: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+
+  accent-color: var(--accent, accentColor);
+  background: var(--bg-texture, var(--bg));
+  background-blend-mode: var(--bg-blend, luminosity);
+  background-size: cover;
+  color: var(--text);
+  color-scheme: var(--color-scheme, light dark);
+  font-family: var(--body-font, revert);
+  font-variant-numeric: oldstyle-nums;
+  line-height: 1.5;
+}
+
+body {
+  font-size: max(1em, 0.9em + var(--fluid-scale, 0vi));
+  margin: 0;
+  padding: var(--gap, 12px);
+}
+
+header,
+footer,
+main,
+nav,
+aside,
+section,
+form {
+  margin-block: var(--gap, 1lh);
+  container: layout / inline-size;
+}
+
+main {
+  font-size-adjust: from-font;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--title-font, inherit);
+  font-weight: normal;
+  text-wrap: pretty;
+}
+
+h1,
+h2 {
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    background: var(
+      --text-gradient,
+      linear-gradient(
+        to bottom right,
+        var(--accent),
+        var(--feature)
+      )
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    max-inline-size: max-content;
+  }
+}
+
+[item-title] {
+  display: inline-block;
+  font-size: inherit;
+}
+
+ul, ol {
+  padding-inline: var(--list-indent, 2ch) 0;
+
+  @container (inline-size < calc(100vi - 6ch)) {
+    --list-indent: 0;
+  }
+
+  li & {
+    --list-indent: initial;
+  }
+}
+
+[role=list] {
+  --list-indent: 0;
+  list-style: none;
+}
+
+p, li {
+  hanging-punctuation: first last;
+  text-wrap: pretty;
+}
+
+pre, code, output, samp {
+  font-family: var(--code-font, var(--fonts-code--));
+}
+
+abbr, p-category, dt {
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.05em;
+}
+
+small {
+  font-style: italic;
+}
+
+d-i {
+  display: block;
+  margin-block: var(--gap);
+}
+
+dt::after {
+  content: ' –';
+}
+
+d-i dd {
+  margin-inline: unset;
+}
+
+hr {
+  margin-block: var(--spacer);
+}
+
+svg {
+  fill: currentColor;
+}
+
+[data-icon] {
+  block-size: auto;
+  inline-size: 1em;
+}
+
+emo-ji {
+  display: inline-block;
+  filter: drop-shadow(0 1px var(--shadow));
+  font-family: "Twemoji Mozilla", Apple Color Emoji, "Segoe UI Emoji", "Noto Color Emoji", "EmojiOne Color";
+  font-style: normal !important;
+  font-variant-caps: initial !important;
+}
+
+@container style(--italic) {
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    strong {
+      background: var(
+        --text-gradient,
+        linear-gradient(
+          to bottom right,
+          var(--accent),
+          var(--feature)
+        )
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      max-inline-size: max-content;
+    }
+  }
+
+  em {
+    background: linear-gradient(
+      100deg,
+      transparent calc(0.5ch - 1px),
+      var(--mark, var(--bg)) 0.5ch calc(100% - 0.2ch),
+      transparent calc(100% - 0.2ch + 1px)
+    ) bottom / 100% 1cap no-repeat;
+    text-shadow: 1px 1px 0 var(--bg);
+  }
+}
+
+p-note, p-role {
+  font-style: italic;
+}

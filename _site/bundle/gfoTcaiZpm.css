@@ -1,0 +1,12 @@
+org-item {
+    display: block;
+  }
+
+  org-item p {
+    font-style: italic;
+    margin: unset;
+  }
+org-list {
+    display: grid;
+    gap: var(--shim);
+  }

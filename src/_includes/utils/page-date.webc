@@ -25,7 +25,7 @@
 </script>
 
 <template webc:root>
-  <i webc:if="this.end === 'ongoing'">since</i>
+  <span webc:if="this.end === 'ongoing'">since</span>
   <date-time
     :@date="this.date"
     :@format="this.end

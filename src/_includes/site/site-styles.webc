@@ -1,0 +1,44 @@
+<!-- alternate styles -->
+<style
+  webc:keep
+  webc:if="$data.style"
+  @raw="$data.style"
+></style>
+
+<!-- default page styles/layers -->
+<template
+  webc:else
+  webc:nokeep
+>
+<style webc:keep>
+  @layer reset, default, tools, layout, objects, utility;
+</style>
+<style webc:keep data-layer="reset">
+  @import url('/css/reset.css') layer(reset);
+</style>
+<style webc:keep data-layer="default">
+  @import url('/css/default/base.css') layer(default);
+  @import url('/css/default/fonts.css') layer(default);
+  @import url('/css/default/theme.css') layer(default);
+  @import url('/css/default/buttons.css') layer(default);
+  @import url('/css/default/links.css') layer(default);
+  @import url('/css/default/dialog.css') layer(default);
+</style>
+</template>
+
+<!-- styles from includes -->
+<layer-bundle
+  webc:nokeep
+  layer="layout"
+></layer-bundle>
+<layer-bundle
+  webc:nokeep
+  layer="tools"
+></layer-bundle>
+<layer-bundle
+  webc:nokeep
+  layer="object"
+></layer-bundle>
+<layer-bundle
+  webc:nokeep
+></layer-bundle>

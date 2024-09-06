@@ -1,0 +1,18 @@
+#summary {
+    font-size: min(1.2em + 1vi, 1.75em);
+    font-style: italic;
+    max-inline-size: 22em;
+
+    code { font-style: normal; }
+  }
+
+  #summary,
+  #header {
+    margin-block: var(--spacer);
+  }
+#banner {
+    align-items: baseline;
+    display: flex;
+    gap: var(--gap);
+    justify-content: space-between;
+  }

@@ -1,0 +1,29 @@
+<script webc:setup>
+  const getProjects = (all, time) => {
+    let collect = (all || []).filter((page) => !page.data.draft);
+
+    if (time === 'current') {
+      collect = collect.filter(
+        (page) => page.data.end === 'ongoing' || page.data.end >= new Date()
+      );
+    } else if (time === 'past') {
+      collect = collect.filter(
+        (page) => page.data.end && page.data.end !== 'ongoing'
+      );
+    }
+
+    return collect.sort((a, b) => a.date - b.date);
+  }
+</script>
+
+<project-item
+  webc:for="project of getProjects(this.projects, this.time)"
+  :@project="project"
+></project-item>
+
+<style webc:bucket="object">
+  project-list {
+    display: grid;
+    gap: var(--gap);
+  }
+</style>

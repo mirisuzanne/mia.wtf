@@ -7,13 +7,13 @@ logo: w3c
 date: 2020-04-15
 index: org:csswg
 tags:
-  - area:code
+  - area:web
+  - as:standards
+  - role:invited-expert
   - org:oddbird
 summary: >
-  Cascading Styles allow
-  graphic design of often-unknown content
-  on an infinite and unknowable canvas
+  Styling _unknown content_
+  on an infinite and _unknowable canvas_ --
   across languages, operating systems,
   and device interfaces.
-  _This is absurd._
 ---

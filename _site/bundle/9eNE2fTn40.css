@@ -1,0 +1,7 @@
+#page-summary {
+    --column: wide;
+    font-style: italic;
+    font-size: min(1em + 1vi, 1.5em);
+
+    code { font-style: normal; }
+  }

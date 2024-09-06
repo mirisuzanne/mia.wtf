@@ -7,6 +7,7 @@ logo: sass
 date: 2017-07-05
 index: org:sass
 tags:
-  - area:code
+  - area:web
+  - as:open-source
   - org:oddbird
 ---

@@ -1,5 +1,12 @@
+<script webc:setup>
+  const formatText = (prefix, date, format) => {
+    const dateText = dateFormat(date, format);
+    return prefix ? `${mdI(prefix)} ${dateText}` : dateText;
+  }
+</script>
+
 <time
   :datetime="dateFormat(this.date, 'iso')"
-  @text="this.as || dateFormat(this.date, this.format)"
+  @text="this.as || formatText(this.prefix, this.date, this.format)"
   @attributes
 ></time>

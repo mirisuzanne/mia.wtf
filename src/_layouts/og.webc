@@ -1,9 +1,8 @@
 ---
 layout: base
 isOg: true
-style: 'social.css'
 hero:
-  src: _mia/bw.jpg
+  src: _mia/wtf.jpg
 ---
 
 <script webc:setup>

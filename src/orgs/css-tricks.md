@@ -8,7 +8,8 @@ date: 2016-10-15
 end: 2022-03-01
 index: org:css-tricks
 tags:
-  - area:code
-  - code:teaching
+  - area:web
+  - web:teaching
+  - as:publication
   - org:oddbird
 ---

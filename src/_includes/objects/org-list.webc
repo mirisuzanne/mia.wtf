@@ -1,5 +1,7 @@
 <script webc:setup>
-  const getOrgs = (all, time, founder) => {
+  const getOrgs = (time, founder) => {
+    const all = $data.collections['is:org'];
+
     let collect = founder
       ? all.filter((page) => {
         isFounder = hasTag(page, 'role:founder')
@@ -11,16 +13,24 @@
 
     if (time === 'current') {
       collect = collect.filter((page) => page.data.end === 'ongoing');
+    } else if (time === 'past') {
+      return collect.filter(
+        (page) => page.data.end && page.data.end !== 'ongoing'
+      ).sort((a, b) => b.data.end - a.data.end);
     }
 
     return collect.sort((a, b) => a.date - b.date);
   }
 </script>
 
-<template webc:root>
-  <org-item
-    webc:for="org of getOrgs(this.orgs, this.time, this.founder)"
-    :@heading-level="this.headingLevel || 3"
-    :@org="org"
-  ></org-item>
-</template>
+<org-item
+  webc:for="org of getOrgs(this.time, this.founder)"
+  :@org="org"
+></org-item>
+
+<style webc:bucket="object">
+  org-list {
+    display: grid;
+    gap: var(--gap);
+  }
+</style>

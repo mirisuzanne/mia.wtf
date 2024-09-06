@@ -1,0 +1,16 @@
+<h1
+  id="title"
+  @html="mdI(this.title)"
+></h1>
+
+<sub-title
+  webc:if="this.subtitle"
+><roll-if
+  :@content="this.subtitle"
+></roll-if></sub-title>
+
+<style webc:bucket="layout">
+  sub-title {
+    font-style: italic;
+  }
+</style>

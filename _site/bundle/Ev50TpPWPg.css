@@ -1,0 +1,9 @@
+[skip-link] {
+        position: absolute;
+        translate: 0 -100%;
+        transition: translate 150ms ease-out;
+      }
+
+      [skip-link]:focus-within {
+        translate: 0 0;
+      }

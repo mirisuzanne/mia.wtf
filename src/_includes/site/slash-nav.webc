@@ -1,0 +1,30 @@
+<nav>
+  <ul role="list">
+    <li>
+      <a
+        href="/"
+        :aria-current="$data.page.url === `/` ? 'page' : false"
+        rel="home"
+      >(home)</a>
+    </li>
+    <li webc:for="item of $data.slash">
+      <a
+        :href="`/${item}/`"
+        :aria-current="$data.page.url === `/${item}/` ? 'page' : false"
+        @text="`/${item}`"
+      ></a>
+    </li>
+  </ul>
+</nav>
+
+<style>
+  slash-nav {
+    display: block;
+  }
+
+  slash-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 2ch;
+  }
+</style>

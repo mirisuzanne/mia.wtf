@@ -1,0 +1,3 @@
+default: mia
+light: '#f4f0f2'
+dark: '#a71f63'

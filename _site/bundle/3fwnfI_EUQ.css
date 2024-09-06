@@ -1,0 +1,15 @@
+org-item {
+    display: block;
+  }
+
+  org-item h3 {
+    display: inline-block;
+  }
+
+  org-item > * {
+    margin: unset;
+  }
+org-list {
+    display: grid;
+    gap: var(--gap);
+  }

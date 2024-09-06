@@ -2,40 +2,69 @@
 layout: base
 ---
 
-<div id="topbar" data-layout>
-  <header>
-    <theme-toggle></theme-toggle>
+<dialog
+  in-flow
+  line-length="wide"
+  id="theme-controls"
+>
+  <form method="dialog">
+    <button>
+      <close-line></close-line>
+      <btn-text>close</btn-text>
+    </button>
+  </form>
+  <theme-controls></theme-controls>
+</dialog>
 
-    <tag-nav
-      webc:keep
-      :@tags="tags"
-      :@collections="collections"
+<header id="banner" line-length>
+  <a
+    href="/"
+    rel="home"
+    :aria-current="this.page.url === '/' ? 'page' : false"
+  >mia</a>
+  <dialog-toggle>
+    <button
+      aria-controls="theme-controls"
+      data-btn="emoji"
     >
-      <a
-        webc:if="page.url == '/'"
-        :href="site.feed"
-        rel="alternate"
-      >📡 <i>rss</i></a>
-      <a
-        webc:else
-        href="/"
-        rel="home"
-      >👩🏼‍🎤 <i @text="site.home"></i></a>
-    </tag-nav>
-  </header>
-</div>
+      <paint-fill></paint-fill>
+      <visually-hidden>style</visually-hidden>
+    </button>
+  </dialog-toggle>
+</header>
 
 <main
   id="main"
-  data-layout
+  tabindex="-1"
   @raw="content"
 ></main>
 
-<site-footer
-  webc:keep
-  id="content-info"
-  data-layout
-  :@site="site"
-  :@og-src="ogSrc"
-></site-footer>
+<slash-nav line-length></slash-nav>
 
+<footer id="content-info" line-length>
+  <p>
+    &copy;
+    <em @text="$data.site.author"></em>,
+    <time @text="year()"></time>
+  </p>
+
+  <a webc:if="$data.ogSrc" :href="$data.ogSrc">(social image)</a>
+</footer>
+
+<style webc:bucket="layout">
+  #banner {
+    align-items: baseline;
+    display: flex;
+    gap: var(--gap);
+    justify-content: space-between;
+  }
+
+  [line-length] {
+    margin-inline: auto;
+    max-inline-size: var(--line-length, 26em);
+  }
+
+  [line-length=wide] {
+    --line-length: 32em;
+  }
+</style>

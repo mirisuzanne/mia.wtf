@@ -1,0 +1,14 @@
+---
+order: 1
+title: Web Code
+area: web
+index: area:web
+permalink: '/web/index.html'
+eleventyImport:
+  collections: ["area:web"]
+summary: >
+  You're looking at it.
+  _The web_.
+  I made this small part of it,
+  where you are now.
+---
