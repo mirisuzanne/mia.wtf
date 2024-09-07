@@ -5,10 +5,10 @@ const ogImage = (image, url) => {
     return `/img/_og/${image}`;
   }
 
-  const api = 'https://screenshot-api.miriam.codes/';
+  const api = 'https://v1.screenshot.11ty.dev/';
   const baseUrl = process.env.URL || 'https://miriamsuzanne.com';
   const encoded = encodeURIComponent(`${baseUrl}${url}`);
-  return `${api}${encoded}/_og/`;
+  return `${api}${encoded}/opengraph/`;
 }
 
 export default function (eleventyConfig) {
