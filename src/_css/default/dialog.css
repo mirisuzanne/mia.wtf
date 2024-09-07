@@ -35,5 +35,7 @@ dialog[in-flow] {
 }
 
 form[method=dialog] {
-  margin-block-start: unset;
+  container: unset;
+  float: right;
+  margin: 0 0 var(--shim) var(--shim);
 }

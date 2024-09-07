@@ -1,0 +1,7 @@
+<style webc:bucket="object">
+  media-gallery {
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  }
+</style>

@@ -1,6 +1,7 @@
 ---
 layout: base
 isOg: true
+noStyle: true
 hero:
   src: _mia/wtf.jpg
 ---
@@ -25,21 +26,72 @@ hero:
   webc:is="u-img"
   :src="pageHero(source).src"
   :alt="pageHero(source).alt || ''"
-  sizes="hero">
+  sizes="og">
 
 <header>
-  <h1><span @html="mdI(source.data.title)"></span></h1>
+  <h1><inline-text @html="mdI(source.data.title)"></inline-text></h1>
   <h2 webc:if="subTitle(source)">
-    <span>//</span>
-    <span @html="mdI(subTitle(source))"></span>
+    <inline-text @html="mdI(subTitle(source))"></inline-text>
   </h2>
-  <page-date
-    webc:if="source.data.is !== 'list'"
-    :@date="source.date"
-    :@end="source.data.end"
-  ></page-date>
 </header>
 
 <footer>
-  <a :href="source.url">MiriamSuzanne.com</a>
+  <inline-text><a :href="source.url">MiriamSuzanne.com</a></inline-text>
 </footer>
+
+<style>
+  @layer reset, default, tools, layout, object, utility;
+  @import url('/css/reset.css') layer(reset);
+  @import url('/css/default/base.css') layer(default);
+
+  @font-face {
+    font-family: 'Alegreya Variable';
+    font-style: normal;
+    font-display: fallback;
+    font-weight: 400 900;
+    src: url(/fonts/alegreya-latin-wght-normal.woff2) format('woff2-variations');
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+  }
+
+  html {
+    --fonts-serif: 'Alegreya Variable', var(--fonts-serif--);
+    --body-font: var(--fonts-serif);
+    width: 1200px;
+    height: 630px;
+    font-size: 38px;
+  }
+
+  body {
+    height: 100%;
+    display: grid;
+    grid-template: 'header' 1fr 'footer' auto / 100%;
+  }
+
+  img {
+    grid-area: 1 / 1 / -1 / -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  header {
+    grid-area: header;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+
+  h2 {
+    font-style: italic;
+  }
+
+  inline-text {
+    background-color: mediumVioletRed;
+  }
+
+  a {
+    text-decoration: none;
+    color: unset;
+  }
+</style>

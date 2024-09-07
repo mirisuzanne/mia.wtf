@@ -1,0 +1,30 @@
+<dl>
+  <d-i webc:for="(item, value) in $data.me">
+    <dt @text="item"></dt>
+    <dd>
+      <a
+        webc:if="value.url"
+        :href="value.url"
+        @text="value.name"
+      ></a>
+      <clip-board
+        webc:else
+      ><span @text="value.name"></span></clip-board>
+    </dd>
+  </d-i>
+</dl>
+
+<style webc:bucket="object">
+  rel-me {
+    display: block;
+    font-family: var(--ui-font);
+
+    :is(d-i) {
+      margin: unset;
+    }
+
+    :is(dt, dd) {
+      display: inline;
+    }
+  }
+</style>

@@ -25,6 +25,7 @@ html {
   --body-font: var(--fonts-serif, var(--fonts-serif--));
   --title-font: var(--fonts-serif, var(--fonts-serif--));
   --code-font: var(--fonts-code, var(--fonts-code--));
+  --ui-font: var(--fonts-sans, var(--fonts-sans--));
   --theme-texture:
     var(--bg-gradient),
     url('/img/_site/paint.jpg') no-repeat fixed
@@ -44,24 +45,42 @@ html {
       light-dark(oklch(1 0 none), oklch(0 0.2 none)) 75%
     );
   }
+
+  :is(h1, h2) {
+    @supports (background-clip: text) {
+      background: var(
+        --text-gradient,
+        linear-gradient(
+          to bottom right,
+          var(--accent),
+          var(--feature)
+        )
+      );
+      background-clip: text;
+      color: transparent;
+      max-inline-size: max-content;
+    }
+  }
 }
 
-[data-theme=tech] {
+[data-theme=terminal] {
   --line-length: 30em;
   --body-font: var(--fonts-code, var(--fonts-code--));
   --title-font: var(--fonts-code, var(--fonts-code--));
   --code-font: var(--fonts-code, var(--fonts-code--));
-  --theme-texture:
-    repeating-linear-gradient(
-      to bottom,
-      #2822 0 1px,
-      transparent 1px 1em
-    ) no-repeat fixed,
-    var(--bg-gradient)
-  ;
-  --bg-blend: normal;
+  --ui-font: var(--fonts-code, var(--fonts-code--));
 
   @supports (fill: light-dark(red, red)) {
+    --theme-texture:
+      repeating-linear-gradient(
+        to bottom,
+        light-dark(#3C31, #2822) 0 1px,
+        transparent 1px 1cap
+      ) no-repeat fixed,
+      var(--bg-gradient)
+    ;
+    --bg-blend: normal;
+
     --bg: light-dark(
       color-mix(in oklch, forestGreen, oklch(1 0 none) 90%),
       color-mix(in oklch, darkGreen, oklch(0 0 none) 65%)
@@ -72,4 +91,52 @@ html {
     --border: var(--text);
     --mark: var(--bg);
   }
+
+  :is(h1, h2, h3, h4, h5, h6) {
+    font-size: inherit;
+    font-weight: bold;
+  }
+
+  :is(h1, h2) {
+    text-transform: uppercase;
+  }
+}
+
+[data-theme=copier] {
+  --line-length: 30em;
+  --body-font: var(--fonts-sans, var(--fonts-sans--));
+  --title-font: var(--fonts-sans, var(--fonts-sans--));
+  --code-font: var(--fonts-code, var(--fonts-code--));
+  --ui-font: var(--fonts-sans, var(--fonts-sans--));
+
+  @supports (fill: light-dark(red, red)) {
+    --theme-texture:
+      linear-gradient(
+        to bottom right,
+        var(--bg),
+        color-mix(in lch, var(--full-bg), lch(none none none / 0.6))
+      ) no-repeat fixed,
+      url('/img/_site/photocopy.jpg') no-repeat fixed
+    ;
+    --bg-blend: normal;
+
+    --bg: light-dark(#eee, #111);
+    --accent: var(--text);
+    --text: light-dark(black, white);
+    --feature: var(--accent);
+    --border: var(--text);
+    --mark: var(--bg);
+  }
+
+  :is(h1, h2, h3, h4, h5, h6) {
+    --accent: var(--bg);
+    --border: var(--bg);
+    --feature: var(--bg);
+    --mark: var(--text);
+    background: var(--text);
+    color: var(--bg);
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
 }

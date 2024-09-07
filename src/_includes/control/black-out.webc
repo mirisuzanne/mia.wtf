@@ -6,7 +6,7 @@
 <style webc:bucket="object">
 #main {
   &[data-erase=erase] { visibility: hidden; }
-  black-out, mark { visibility: visible; }
+  black-out, mark, hr { visibility: visible; }
   mark {
     background-color: unset;
     color: unset;

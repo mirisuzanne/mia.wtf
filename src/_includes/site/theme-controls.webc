@@ -23,7 +23,8 @@
 >
   <button>browser</button>
   <button aria-pressed="true">mia</button>
-  <button>tech</button>
+  <button>terminal</button>
+  <button>copier</button>
 </toggle-control>
 
 <control-label>Light/Dark</control-label>

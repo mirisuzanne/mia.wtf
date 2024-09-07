@@ -32,3 +32,10 @@ Here are some things that other people built
   [Alegreya Sans](https://www.huertatipografica.com/en/fonts/alegreya-sans-ht),
   & [Victor Mono](https://rubjo.github.io/victor-mono/) variable
   fonts (by way of [Fontsource](https://fontsource.org/))
+
+Gosh it was hard to pick my fonts.
+have you seen [Volume TC](https://tomchalky.com/product/volume-handcrafted-trio-font-family/)
+and all the other good fonts by Tom Chalky?
+That was my runner up.
+I'm a sucker for old style serifs,
+and a hand-drawn feel.

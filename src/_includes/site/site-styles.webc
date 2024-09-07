@@ -1,17 +1,10 @@
-<!-- alternate styles -->
-<style
-  webc:keep
-  webc:if="$data.style"
-  @raw="$data.style"
-></style>
-
 <!-- default page styles/layers -->
 <template
-  webc:else
+  webc:if="!$data.noStyle"
   webc:nokeep
 >
 <style webc:keep>
-  @layer reset, default, tools, layout, objects, utility;
+  @layer reset, default, tools, layout, object, utility;
 </style>
 <style webc:keep data-layer="reset">
   @import url('/css/reset.css') layer(reset);
@@ -29,11 +22,11 @@
 <!-- styles from includes -->
 <layer-bundle
   webc:nokeep
-  layer="layout"
+  layer="tools"
 ></layer-bundle>
 <layer-bundle
   webc:nokeep
-  layer="tools"
+  layer="layout"
 ></layer-bundle>
 <layer-bundle
   webc:nokeep

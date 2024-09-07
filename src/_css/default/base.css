@@ -20,13 +20,15 @@ html {
   --fonts-slab--: Rockwell, 'Rockwell Nova', 'Roboto Slab', 'DejaVu Serif', 'Sitka Small', serif;
   --fonts-code--: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
 
+  --emoji-font: 'Twemoji Mozilla', Apple Color Emoji, 'Segoe UI Emoji', 'Noto Color Emoji', 'EmojiOne Color';
+
   accent-color: var(--accent, accentColor);
   background: var(--bg-texture, var(--bg));
   background-blend-mode: var(--bg-blend, luminosity);
   background-size: cover;
   color: var(--text);
   color-scheme: var(--color-scheme, light dark);
-  font-family: var(--body-font, revert);
+  font-family: var(--body-font, unset);
   font-variant-numeric: oldstyle-nums;
   line-height: 1.5;
 }
@@ -53,32 +55,27 @@ main {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--title-font, inherit);
+  font-family: var(--title-font, unset);
   font-weight: normal;
   text-wrap: pretty;
-}
-
-h1,
-h2 {
-  @supports (background-clip: text) or (-webkit-background-clip: text) {
-    background: var(
-      --text-gradient,
-      linear-gradient(
-        to bottom right,
-        var(--accent),
-        var(--feature)
-      )
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    max-inline-size: max-content;
-  }
 }
 
 [item-title] {
   display: inline-block;
   font-size: inherit;
+}
+
+d-i {
+  display: block;
+  margin-block: var(--shim);
+}
+
+dt::after {
+  content: ' – ';
+}
+
+d-i dd {
+  margin-inline: unset;
 }
 
 ul, ol {
@@ -88,7 +85,7 @@ ul, ol {
     --list-indent: 0;
   }
 
-  li & {
+  :is(li) & {
     --list-indent: initial;
   }
 }
@@ -104,7 +101,7 @@ p, li {
 }
 
 pre, code, output, samp {
-  font-family: var(--code-font, var(--fonts-code--));
+  font-family: var(--code-font, revert);
 }
 
 abbr, p-category, dt {
@@ -112,25 +109,31 @@ abbr, p-category, dt {
   letter-spacing: 0.05em;
 }
 
-small {
-  font-style: italic;
-}
-
-d-i {
-  display: block;
-  margin-block: var(--gap);
-}
-
-dt::after {
-  content: ' –';
-}
-
-d-i dd {
-  margin-inline: unset;
+table {
+  font-variant-numeric: tabular-nums;
 }
 
 hr {
+  border-block-start: thin dotted var(--border);
   margin-block: var(--spacer);
+
+  #content & {
+    border: unset;
+    color: var(--border);
+    font-family: var(--ui-font, unset);
+    text-align: center;
+
+    &::before {
+      content: '~ & & & ~';
+      content: '~ & & & ~' / '';
+    }
+  }
+}
+
+caption,
+figcaption,
+small {
+  font-family: var(--ui-font, unset);
 }
 
 svg {
@@ -145,10 +148,9 @@ svg {
 
 emo-ji {
   display: inline-block;
-  filter: drop-shadow(0 1px var(--shadow));
-  font-family: "Twemoji Mozilla", Apple Color Emoji, "Segoe UI Emoji", "Noto Color Emoji", "EmojiOne Color";
-  font-style: normal !important;
-  font-variant-caps: initial !important;
+  filter: drop-shadow(1px 1px 0 var(--full-bg, Canvas));
+  font-family: var(--emoji-font);
+  font-synthesis: none;
 }
 
 @container style(--italic) {

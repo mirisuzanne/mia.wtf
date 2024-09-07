@@ -1,0 +1,107 @@
+<style web:bucket="tools">
+  clip-board::part(button) {
+    filter: drop-shadow(1px 1px 0 var(--full-bg, Canvas));
+    font-family: var(--emoji-font);
+    font-synthesis: none;
+  }
+</style>
+
+<script type="module">
+class ClipBoard extends HTMLElement {
+  static register(tagName) {
+    if ("customElements" in window) {
+      customElements.define(tagName || "clip-board", ClipBoard);
+    }
+  }
+
+  // static observedAttributes = [];
+
+  #btn;
+  #text;
+
+  static #appendShadowTemplate = (node) => {
+    const template = document.createElement("template");
+    template.innerHTML = `
+      <span part="content"><slot></slot></span>
+      <button part="button" id="copy-button">
+        <span sr-only>Copy to clipboard</span>
+      </button>
+    `;
+    const shadowRoot = node.attachShadow({ mode: "open" });
+    shadowRoot.appendChild(template.content.cloneNode(true));
+  }
+
+  static #adoptShadowStyles = (node) => {
+    const shadowStyle = new CSSStyleSheet();
+    shadowStyle.replaceSync(`
+      [part=content] {
+        user-select: all;
+      }
+      [part=button] {
+        font: inherit;
+        background: transparent;
+        border: none;
+        border-radius: 2px;
+        padding-inline: 0.4ch;
+
+        &::before {
+          content: var(--cb-copy-success, ' 📋 ');
+        }
+
+        &[copy-success] {
+          --cb-copy-success: ' ✅ ';
+        }
+      }
+
+      [sr-only] {
+        border: 0 !important;
+        clip: rect(1px, 1px, 1px, 1px) !important;
+        -webkit-clip-path: inset(50%) !important;
+        clip-path: inset(50%) !important;
+        height: 1px !important;
+        overflow: hidden !important;
+        margin: -1px !important;
+        padding: 0 !important;
+        position: absolute !important;
+        width: 1px !important;
+        white-space: nowrap !important;
+      }
+    `);
+    node.shadowRoot.adoptedStyleSheets = [shadowStyle];
+  }
+
+  constructor() {
+    super();
+    ClipBoard.#appendShadowTemplate(this);
+    ClipBoard.#adoptShadowStyles(this);
+  }
+
+  attributeChangedCallback() {
+  }
+
+  connectedCallback() {
+    this.#text = this.innerText;
+    this.#btn = this.shadowRoot.getElementById('copy-button');
+
+    this.#btn.addEventListener('click', (e) => this.#setClipboard());
+    this.#btn.addEventListener('blur', (e) => this.#blurAfterCopy());
+  }
+
+  disconnectedCallback() {
+    this.#btn.removeEventListener('click', (e) => this.#setClipboard());
+    this.#btn.removeEventListener('blur', (e) => this.#blurAfterCopy());
+  }
+
+  #setClipboard = async (text) => {
+    const type = "text/plain";
+    const blob = new Blob([text || this.#text], { type });
+    const data = [new ClipboardItem({ [type]: blob })];
+    await navigator.clipboard.write(data);
+    this.#btn.toggleAttribute('copy-success', true);
+  }
+
+  #blurAfterCopy = () => this.#btn.removeAttribute('copy-success');
+}
+
+ClipBoard.register();
+</script>

@@ -8,3 +8,4 @@ sizes:
   hero: '(min-width: 75em) 75vw, 95vw'
   gallery: '(min-width: 65em) 30vw, (min-width: 30em) 45vw, 95vw'
   media: '(min-width: 65em) 15vw, (min-width: 30em) 30vw, 50vw'
+  og: '1200px'

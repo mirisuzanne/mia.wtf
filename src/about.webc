@@ -6,7 +6,7 @@ summary: >
   Miriam is a human person
   with skin that covers a wide array of emotions.
   She wrote this in _third person_, _past-tense_,
-  but now regrets those decisions.
+  but regrets that as an aesthetic choice.
 bios:
   intro: >
     Miriam is a cross-media artist
@@ -83,11 +83,16 @@ photos:
   <figcaption>
     For speaking gigs, etc…
   </figcaption>
-  <img
-    webc:for="item of photos"
-    webc:is="u-img"
-    :src="item.src"
-    :alt="item.alt">
+  <media-gallery>
+    <a
+      webc:for="item of photos"
+      :href="imgSrc(item.src)"
+    ><img
+      webc:is="u-img"
+      :src="item.src"
+      :alt="item.alt"
+      sizes="gallery"></a>
+  </media-gallery>
 </figure>
 
 <h2>Past Teams</h2>

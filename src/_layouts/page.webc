@@ -46,10 +46,13 @@ layout: base
 <footer id="content-info" line-length>
   <p>
     &copy;
-    <em @text="$data.site.author"></em>,
+    <span @text="$data.site.author"></span>,
     <time @text="year()"></time>
   </p>
 
+  <rel-me></rel-me>
+
+  <em>protect trans kids</em>
   <a webc:if="$data.ogSrc" :href="$data.ogSrc">(social image)</a>
 </footer>
 

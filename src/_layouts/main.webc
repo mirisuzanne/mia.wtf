@@ -44,7 +44,6 @@ layout: page
   }
 
   hr[aria-hidden=true] {
-    border-block-start: thin dotted var(--border);
     border-image: linear-gradient(
       to right,
       transparent,

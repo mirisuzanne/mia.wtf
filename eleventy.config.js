@@ -2,9 +2,9 @@ import 'dotenv/config';
 
 // External Plugins
 import { EleventyRenderPlugin } from '@11ty/eleventy';
-import pluginWebc from "@11ty/eleventy-plugin-webc";
+import pluginWebc from '@11ty/eleventy-plugin-webc';
 import { eleventyImagePlugin } from '@11ty/eleventy-img';
-import pluginRss, { absoluteUrl } from "@11ty/eleventy-plugin-rss";
+import pluginRss, { absoluteUrl } from '@11ty/eleventy-plugin-rss';
 import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
 import { exec } from 'child_process';
 
@@ -12,12 +12,13 @@ import { exec } from 'child_process';
 import collect from './plugins/collect.js';
 import data from './plugins/data.js';
 import icons from './plugins/icons.js';
+import images from './plugins/images.js';
 import markdown from './plugins/markdown.js';
 import openGraph from './plugins/open-graph.js';
 import time from './plugins/time.js';
 
 export default async function (eleventyConfig) {
-  eleventyConfig.addJavaScriptFunction("absoluteUrl", absoluteUrl);
+  eleventyConfig.addJavaScriptFunction('absoluteUrl', absoluteUrl);
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight);
@@ -50,15 +51,26 @@ export default async function (eleventyConfig) {
     './src/_favicons/*.*': './',
   });
 
+
+  eleventyConfig.addPlugin(images, {
+    in: './src/_images/',
+    out: {
+      formats: ['jpeg'],
+      outputDir: './_site/img/full/',
+      urlPath: '/img/full/',
+      widths: ['auto'],
+    }
+  });
+
   eleventyConfig.addPlugin(eleventyImagePlugin, {
     // Set global default options
-    formats: ["avif", "jpeg"],
-    urlPath: "/img/",
+    formats: ['avif', 'jpeg'],
+    urlPath: '/img/',
     widths: [640, 960, 1600],
 
     defaultAttributes: {
-      loading: "lazy",
-      decoding: "async",
+      loading: 'lazy',
+      decoding: 'async',
     },
   });
 
@@ -72,7 +84,7 @@ export default async function (eleventyConfig) {
   });
 
   eleventyConfig.setLiquidOptions({jsTruthy: true});
-  eleventyConfig.addWatchTarget("./src/_css/");
+  eleventyConfig.addWatchTarget('./src/_css/');
   eleventyConfig.setQuietMode(true);
 
   return {
