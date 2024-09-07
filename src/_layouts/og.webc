@@ -65,6 +65,7 @@ hero:
     height: 100%;
     display: grid;
     grid-template: 'header' 1fr 'footer' auto / 100%;
+    padding: unset;
   }
 
   img {
