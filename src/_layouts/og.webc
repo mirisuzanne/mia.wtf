@@ -7,10 +7,12 @@ hero:
 ---
 
 <script webc:setup>
-  const pageHero = (source) =>
-    source.data.og?.image
-    || source.data.hero
-    || hero;
+  const pageHero = (source) => {
+    const img = source.data.og?.image
+      || source.data.hero
+      || this.hero;
+    return imgSrc(img.src, { widths: [1200] });
+  }
 
   const subTitle = (source) => {
     if (source.data.sub) {
@@ -22,11 +24,7 @@ hero:
   }
 </script>
 
-<img
-  webc:is="u-img"
-  :src="pageHero(source).src"
-  :alt="pageHero(source).alt || ''"
-  sizes="og">
+<img :src="pageHero(source)">
 
 <header>
   <h1><inline-text @html="mdI(source.data.title)"></inline-text></h1>
