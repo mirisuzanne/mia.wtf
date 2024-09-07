@@ -41,15 +41,14 @@ layout: base
   @raw="content"
 ></main>
 
-<slash-nav line-length></slash-nav>
-
-<footer id="content-info" line-length>
+<footer id="content-info" line-length content-break>
   <p>
     &copy;
     <span @text="$data.site.author"></span>,
     <time @text="year()"></time>
   </p>
 
+  <slash-nav></slash-nav>
   <rel-me></rel-me>
 
   <em>protect trans kids</em>

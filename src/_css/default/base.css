@@ -93,6 +93,7 @@ ul, ol {
 [role=list] {
   --list-indent: 0;
   list-style: none;
+  margin-block: unset;
 }
 
 p, li {
@@ -117,17 +118,24 @@ hr {
   border-block-start: thin dotted var(--border);
   margin-block: var(--spacer);
 
-  #content & {
+  [id=content] & {
     border: unset;
-    color: var(--border);
-    font-family: var(--ui-font, unset);
-    text-align: center;
-
-    &::before {
-      content: '~ & & & ~';
-      content: '~ & & & ~' / '';
-    }
   }
+}
+
+[id=content] hr,
+[content-break] {
+  &::before {
+    color: var(--border);
+    content: '~ & & & ~';
+    content: '~ & & & ~' / '';
+    display: block;
+    font-family: var(--ui-font, unset);
+  }
+}
+
+[content-break]::before {
+  margin-block: var(--spacer) var(--gap);
 }
 
 caption,
