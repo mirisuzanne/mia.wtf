@@ -1,6 +1,9 @@
 ---
-title: Follow my website, wherever it goes
-sub: All the feeds we can feed you
+title: Follow my website
+sub: Wherever it goes
+summary: |
+  At this point there's only a single RSS feed,
+  but maybe I'll have more in the future.
 ---
 
 <a

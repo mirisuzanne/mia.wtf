@@ -13,6 +13,7 @@
   @import url('/css/default/base.css') layer(default);
   @import url('/css/default/fonts.css') layer(default);
   @import url('/css/default/theme.css') layer(default);
+  @import url('/css/default/forms.css') layer(default);
   @import url('/css/default/buttons.css') layer(default);
   @import url('/css/default/links.css') layer(default);
   @import url('/css/default/dialog.css') layer(default);

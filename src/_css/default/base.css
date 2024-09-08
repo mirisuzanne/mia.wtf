@@ -32,12 +32,13 @@ html {
   color: var(--text);
   color-scheme: var(--color-scheme, light dark);
   font-family: var(--body-font);
+  font-size: var(--font-size-auto);
   font-variant-numeric: oldstyle-nums;
   line-height: 1.5;
 }
 
 body {
-  font-size: max(1em, 0.9em + var(--fluid-scale, 0vi));
+  font-size: max(1em, 0.9em + var(--fluid-scale, 0.5vi));
   margin: unset;
   padding: var(--gap, 12px);
 }
@@ -78,7 +79,8 @@ dd + dt {
 }
 
 dt::after {
-  content: ' – ';
+  content: ' –';
+  content: ' –' / '';
 }
 
 dd {

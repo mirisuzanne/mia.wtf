@@ -49,7 +49,7 @@ layout: base
   </p>
 
   <slash-nav></slash-nav>
-  <rel-me></rel-me>
+  <rel-me id="footer-contact"></rel-me>
 
   <em>protect trans kids</em>
   <a webc:if="$data.ogSrc" :href="$data.ogSrc">(social image)</a>

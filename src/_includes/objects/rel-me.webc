@@ -5,11 +5,22 @@
       <a
         webc:if="value.url"
         :href="value.url"
+        rel="me"
         @text="value.name"
       ></a>
       <clip-board
         webc:else
       ><span @text="value.name"></span></clip-board>
+    </dd>
+  </d-i>
+  <d-i>
+    <dt><abbr>RSS</abbr></dt>
+    <dd>
+      <a
+        :href="$data.site.feed"
+        rel="alternate"
+        @text="$data.site.feed"
+      ></a>
     </dd>
   </d-i>
 </dl>

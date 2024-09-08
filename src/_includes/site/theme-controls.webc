@@ -59,10 +59,10 @@
   id="fluid-scale"
   data-prop="--fluid-scale"
   data-local="css-fluid-scale"
-  data-off="unset"
+  data-off="0"
 >
-  <button data-value="unset">off</button>
-  <button data-value="0.5vi" aria-pressed="true">some</button>
+  <button data-value="0">off</button>
+  <button data-value="initial" aria-pressed="true">some</button>
   <button data-value="0.75vi">extra</button>
 </toggle-control>
 

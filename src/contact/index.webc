@@ -1,0 +1,67 @@
+---
+title: What's on your mind?
+sub: >
+  Leave me a note,
+  or [find me online](#footer-contact)
+summary: |
+  If you contact me
+  through my website,
+  then it becomes a _social media platform_ --
+  and I become a billionaire
+  (derogatory).
+---
+
+<form
+  id="contact"
+  name="contact"
+  aria-labelledby="title"
+  method="POST"
+  action="/contact/thanks/"
+  netlify-honeypot="subject"
+  data-netlify="true"
+>
+  <p>
+    You can write words here,
+    and they will show up in my email.
+    The web is a magical technology.
+  </p>
+
+  <form-field>
+    <label for="contact-name">Name</label>
+    <input
+      id="contact-name"
+      type="text"
+      name="name"
+      text-input
+      required />
+  </form-field>
+
+  <form-field>
+    <label for="contact-email">Email</label>
+    <input
+      id="contact-email"
+      type="email"
+      name="email"
+      text-input
+      required />
+  </form-field>
+
+  <form-field>
+    <label for="contact-message">Message</label>
+    <textarea
+      id="contact-message"
+      name="message"
+      text-input
+      required
+    ></textarea>
+  </form-field>
+
+  <form-field hidden>
+    <label for="contact-sweet">Don't fill out this field</label>
+    <input id="contact-sweet" name="subject" />
+  </form-field>
+
+  <form-actions>
+    <button type="submit">Send</button>
+  </form-actions>
+</form>

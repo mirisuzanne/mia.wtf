@@ -13,12 +13,13 @@ summary:
   or I'll forget.
 ---
 
+To build this site,
 I used more than my share of
 <abbr>HTML</abbr> & <abbr>CSS</abbr>,
 with some <abbr>JS</abbr> thrown in _for good luck_.
 Don't tell anyone,
-but there's one <abbr>CSS</abbr> feature
-that I _invented, and then used_!
+but I invented a new <abbr>CSS</abbr> feature,
+_and then used it here_!
 That feels like cheating. Is that cheating?
 
 ## Design
@@ -49,26 +50,14 @@ with a few priorities in mind:
   instead of switching to 'reader mode'.
   The web is made to be customized.
 
-I'm not always happy
-with my skill as a designer,
-but I am very happy with those goals.
-And I hope you'll spend some time
-customizing my website to your own liking.
-Choose the settings you like best,
-and change them any time you want.
-
-Ok, _blur_ is mostly a joke.
-But some days I feel like photocopier vibes,
-with a bit of the sepia filter.
-Other days I need that slightly blurred
-terminal pc look,
-with a bit of hue shift (and even more sepia).
-
-Let's be honest,
+Ok, the `blur` filter is _mostly_ a joke.
+But I recommend adding a small blur
+to the terminal vibes.
+And let's be honest,
 all the vibes look better
 with a bit of sepia.
-Maybe I'll add an aging effect to old pages,
-so they turn sepia over time by default.
+Maybe I should add an aging effect to pages,
+so they turn sepia over time by default?
 
 Did you know that most browsers will let you choose
 your default fonts?
@@ -81,15 +70,19 @@ the browser vibes
 let you <abbr>BYOF</abbr>
 (bring your own fonts).
 
+I'm not always happy
+with my skill as a designer,
+but I am very happy with those goals.
+
 ## Fonts
 
-Gosh, it was hard to pick fonts,
-there are so many good ones.
+Gosh, it was hard to pick fonts.
+There are so many good ones.
 
 I didn't want anything
 designed by a massive tech company,
 or associated with a specific operating system.
-In the end, I went with
+In the end, I chose
 [Alegreya](https://www.huertatipografica.com/en/fonts/alegreya-ht-pro)
 variable and
 [Alegreya Sans](https://www.huertatipografica.com/en/fonts/alegreya-sans-ht)
@@ -106,8 +99,7 @@ with a hand-drawn feel,
 and Tom Chalky does nice work.
 I bought it anyway,
 and set it as my browser default.
-Now I get Volume TC any time I set my
-vibes to the browser default.
+I love when sites use my preference!
 
 ## Inspiration
 
@@ -147,7 +139,7 @@ while I was working:
 
 ## Custom Elements
 
-Custom elements are just <abbr>HTML</abbr> elements
+Custom elements are just <abbr>HTML</abbr> tags
 that you make up as you go.
 You can introduce them to the browser if you want,
 but it's not required.
@@ -175,11 +167,9 @@ in case you want to use them:
 ~ Displays a random selection
   from a group of options,
   and allows the reader to shake things up.
-  You know that dice icon that shows up a few times
-  on my home page and elsewhere?
-  I went with a different visual metaphor here,
-  but maybe I should go looking for
-  an eight-ball icon.
+  I went with a 'dice' icon on this site,
+  because that's what I found.
+  Sorry for the mixed metaphor.
 
 ## Tools
 
@@ -207,6 +197,16 @@ I also used some tools from other people
   that don't come from a large corporate design system.
   They don't have an eight-ball icon,
   I looked.
+
+[Wakamai Fondue](https://wakamaifondue.com)
+~ A great resource for inspecting font files,
+  and learning what your fonts can do!
+
+[Sorted Colors](https://enes.in/sorted-colors/)
+~ The [CSS Color Specification](https://www.w3.org/TR/css-color/#named-colors)
+  strongly encourages us _not_ to use named colors.
+  I used them anyway,
+  it was nice to have them sorted for me.
 
 [Fontsource](https://fontsource.org/)
 ~ Was really unnecessary here,
