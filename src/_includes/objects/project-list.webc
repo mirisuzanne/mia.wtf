@@ -24,6 +24,6 @@
 <style webc:bucket="object">
   project-list {
     display: grid;
-    gap: var(--gap);
+    gap: 1lh;
   }
 </style>

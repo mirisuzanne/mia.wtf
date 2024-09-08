@@ -1,5 +1,5 @@
 ---
-title: Miriam in Words & Photos
+title: Miriam's build-a-bio workshop
 sub: >
   ~~My~~ Her least favorite page
 summary: >
@@ -62,7 +62,6 @@ photos:
       with letters on the screen behind
 ---
 
-<h2 id="bio">Build-A-Bio Workshop (fun!)</h2>
 <dl>
   <d-i
     webc:for="(key, text) in bios"

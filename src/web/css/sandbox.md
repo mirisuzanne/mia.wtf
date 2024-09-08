@@ -1,5 +1,5 @@
 ---
-title: CSS Sandbox
+title: OddBird CSS Sandbox
 sub: scratchpad for new CSS features
 at: https://css.oddbird.net/
 date: 2020-11-09

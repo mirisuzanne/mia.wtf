@@ -1,6 +1,6 @@
 ---
 layout: is/markdown
-title: Notes Towards a Queer Art
+title: Notes towards a queer art
 sub: and a queer web, world wide
 summary:
   People are ==queer==.
@@ -15,8 +15,6 @@ and call them a matter of time.
 _First this, then that._
 But every story is incomplete --
 full of holes and ==misdirection.==
-
-------
 
 So that is what ==I like==.
 Bits borrowed from here and there.

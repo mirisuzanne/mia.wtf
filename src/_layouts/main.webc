@@ -40,7 +40,7 @@ layout: page
   }
 
   #header {
-    margin-block: var(--double);
+    margin-block: 2lh;
   }
 
   hr[aria-hidden=true] {

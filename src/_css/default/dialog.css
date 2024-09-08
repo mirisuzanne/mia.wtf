@@ -28,8 +28,8 @@ dialog[in-flow] {
   color: inherit;
   height: unset;
   inset: unset;
-  margin-block: var(--gap);
-  padding: var(--gap) 0;
+  margin-block: 1lh;
+  padding: var(--shim) 0;
   position: unset;
   width: unset;
 }

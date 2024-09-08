@@ -1,5 +1,5 @@
 ---
-title: All The Tags
+title: All the tags
 eleventyExcludeFromCollections: true
 nonTag:
   - all

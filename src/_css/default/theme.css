@@ -1,4 +1,13 @@
 html {
+  --font-size-auto: initial;
+
+  --text-gradient--: linear-gradient(
+    179deg,
+    var(--accent) calc(0.8em - 1px),
+    var(--text) calc(0.8em - 1px) 0.8em,
+    var(--feature) 0.8em
+  );
+  --text-gradient: var(--text-gradient--);
   --bg-gradient: linear-gradient(
     to bottom right,
     var(--bg),
@@ -7,6 +16,12 @@ html {
 
   --theme-texture: var(--bg-gradient);
   --bg-texture: var(--theme-texture);
+
+  --body-font: serif;
+  --ui-font: sans-serif;
+  --code-font: monospace;
+
+  --hr: '<!-- horizontal rule -->';
 
   filter:
     brightness(var(--filter-brightness))
@@ -22,6 +37,8 @@ html {
 }
 
 [data-theme=mia] {
+  --font-size-auto: max(1em, 20px);
+
   --body-font: var(--fonts-serif, var(--fonts-serif--));
   --title-font: var(--fonts-serif, var(--fonts-serif--));
   --code-font: var(--fonts-code, var(--fonts-code--));
@@ -31,14 +48,19 @@ html {
     url('/img/_site/paint.jpg') no-repeat fixed
   ;
 
+  --hr: '~ & & & ~';
+
+  --link-color: var(--accent);
+  --border: cadetBlue;
+
   @supports (fill: light-dark(red, red)) {
     --bg: light-dark(
       color-mix(in oklch, powderblue, oklch(1 0 none) 75%),
       color-mix(in oklch, darkSlateGray, oklch(0 0 none) 50%)
     );
+    --text: light-dark(#111, lavender);
     --accent: light-dark(mediumVioletRed, hotPink);
-    --feature: light-dark(teal, powderBlue);
-    --border: cadetBlue;
+    --feature: light-dark(teal, cyan);
     --mark: color-mix(
       in oklch,
       var(--accent),
@@ -46,19 +68,27 @@ html {
     );
   }
 
-  :is(h1, h2) {
-    @supports (background-clip: text) {
-      background: var(
-        --text-gradient,
-        linear-gradient(
-          to bottom right,
-          var(--accent),
-          var(--feature)
-        )
-      );
+  :is(h1) {
+    font-size: calc(1.5em + 1cqi);
+  }
+
+  :is(h2) {
+    font-size: calc(1em + 1cqi);
+  }
+
+  :is(h3) {
+    font-size: inherit;
+    font-weight: 450;
+  }
+
+  @supports (background-clip: text) {
+    :is(h1),
+    [id=content] hr::before,
+    [content-break]::before {
+      -webkit-text-stroke-width: 0.5px;
+      -webkit-text-fill-color: transparent;
+      background: var(--text-gradient);
       background-clip: text;
-      color: transparent;
-      max-inline-size: max-content;
     }
   }
 }
@@ -69,6 +99,8 @@ html {
   --title-font: var(--fonts-code, var(--fonts-code--));
   --code-font: var(--fonts-code, var(--fonts-code--));
   --ui-font: var(--fonts-code, var(--fonts-code--));
+
+  --hr: '>>>>>>>>> _';
 
   @supports (fill: light-dark(red, red)) {
     --theme-texture:
@@ -109,6 +141,8 @@ html {
   --code-font: var(--fonts-code, var(--fonts-code--));
   --ui-font: var(--fonts-sans, var(--fonts-sans--));
 
+  --hr: '!! #@*% !!';
+
   @supports (fill: light-dark(red, red)) {
     --theme-texture:
       linear-gradient(
@@ -126,17 +160,25 @@ html {
     --feature: var(--accent);
     --border: var(--text);
     --mark: var(--bg);
+
+    --em-background: var(--text);
+    --em-color: var(--bg);
+    --em-shadow: var(--text);
   }
 
   :is(h1, h2, h3, h4, h5, h6) {
-    --accent: var(--bg);
-    --border: var(--bg);
-    --feature: var(--bg);
-    --mark: var(--text);
+    --border: currentColor;
     background: var(--text);
     color: var(--bg);
     font-weight: bold;
     text-transform: uppercase;
   }
 
+  [id=content] hr::before,
+  [content-break]::before {
+    background: var(--text);
+    color: var(--bg);
+    font-weight: bold;
+    max-inline-size: max-content;
+  }
 }

@@ -1,6 +1,6 @@
 ---
 role: member
-title: Sass Core Team
+title: Sass core team
 sub: CSS with superpowers
 at: https://sass-lang.com/
 logo: sass

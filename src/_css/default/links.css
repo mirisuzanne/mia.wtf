@@ -1,6 +1,6 @@
 a {
   &:any-link {
-    color: var(---link-state, var(--accent));
+    color: var(---link-state, var(--link-color, currentColor));
   }
 
   &:where(:any-link),

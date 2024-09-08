@@ -44,9 +44,9 @@
   id="font-size"
   data-prop="font-size"
   data-local="css-font-size"
-  data-off="unset"
+  data-off="var(--font-size-auto)"
 >
-  <button data-value="unset">auto</button>
+  <button data-value="var(--font-size-auto)">auto</button>
   <button>small</button>
   <button>medium</button>
   <button>large</button>

@@ -1,12 +1,13 @@
 import markdownIt from 'markdown-it';
 import mdMark from 'markdown-it-mark';
+import mdDefList from 'markdown-it-deflist';
 import removeMd from 'remove-markdown';
 
 const mdIt = markdownIt({
   html: true,
   breaks: false,
   typographer: true,
-}).use(mdMark);
+}).use(mdMark).use(mdDefList);
 
 const block = (content) => (content ? mdIt.render(content.trim()) : '');
 const inline = (content) => (content ? mdIt.renderInline(content.trim()) : '');
