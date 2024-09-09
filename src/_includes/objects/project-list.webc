@@ -16,14 +16,9 @@
   }
 </script>
 
-<project-item
-  webc:for="project of getProjects(this.projects, this.time)"
-  :@project="project"
-></project-item>
-
-<style webc:bucket="object">
-  project-list {
-    display: grid;
-    gap: 1lh;
-  }
-</style>
+<section webc:root data-flow>
+  <project-item
+    webc:for="project of getProjects(this.projects, this.time)"
+    :@project="project"
+  ></project-item>
+</section>

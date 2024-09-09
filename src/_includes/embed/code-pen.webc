@@ -1,0 +1,56 @@
+<script webc:setup>
+  const penBase = 'https://codepen.io/';
+
+  const penUrl = (pen, user) => pen.includes('://')
+    ? pen
+    : `${penBase}${user || 'miriamsuzanne'}/pen/${pen}`;
+
+  const urlGet = (fromUrl, get) => {
+    if (!fromUrl) return;
+
+    const partKeys = ['user', null, 'hash'];
+    const parts = {};
+
+    fromUrl
+      .replace(penBase, '')
+      .split('/')
+      .forEach((part, i) => {
+        const key = partKeys[i];
+        if (key) { parts[key] = part; }
+      });
+
+    return parts[get];
+  }
+</script>
+
+<p
+  class="codepen"
+  :data-slug-hash="this.hash || urlGet(this.src, 'hash')"
+  :data-editable="this.dataEditable || 'true'"
+  :data-height="this.dataHeight || 500"
+  :data-theme-id="this.dataThemeId || 39098"
+  :data-user="this.user || urlGet(this.src, 'user') || 'miriamsuzanne'"
+  :data-default-tab="this.tab || 'result'"
+  :data-embed-version="2"
+  :data-preview="this.dataPreview || 'none'"
+>
+  See
+  <a :href="this.src || penUrl(this.hash, this.user)"><slot></slot></a>
+  by <a
+    :href="`${penBase}${urlGet(this.src, 'user')}/`"
+    @text="`@${urlGet(this.src, 'user')}`"
+  ></a>
+  on <a :href="penBase">CodePen</a>
+</p>
+
+<script
+  webc:keep
+  async
+  src="https://static.codepen.io/assets/embed/ei.js"
+></script>
+
+<style>
+.cp_embed_wrapper {
+  display: contents;
+}
+</style>

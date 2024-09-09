@@ -42,16 +42,17 @@ layout: base
 ></main>
 
 <footer id="content-info" line-length content-break>
+  <slash-nav></slash-nav>
+  <rel-me id="footer-contact"></rel-me>
+
   <p>
     &copy;
     <span @text="$data.site.author"></span>,
     <time @text="year()"></time>
+    <br>
+    <em>protect trans kids</em>
   </p>
 
-  <slash-nav></slash-nav>
-  <rel-me id="footer-contact"></rel-me>
-
-  <em>protect trans kids</em>
   <a webc:if="$data.ogSrc" :href="$data.ogSrc">(social image)</a>
 </footer>
 

@@ -19,13 +19,22 @@ const tagType = (tags, prefix) => tags
   .filter((tag) => tag.startsWith(prefix))
   .map((tag) => tag.replaceAll(`${prefix}:`, ''));
 
+const findTagType = (tags, prefix) => tagType(tags, prefix)[0];
+const pCategory = (tags, prefixList) => {
+  const list = prefixList
+    .map((pre) => findTagType(tags, pre))
+    .filter(Boolean);
+  return list ? list.join(':') : null;
+}
+
+const isStub = (page) => page.data.at && !page.data.summary;
+const onGoing = (page) => page.data?.end === 'ongoing';
+const pageName = (page) => page.data.banner || page.data.title || page.fileSlug;
 const findIndex = (pages, tag) => pages.find((page) => page.data.index === tag);
 
 export default (eleventyConfig) => {
   eleventyConfig.addAsyncFilter('shuffle', shuffle);
   eleventyConfig.addAsyncFilter('merge', merge);
-
-  eleventyConfig.addAsyncFilter('tagType', tagType);
 
   eleventyConfig.addAsyncFilter('hasTag', hasTag);
   eleventyConfig.addAsyncFilter('everyTag', everyTag);
@@ -35,6 +44,13 @@ export default (eleventyConfig) => {
   eleventyConfig.addAsyncFilter('withEveryTag', withEveryTag);
   eleventyConfig.addAsyncFilter('withAnyTag', withAnyTag);
 
+  eleventyConfig.addAsyncFilter('tagType', tagType);
+  eleventyConfig.addAsyncFilter('findTagType', findTagType);
+  eleventyConfig.addAsyncFilter('pCategory', pCategory);
+
+  eleventyConfig.addAsyncFilter('isStub', isStub);
+  eleventyConfig.addAsyncFilter('onGoing', onGoing);
+  eleventyConfig.addAsyncFilter('pageName', pageName);
   eleventyConfig.addAsyncFilter('findIndex', findIndex);
 
   eleventyConfig.addDataExtension('yml, yaml', (contents) =>

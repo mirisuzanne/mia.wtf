@@ -1,0 +1,7 @@
+<a :href="`https://caniuse.com/#feat=${this.feature}`">
+  <img
+    webc:is="u-img"
+    :src="`https://caniuse.bitsofco.de/image/${this.feature}.jpg`"
+    :alt="`Support data from CanIUse.com on the ${this.feature} feature`"
+  >
+</a>

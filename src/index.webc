@@ -1,13 +1,13 @@
 ---
 is: list
-title: Miriam Suzanne
+title: Miriam Eric Suzanne
 sub:
   - is a.k.a. _terrible mia_
   - has three first names, but only one comes first
   - is pretty anxious about this, honestly
   - wants to sell you something (anything)
   - if you're looking for [my bio](/about/), that's on a different page
-  - can't be one thing forever
+  - keeps on changing, without any excuse
 description: Art & code & other digital artifacts of my life.
 summary:
   - |
@@ -42,6 +42,17 @@ summary:
     `**`Ned Ludd was right`**`.
     Join a union.`
 ---
+
+<h2>Posts</h2>
+<post-list
+  :@posts="collections['is:post']"
+></post-list>
+
+<h2>Co-Conspirators</h2>
+<org-list
+  @time="current"
+  @founder="true"
+></org-list>
 
 <h2>Other Channels</h2>
 <project-list

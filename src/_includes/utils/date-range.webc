@@ -1,0 +1,11 @@
+<i webc:if="this.end === 'ongoing'">since</i>
+<date-time
+  :@date="this.date"
+  @format="year"
+></date-time>
+<date-time
+  webc:if="this.end !== 'ongoing'"
+  :@date="this.end"
+  @format="year"
+  @prefix="--"
+></date-time>

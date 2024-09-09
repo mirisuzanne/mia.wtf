@@ -1,0 +1,7 @@
+<section webc:root data-flow="tight">
+  <post-item
+    webc:for="post of this.posts.sort((a, b) => b.date - a.date)"
+    list-item="post"
+    :@post="post"
+  ></post-item>
+</section>

@@ -1,5 +1,5 @@
 ---
-role: co-founder
+role: web enthusiast
 title: OddBird
 sub: web design & development
 at: https://www.oddbird.net/

@@ -1,5 +1,5 @@
 ---
-role: co-founder
+role: hybrid artist
 title: Grapefruit Lab
 sub: hybrid performance laboratory
 at: https://grapefruitlab.com/

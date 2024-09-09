@@ -64,9 +64,30 @@ h1, h2, h3, h4, h5, h6 {
   text-wrap: pretty;
 }
 
-[item-title] {
-  display: inline-block;
-  font-size: inherit;
+[data-flow] {
+  display: grid;
+  gap: var(--flow-gap, 0.5lh);
+}
+
+[data-flow=tight] {
+  --flow-gap: 0;
+}
+
+[list-item] {
+  display: block;
+
+  * { margin: unset; }
+}
+
+item-meta {
+  font-family: var(--ui-font);
+}
+
+p-category {
+  background-color: var(--feature);
+  border-radius: 3px;
+  color: var(--bg);
+  padding-inline: var(--shim);
 }
 
 d-i {
@@ -155,6 +176,11 @@ hr {
   margin-block: var(--spacer) 1lh;
 }
 
+figure {
+  display: grid;
+  row-gap: 0.5lh;
+}
+
 caption,
 figcaption,
 small {
@@ -194,4 +220,18 @@ emo-ji {
 
 p-note, p-role {
   font-style: italic;
+}
+
+code[style*=--color-tile] {
+  &::before {
+    aspect-ratio: 1;
+    background:
+      linear-gradient(var(--color-tile) 0 100%),
+      linear-gradient(45deg, black 50%, white 50%);
+    border: thin solid;
+    content: '';
+    display: inline-block;
+    inline-size: 1cap;
+    margin-inline-end: 0.5ch;
+  }
 }

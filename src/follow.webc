@@ -13,3 +13,9 @@ summary: |
   <rss-fill></rss-fill>
   <link-text>rss</link-text>
 </a>
+
+<h2>Other Channels</h2>
+<project-list
+  :@projects="collections['is:channel']"
+  @time="current"
+></project-list>

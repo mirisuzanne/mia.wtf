@@ -20,7 +20,7 @@ a {
     ---go-go-go: -3px;
   }
 
-  &:is([href*='://'], [href^=mailto]) {
+  &:is([href*='://'], [href^=mailto]):not(:has(img)) {
     &::after {
       content: '↑';
       content: '↑' / '';

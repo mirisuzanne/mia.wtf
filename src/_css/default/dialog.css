@@ -10,6 +10,7 @@ dialog {
 }
 
 dialog[open] {
+  display: flow-root;
   opacity: 1;
   translate: 0 0;
 }

@@ -1,39 +1,15 @@
-<script webc:setup>
-  const getArea = (tags) => {
-    const area = tagType(tags, 'area')[0];
-    const media = tagType(tags, 'as')[0];
-    return media ? `${area}:${media}` : area;
-  }
-
-  const getLink = (project) => project.data.at && !project.data.summary
-    ? project.data.at
-    : project.url;
-</script>
-
-<header>
-  <h3 item-title>
+<article
+  webc:root="override"
+  list-item="project"
+>
+  <h3>
     <a
-      :href="getLink(this.project)"
-      @text="this.project.data.banner || this.project.data.title"
+      :href="isStub(this.project) ? this.project.data.at : this.project.url"
+      @text="pageName(this.project)"
     ></a>
   </h3>
 
-  [
-    <p-category
-      class="p-category"
-      @text="getArea(this.project.data.tags)"
-    ></p-category>
-  ]
-</header>
-
-<p-note
-  @html="mdI(this.project.data.sub)"
-></p-note>
-
-<style webc:bucket="object">
-  project-item { display: block; }
-
-  project-item * {
-    margin: unset;
-  }
-</style>
+  <p-note
+    @html="mdI(this.project.data.sub)"
+  ></p-note>
+</article>

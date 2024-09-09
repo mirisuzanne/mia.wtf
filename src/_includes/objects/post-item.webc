@@ -1,0 +1,17 @@
+<article
+  webc:root="override"
+  list-item="post"
+>
+  <h3><a :href="this.post.url" @text="this.post.data.title"></a></h3>
+  - <date-time :@date="this.post.date" @format="recent"></date-time>
+</article>
+
+<style webc:bucket="object">
+  [list-item=post] h3 {
+    display: inline-block;
+  }
+
+  [list-item=post] time {
+    font-style: italic;
+  }
+</style>

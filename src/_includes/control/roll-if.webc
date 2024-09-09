@@ -1,7 +1,8 @@
-<p
+<template
+  webc:nokeep
   webc:if="typeof this.content === 'string'"
-  @raw="mdI(this.content)"
-></p>
+  @raw="md(this.content)"
+></template>
 
 <template
   webc:elseif="this.content"
