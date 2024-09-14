@@ -9,14 +9,13 @@ tags:
   - theater
   - music
   - process
+  - code
 summary: |
   Robin says
-  [design ain’t a democracy](https://robinrendle.com/notes/design-aint-a-democracy/),
-
-  > great design can only thrive
-  > with a dictator/director
-
-  I aim to push back
+  [design ain’t a democracy](https://robinrendle.com/notes/design-aint-a-democracy/).
+  "_great design can only thrive
+  with a dictator/director._"
+  I aim to push back.
 ---
 
 Everyone can agree that

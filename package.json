@@ -30,7 +30,7 @@
     "@fontsource-variable/victor-mono": "^5.0.6",
     "@fontsource/alegreya-sans": "^5.0.14",
     "@octokit/rest": "^20.1.1",
-    "@terriblemia/eight-ball": "^0.1.0",
+    "@terriblemia/eight-ball": "^0.2.0",
     "@terriblemia/ground-control": "^0.2.1",
     "baseline-status": "^1.0.4",
     "date-fns": "^2.30.0",

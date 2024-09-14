@@ -2,6 +2,9 @@ button {
   ---btn-bg: var(--bg);
   ---btn-border: var(--border);
   ---btn-text: var(--text);
+  ---btn-bg-focus: var(--btn-bg);
+  ---btn-border-focus: var(--accent);
+  ---btn-text-focus: var(---btn-text);
   background: var(---btn-state-bg, var(---btn-bg));
   color: var(---btn-state-text, var(---btn-text));
   border: thin solid var(---btn-state-border, var(---btn-border));
@@ -10,7 +13,9 @@ button {
   &:focus,
   &:hover,
   &:active {
-    ---btn-state-border: var(--accent);
+    ---btn-state-bg: var(---btn-bg-focus);
+    ---btn-state-border: var(---btn-border-focus);
+    ---btn-state-text: var(---btn-text-focus);
   }
 
   &:not(
@@ -46,6 +51,7 @@ button {
 [data-btn=emoji] {
   ---btn-bg: var(--bg);
   ---btn-border: var(--full-bg);
+  ---btn-text-focus: var(--feature);
   align-items: center;
   aspect-ratio: 1;
   border-radius: 0.25lh;

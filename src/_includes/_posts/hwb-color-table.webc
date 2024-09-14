@@ -1,0 +1,47 @@
+<script webc:setup>
+  const range = [...Array(11).keys()];
+  const channels = (format, n) => {
+    const arr = format.split('');
+    return n ? arr[n] : arr;
+  }
+</script>
+
+<table-like>
+  <t-r>
+    <t-h></t-h>
+    <t-h webc:for="i of range">
+      <code @text="`${channels(this.dataFormat, 1)}${i * 10}%`"></code>
+    </t-h>
+  </t-r>
+  <t-r
+    webc:for="a of range"
+    :style="`--a: ${a};`"
+  >
+    <t-h>
+      <code @text="`${channels(this.dataFormat, 2)}${a * 10}%`"></code>
+    </t-h>
+    <t-d
+      data-cell="color"
+      webc:for="b of range"
+      :style="`--b: ${b};`"
+    ></t-d>
+  </t-r>
+</table-like>
+
+<style webc:bucket="object">
+  hwb-color-table {
+    font-size: smaller;
+  }
+
+  hwb-color-table t-d {
+    --channels: 180deg calc(var(--a) * 10%) calc(var(--b) * 10%);
+  }
+
+  [data-format=hwb] t-d {
+    --cell-color: hwb(var(--channels));
+  }
+
+  [data-format=hsl] t-d {
+    --cell-color: hsl(var(--channels));
+  }
+</style>

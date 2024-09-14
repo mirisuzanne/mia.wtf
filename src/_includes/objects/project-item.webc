@@ -9,7 +9,7 @@
     ></a>
   </h3>
 
-  <p-note
+  &ndash; <p-note
     @html="mdI(this.project.data.sub)"
   ></p-note>
 </article>

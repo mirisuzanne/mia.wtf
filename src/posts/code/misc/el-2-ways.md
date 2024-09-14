@@ -52,7 +52,12 @@ I'm not sure.
 
 What do you think?
 
-<code-pen hash="KKEXQKr">custom element, two ways</code-pen>
+<iframe
+  webc:is="code-pen"
+  src="https://codepen.io/miriamsuzanne/embed/KKEXQKr"
+  title="Custom element, two ways"
+  height="400"
+></iframe>
 
 <script>
 class ColorTile extends HTMLElement {

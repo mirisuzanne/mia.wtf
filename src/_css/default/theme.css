@@ -78,7 +78,7 @@ html {
 
   :is(h3) {
     font-size: inherit;
-    font-weight: 450;
+    font-weight: normal;
   }
 
   @supports (background-clip: text) {

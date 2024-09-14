@@ -10,6 +10,7 @@
 >
   <eight-ball
     :@content="this.content"
+    view-transition
   >
     <p
       webc:for="(item, index) of content"

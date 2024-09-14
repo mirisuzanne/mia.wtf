@@ -1,4 +1,4 @@
-<section webc:root data-flow="tight">
+<section webc:root data-flow>
   <post-item
     webc:for="post of this.posts.sort((a, b) => b.date - a.date)"
     list-item="post"

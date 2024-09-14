@@ -66,17 +66,22 @@ h1, h2, h3, h4, h5, h6 {
 
 [data-flow] {
   display: grid;
-  gap: var(--flow-gap, 0.5lh);
+  gap: var(--flow-gap, 0);
 }
 
-[data-flow=tight] {
-  --flow-gap: 0;
+[data-flow=block] {
+  --flow-gap: 0.5lh;
 }
 
 [list-item] {
   display: block;
 
   * { margin: unset; }
+
+  :is(h2, h3, h4) {
+    display: inline-block;
+    font-weight: normal;
+  }
 }
 
 item-meta {
@@ -141,14 +146,38 @@ pre, code, output, samp {
   font-family: var(--code-font, revert);
 }
 
+pre {
+  border-inline-start: var(--shim) solid var(--border);
+  margin-inline-start: var(--code-outset, 0);
+  overflow: auto;
+  padding-inline-start: var(--gap);
+
+  @container (inline-size < calc(100vi - 6ch)) {
+    --code-outset: calc(var(--gap) * -1.5);
+  }
+}
+
 abbr, p-category, dt {
   font-variant-caps: all-small-caps;
   font-weight: 450;
   letter-spacing: 0.05em;
 }
 
-table {
+table,
+table-like {
   font-variant-numeric: tabular-nums;
+}
+
+table-like {
+  display: table;
+  inline-size: 100%;
+}
+
+t-r { display: table-row; }
+t-h, t-d { display: table-cell; }
+
+t-d {
+  background-color: var(--cell-color);
 }
 
 hr {
@@ -179,6 +208,11 @@ hr {
 figure {
   display: grid;
   row-gap: 0.5lh;
+}
+
+iframe {
+  display: block;
+  width: 100%;
 }
 
 caption,

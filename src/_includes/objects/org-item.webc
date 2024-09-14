@@ -11,11 +11,10 @@
     ></a>
   </h3>
 
-  <p-note
+  &ndash; <p-note
     class="p-note"
     @html="mdI(this.org.data.sub)"
-  ></p-note>,
-  <date-range
+  ></p-note>, <date-range
     :@date="this.org.date"
     :@end="this.org.data.end"
   ></date-range>

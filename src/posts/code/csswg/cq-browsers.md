@@ -23,7 +23,6 @@ summary: |
 
 - [Chrome 105](https://developer.chrome.com/blog/new-in-chrome-105/)
   [<date-time date="2022-08-30"></date-time>]
-
 - [Safari 16](https://webkit.org/blog/13152/webkit-features-in-safari-16-0/)
   [<date-time date="2022-09-12"></date-time>]
 
@@ -90,7 +89,13 @@ establishing two 'button themes' --
 `mia` and `mia-plus` --
 toggled by a single custom property:
 
-<code-pen hash="abGBNNx" tab="css,result">Style query button themes</code-pen>
+<iframe
+  webc:is="code-pen"
+  src="https://codepen.io/miriamsuzanne/embed/abGBNNx"
+  title="Style query button themes"
+  height="600"
+  default-tab="css,result"
+></iframe>
 
 I'm excited to experiment with this more.
 It should enable most of the use-cases

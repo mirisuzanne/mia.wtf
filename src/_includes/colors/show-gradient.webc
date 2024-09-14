@@ -1,0 +1,14 @@
+<div
+  webc:root
+  role="img"
+></div>
+
+<style webc:bucket="object">
+show-gradient {
+  background: linear-gradient(to right, var(--stops, red, green)) no-repeat scroll;
+  block-size: 2lh;
+  border: thin solid;
+  display: block;
+  margin-block-end: 1lh;
+}
+</style>
