@@ -50,7 +50,8 @@ html {
 
   --hr: '~ & & & ~';
 
-  --link-color: var(--accent);
+  --link-color: currentColor;
+  ---link-line-color: var(--accent);
   --border: cadetBlue;
 
   @supports (fill: light-dark(red, red)) {
@@ -89,6 +90,7 @@ html {
       -webkit-text-fill-color: transparent;
       background: var(--text-gradient);
       background-clip: text;
+      text-shadow: none;
     }
   }
 }
@@ -101,13 +103,20 @@ html {
   --ui-font: var(--fonts-code, var(--fonts-code--));
 
   --hr: '>>>>>>>>> _';
+  --link-color: currentColor;
 
   @supports (fill: light-dark(red, red)) {
     --theme-texture:
       repeating-linear-gradient(
         to bottom,
-        light-dark(#3C31, #2822) 0 1px,
-        transparent 1px 1cap
+        light-dark(#3C31, #2821) 0 2px,
+        transparent 4px 1cap
+      ) no-repeat fixed,
+      repeating-linear-gradient(
+        to bottom,
+        light-dark(#3C32, #2821),
+        light-dark(#3C31, transparent),
+        light-dark(#3C32, #2821) 13em
       ) no-repeat fixed,
       var(--bg-gradient)
     ;
@@ -142,6 +151,7 @@ html {
   --ui-font: var(--fonts-sans, var(--fonts-sans--));
 
   --hr: '!! #@*% !!';
+  --link-color: currentColor;
 
   @supports (fill: light-dark(red, red)) {
     --theme-texture:
@@ -172,6 +182,7 @@ html {
     color: var(--bg);
     font-weight: bold;
     text-transform: uppercase;
+    text-shadow: none;
   }
 
   [id=content] hr::before,
@@ -180,5 +191,6 @@ html {
     color: var(--bg);
     font-weight: bold;
     max-inline-size: max-content;
+    text-shadow: none;
   }
 }

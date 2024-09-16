@@ -1,6 +1,6 @@
 a {
   &:any-link {
-    color: var(---link-state, var(--link-color, currentColor));
+    color: var(---link-state, var(--link-color, revert-layer));
   }
 
   &:where(:any-link),
