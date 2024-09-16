@@ -5,7 +5,8 @@ date: 2024-08-08
 url: https://robinrendle.com/notes/design-aint-a-democracy/
 rel: reply
 tags:
-  - art
+  - area:web
+  - area:art
   - theater
   - music
   - process

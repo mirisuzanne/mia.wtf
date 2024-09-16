@@ -1,5 +1,5 @@
 ---
-title: Complex vs Compound Selectors
+title: Complex vs compound selectors
 sub: I have to look it up every time.
 date: 2022-06-15
 tags:

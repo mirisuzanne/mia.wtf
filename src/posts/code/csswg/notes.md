@@ -1,5 +1,5 @@
 ---
-title: Open CSS Notebook
+title: An open CSS notebook
 sub: A scratchpad for new features
 date: 2020-11-17
 venue: css.oddbird.net

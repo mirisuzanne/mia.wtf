@@ -1,5 +1,5 @@
 ---
-title: CSS Most Normalizer-est
+title: CSS most normalizer-est
 sub: Browsers can't get any more normal than this
 tags:
   - cascade

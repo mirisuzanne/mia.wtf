@@ -1,15 +1,12 @@
-<article
+<li
   webc:root="override"
   class="h-card p-org"
-  list-item="org"
 >
-  <h3>
-    <a
-      :href="this.org.url"
-      class="p-name u-url"
-      @text="pageName(this.org)"
-    ></a>
-  </h3>
+  <a
+    :href="this.org.url"
+    class="p-name u-url"
+    @text="pageName(this.org)"
+  ></a>
 
   &ndash; <p-note
     class="p-note"

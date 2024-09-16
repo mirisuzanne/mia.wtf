@@ -1,7 +1,7 @@
 ---
 role: member
-title: Sass core team
-sub: CSS with superpowers
+title: Sass Core Team
+sub: developing CSS superpowers
 at: https://sass-lang.com/
 logo: sass
 date: 2017-07-05

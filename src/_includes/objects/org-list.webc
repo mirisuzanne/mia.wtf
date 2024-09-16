@@ -23,9 +23,9 @@
   }
 </script>
 
-<section webc:root data-flow>
+<ul webc:root="override">
   <org-item
     webc:for="org of getOrgs(this.time, this.founder)"
     :@org="org"
   ></org-item>
-</section>
+</ul>

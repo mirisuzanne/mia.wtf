@@ -3,7 +3,7 @@
   role="img"
 ></div>
 
-<style webc:bucket="object">
+<style webc:bucket="objects">
 show-gradient {
   background: linear-gradient(to right, var(--stops, red, green)) no-repeat scroll;
   block-size: 2lh;

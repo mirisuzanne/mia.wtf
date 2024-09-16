@@ -60,6 +60,8 @@ photos:
     alt: >
       At a mic wearing flannel,
       with letters on the screen behind
+eleventyImport:
+  collections: [is:org]
 ---
 
 <dl>
@@ -71,12 +73,12 @@ photos:
   </d-i>
 </dl>
 
-<h2>Current Teams</h2>
+<h2>Teams I play with</h2>
 <org-list
   @time="current"
 ></org-list>
 
-<h2>Photos</h2>
+<h2>Photos of me</h2>
 
 <figure>
   <figcaption>
@@ -94,7 +96,7 @@ photos:
   </media-gallery>
 </figure>
 
-<h2>Past Teams</h2>
+<h2>Team history</h2>
 <org-list
   @time="past"
 ></org-list>

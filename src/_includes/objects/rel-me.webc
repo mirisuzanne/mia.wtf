@@ -25,7 +25,7 @@
   </d-i>
 </dl>
 
-<style webc:bucket="object">
+<style webc:bucket="objects">
   rel-me {
     display: block;
     font-family: var(--ui-font);

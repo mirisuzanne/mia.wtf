@@ -1,6 +1,7 @@
 ---
-title: The Gray Areas of HWB Color
-sub: The channels are clamped before they are scaled
+title: The gray areas of HWB color
+banner: The gray areas of `hwb` color
+sub: White and black channels are clamped, and then scaled
 date: 2022-06-29
 tags:
   - color
@@ -130,7 +131,7 @@ Still, that's a much smaller portion of the table:
     aria-label="gradient cyan to black on the x axis, cyan to white on the y axis, the bottom right half is gray"
   ></hwb-color-table>
   <figcaption>
-    An HSL table of colors using <code>180deg hue<code>,
+    An HSL table of colors using <code>180deg hue</code>,
     incrementing <code>lightness</code> and <code>saturation</code>
     from <code>0</code> to <code>100%</code>.
   </figcaption>

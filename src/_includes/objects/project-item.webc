@@ -1,15 +1,10 @@
-<article
-  webc:root="override"
-  list-item="project"
->
-  <h3>
-    <a
-      :href="isStub(this.project) ? this.project.data.at : this.project.url"
-      @text="pageName(this.project)"
-    ></a>
-  </h3>
+<li webc:root="override">
+  <a
+    :href="isStub(this.project) ? this.project.data.at : this.project.url"
+    @text="pageName(this.project)"
+  ></a>
 
   &ndash; <p-note
     @html="mdI(this.project.data.sub)"
   ></p-note>
-</article>
+</li>

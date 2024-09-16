@@ -1,6 +1,6 @@
 ---
 feature: true
-title: Container Queries Explainer & Proposal
+title: Container queries explainer & proposal
 sub: A path forward, with single-axis containment
 venue: OddBird CSS Sandbox
 url: https://github.com/oddbird/css-sandbox/blob/main/src/rwd/query/explainer.md

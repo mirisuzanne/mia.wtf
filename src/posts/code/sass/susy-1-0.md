@@ -1,5 +1,5 @@
 ---
-title: Susy 1.0 Release
+title: Susy 1.0 release
 date: 2012-08-14
 tags:
   - susy

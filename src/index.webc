@@ -43,19 +43,19 @@ summary:
     Join a union.`
 ---
 
-<h2>Posts</h2>
+<h2>Words</h2>
 <post-list
-  :@posts="collections['is:post']"
+  :@posts="$data.collections['is:post']"
 ></post-list>
 
-<h2>Co-Conspirators</h2>
+<h2>Other channels</h2>
+<project-list
+  :@projects="$data.collections['is:channel']"
+  @time="current"
+></project-list>
+
+<h2>Co-conspirators</h2>
 <org-list
   @time="current"
   @founder="true"
 ></org-list>
-
-<h2>Other Channels</h2>
-<project-list
-  :@projects="collections['is:channel']"
-  @time="current"
-></project-list>

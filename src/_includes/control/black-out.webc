@@ -3,7 +3,7 @@
   is-switch
 ><switch-text><slot>blackout</slot></switch-text></button>
 
-<style webc:bucket="object">
+<style webc:bucket="objects">
 #main {
   &[data-erase=erase] { visibility: hidden; }
   black-out, mark, hr { visibility: visible; }

@@ -1,5 +1,5 @@
 ---
-title: Body Margin 8px
+title: Body margin 8px
 sub: The origin story for a style no one wants
 date: 2022-07-04
 tags:
@@ -92,11 +92,14 @@ provided in the CSS specifications.
 ~~I'm not sure if there's a more recent version somewhere,
 but I couldn't find it?~~
 
-<call-out up-date="2022-07-27">
+<call-out>
+
+**Update 2022-07-27**:
 The recommended default styles
 are now part of the
 [HTML Living Standard](https://html.spec.whatwg.org/multipage/rendering.html#rendering),
 rather than the CSS specification.
+
 </call-out>
 
 <details data-pattern="figure">
@@ -112,7 +115,7 @@ h1, h2, h3, h4,
 h5, h6, noframes,
 ol, p, ul, center,
 dir, hr, menu, pre   { display: block; unicode-bidi: embed }
-li              { display: list-item }
+li              { display: flow-item }
 head            { display: none }
 table           { display: table }
 tr              { display: table-row }
@@ -547,7 +550,7 @@ SAMP, SPAN, STRONG, SUB, SUP, VAR, B, BIG, FONT, I, S, SMALL, STRIKE, TT, U {
   }
 
 LI {
-  display: list-item;
+  display: flow-item;
   }
 
 /* Begin tree of inherited properties and cascades. */

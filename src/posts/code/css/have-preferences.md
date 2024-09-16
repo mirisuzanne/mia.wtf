@@ -1,5 +1,5 @@
 ---
-title: User Styles
+title: User styles on the web
 date: 2024-01-24
 tags:
   - preferences

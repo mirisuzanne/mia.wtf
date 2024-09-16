@@ -28,7 +28,7 @@
   </t-r>
 </table-like>
 
-<style webc:bucket="object">
+<style webc:bucket="objects">
   hwb-color-table {
     font-size: smaller;
   }

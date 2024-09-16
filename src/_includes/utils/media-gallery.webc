@@ -1,4 +1,4 @@
-<style webc:bucket="object">
+<style webc:bucket="objects">
   media-gallery {
     display: grid;
     gap: var(--shim);

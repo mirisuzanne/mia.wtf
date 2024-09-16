@@ -16,6 +16,6 @@ summary: |
 
 <h2>Other Channels</h2>
 <project-list
-  :@projects="collections['is:channel']"
+  :@projects="$data.collections['is:channel']"
   @time="current"
 ></project-list>

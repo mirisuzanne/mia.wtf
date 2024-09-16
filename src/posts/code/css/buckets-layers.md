@@ -1,5 +1,5 @@
 ---
-title: Eleventy Buckets & Cascade Layers
+title: Eleventy buckets & cascade layers
 sub: Solving a problem I created
 date: 2024-07-06
 tags:
@@ -174,8 +174,6 @@ But if I'm not using Sass for anything else,
 maybe I can avoid the dependency altogether?
 
 ## When in Eleventy, do as the Eleventies do
-
-(Eleventines? Eleventonians?)
 
 I'm already using WebC,
 which provides _asset bundling_.

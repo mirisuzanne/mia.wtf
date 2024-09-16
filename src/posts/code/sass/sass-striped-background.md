@@ -1,5 +1,5 @@
 ---
-title: Sass Striped Backgrounds
+title: Sass striped backgrounds
 date: 2012-07-20
 ---
 

@@ -16,9 +16,9 @@
   }
 </script>
 
-<section webc:root data-flow>
+<ul webc:root="override">
   <project-item
     webc:for="project of getProjects(this.projects, this.time)"
     :@project="project"
   ></project-item>
-</section>
+</ul>

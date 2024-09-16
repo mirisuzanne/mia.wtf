@@ -1,5 +1,5 @@
 ---
-title: Custom Element, Two ways
+title: Custom element, two ways
 date: 2024-01-24
 tags:
   - css

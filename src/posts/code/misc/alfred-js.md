@@ -1,5 +1,5 @@
 ---
-title: JavaScript Automation on Mac
+title: Javascript automation on Mac
 sub: New powers unlocked!
 date: 2022-12-11
 tags:
