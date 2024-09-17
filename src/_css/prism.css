@@ -1,0 +1,76 @@
+/**
+ * Based on…
+ * https://github.com/catppuccin
+ */
+
+code[class*='language-'],
+pre[class*='language-'] {
+  color: var(--text);
+}
+
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+  color: var(--text);
+  background: var(--bg);
+	padding-block: 0.5lh;
+}
+
+.token.variable,
+.token.regex {
+  color: var(--text);
+}
+
+.token.punctuation,
+.token.operator {
+  color: var(--border);
+}
+
+.token.comment {
+  color: color-mix(in oklch, var(--text) 75%, oklch(none none none / 0));
+  font-style: italic;
+}
+
+.token.string,
+.token.inserted {
+  color: var(--feature);
+}
+
+.token.char,
+.token.constant {
+  color: var(--text);
+}
+
+.token.number,
+.token.builtin,
+.token.boolean,
+.token.changed {
+  color: var(--feature);
+}
+
+.token.keyword,
+.token.tag {
+  color: var(--text);
+}
+
+.token.function,
+.token.class-name {
+  color: var(--accent);
+  font-style: italic;
+}
+
+.token.attr-name,
+.token.selector,
+.token.deleted,
+.token.property,
+.token.symbol {
+  color: var(--accent);
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}

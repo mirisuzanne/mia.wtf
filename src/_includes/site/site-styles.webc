@@ -19,6 +19,9 @@
   @import url('/css/default/links.css') layer(default);
   @import url('/css/default/dialog.css') layer(default);
 </style>
+<style webc:keep data-layer="tools">
+  @import url('/css/prism.css') layer(tools);
+</style>
 <style webc:keep data-layer="objects">
   @import url('/css/objects.css') layer(objects);
 </style>

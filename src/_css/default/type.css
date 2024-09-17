@@ -6,33 +6,13 @@ h1, h2, h3, h4, h5, h6 {
 
 blockquote {
   --style: italic;
+  border-inline-start: thick solid var(--feature);
+  border-image: linear-gradient(to bottom, var(--feature), var(--accent)) 1;
   font-style: italic;
   padding-inline-start: var(--gap);
-  position: relative;
 
   @container (inline-size < calc(100vi - 6ch)) {
-    margin-inline-start: calc(var(--gap) * -1);
-  }
-
-  &::before,
-  &::after {
-    position: absolute;
-    inset-inline: 0 auto;
-  }
-
-  &::before {
-    color: var(--accent);
-    content: '“';
-    font-family: var(--ui-font);
-    inset-block: 0 auto;
-    translate: -0.125ch 0;
-  }
-
-  &::after {
-    border-inline-start: thick solid var(--feature);
-    border-image: linear-gradient(to bottom, var(--feature), var(--accent)) 1;
-    content: '';
-    inset-block: 1em 0;
+    margin-inline-start: calc((var(--gap) + 5px) * -1);
   }
 }
 
@@ -53,9 +33,11 @@ ul, ol {
   font-family: var(--ui-font);
 }
 
-ul:not([role]) ::marker {
-  content: '~ ';
-  content: '~ ' / '';
+@container style(--list-marker) {
+  ul:not([role]) ::marker {
+    content: var(--list-marker);
+    content: var(--list-marker) / '';
+  }
 }
 
 [role=list] {
