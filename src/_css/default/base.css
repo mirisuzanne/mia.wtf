@@ -1,4 +1,6 @@
 html {
+  --css-reveal: none;
+
   --gap: clamp(12px, 10px + 2vi, 24px);
   --shim: calc(var(--gap) / 2);
   --spacer: 3lh;
@@ -31,6 +33,7 @@ html {
   background-size: cover;
   color: var(--text);
   color-scheme: var(--color-scheme, light dark);
+  container-name: ಠ_ಠ;
   font-family: var(--body-font);
   font-size: var(--font-size-auto);
   font-variant-numeric: oldstyle-nums;

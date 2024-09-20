@@ -129,12 +129,26 @@
 </input-control>
 <p><small>* Not applied to background texture</small></p>
 
-<button data-reset="site-styles site-texture site-vibes color-scheme font-size fluid-scale filter-brightness filter-contrast filter-hue filter-sepia filter-blur">
+<switch-control
+  data-prop="--（╯°□°）╯"
+  data-on="︵┻━┻"
+  id="table-flip"
+  style="display: var(--css-reveal, revert-layer);"
+><button
+  is-switch
+><switch-text><emo-ji>(╯°□°）╯︵ ┻━┻</emo-ji></switch-text></button></switch-control>
+
+<button data-reset="site-styles site-texture table-flip site-vibes color-scheme font-size fluid-scale filter-brightness filter-contrast filter-hue filter-sepia filter-blur">
   <reset-left-line></reset-left-line>
   <btn-text>reset all</btn-text>
 </button>
 
 <style webc:bucket="layout">
+  theme-controls switch-control {
+    display: block;
+  }
+
+  theme-controls switch-control,
   css-toggle {
     margin-block-end: var(--shim);
   }
@@ -160,5 +174,22 @@
     display: block;
     font-variant-caps: all-small-caps;
     font-weight: bold;
+  }
+
+  @container style(--gap) {
+    theme-controls * { transition: rotate 350ms ease-out; }
+    #table-flip { --css-reveal: initial; }
+  }
+
+  @container ಠ_ಠ style(--（╯°□°）╯: ︵┻━┻) {
+    theme-controls *:nth-child(1n - 3) { rotate: 0.1turn; }
+    theme-controls *:nth-child(3n + 1) { rotate: -0.7turn; }
+    theme-controls *:nth-child(5n + 7) { rotate: 0.5turn; }
+
+    theme-controls [data-reset],
+    theme-controls [data-reset] * {
+      rotate: 0deg;
+      z-index: 10;
+    }
   }
 </style>

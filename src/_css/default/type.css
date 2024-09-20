@@ -185,7 +185,9 @@ emo-ji {
   display: inline-block;
   filter: drop-shadow(1px 1px 0 var(--full-bg, Canvas));
   font-family: var(--emoji-font);
+  font-style: normal;
   font-synthesis: none;
+  font-weight: normal;
 }
 
 @container style(--italic) {
