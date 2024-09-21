@@ -2,6 +2,7 @@
   type="button"
   is-switch
   aria-pressed="true"
+  :id="this.id"
 ><switch-text><slot>CSS</slot></switch-text></button>
 
 <link
@@ -34,29 +35,10 @@ class CSSToggle extends SwitchControl {
   constructor() {
     super();
     GroundControl.blockDisplay(this);
-    this.onPress = () => this.CSS = true;
-    this.onUnPress = () => this.CSS = false;
   };
 
-  connectedCallback() {
-    this.#findToggle();
-
-    if (this.storedValue) {
-      this.pressed = this.#isPressedValue(this.storedValue);
-    }
-
-    this.doToggleActions();
-  };
-
-  #isPressedValue = (value) => this.dataset.on === value;
-
-  #findToggle = () => {
-    const foundToggle = this.dataset.id
-      ? this.querySelector(`button[id='${this.dataset.id}']`)
-      : this.querySelector('button');
-
-    this.toggle = foundToggle;
-  };
+  onPress = () => this.CSS = true;
+  onUnPress = () => this.CSS = false;
 }
 
 CSSToggle.register();
