@@ -1,18 +1,20 @@
 ---
-title: Miriam, for the Archive
+title: Miriam, for the archive
 sub: A (long) short note on writing longer short notes
 date: 2022-06-17
 tags:
   - journal
-summary: |
-  This post has been written
-  and published,
-  and filed away for safe keeping
-  as an event that happened in my past.
-  This post is also a live performance,
-  and an invitation to engage.
-  Thanks for dropping by.
 ---
+
+This post has been written
+and published,
+and filed away for safe keeping
+as an event that happened in my past.
+This post is also a live performance,
+and an invitation to engage.
+Thanks for dropping by.
+
+<!-- intro -->
 
 I've had this site for a very long time --
 though the domain and the underlying tech

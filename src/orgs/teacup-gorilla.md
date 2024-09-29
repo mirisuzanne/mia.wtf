@@ -13,7 +13,7 @@ tags:
   - area:art
   - as:music
   - role:founder
-summary: >
-  Inhabiting the venues of Denver Colorado
-  with dark indie-rock soundscapes and evocative poetry.
 ---
+
+Inhabiting the venues of Denver Colorado
+with dark indie-rock soundscapes and evocative poetry.

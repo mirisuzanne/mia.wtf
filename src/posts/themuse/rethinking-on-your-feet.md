@@ -1,14 +1,10 @@
 ---
-title: (re)Thinking on Your Feet
+title: (re)Thinking on your feet
 sub: Part 7 of [Fuck the Muse](/2012/10/16/muse-intro/)
 venue: The Operating System
 url: https://medium.com/the-operating-system/coco-process-course-eric-meyers-fuck-the-muse-lesson-7-re-thinking-on-your-feet-25782c23a87e
 date: 2013-03-29
-cycle:
-  - img: muse/cycle-diagram.jpg
-    alt: Is your approach working? Keep doing it, or try something else.
 ---
-{# import "content.macros.njk" as content #}
 
 Sometimes you have a great idea for a project,
 or one aspect of a project,
@@ -19,10 +15,17 @@ after putting so much into it,
 but neither can you force it through.
 The only way forward is to take a step back.
 
-{# content.figure(
-  data=cycle,
-  caption='How to everything ([again](/2012/11/08/creative-cycles/))'
-) #}
+<figure>
+  <img
+    webc:is="u-img"
+    src="muse/cycle-diagram.jpg"
+    alt="Is your approach working? Keep doing it, or try something else."
+  >
+  <figcaption>
+    How to everything
+    (<a href="/2012/11/08/creative-cycles/">again</a>)
+  </figcaption>
+</figure>
 
 Chalk Outline
 -------------

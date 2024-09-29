@@ -14,6 +14,9 @@ but moving from
 [Nunjucks](https://www.11ty.dev/docs/languages/nunjucks/) templates/macros
 to [WebC](https://www.11ty.dev/docs/languages/webc/)
 and web components.
+
+<!-- intro -->
+
 Outside of static-site templates,
 one goal of this refresh
 is to keep things as 'vanilla' as possible.

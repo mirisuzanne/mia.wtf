@@ -11,15 +11,17 @@ hero:
     scrawled in red ink
     over a poster of fast cars and neon lights
     originally saying 2 fast 2 furious.
-summary: |
-  After nearly 15 years
-  as a highly-requested feature in CSS --
-  and 15 years being told it was impossible --
-  (size) Container Queries and units
-  have shipped in both Chrome/Edge 105,
-  and Safari 16!
-  Firefox is not far behind.
 ---
+
+After nearly 15 years
+as a highly-requested feature in CSS --
+and 15 years being told it was impossible --
+(size) Container Queries and units
+have shipped in both Chrome/Edge 105,
+and Safari 16!
+Firefox is not far behind.
+
+<!-- intro -->
 
 - [Chrome 105](https://developer.chrome.com/blog/new-in-chrome-105/)
   [<date-time date="2022-08-30"></date-time>]

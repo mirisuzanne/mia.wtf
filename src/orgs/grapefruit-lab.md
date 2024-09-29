@@ -10,8 +10,8 @@ tags:
   - area:art
   - as:theater
   - role:founder
-summary: >
-  Performance is an embodied process
-  for imagining, exploring,
-  and _deepening our humanity_.
 ---
+
+Performance is an embodied process
+for imagining, exploring,
+and _deepening our humanity_.

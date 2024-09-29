@@ -2,60 +2,59 @@
 is: list
 title: Miriam Eric Suzanne
 sub:
-  - is a.k.a. _terrible mia_
+  - is a.k.a. [terrible mia](https://front-end.social/@mia/)
   - has three first names, but only one comes first
-  - is pretty anxious about this, honestly
-  - wants to sell you something (anything)
-  - if you're looking for [my bio](/about/), that's on a different page
-  - keeps on changing, without any excuse
+  - wants to sell you something ([anything](/tip/))
 description: Art & code & other digital artifacts of my life.
 summary:
-  - |
-    **I'm Miriam**,
-    a cross-media artist --
+  - >
+    **I'm [Miriam](/about/)**,
+    a hybrid artist --
     often creating [music](/music/)
     & [theater](/theater/)
     & [websites](/web/),
-    or [teaching CSS](/web/teaching/).
+    or [teaching](/web/teaching/)
+    and [developing new features](/orgs/csswg/)
+    for the <abbr>CSS</abbr> language.
     These days, I'm also into
-    _yarn_
-    and _pottery_
+    _yarn_ and _pottery_
     and _mechanical clocks_.
-  - |
+  - >
     _People are queer_.
     We fall between meanings,
     and explore outside them.
     We [grasp at stability and form](/why/),
     but always come up short.
-  - |
+  - >
     I was told that
     _every home page should be selling something_.
     But I have a
     <a href="https://business-business.business" aria-label="business website">
     bu$ine$$ web$ite</a>
     for that.
-  - |
+  - >
     `» Hello. `**`I am a Miriam`**`(Bot).
     Beep boop boop beep.
     Clock Escapement.
     Cascading Styles.
     `**`Ned Ludd was right`**`.
     Join a union.`
+eleventyImport:
+  collections: [is:post, is:channel, is:org]
 ---
 
-<h2>Words</h2>
+<h2>The live feed</h2>
 <post-list
   :@posts="$data.collections['is:post']"
 ></post-list>
-
-<h2>Other channels</h2>
-<project-list
-  :@projects="$data.collections['is:channel']"
-  @time="current"
-></project-list>
 
 <h2>Co-conspirators</h2>
 <org-list
   @time="current"
   @founder="true"
 ></org-list>
+
+<h2>Other channels</h2>
+<project-list
+  :@projects="$data.collections['is:channel']"
+></project-list>

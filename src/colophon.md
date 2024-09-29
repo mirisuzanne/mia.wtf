@@ -1,5 +1,4 @@
 ---
-layout: is/markdown
 title: What's in a website?
 sub: The nerds call this a [colophon](https://en.wikipedia.org/wiki/Colophon_(publishing))
 summary:

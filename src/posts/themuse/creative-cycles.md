@@ -1,29 +1,10 @@
 ---
-title: Creative Modes and Cycles
+title: Creative modes and cycles
 sub: Part 3 of [Fuck the Muse](/2012/10/16/muse-intro/)
 venue: The Operating System
 url: https://medium.com/the-operating-system/coco-process-course-eric-meyers-fuck-the-muse-lesson-3-creative-modes-and-cycles-984e501058e1
 date: 2012-11-08
-cleese:
-  - iframe: https://player.vimeo.com/video/176474304
-    title: John Cleese video
-    width: 640
-    height: 483
-divided:
-  - iframe: https://www.youtube.com/embed/dFs9WO2B8uI
-    title: video explaining the divided brain
-    width: 521
-    height: 293
-cycle:
-  - img: muse/cycle-diagram.jpg
-    alt: Is your approach working? Keep doing it, or try something else.
-different:
-  - iframe: https://www.youtube.com/embed/K2P86C-1x3o
-    title: Monty Python video
-    width: 520
-    height: 390
 ---
-{# import "content.macros.njk" as content #}
 
 Cycles have become the core of my creative process.
 Thinking in cycles means I always know
@@ -46,10 +27,16 @@ cultivate the open mode of operating.
 
 [creativity]: https://vimeo.com/176474304
 
-{# content.figure(
-  data=cleese,
-  caption='John Cleese is full of dad jokes'
-) #}
+<figure>
+  <iframe
+    webc:is="ratio-frame"
+    title="John Cleese talking about creative work"
+    src="https://player.vimeo.com/video/176474304"
+    width="640"
+    height="483"
+    frameborder="0"></iframe>
+  <figcaption>John Cleese is full of dad jokes</figcaption>
+</figure>
 
 ## Your Brain at Work
 
@@ -68,10 +55,16 @@ on the [Divided Brain][Divided Brain]:
 [Divided Brain]: https://www.youtube.com/watch?v=dFs9WO2B8uI
 [RSA]: https://www.thersa.org/
 
-{# content.figure(
-  data=divided,
-  caption='Both sides of your brain, together at last'
-) #}
+<figure>
+  <iframe
+    webc:is="ratio-frame"
+    title="Video explaining the divided brain"
+    src="https://www.youtube.com/embed/dFs9WO2B8uI"
+    width="521"
+    height="293"
+    frameborder="0"></iframe>
+  <figcaption>Both sides of your brain, together at last</figcaption>
+</figure>
 
 ## Working in Cycles
 
@@ -83,10 +76,14 @@ You have to know when to set down your hammer
 and pick up a chainsaw.
 That's where cycles become useful.
 
-{# content.figure(
-  data=cycle,
-  caption='How to everything'
-) #}
+<figure>
+  <img
+    webc:is="u-img"
+    src="muse/cycle-diagram.jpg"
+    alt="Is your approach working? Keep doing it, or try something else."
+  >
+  <figcaption>How to everything</figcaption>
+</figure>
 
 Cycling through different modes has become
 the core of my creative process.
@@ -155,10 +152,16 @@ Getting new ideas into your head is part of the work.
 
 ## Stay Agile
 
-{# content.figure(
-  data=different,
-  caption='And now for a callback framed as a diversion'
-) #}
+<figure>
+  <iframe
+    webc:is="ratio-frame"
+    title="Monty Python, two men slapping each other with large fish"
+    src="https://www.youtube.com/embed/K2P86C-1x3o"
+    width="521"
+    height="293"
+    frameborder="0"></iframe>
+  <figcaption>And now for a callback framed as a diversion</figcaption>
+</figure>
 
 No one technique is going to get you the whole way there.
 Practice changing directions quickly.

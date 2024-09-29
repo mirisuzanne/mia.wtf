@@ -5,15 +5,17 @@ sub: White and black channels are clamped, and then scaled
 date: 2022-06-29
 tags:
   - color
-summary: |
-  Working on Sass
-  [support for color spaces](/specs/sass-color-spaces/),
-  I ran into a question
-  about the proper handling of `hwb()` colors.
-  That lead me down a rabbit hole,
-  exploring the edges of hwb
-  (and powerless color channels) in CSS.
 ---
+
+Working on Sass
+[support for color spaces](/specs/sass-color-spaces/),
+I ran into a question
+about the proper handling of `hwb()` colors.
+That lead me down a rabbit hole,
+exploring the edges of hwb
+(and powerless color channels) in CSS.
+
+<!-- intro -->
 
 ## Intro to HWB colors
 

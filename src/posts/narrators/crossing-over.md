@@ -1,5 +1,6 @@
 ---
-title: Crossing Over | Teaching You To See Me
+title: Crossing over
+sub: Teaching you to see me
 date: 2017-08-16
 hero:
   src: narrators/crossingover.png

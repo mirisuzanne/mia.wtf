@@ -4,11 +4,13 @@ sub: If you give zero F*CSS, are you even a developer?
 date: 2019-08-28
 tags:
   - selectors
-summary: |
-  In the CSS naming-convention arms race to lowest specificity,
-  I’ve decided to only use universal `*` selectors.
-  I call it **F*CSS**.
 ---
+
+In the CSS naming-convention arms race to lowest specificity,
+I’ve decided to only use universal `*` selectors.
+I call it **F*CSS**.
+
+<!-- intro -->
 
 - It's a recursive backronym: the "F" is for F*CSS
 - When asked "why?" you must say "for F*CSS sake" [^1]

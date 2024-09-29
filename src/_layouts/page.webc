@@ -21,9 +21,7 @@ layout: base
     href="/"
     rel="home"
     :aria-current="this.page.url === '/' ? 'page' : false"
-  >
-    <and-amp>&c</and-amp>
-  </a>
+  >mia</a>
   <dialog-toggle>
     <button
       aria-controls="theme-controls"
@@ -60,8 +58,10 @@ layout: base
   #banner {
     align-items: baseline;
     display: flex;
-    gap: var(--gap);
+    gap: 1ch;
     justify-content: space-between;
+
+    [rel=home] { font-style: italic; }
   }
 
   [line-length] {

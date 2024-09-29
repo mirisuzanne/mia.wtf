@@ -1,5 +1,5 @@
 ---
-title: (Mis)Gender
+title: (Mis)gender
 date: 2017-07-11
 hero:
   src: '2017/herm.jpg'

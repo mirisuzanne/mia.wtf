@@ -1,6 +1,6 @@
 ---
 feature: true
-title: Body & Gender Fragments
+title: Body & gender fragments
 date: 2017-03-01
 erasure: true
 hero:
@@ -15,7 +15,6 @@ summary: |
   *I was born, a body.*
   Without my body, I don't exist.
 ---
-{# import "content.macros.njk" as content #}
 
 Some ==bodies have freckles,==
 while some are six-foot-four and near-sighted.
@@ -40,13 +39,11 @@ I call it transition.
 
 ------
 
-<p>
-  {# content.erase('These fragments') #}
-  are my own,
-  not a guide to trans experience.
-  Some will <mark>relate to parts.</mark>
-  Others won't.
-</p>
+<black-out>These fragments</black-out>
+are my own,
+not a guide to trans experience.
+Some will ==relate to parts.==
+Others won't.
 
 ------
 

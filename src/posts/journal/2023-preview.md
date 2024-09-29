@@ -1,5 +1,5 @@
 ---
-title: Reclaiming My Time
+title: Reclaiming my time
 sub: 2023 in (partial) preview
 date: 2023-05-06
 hero:
@@ -15,12 +15,14 @@ hero:
     are used to create a pixelated heart,
     and spell out the word poop.
   caption: a love note
-summary: |
-  So that when I am busy,
-  it should be from
-  _an abundance of creative projects,
-  not a scarcity of time_.
 ---
+
+So that when I am busy,
+it should be from
+_an abundance of creative projects,
+not a scarcity of time_.
+
+<!-- intro -->
 
 Here we are,
 1/4<sup>th</sup> of our way through

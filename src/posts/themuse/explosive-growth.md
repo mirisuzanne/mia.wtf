@@ -1,5 +1,5 @@
 ---
-title: Explosive Growth
+title: Explosive growth
 sub: Part 6 of [Fuck the Muse](/2012/10/16/muse-intro/)
 venue: The Operating System
 url: https://medium.com/the-operating-system/coco-process-course-eric-meyers-fuck-the-muse-lesson-6-explosive-growth-b5e6652af1e1
@@ -9,7 +9,6 @@ hoarding:
 cutup:
   - img: muse/explosion/cutup.jpg
 ---
-{# import "content.macros.njk" as content #}
 
 It's always useful to remember where you are
 in the overall creative process.
@@ -34,10 +33,14 @@ Now it's time to go shopping.
 
 ## Surround Yourself with Material
 
-{# content.figure(
-  data=hoarding,
-  caption="It's time to get your hoarding on"
-) #}
+<figure>
+  <img
+    webc:is="u-img"
+    src="muse/explosion/hoarding.jpg"
+    alt="A room full of old junk"
+  >
+  <figcaption>It's time to get your hoarding on</figcaption>
+</figure>
 
 The goal of this phase is to collect all the material
 you might possibly need to create your piece.
@@ -81,10 +84,14 @@ or just take notes.
 When ideas start to merge and you are inspired to say something,
 then say it.
 
-{# content.figure(
-  data=cutup,
-  caption='Cut it up. You can put it back together later'
-) #}
+<figure>
+  <img
+    webc:is="u-img"
+    src="muse/explosion/cutup.jpg"
+    alt="Some printed pages cut up, and a scissors"
+  >
+  <figcaption>Cut it up. You can put it back together later</figcaption>
+</figure>
 
 Ebb and flow with the [cycles][cycles] of research, theft, and creation.
 Let your inspiration drive you back and forth

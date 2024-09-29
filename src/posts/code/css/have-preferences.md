@@ -3,10 +3,13 @@ title: User styles on the web
 date: 2024-01-24
 tags:
   - preferences
-summary: |
-  You're allowed to have preferences.
-  Set your preferences.
 ---
+
+You're allowed to have preferences.
+That's what the web is designed for.
+Set your preferences.
+
+<!-- intro -->
 
 I've been playing with user styles.
 

@@ -1,22 +1,23 @@
 ---
 date: 2016-08-17
-title: 'Miriam: A How-To Guide'
+title: Miriam, a how-to guide
 erasure: yes
 hero:
   src: 2016/mia-wtf.jpg
-summary: |
-  There are some questions that come up again and again
-  if you are trans.
-  A few of those questions are terrible,
-  but most of them are well-intentioned.
-  I'm lucky to have a supportive community around me,
-  so I thought I'd write down my most common answers
-  to help ease your stress about
-  *getting it right*,
-  and ease my stress about
-  answering the same questions over and over.
 ---
-{# import "content.macros.njk" as content #}
+
+There are some questions that come up again and again
+if you are trans.
+A few of those questions are creepy,
+but most of them are well-intentioned.
+I'm lucky to have a supportive community around me,
+so I thought I'd write down my most common answers
+to help ease your stress about
+*getting it right*,
+and ease my stress about
+answering the same questions over and over.
+
+<!-- intro -->
 
 *These answers are very much my own.
 I am not attempting to speak for anyone else.
@@ -166,7 +167,7 @@ I'd love for you to update my name anywhere you can.
 to find every instance,
 but I might ask you to
 update my name if I see it.
-Not because {# content.erase('I need to erase') #}
+Not because <black-out>I need to erase</black-out>
 any mention of my past,
 but because it's confusing to refer to a person
 by a name they don't use.

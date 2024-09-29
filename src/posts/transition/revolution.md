@@ -1,6 +1,6 @@
 ---
-title: Rejecting Maleness
-sub: An Apology to the Revolution
+title: Rejecting maleness
+sub: An apology to the revolution
 date: 2018-08-01
 venue: Journal of Mennonite Writing
 url: https://mennonitewriting.org/journal/10/3/rejecting-maleness-apology-revolution/

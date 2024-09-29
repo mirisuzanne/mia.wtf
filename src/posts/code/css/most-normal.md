@@ -8,11 +8,13 @@ hero:
   alt: this site, using most normalizer-est to remove all styles
   caption: No style is the best, most-normal style
 date: 2019-11-02
-summary: |
-  Why waste your time on half-measures?
-  Make your site **THE MOST NORMALEST**
-  with this **ULTIMATE CSS RESET**.
 ---
+
+Why waste your time on half-measures?
+Make your site **THE MOST NORMALEST**
+with this **ULTIMATE CSS RESET**.
+
+<!-- intro -->
 
 ```css
 *, *::after, *::before {

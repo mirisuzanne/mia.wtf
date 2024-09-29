@@ -10,12 +10,13 @@ gallery:
   - img: portraits/DanSondra-Full.png
     alt: Digitally colored version
 ---
-{# import "content.macros.njk" as content #}
 
-{# content.figure(
-  data=gallery,
-  caption="Dan Eisenstat & Sondra Eby, a sketchy couple"
-) #}
+<figure>
+  <media-gallery
+    :@from-data="gallery"
+  ></media-gallery>
+  <figcaption>Dan Eisenstat & Sondra Eby, a sketchy couple</figcaption>
+</figure>
 
 I began this portrait in the same manner
 as the [Kitten Karlyle][kk] illustration,

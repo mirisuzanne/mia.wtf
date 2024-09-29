@@ -2,16 +2,18 @@
 title: A web component for CodePen embeds?
 sub: It's not essential, but it took me down a path…
 date: 2024-09-09
-summary: |
-  David Darnes
-  already made
-  [a `<code-pen>` web component](https://darn.es/code-pen-web-component/).
-  It's great.
-  It takes code,
-  and creates a pen from that code.
-  But I don't want to create a pen,
-  I want to embed one.
 ---
+
+David Darnes
+already made
+[a `<code-pen>` web component](https://darn.es/code-pen-web-component/).
+It's great.
+It takes code,
+and creates a pen from that code.
+But I don't want to create a pen,
+I want to embed one.
+
+<!-- intro -->
 
 The default CodePen embed is pretty good already.
 So right from the start,

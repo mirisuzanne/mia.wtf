@@ -4,15 +4,17 @@ sub: I have to look it up every time.
 date: 2022-06-15
 tags:
   - selectors
-summary: |
-  In CSS,
-  there are _compound selectors_
-  and also _complex selectors_,
-  and I never remember which is which.
-  Do you need to learn the difference?
-  Probably not.
-  But I'm tired of looking it up.
 ---
+
+In CSS,
+there are _compound selectors_
+and also _complex selectors_,
+and I never remember which is which.
+Do you need to learn the difference?
+Probably not.
+But I'm tired of looking it up.
+
+<!-- intro -->
 
 From the specification:
 

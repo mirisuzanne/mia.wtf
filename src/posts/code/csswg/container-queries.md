@@ -20,14 +20,16 @@ callout:
       [use the container query syntax](https://www.oddbird.net/2022/08/18/cq-syntax/)
       that has actually
       [shipped in browsers](/2022/09/14/cq-browsers/).
-summary: |
-  Media-queries allow an author
-  to make style changes
-  based on the overall viewport dimensions --
-  but in many cases,
-  authors would prefer styling modular components
-  based on their context within a layout.
 ---
+
+Media-queries allow an author
+to make style changes
+based on the overall viewport dimensions --
+but in many cases,
+authors would prefer styling modular components
+based on their context within a layout.
+
+<!-- intro -->
 
 [My proposal][issue] builds on
 [David Baron's `@container` proposal][dbaron],

@@ -1,25 +1,10 @@
 ---
-title: Starting from a Seed
+title: Starting from a seed
 sub: Part 4 of [Fuck the Muse](/2012/10/16/muse-intro/)
 venue: The Operating System
 url: https://www.theoperatingsystem.org/coco-process-course-eric-meyers-fuck-the-muse-lesson-4-starting-from-a-seed/
 date: 2012-12-13
-specimen:
-  - img: muse/seed/specimen.jpg
-    alt: pinned insects
-circle:
-  - img: muse/seed/golden-circle.jpg
-    alt: |
-      *why* in the center circle, then *what*, and *how* in larger circles
-science:
-  - img: muse/seed/science.jpg
-    alt: one person sitting with a VR set, while another pokes at a camera
-herm:
-  - img: muse/seed/herm.jpg
-    alt: statue of hermaphroditus lifting her dress
-    width: auto
 ---
-{# import "content.macros.njk" as content #}
 
 You can't start working
 until you know what you are working towards.
@@ -31,10 +16,14 @@ the "seed" of a project.
 
 ## A Range of Specimen
 
-{# content.figure(
-  data=specimen,
-  caption='what do we have against these cute little insects?'
-) #}
+<figure>
+  <img
+    webc:is="u-img"
+    src="muse/seed/specimen.jpg"
+    alt="pinned insects"
+  >
+  <figcaption>What do we have against these cute little insects?</figcaption>
+</figure>
 
 There are many ways to find,
 define, and refine your seed.
@@ -49,10 +38,14 @@ starting with a question and related hypothesis.
 2. Do *background research*
 3. Construct a *hypothesis*
 
-{# content.figure(
-  data=circle,
-  caption="Simon Sinek's *golden circle*"
-) #}
+<figure>
+  <img
+    webc:is="u-img"
+    src="muse/seed/golden-circle.jpg"
+    alt="concentric circles with 'why' in the center, then 'what', and 'how'"
+  >
+  <figcaption @html="mdI(`Simon Sinek's *golden circle*`)"></figcaption>
+</figure>
 
 [Simon Sinek][sinek] starts his projects with
 "why" then "how" and finally "what" -
@@ -100,10 +93,14 @@ started with a quote I found on the internet:
 
 [hetero]: https://books.google.com/books?id=S8BB1K361SUC&lpg=PP1&pg=PA15#v=onepage&q&f=false
 
-{# content.figure(
-  data=science,
-  caption='Out-of-body studies are super weird, yall'
-) #}
+<figure>
+  <img
+    webc:is="u-img"
+    src="muse/seed/science.jpg"
+    alt="One person sitting with a VR set, while another pokes at a camera"
+  >
+  <figcaption>Out-of-body studies are super weird, y'all</figcaption>
+</figure>
 
 I combined that with an article
 describing the [science of out-of-body experience][body].
@@ -123,10 +120,18 @@ the other pieces fell into place.
 [wiki]: https://en.wikipedia.org/
 [tattered]: https://tatteredcover.com/
 
-{# content.figure(
-  data=herm,
-  caption='a herm (named for Hermes) is a statue with carved genitals on un-carved block legs'
-) #}
+<figure>
+  <img
+    webc:is="u-img"
+    src="muse/seed/herm.jpg"
+    alt="Statue of hermaphroditus lifting her dress"
+  >
+  <figcaption>
+    a herm (named for Hermes)
+    is a statue with carved genitals
+    on un-carved block legs
+  </figcaption>
+</figure>
 
 The fragmented & unreliable nature of memory inspired a *structure*:
 note cards, each written as a fragment of memory,

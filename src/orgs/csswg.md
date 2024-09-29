@@ -11,9 +11,9 @@ tags:
   - as:standards
   - role:invited-expert
   - org:oddbird
-summary: >
-  Styling _unknown content_
-  on an infinite and _unknowable canvas_ --
-  across languages, operating systems,
-  and device interfaces.
 ---
+
+Styling _unknown content_
+on an infinite and _unknowable canvas_ --
+across languages, operating systems,
+and device interfaces.

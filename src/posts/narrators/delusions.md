@@ -1,5 +1,5 @@
 ---
-title: My Theatrical Delusions
+title: My theatrical delusions
 date: 2022-04-20
 tags:
   - theater

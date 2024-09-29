@@ -1,5 +1,5 @@
 ---
-title: 2 Days of Cordwainery
+title: 2 days of cordwainery
 sub: A wonderful adventure in shoe-building
 venue: Colorado Shoe School
 url: https://coloradoshoeschool.com/
@@ -163,7 +163,6 @@ worn:
       red scribbles, black lines and arrows, purple lining,
       and orange lace panels --
       into silver/black stripes and orange upper.
-    span: full
   - img: 2022/shoes/moth-22.jpg
     alt: |
       Closeup inside left shoe,
@@ -193,20 +192,20 @@ worn:
       Closeup back of the pair,
       with black bike inner-tube heal panel,
       with printed white illegible letters & numbers.
-summary: |
-  Erin and I spent a couple days last week
-  at the [Colorado Shoe School](https://coloradoshoeschool.com/)
-  in Bellvue, CO --
-  learning, designing, and making our own sneakers.
-  Yes,
-  actual sneakers,
-  fit for wearing,
-  and built from scratch.
-  Only the soles come pre-formed
-  out of recycled plastic.
 ---
 
-{# import "content.macros.njk" as content #}
+Erin and I spent a couple days last week
+at the [Colorado Shoe School](https://coloradoshoeschool.com/)
+in Bellvue, CO --
+learning, designing, and making our own sneakers.
+Yes,
+actual sneakers,
+fit for wearing,
+and built from scratch.
+Only the soles come pre-formed
+out of recycled plastic.
+
+<!-- intro -->
 
 <abbr>TL;DR</abbr>
 Annabel (my teacher)
@@ -228,16 +227,18 @@ We stayed in the tiny home
 they converted from a 1940s train car,
 between the two days of our workshop.
 
-{# set caption #}
+<figure>
+  <media-gallery
+    :@from-data="location"
+  ></media-gallery>
+  <figcaption>
+
 The entrance & yard (notice the log rocking chair) --
 along with some videos about
 the school and the converted train car.
-{# endset #}
 
-{# content.figure(
-  location,
-  caption
-) #}
+  </figcaption>
+</figure>
 
 They have several workshops available,
 but we went with the two-day option --
@@ -285,14 +286,12 @@ it doesn't look like much
 and I think both Annabel and I
 were worried about how it would come together.
 
-{# set caption #}
-My cut leather & fabric at the end of day 1.
-{# endset #}
-
-{# content.figure(
-  day_one,
-  caption
-) #}
+<figure>
+  <media-gallery
+    :@from-data="day_one"
+  ></media-gallery>
+  <figcaption>My cut leather & fabric at the end of day 1</figcaption>
+</figure>
 
 I guess I'm making clown shoes?
 
@@ -324,14 +323,12 @@ We found that it worked well
 to tack down my drawings onto the leather,
 and sew straight through the paper.
 
-{# set caption #}
-Sewing, gluing, and building on day 2.
-{# endset #}
-
-{# content.figure(
-  day_two,
-  caption
-) #}
+<figure>
+  <media-gallery
+    :@from-data="day_two"
+  ></media-gallery>
+  <figcaption>Sewing, gluing, and building on day 2</figcaption>
+</figure>
 
 It was surprising to me --
 despite experiencing the same
@@ -350,15 +347,15 @@ and provide a heal pull.
 
 All that's left to do is try them on.
 
-{# set caption #}
-Trying them on in the workshop,
-and some closeups on the ride home.
-{# endset #}
-
-{# content.figure(
-  lacing,
-  caption
-) #}
+<figure>
+  <media-gallery
+    :@from-data="lacing"
+  ></media-gallery>
+  <figcaption>
+    Trying them on in the workshop,
+    and some closeups on the ride home
+  </figcaption>
+</figure>
 
 ## A little more
 
@@ -375,20 +372,22 @@ on scraps of leather.
 Only the black is consistently visible,
 so I went with it.
 
-{# content.figure(test) #}
+<figure>
+  <media-gallery
+    :@from-data="test"
+  ></media-gallery>
+</figure>
 
 Now I've been wearing the shoes for a week,
 and I love them.
 I'm on the road this week,
 exploring southwest Colorado,
-but ere are some more closeups I took
+but here are some more closeups I took
 in the hotel room:
 
-{# set caption #}
-Two-weeks worn in, now with more arrows.
-{# endset #}
-
-{# content.figure(
-  worn,
-  caption
-) #}
+<figure>
+  <media-gallery
+    :@from-data="worn"
+  ></media-gallery>
+  <figcaption>Two-weeks worn in, now with more arrows</figcaption>
+</figure>

@@ -1,5 +1,5 @@
 ---
-title: UMS Day 2
+title: UMS day 2
 date: 2014-07-26
 hero:
   src: ums/14-25/raven-jane.jpg
@@ -16,7 +16,9 @@ gallery:
     alt: Dave Devine Relay
     span: full
   - img: ums/14-25/us.jpg
+    alt: Dan and Mia and Sondra
   - img: ums/14-25/planning.jpg
+    alt: Sondra and Robin and Dan looking at schedules in a restaurant booth
   - img: ums/14-25/dragondeer.jpg
     alt: Dragondeer
     span: full
@@ -25,18 +27,20 @@ gallery:
   - img: ums/14-25/saturn.jpg
     alt: Saturn Cowboys
   - img: ums/14-25/icecream.jpg
+    alt: ice cream cones
   - img: ums/14-25/accordion-crimes.jpg
     alt: Accordion Crimes
   - img: ums/14-25/truth.jpg
     alt: The Truth & Spectacle
     span: full
 ---
-{# import "content.macros.njk" as content #}
 
 I'm overwhelmed by all the music! At this point I wander half-aimless,
 in and out of venues — quick to judge, but more often inspired. Glad to
 discover that most of my favorites are local, and I can stalk them like
 a groupie until the next UMS arrives again.
+
+<!-- intro -->
 
 I've always loved
 **Accordion Crimes**
@@ -58,7 +62,9 @@ This was a wonderful night of live/local music, but my favorite
 discovery was the intricate shoe-gazing soundscapes of
 **Dave Devine Relay**.
 
-{# content.figure(
-  data=gallery,
-  caption='Photos from UMS day 2'
-) #}
+<figure>
+  <media-gallery
+    :@from-data="gallery"
+  ></media-gallery>
+  <figcaption>Photos from UMS day 2</figcaption>
+</figure>

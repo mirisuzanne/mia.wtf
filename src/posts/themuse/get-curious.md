@@ -1,20 +1,10 @@
 ---
-title: Get Curious
+title: Get curious
 sub: Part 5 of [Fuck the Muse](/2012/10/16/muse-intro/)
 venue: The Operating System
 url: https://medium.com/the-operating-system/coco-process-course-eric-meyers-fuck-the-muse-lesson-5-get-curious-pt-1-b30284155182
 date: 2013-02-07
-bull:
-  - img: muse/curious/bullshit.jpg
-    alt: the rear end of a steer
-posture:
-  - img: contour/final.png
-    alt: The Posture of Contour by James Belflower
-bodies:
-  - img: muse/curious/bodies.jpg
-    alt: Collage of labeled animal diagrams
 ---
-{# import "content.macros.njk" as content #}
 
 Now that you have [a seed worth exploring][seed],
 you are ready for step 2 of the creative process.
@@ -29,10 +19,16 @@ but I think you can do even better:
 *Write shitty piles of shit,
 and leave the drafting for later.*
 
-{# content.figure(
-  data=bull,
-  caption='I often refer to this as the fertilizer or *bullshit* stage.'
-) #}
+<figure>
+  <img
+    webc:is="u-img"
+    src="muse/curious/bullshit.jpg"
+    alt="the rear end of a steer"
+  >
+  <figcaption
+    @html="mdI('I often refer to this as the fertilizer or *bullshit* stage')"
+  ></figcaption>
+</figure>
 
 Drafting is an organizational problem.
 You can't organize ideas you don't have.
@@ -59,10 +55,16 @@ images, and aesthetics I am working with.
 I want to soak up inspirations,
 and understand my constraints.
 
-{# content.figure(
-  data=posture,
-  caption='Final cover design for *The Posture of Contour*'
-) #}
+<figure>
+  <img
+    webc:is="u-img"
+    src="contour/final.png"
+    alt="The Posture of Contour by James Belflower"
+  >
+  <figcaption
+    @html="mdI('Final cover design for *The Posture of Contour*')"
+  ></figcaption>
+</figure>
 
 I start with three questions:
 
@@ -113,10 +115,14 @@ you have enough to get started.
 
 ## Sparking Curiosity
 
-{# content.figure(
-  data=bodies,
-  caption='Bodies. A diagram.'
-) #}
+<figure>
+  <img
+    webc:is="u-img"
+    src="muse/curious/bodies.jpg"
+    alt="Collage of labeled animal diagrams"
+  >
+  <figcaption>Bodies. A diagram.</figcaption>
+</figure>
 
 The [seed I developed in phase 1][seed]
 can be used directly to start a list of materials

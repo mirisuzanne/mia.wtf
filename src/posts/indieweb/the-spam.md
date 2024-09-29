@@ -1,5 +1,5 @@
 ---
-title: The Spam Has Arrived
+title: The spam has arrived
 sub: Now I remember why we stopped putting comment forms on everything.
 date: 2022-06-09
 tags:
@@ -13,21 +13,21 @@ callout:
       maintained by
       [Shawn Wang](https://www.swyx.io/),
       which I'm now using.
-summary: |
-  The other day, I posted an article about
-  [implementing webmentions](/2022/06/04/indiweb/)
-  on this site.
-  Today, I'm battling an endless stream
-  of spam in my mentions.
 ---
+
+The other day, I posted an article about
+[implementing webmentions](/2022/06/04/indiweb/)
+on this site.
+Today, I'm battling an endless stream
+of spam.
+
+<!-- intro -->
 
 I first noticed it on a Netlify deploy preview.
 A faceless mention from 'admin'
 at 'imoneyhub'.
 
-{# '2022/mention-spam.jpg' | img(
-  'screenshot: admin, June 9, 2022, mentioned this in imoneyhub.com'
-) | safe #}
+<img webc:is="u-img" src="2022/mention-spam.jpg" alt="screenshot: admin, June 9, 2022, mentioned this in imoneyhub.com">
 
 I assumed right away it must be spam,
 but I'm glad I clicked through.
@@ -49,9 +49,7 @@ all (web)mentioning my original post.
 The webmention.io dashboard shows me all of them
 (with a few legit mentions scattered through):
 
-{# '2022/mention-spam-list.jpg' | img(
-  'screenshot: Recent Webmentions, and a small-print list of faceless random urls, and a few blurred-out legit mentions'
-) | safe #}
+<img webc:is="u-img" src="2022/mention-spam-list.jpg" alt="screenshot: Recent Webmentions, and a small-print list of faceless random urls, and a few blurred-out legit mentions">
 
 All of these mentions made it into my local cache,
 but only one made it into a build.

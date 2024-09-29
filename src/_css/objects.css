@@ -38,6 +38,8 @@ p-note, p-role {
 }
 
 code[style*=--color-tile] {
+  display: inline-block;
+
   &::before {
     aspect-ratio: 1;
     background:
@@ -47,6 +49,6 @@ code[style*=--color-tile] {
     content: '';
     display: inline-block;
     inline-size: 1cap;
-    margin-inline-end: 0.5ch;
+    margin-inline: 0.5ch;
   }
 }

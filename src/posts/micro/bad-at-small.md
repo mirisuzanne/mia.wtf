@@ -1,5 +1,5 @@
 ---
-title: I Never Let Things Be Small
+title: I never let things be small
 banner: ~~I Never~~ Let Things Be Small
 date: 2022-09-09
 ---
@@ -10,6 +10,8 @@ I feel like,
 if I'm going to post the link,
 I should have more to say about it.
 Something you haven't considered already.
+
+<!-- intro -->
 
 I created a folder here
 for 'micro' posts.

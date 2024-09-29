@@ -1,5 +1,5 @@
 ---
-title: Some Kind of Resistance Tour
+title: Some kind of resistance tour
 date: 2016-12-09
 hero:
   src: 2016/resistence.jpg
@@ -57,14 +57,16 @@ events:
     url: https://opengrounds.virginia.edu/
     tags:
       - resistance tour
-summary: |
-  It's been a month
-  since our country pseudo-elected
-  a bigoted blow-hard for president.
-  I'm heading to DC to protest his inauguration in January,
-  visit friends,
-  and go on a mixed-media resistance tour...
 ---
+
+It's been a month
+since our country pseudo-elected
+a bigoted blow-hard for president.
+I'm heading to DC to protest his inauguration in January,
+visit friends,
+and go on a mixed-media resistance tour...
+
+<!-- intro -->
 
 I'll be:
 

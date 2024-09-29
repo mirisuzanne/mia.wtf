@@ -1,6 +1,6 @@
 ---
 feature: true
-title: Fuck The Muse
+title: Fuck the muse
 sub: a series of articles on creative process
 venue: The Operating System
 url: https://www.theoperatingsystem.org/coco-process-course-eric-meyers-fuck-the-muse-creativity-mini-series-lesson-1/

@@ -10,8 +10,8 @@ tags:
   - area:web
   - as:agency
   - role:founder
-summary: >
-  OddBird is an influential web development agency --
-  helping clients plan, design, and develop
-  tailor-made web applications.
 ---
+
+OddBird is an influential web development agency --
+helping clients plan, design, and develop
+tailor-made web applications.

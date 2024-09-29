@@ -6,13 +6,15 @@ tags:
   - javascript
   - automation
   - osx
-summary: |
-  When my Alfred word counting workflow
-  stopped working (flowing?)
-  I discovered it was written as a php script --
-  and could be re-written with JS.
-  So I did!
 ---
+
+When my Alfred word counting workflow
+stopped working (flowing?)
+I discovered it was written as a php script --
+and could be re-written with JS.
+So I did!
+
+<!-- intro -->
 
 I've been using Alfred for Mac
 as long as I can remember --

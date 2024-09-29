@@ -1,5 +1,6 @@
 ---
-title: A Dark Plain
+feed: false
+title: A Dark Plain, song demo
 date: 2014-07-26
 tags:
   - teacup gorilla
@@ -13,14 +14,14 @@ caption: |
   lyrics by [Gil Scott Heron](https://www.youtube.com/watch?v=ztA6zUoqUcc)
 ---
 
-{# import "content.macros.njk" as content #}
-
 The first in a new set of demos:
 
-{# content.figure(
-  track,
-  caption
-) #}
+<figure>
+  <media-gallery
+    :@from-data="track"
+  ></media-gallery>
+  <figcaption @html="mdI(caption)"></figcaption>
+</figure>
 
 Hear studio recording of this track
 on our debut EP:

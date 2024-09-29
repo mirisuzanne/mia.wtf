@@ -1,0 +1,4 @@
+<iframe
+  webc:root="override"
+  :style="`aspect-ratio: ${this.width} / ${this.height}`"
+></iframe>

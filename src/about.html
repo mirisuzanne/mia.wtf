@@ -9,13 +9,13 @@ summary: >
   but regrets that as an aesthetic choice.
 bios:
   intro: >
-    Miriam is a cross-media artist
+    Miriam is a hybrid artist
     and web developer
     based in Denver, CO.
   orgs: >
-    She makes websites with [OddBird](https://oddbird.net),
+    She makes web things with [OddBird](https://oddbird.net),
     music with [Teacup Gorilla](https://teacupgorilla.com),
-    and hybrid theater with [Grapefruit lab](https://grapefruitlab.com).
+    and live performance with [Grapefruit lab](https://grapefruitlab.com).
   web: >
     Miriam is an Invited Expert on the
     W3C CSS Working group,
@@ -42,21 +42,24 @@ bios:
     pottery, socks, and mechanical clocks.
     It's fun to make things.
 photos:
-  - src: _mia/cssday-23.webp
+  - img: _mia/cssday-23.webp
     alt: >
       On stage at CSS Day,
       wearing black-and-white patterns
       and a headset
-  - src: _mia/lightning.jpg
-    alt: >
-      Selfie with neon pink lightning earrings
-      and a black jumpsuit
-  - src: _mia/smashing.jpg
+    span: tall
+  - img: _mia/smashing.jpg
     alt: >
       On stage behind a laptop at Smashing Conf,
       wearing a yellow leather jacket
       and headset
-  - src: _mia/debate.jpg
+    span: short
+  - img: _mia/lightning.jpg
+    alt: >
+      Selfie with neon pink lightning earrings
+      and a black jumpsuit
+    span: tall
+  - img: _mia/debate.jpg
     alt: >
       At a mic wearing flannel,
       with letters on the screen behind
@@ -87,10 +90,11 @@ eleventyImport:
   <media-gallery>
     <a
       webc:for="item of photos"
-      :href="imgSrc(item.src)"
+      :href="imgSrc(item.img)"
+      :data-span="item.span"
     ><img
       webc:is="u-img"
-      :src="item.src"
+      :src="item.img"
       :alt="item.alt"
       sizes="gallery"></a>
   </media-gallery>

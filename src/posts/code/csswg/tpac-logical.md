@@ -4,13 +4,15 @@ date: 2022-09-16
 url: https://adactio.com/journal/19457
 venue: Jeremy Keith
 rel: reply
-summary: |
-  The CSS Working Group is discussing
-  'logical properties' today
-  with the Internationalization Working Group --
-  and there's a great new article on the topic
-  this week from Jeremy Keith.
 ---
+
+The CSS Working Group is discussing
+'logical properties' today
+with the Internationalization Working Group --
+and there's a great new article on the topic
+this week from Jeremy Keith.
+
+<!-- intro -->
 
 CSS has historically revolved around
 physical directions:

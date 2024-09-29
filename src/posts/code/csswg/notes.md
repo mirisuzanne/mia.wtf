@@ -6,12 +6,14 @@ venue: css.oddbird.net
 url: https://css.oddbird.net
 tags:
   - oddbird
-summary: |
-  As I spend more of my time
-  working on the CSS language,
-  I wanted a place to take notes
-  and explore new ideas in the open.
 ---
+
+As I spend more of my time
+working on the CSS language,
+I wanted a place to take notes
+and explore new ideas in the open.
+
+<!-- intro -->
 
 The official conversation
 for CSS language development

@@ -11,5 +11,4 @@ tags:
   - area:web
   - web:teaching
   - as:publication
-  - org:oddbird
 ---

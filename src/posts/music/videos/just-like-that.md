@@ -22,15 +22,14 @@ events:
         url: https://www.facebook.com/RavenAndTheWritingDesk/
       - name: The Assemblage
         url: https://www.facebook.com/assemblagemusic/
-video:
-  - iframe: https://player.vimeo.com/video/203945682
-    width: 640
-    height: 360
 ---
 
-{# import "content.macros.njk" as content #}
-
-{# content.figure(
-  data=video,
-  caption='Just Like That music video'
-) #}
+<figure>
+  <iframe
+    webc:is="ratio-frame"
+    src="https://player.vimeo.com/video/203945682"
+    width="640"
+    height="360"
+    frameborder="0"></iframe>
+  <figcaption>Just Like That music video</figcaption>
+</figure>

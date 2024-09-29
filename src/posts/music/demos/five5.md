@@ -1,5 +1,6 @@
 ---
-title: Five(5)
+feed: false
+title: Five(5), song demo
 date: 2013-03-12
 tags:
   - teacup gorilla
@@ -10,9 +11,9 @@ track:
     height: 166
 ---
 
-{# import "content.macros.njk" as content #}
-
-{# content.figure(
-  track,
-  caption='Demo recording of Five(5)'
-) #}
+<figure>
+  <media-gallery
+    :@from-data="track"
+  ></media-gallery>
+  <figcaption>Demo recording of Five(5)</figcaption>
+</figure>

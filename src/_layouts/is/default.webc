@@ -4,5 +4,5 @@ layout: main
 
 <template
   webc:nokeep
-  @raw="content"
+  @html="content"
 ></template>

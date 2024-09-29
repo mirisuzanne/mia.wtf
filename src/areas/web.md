@@ -7,8 +7,8 @@ permalink: '/web/index.html'
 eleventyImport:
   collections: ["area:web"]
 summary: >
-  You're looking at it.
-  _The web_.
-  I made this small part of it,
-  where you are now.
 ---
+
+You're looking at it.
+I made this small corner of _The Web_,
+using text files full of code.

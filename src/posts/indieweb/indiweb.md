@@ -1,21 +1,23 @@
 ---
-title: Am I on the IndieWeb Yet?
+title: Am I on the IndieWeb yet?
 sub: I haven't signed to any major web labels.
 date: 2022-06-04
 tags:
   - webmentions
   - code
-summary: |
-  I'm really into the [IndieWeb](https://indieweb.org/),
-  or the ideas behind it.
-  I like to own my data,
-  I like a space to play and experiment,
-  I like the idea of syndicating content
-  to be read/experienced in a variety of formats.
-  I love [microformats](https://microformats.org/wiki/microformats2),
-  and [RSS feeds](https://en.wikipedia.org/wiki/RSS),
-  and… wait… how do [webmentions](https://indieweb.org/Webmention) work?
 ---
+
+I'm really into the [IndieWeb](https://indieweb.org/),
+or the ideas behind it.
+I like to own my data,
+I like a space to play and experiment,
+I like the idea of syndicating content
+to be read/experienced in a variety of formats.
+I love [microformats](https://microformats.org/wiki/microformats2),
+and [RSS feeds](https://en.wikipedia.org/wiki/RSS),
+and… wait… how do [webmentions](https://indieweb.org/Webmention) work?
+
+<!-- intro -->
 
 ## Slow Social
 

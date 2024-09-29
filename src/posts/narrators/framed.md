@@ -1,5 +1,5 @@
 ---
-title: Framed | Born To Choose This Way
+title: Framed
 sub: Struggles in re-writing the narrative of my life
 erasure: true
 date: 2019-06-19
@@ -32,9 +32,12 @@ summary: |
   desire, choice,
   and the stories we tell about ourselves
 ---
-{# import "content.macros.njk" as content #}
 
-{# content.figure(podcast) #}
+<figure>
+  <media-gallery
+    :@from-data="podcast"
+  ></media-gallery>
+</figure>
 
 Last week,
 my dad sent me a newspaper ==clipping==
@@ -91,7 +94,7 @@ but Bishme is great,
 and Garo’s a total hack.
 
 So I've been thinking a lot about change.
-{# content.erase('Big change') #}.
+<black-out>Big change</black-out>.
 Identity change.
 I was raised Mennonite,
 but at some point that label stopped making sense.

@@ -1,5 +1,6 @@
 ---
-title: I See Rockets
+feed: false
+title: I See Rockets, song demo
 date: 2009-05-14
 tags:
   - dirt circle dogs
@@ -8,11 +9,12 @@ track:
     title: Soundcloud embed
     width: 100%
     height: 166
+caption: Demo recording of *I See Rockets*
 ---
 
-{# import "content.macros.njk" as content #}
-
-{# content.figure(
-  track,
-  caption='Demo recording of *I See Rockets*'
-) #}
+<figure>
+  <media-gallery
+    :@from-data="track"
+  ></media-gallery>
+  <figcaption @html="mdI(caption)"></figcaption>
+</figure>

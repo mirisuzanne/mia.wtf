@@ -5,15 +5,17 @@ tags:
   - susy
 ---
 
-Susy 1.0 has officially launched!
-Thanks to everyone who contributed.
-
 This release is loaded with new features,
 but don't let that fool you.
 Susy has become shockingly simple to use.
 See the [website][susy] for more details and demonstrations.
 
 [susy]: https://susy.oddbird.net/
+
+<!-- intro -->
+
+Susy 1.0 has officially launched!
+Thanks to everyone who contributed.
 
 The interface and syntax have been simplified
 so that the language is consistent and easy to understand.

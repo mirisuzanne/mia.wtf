@@ -1,5 +1,4 @@
 ---
-layout: is/markdown
 title: Notes towards a queer art
 sub: and a queer web, world wide
 summary:

@@ -156,7 +156,11 @@ figure {
 
 iframe {
   display: block;
-  width: 100%;
+
+  &[style*=aspect-ratio] {
+    block-size: auto;
+    inline-size: 100%;
+  }
 }
 
 caption,

@@ -5,7 +5,7 @@ is: list
 
 <template
   webc:nokeep
-  @raw="content"
+  @html="content"
 ></template>
 
 <ul webc:if="(listOf || index) && !(autoList === 'hide')">

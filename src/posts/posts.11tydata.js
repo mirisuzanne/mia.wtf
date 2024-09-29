@@ -12,6 +12,5 @@ const postUrl = (page) => page
 
 export default {
   tags: ['is:post'],
-  layout: 'is/markdown',
   permalink: (data) => postUrl(data.page),
 }

@@ -1,5 +1,6 @@
 ---
-title: I'm Not Ready To Go Yet
+feed: false
+title: I'm Not Ready To Go Yet, song demo
 date: 2014-07-29
 tags:
   - teacup gorilla
@@ -12,17 +13,18 @@ caption: |
   I'm Not Ready To Go Yet is our follow-up
   to the earlier Suicide Note.
 ---
-{# import "content.macros.njk" as content #}
 
 Another demo:
 this one features Daniel Rule on the second guitar & vocals.
 Daniel has started playing with us regularly these days —
 we're excited to have him in the band!
 
-{# content.figure(
-  track,
-  caption
-) #}
+<figure>
+  <media-gallery
+    :@from-data="track"
+  ></media-gallery>
+  <figcaption @html="mdI(caption)"></figcaption>
+</figure>
 
 Hear studio recording of this track
 on our debut EP:

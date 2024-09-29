@@ -9,13 +9,14 @@ a rainbow-striped background gradient
 using any set of arbitrary colors.
 This is my solution,
 in the form of a Sass function.
-This requires [Sass 3.2][sass3]
-(currently in alpha)
+
+<!-- intro -->
+
+It requires [Sass 3.2][sass3]
 in order to run.
 
 [jina]: https://twitter.com/jina/status/225811628338323458
 [sass3]: https://rubygems.org/gems/sass
-
 
 ## Stripes Function
 

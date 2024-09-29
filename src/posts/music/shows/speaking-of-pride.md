@@ -1,5 +1,5 @@
 ---
-title: Speaking of Pride
+title: Speaking of pride
 sub: Minimalist music with fragments of memoir
 date: 2018-06-09
 adr: Denver, CO
@@ -15,24 +15,27 @@ events:
     date: 2018-06-13
   - venue: Denver Public Library
     date: 2018-06-09
-video:
-  - iframe: https://www.youtube.com/embed/-u_vwCiwp0M
-    width: 560
-    height: 315
-summary: |
-  An LGBT concert of writers and composers
-  by the [Playground Ensemble][pe],
-  with three works by LGBT authors and the composers.
-
-  [pe]: https://playgroundensemble.org/
 ---
 
-{# import "content.macros.njk" as content #}
+An LGBT concert of writers and composers
+by the [Playground Ensemble][pe],
+with three works by LGBT authors and the composers.
 
-{# content.figure(
-  data=video,
-  caption='Fragments @ Invisible City (by Mirriam & Nathan Hall)'
-) #}
+[pe]: https://playgroundensemble.org/
+
+<!-- intro -->
+
+<figure>
+  <iframe
+    webc:is="ratio-frame"
+    src="https://www.youtube.com/embed/-u_vwCiwp0M"
+    width="560"
+    height="315"
+    frameborder="0"></iframe>
+  <figcaption>
+    Fragments @ Invisible City (by Miriam & Nathan Hall)
+  </figcaption>
+</figure>
 
 - **Miss Furr and Miss Skeene** --
   *Gertrude Stein & Linda Dusman*

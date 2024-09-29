@@ -10,9 +10,10 @@ gallery:
   - img: portraits/Kitten-Full.png
     alt: Nude bust sketch
 ---
-{# import "content.macros.njk" as content #}
 
-{# content.figure(
-  data=gallery,
-  caption='My good friend, Kitten Karlyle'
-) #}
+<figure>
+  <media-gallery
+    :@from-data="gallery"
+  ></media-gallery>
+  <figcaption>My good friend, Kitten Karlyle</figcaption>
+</figure>

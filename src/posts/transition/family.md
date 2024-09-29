@@ -1,5 +1,5 @@
 ---
-title: Chosen Family (Thank You)
+title: Chosen family (thank you)
 sub: Choosing vulnerability, choosing each other
 date: 2018-07-19
 hero:

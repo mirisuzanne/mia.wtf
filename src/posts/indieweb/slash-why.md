@@ -1,16 +1,18 @@
 ---
-title: A Slash-Why Proposal
+title: A slash-why proposal
 sub: What are you aiming for?
 date: 2024-07-02
 tags:
   - journal
-summary: |
-  Get yourself
-  a fancy little
-  manifesto page,
-  and tell us all
-  what you're about.
 ---
+
+Get yourself
+a fancy little
+manifesto page,
+and tell us all
+what you're about.
+
+<!-- intro -->
 
 I'm working on a personal site refresh,
 oh so slowly.

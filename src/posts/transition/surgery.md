@@ -1,5 +1,6 @@
 ---
-title: Mia's Medical Upgrade
+unlisted: true
+title: Mia's medical upgrade
 date: 2018-07-17
 hero:
   src: writing/sidesaddle/reeds.jpg
@@ -17,7 +18,6 @@ summary: |
   to give me a date: **September 10**,
   less than two months away.
 ---
-{# import "content.macros.njk" as content #}
 
 I'm excited, and terrified,
 and I might start crying.
@@ -152,10 +152,12 @@ Laugh break!
 
 [carina]: https://www.carinamagyar.com/
 
-{# content.figure(
-  data=carina,
-  caption='Carina Magyar performs in the FPIA 2017 finals'
-) #}
+<figure>
+  <media-gallery
+    :@from-data="carina"
+  ></media-gallery>
+  <figcaption>Carina Magyar performs in the FPIA 2017 finals</figcaption>
+</figure>
 
 Over the course of my transition,
 I've begun to heal that relationship with my body --

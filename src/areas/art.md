@@ -7,8 +7,8 @@ index: area:art
 permalink: '/art/index.html'
 eleventyImport:
   collections: ["area:art"]
-summary: >
-  I enjoy art that bleeds across genres and forms.
-  I want an artistic practice
-  that is _curious and expansive_.
 ---
+
+I enjoy art that bleeds across genres and forms.
+I want an artistic practice
+that is _curious and expansive_.

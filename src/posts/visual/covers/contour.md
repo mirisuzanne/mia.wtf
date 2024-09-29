@@ -36,9 +36,14 @@ final:
   caption: What was once a diagram of the tongue, teeth, and bottom jaw.
   items:
     - img: contour/final.png
+      alt: >
+        Full book cover,
+        title and author on front and spine -
+        the inside of a jaw filled with red arrows,
+        some of which extend across the back cover,
+        three larger charcoal arrows entering from the right,
+        from SpringGun press
 ---
-
-{# import "content.macros.njk" as content #}
 
 The editors at
 SpringGun Press asked me
@@ -61,11 +66,21 @@ using my iPad as a light table.
 
 [blind contours]: https://en.wikipedia.org/wiki/Blind_contour_drawing
 
-{# content.figure(process.items, process.caption) #}
+<figure>
+  <media-gallery
+    :@from-data="process.items"
+  ></media-gallery>
+  <figcaption @html="mdI(process.caption)"></figcaption>
+</figure>
 
 ## Final(ish) Design
 
 In the end,
 James decided on the abstract jawbone pattern in red arrows.
 
-{# content.figure(final.items, final.caption) #}
+<figure>
+  <media-gallery
+    :@from-data="final.items"
+  ></media-gallery>
+  <figcaption @html="mdI(final.caption)"></figcaption>
+</figure>

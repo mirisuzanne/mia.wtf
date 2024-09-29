@@ -1,7 +1,7 @@
 ---
 date: 2016-12-24
-title: Some Clarifications on Trans Language
-sub: A Very Incomplete Glossary
+title: Some clarifications on trans language
+sub: A very incomplete glossary
 erasure: true
 hero:
   src: 2016/clarifications.jpg
@@ -14,8 +14,6 @@ summary: |
   from *gender identity* to *biological sex*,
   *transition*, *passing*, and *visibility*.
 ---
-{# import "content.macros.njk" as content #}
-
 (See also [Julia Serano](https://juliaserano.com/)’s
 wonderful [Transgender Glossary](https://juliaserano.com/terminology.html)
 if you are interested in more.
@@ -29,7 +27,7 @@ but refers to two very
 often interchangeably,
 and without distinction.
 
-1.  Our {# content.erase('conscious acts') #}
+1.  Our <black-out>conscious acts</black-out>
     of identifying with a gender or sexuality —
     male, female, non-binary, fluid, straight, bi, gay, cis, trans,
     ==non-conforming,== or otherwise.

@@ -1,5 +1,5 @@
 ---
-title: CSS Tie-Dye Gradient Backgrounds
+title: CSS tie-dye gradient backgrounds
 sub: a conic splash of color
 date: 2022-10-21
 hero:
@@ -21,7 +21,6 @@ summary: |
   ---John Milton
 ---
 
-{# import "content.macros.njk" as content #}
 
 ## Playful gradient inspiration
 
@@ -32,12 +31,15 @@ sent me a question about
 improving the performance of this
 fun blurry-blob background animation:
 
-{# content.codepen(
-  id='zYjyEOb',
-  title='Moving CSS blur background',
-  preview=true,
-  caption='It performs ok on my machine, but can get choppy on less powerful devices'
-) #}
+<figure>
+  <iframe
+    webc:is="code-pen"
+    src="https://codepen.io/miriamsuzanne/embed/preview/zYjyEOb"
+    title="Moving CSS blur background"
+    preview="true"
+  ></iframe>
+  <figcaption>It performs ok on my machine, but can get choppy on less powerful devices</figcaption>
+</figure>
 
 I made a few small suggestions,
 and sent links to other animation performance resources.
@@ -65,11 +67,14 @@ semi-random semi-transparent bubbles --
 something like this,
 but with colors based on the site design:
 
-{# content.codepen(
-  id='mdXzwxr',
-  title='Random circles',
-  caption='Hit rerun in the bottom right to generate new circles'
-) #}
+<figure>
+  <iframe
+    webc:is="code-pen"
+    src="https://codepen.io/miriamsuzanne/embed/mdXzwxr"
+    title="Random circles"
+  ></iframe>
+  <figcaption>Hit 'rerun' in the bottom right to generate new circles</figcaption>
+</figure>
 
 I like that randomness,
 but it's time to try something new.
@@ -95,17 +100,21 @@ Ana Tudor also has
 a series of fantastic gradient demos
 on CodePen:
 
-{# content.codepen(
-  id='GRRpzNX',
-  title='Single element card background patterns',
-  user='thebabydino'
-) #}
+<figure>
+  <iframe
+    webc:is="code-pen"
+    src="https://codepen.io/thebabydino/embed/GRRpzNX"
+    title="Single element card background patterns"
+  ></iframe>
+</figure>
 
-{# content.codepen(
-  id='JxELvZ',
-  title='Single element card background patterns',
-  user='thebabydino'
-) #}
+<figure>
+  <iframe
+    webc:is="code-pen"
+    src="https://codepen.io/thebabydino/embed/JxELvZ"
+    title="Single element card background patterns"
+  ></iframe>
+</figure>
 
 ## A conic & radial first draft
 
@@ -119,11 +128,13 @@ But for now I went with a pattern by
 [Temani Afif](https://twitter.com/ChallengesCss)
 that I really love:
 
-{# content.codepen(
-  id='ZErrbEp',
-  title='Fancy pattern using radial-gradient',
-  user='t_afif'
-) #}
+<figure>
+  <iframe
+    webc:is="code-pen"
+    src="https://codepen.io/t_afif/embed/ZErrbEp"
+    title="Fancy pattern using radial-gradient"
+  ></iframe>
+</figure>
 
 I swapped in my own subtle site background colors,
 and an extra radial gradient on top.
@@ -132,10 +143,13 @@ if it continued too far down the page,
 so this gives it a nice fade-out
 with soft/curved edges.
 
-{# content.codepen(
-  id='gOzVama',
-  title='Site background'
-) #}
+<figure>
+  <iframe
+    webc:is="code-pen"
+    src="https://codepen.io/miriamsuzanne/embed/gOzVama"
+    title="Site background"
+  ></iframe>
+</figure>
 
 ## Blended gradient tie-dye
 
@@ -154,11 +168,16 @@ into my work before.
 So I spent some time exploring,
 and really enjoyed this result:
 
-{# content.codepen(
-  id='QWrPXEQ',
-  title='Conic splash',
-  caption='Almost tie-dye, if only we had spiral gradients…'
-) #}
+<figure>
+  <iframe
+    webc:is="code-pen"
+    src="https://codepen.io/miriamsuzanne/embed/QWrPXEQ"
+    title="Conic splash"
+  ></iframe>
+  <figcaption>
+    Almost tie-dye, if only we had spiral gradients
+  </figcaption>
+</figure>
 
 It's fun to just sit
 and tinker with the colors,
@@ -182,7 +201,10 @@ in my site footer --
 where I previously had a trans flag.
 What happens if we use the trans colors?
 
-{# content.codepen(
-  id='bGMXdey',
-  title='Conic splash'
-) #}
+<figure>
+  <iframe
+    webc:is="code-pen"
+    src="https://codepen.io/miriamsuzanne/embed/bGMXdey"
+    title="Conic splash"
+  ></iframe>
+</figure>

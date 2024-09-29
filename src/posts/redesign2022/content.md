@@ -1,5 +1,5 @@
 ---
-title: This Content Won't Architect Itself
+title: This content won't architect itself
 sub: What can a site be, and what can it be afraid of?
 date: 2022-08-25
 og:
@@ -12,29 +12,32 @@ summary: |
   rearranging the ~~deck chairs~~ ++content files++
   on ~~the Titanic~~ ++this website++.
 v2008to2012:
-  - img: '2022/2008-e-dirtcircle.jpg'
-    url: true
-    alt: |
-      Bright watercolor wash in purples and yellows,
-      and large sans-serif text
-      overflowing translucent colored columns --
-      each a different color, length, and font-size.
-      Miriam E Suzanne,
-      OddBird Collective | web portfolio,
-      Dirt Circle Dogs | indie rock,
-      The LIDA Project | experimental theater company,
-      Countdown to Zero | political theater collective,
-      Dirt Circle Network | freelance collective.
-  - img: '2022/2012-e-dirtcircle.jpg'
-    url: true
-    alt: |
-      Same design,
-      but some new links --
-      Into The Green Green Mud a novel (with pictures),
-      Dirt Circle Dogs bright/dark music,
-      Vicious Trap deform reform perform,
-      Teacup Gorilla petite & deadly rock,
-      OddBird web design and development.
+  caption: >
+    My 2008-2012 business-card site. I call this _rainbow brutalism_.
+  gallery:
+    - img: '2022/2008-e-dirtcircle.jpg'
+      url: true
+      alt: |
+        Bright watercolor wash in purples and yellows,
+        and large sans-serif text
+        overflowing translucent colored columns --
+        each a different color, length, and font-size.
+        Miriam E Suzanne,
+        OddBird Collective | web portfolio,
+        Dirt Circle Dogs | indie rock,
+        The LIDA Project | experimental theater company,
+        Countdown to Zero | political theater collective,
+        Dirt Circle Network | freelance collective.
+    - img: '2022/2012-e-dirtcircle.jpg'
+      url: true
+      alt: |
+        Same design,
+        but some new links --
+        Into The Green Green Mud a novel (with pictures),
+        Dirt Circle Dogs bright/dark music,
+        Vicious Trap deform reform perform,
+        Teacup Gorilla petite & deadly rock,
+        OddBird web design and development.
 v2014:
   - img: '2022/2014-e-suzanne.jpg'
     url: true
@@ -111,8 +114,6 @@ v2019to2022:
       art & code & writing & music & speaking & theater & more.
 ---
 
-{# import "content.macros.njk" as content #}
-
 Can I really call it
 a ['no-demo' reno](/2022/08/07/minimal/),
 when I keep moving all these files around?
@@ -153,10 +154,12 @@ My name, a few links,
 and some aggressive
 _aesthetic choices_:
 
-{# content.figure(
-  data=v2008to2012,
-  caption='My 2008-2012 business-card site. I call this _rainbow brutalism_.'
-) #}
+<figure>
+  <media-gallery
+    :@from-data="v2008to2012.gallery"
+  ></media-gallery>
+  <figcaption @html="mdI(v2008to2012.caption)"></figcaption>
+</figure>
 
 There's something refreshing about
 a single-page site.
@@ -211,10 +214,14 @@ The earliest styled archive I could find
 is from 2014,
 when I moved off Tumblr:
 
-{# content.figure(
-  data=v2014,
-  caption='My 2014 blog site, becoming an active participant on the indieweb.'
-) #}
+<figure>
+  <media-gallery
+    :@from-data="v2014"
+  ></media-gallery>
+  <figcaption>
+    My 2014 blog site, becoming an active participant on the indieweb.
+  </figcaption>
+</figure>
 
 Since then,
 it seems like
@@ -223,10 +230,14 @@ For a while
 the navigation became
 more and more complex:
 
-{# content.figure(
-  data=v2015to2018,
-  caption='2015, 2016, & 2018 sites, with increasingly complicated navigation.'
-) #}
+<figure>
+  <media-gallery
+    :@from-data="v2015to2018"
+  ></media-gallery>
+  <figcaption>
+    2015, 2016, & 2018 sites, with increasingly complicated navigation.
+  </figcaption>
+</figure>
 
 Until 2019,
 when I removed all the navigation
@@ -235,10 +246,14 @@ I was tired of trying to sort
 my life into a nav hierarchy.
 The new design would rely on tags instead:
 
-{# content.figure(
-  data=v2019to2022,
-  caption='From 2019 to 2022, a series of variations on a tag-driven theme.'
-) #}
+<figure>
+  <media-gallery
+    :@from-data="v2019to2022"
+  ></media-gallery>
+  <figcaption>
+    From 2019 to 2022, a series of variations on a tag-driven theme.
+  </figcaption>
+</figure>
 
 It's interesting to look at those last few years.
 It seems I've been struggling to determine

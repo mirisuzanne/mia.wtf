@@ -1,5 +1,5 @@
 ---
-title: Underground Music Showcase
+title: Underground music showcase
 sub: the largest indie music festival in the Rocky Mountain region
 url: https://theums.com/
 date: 2015-07-25
@@ -10,8 +10,8 @@ events:
     date: 2015-07-25
 tags:
   - teacup gorilla
-summary: |
-  Founded in 2001,
-  The UMS is an annual three-day celebration of music
-  featuring hundreds of bands across multiple venues.
 ---
+
+Founded in 2001,
+The UMS is an annual three-day celebration of music
+featuring hundreds of bands across multiple venues.

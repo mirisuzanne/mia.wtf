@@ -1,6 +1,6 @@
 ---
 type: tour
-title: Holes / SideSaddle Midwest Tour
+title: Holes / SideSaddle midwest tour
 sub: A hybrid evening of music & story
 date: 2015-08-01
 hero:
@@ -59,8 +59,8 @@ events:
     with:
       - name: Hot Books
       - name: MariaElena
-summary: |
-  A joint tour for [Teacup Gorilla](/orgs/teacup-gorilla/)'s
-  debut album [*The Holes They Leave*](/music/albums/holes-they-leave/),
-  and my debut novel [*Riding SideSaddle**](/books/sidesaddle/).
 ---
+
+A joint tour for [Teacup Gorilla](/orgs/teacup-gorilla/)'s
+debut album [*The Holes They Leave*](/music/albums/holes-they-leave/),
+and my debut novel [*Riding SideSaddle**](/books/sidesaddle/).

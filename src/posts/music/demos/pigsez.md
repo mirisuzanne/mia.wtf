@@ -1,5 +1,6 @@
 ---
-title: Pig Sez
+feed: false
+title: Pig Sez, song demo
 date: 2014-08-01
 tags:
   - teacup gorilla
@@ -13,14 +14,15 @@ caption: |
   including words from CA Conrad's
   [Book of Frank](https://wavepoetry.myshopify.com/products/the-book-of-frank)
 ---
-{# import "content.macros.njk" as content #}
 
 The last demo of new material (for now):
 
-{# content.figure(
-  track,
-  caption
-) #}
+<figure>
+  <media-gallery
+    :@from-data="track"
+  ></media-gallery>
+  <figcaption @html="mdI(caption)"></figcaption>
+</figure>
 
 Hear studio recording of this track
 on our debut EP:

@@ -4,17 +4,19 @@ sub: The origin story for a style no one wants
 date: 2022-07-04
 tags:
   - cascade
-summary: |
-  All browsers add an `8px` margin
-  on the `body` element --
-  it's part of the w3c-recommended
-  [default stylesheet](https://drafts.csswg.org/css2/#html-stylesheet)
-  which browsers generally use
-  as a starting point
-  for their own 'user agent' styles.
-  But why `8px`?
-  Where does that come from?
 ---
+
+All browsers add an `8px` margin
+on the `body` element --
+it's part of the w3c-recommended
+[default stylesheet](https://drafts.csswg.org/css2/#html-stylesheet)
+which browsers generally use
+as a starting point
+for their own 'user agent' styles.
+But why `8px`?
+Where does that come from?
+
+<!-- intro -->
 
 ## Initial values vs browser defaults
 

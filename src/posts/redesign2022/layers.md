@@ -1,5 +1,5 @@
 ---
-title: A Whole Cascade of Layers
+title: A whole cascade of layers
 sub: the path to SBRDFLT
 date: 2022-09-06
 venue: Dave Rupert
@@ -17,8 +17,6 @@ summary: |
   what he calls _SBRDFLT_.
   What's that all about?
 ---
-
-{# import "demos/colors.njk" as colors #}
 
 TL;DR _I don't know yet._
 
@@ -60,7 +58,8 @@ and what's the thinking
 (if any) behind
 this particular organization?
 
-{# callout #}
+<call-out>
+
 [Cascade Layers](/specs/cascade-5/)
 allow you to specify
 exactly which CSS selectors should take priority
@@ -72,7 +71,8 @@ For more info,
 check out my
 [Complete Guide to Cascade Layers](https://css-tricks.com/css-cascade-layers/)
 on CSS Tricks.
-{# endcallout #}
+
+</call-out>
 
 ## The first two (implicit) layers
 
@@ -371,7 +371,7 @@ that I've come to rely on:
 I also added a new one as I was working,
 which allows me to show inline
 color-swatches next to a given color value.
-Here's {# colors.swatch('rebeccapurple') #}
+Here's <code style="--color-tile: rebeccapurple">rebeccapurple</code>
 for example.
 
 These patterns are specific to
@@ -403,8 +403,8 @@ inspired me to go find
 and I came up with a quick
 color palette
 based around my favorite CSS colors:
-{# colors.swatch('mediumvioletred') #}
-and {# colors.swatch('teal') #}.
+<code style="--color-tile: mediumvioletred">mediumvioletred</code>
+and <code style="--color-tile: teal">teal</code>.
 
 These layers are by far
 the most incomplete
@@ -413,13 +413,16 @@ Just enough style to make me
 enjoy the site
 while I continue working on it.
 
-{# callout 'update', '2022-09-26' #}
+<call-out>
+
+**Update 2022-09-26**:
 These two layers have been merged.
 While I'm still using separate files,
 and could still 'layer' them technically --
 the difference is more in _what is being styled_
 rather than in the _intent of those styles_.
-{# endcallout #}
+
+</call-out>
 
 ### Reflecting on all those layers
 

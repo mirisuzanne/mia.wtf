@@ -1,5 +1,5 @@
 ---
-title: Poetry Readings are Terrible
+title: Poetry readings are terrible
 date: 2013-03-08
 ---
 

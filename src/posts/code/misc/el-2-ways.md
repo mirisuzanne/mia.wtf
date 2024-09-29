@@ -4,11 +4,13 @@ date: 2024-01-24
 tags:
   - css
   - custom elements
-summary: |
-  Sometimes I build
-  a custom element,
-  and then I have second thoughts about it.
 ---
+
+Sometimes I build
+a custom element,
+and then I have second thoughts about it.
+
+<!-- intro -->
 
 - <code style="--color-tile:hotpink">hotpink</code>
 - <code><color-tile>teal</color-tile></code>
@@ -17,7 +19,7 @@ summary: |
 
 The first is just
 a clever use of CSS.
-The second ('real') custom element
+The second (registered) custom element
 simplifies the markup,
 but adds a JS dependency.
 The markup:

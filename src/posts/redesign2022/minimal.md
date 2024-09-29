@@ -1,5 +1,5 @@
 ---
-title: No Demo [Website] Reno
+title: No demo [website] reno
 sub: A slow remodel of my HTML & CSS
 date: 2022-08-07T14:57:46-06:00
 series: redesign 2022
@@ -9,9 +9,6 @@ summary: |
   the (Eleventy/Markdown) content that drives it.
   And I want to do it slowly.
 ---
-
-{# import "utility.macros.njk" as utility #}
-{# import "demos/colors.njk" as colors #}
 
 Erin & I had a lovely vacation last month,
 driving around southwest Colorado --
@@ -245,14 +242,16 @@ Check out the [Theme Settings](#settings) below,
 for a first-draft of the idea.
 
 <figure>
-<section data-options="css" aria-label="style layers">
-  {#- include "settings/css-buttons.njk" -#}
-</section>
-<figcaption>
-  Try turning CSS layers on and off...
-  These settings are also saved in `localStorage`,
-  so they persist across visits.
-</figcaption>
+  <img
+    webc:is="u-img"
+    src="2022/layer-toggles.jpg"
+    alt="Buttons for spec, browser, reset, default, features, layout, and theme"
+  >
+  <figcaption>
+    A way of turning CSS layers on and off...
+    These settings were also saved in `localStorage`,
+    so they persist across visits.
+  </figcaption>
 </figure>
 
 This idea is absolutely
@@ -307,14 +306,15 @@ I might revisit in the future.
 The `theme` layer colors
 are based on [Named Colors](https://www.w3.org/TR/css-color-4/#named-colors),
 with some minor adjustments for accessible contrast.
-While {# colors.swatch('darkslategray') #}
+While <code style="--color-tile:darkslategray">darkslategray</code>
 works fine as a text `color`
-over {# colors.swatch('azure') #}
+over <code style="--color-tile:azure">azure</code>
 in `light` mode,
 I used Sass to darken it
 as a `background-color` in `dark` mode,
 providing enough contrast for my accent colors as well.
-The result is {# colors.swatch('hsl(180deg 25% 6%)') #}.
+The result is
+<code style="--color-tile:hsl(180deg 25% 6%)">hsl(180deg 25% 6%)</code>.
 
 There's a lot more to do.
 WebMentions are temporarily hidden,

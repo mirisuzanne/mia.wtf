@@ -1,0 +1,29 @@
+- title: OddBird Blog
+  sub: web development articles, videos, podcasts, and case studies
+  at: https://www.oddbird.net/blog/
+  date: 2012-08-14
+  end: ongoing
+
+- title: CSS Spec Notebook
+  sub: scratchpad for new CSS & Sass features
+  at: https://css.oddbird.net/
+  date: 2020-11-09
+  end: ongoing
+
+- title: Winging It
+  sub: live and cross-discipline chats between web experts
+  at: https://www.oddbird.net/wingingit/
+  date: 2023-07-20
+  end: ongoing
+
+- title: CSS Tricks
+  sub: for people who make websites
+  at: https://css-tricks.com/author/miriam/
+  date: 2016-10-15
+  end: 2022-03-01
+
+- title: Mozilla Developer Channel
+  sub: videos for web developers and designers
+  at: https://www.youtube.com/@MozillaDeveloper
+  date: 2019-08-19
+  end: 2020-01-06

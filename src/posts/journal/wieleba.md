@@ -4,30 +4,17 @@ sub: The writing and comedy of Jordan Wieleba
 date: 2016-10-10
 hero:
   src: 2016/wieleba.png
-audio:
-  - iframe: https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/219256111&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false
-    title: Soundcloud embed
-    width: 100%
-    height: 166
-video:
-  - iframe: https://www.youtube.com/embed/Uxp4xx9YHDw
-    width: 723
-    height: 419
 ---
-
-{# import "content.macros.njk" as content #}
-
-{# content.figure(
-  video,
-  caption='Jordan, live at Comedy Works'
-) #}
 
 Jordan and I were never close.
 Her colleagues say she was private,
-but I only experienced her generosisty,
+but I only experienced her generosity,
 kindness, and humor.
-She is one of the first trans women I talked to
+She was one of the first trans women I talked to
 before coming out.
+
+<!-- intro -->
+
 She was blunt about her own experience,
 but endlessly supportive.
 *You do you, girl. You have to do you.*
@@ -37,10 +24,14 @@ making sure I was ok.
 I know I wasn't the only trans woman she helped.
 Jordan saved lives.
 
-{# content.figure(
-  audio,
-  caption='Estrogentrification comedy album'
-) #}
+<figure>
+  <iframe
+    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/219256111&color=ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false"
+    width="100%"
+    height="166"
+    frameborder="0"></iframe>
+  <figcaption>EstroGentrification comedy album</figcaption>
+</figure>
 
 I only saw her perform once,
 and it was amazing.
