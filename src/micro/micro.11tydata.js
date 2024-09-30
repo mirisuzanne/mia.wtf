@@ -5,5 +5,5 @@ const zoneDate = (date) => utcToZonedTime(date || new Date(), '+00:00');
 
 export const eleventyComputed = {
   title: (data) => data.title
-    || `Note: ${format(zoneDate(data.date), 'yyyy-MM-dd')}`,
+    || `Note: ${format(zoneDate(data.date), 'MMMM d, y')}`,
 };

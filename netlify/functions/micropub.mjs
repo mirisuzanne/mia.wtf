@@ -1,64 +1,102 @@
-const qs = require('querystring');
+import slugify from "@sindresorhus/slugify";
+import { Octokit } from "@octokit/rest";
 
-const { Octokit } = require("@octokit/rest");
-const octokit = new Octokit({
-  auth: process.env.GH_MICROPUB,
-})
+const octokit = new Octokit({ auth: process.env.GITHUB_MICROPUB });
 
-export default async (event, context) => {
-
-  // GET request
-  if (event.httpMethod === 'GET') {
-    return Response.json({});
+const gh = {
+  owner: process.env.GITHUB_USERNAME,
+  repo: process.env.GITHUB_REPO,
+  committer: {
+    name: process.env.GITHUB_NAME,
+    email: process.env.GITHUB_EMAIL,
+  },
+  headers: {
+    'X-GitHub-Api-Version': '2022-11-28'
   }
+};
 
-  const auth = event.headers.get("authorization");
+const currentDate = new Date();
+const dateToSlug = (date) => {
+  const time = date.toLocaleString("sv-SE", {
+    timeZone: "America/Denver",
+    hour12: false,
+  });
+  return slugify(time);
+};
 
-  // Verify the token
-  if (
-    !auth || auth != `Bearer ${process.env.MICROPUB}`
-  ) {
-    return Response.json({}, { status: 401 });
-  }
-
-  const text = await event.text();
-  const data = qs.parse(text);
-  const date = new Date()
-
-  data.date = date.toISOString();
-
+const mdTemplate = (data) => {
   const postMeta = Object.keys(data)
     .filter((item) => item !== 'content' && data[item])
     .map((item) => `${item}: ${data[item]}`)
     .join('\n');
 
-  const filePath = data.date.replaceAll('-', '/').replace('T', '/T');
-  const fileContent = `---
+  return Buffer.from(`---
 ${postMeta}
 ---
-${data.content || ''}
-`;
+${decodeURIComponent(data.content) || ''}
+`).toString("base64");
+}
 
-  // Create a new file on GitHub with the octokit library
-  // owner/repo and message/path are hardcoded here,
-  // you might want to change those to your own likings.
-  return octokit.repos.createOrUpdateFileContents({
-    owner: "mirisuzanne",
-    repo: "mia.wtf",
-    message: (`Adding micro entry: ${data.title || data.date}`),
-    path: `src/micro/${filePath}.md`,
-    content: Buffer.from(fileContent).toString("base64")
-  }).then((response) => {
-    return Response.json({
-      post_url: `${process.env.URL}`,
-    });
-  }).catch((error) => {
+export default async (request, context) => {
+  // reject GET requests
+  if (request.httpMethod === 'GET') {
+    return new Response(
+      "We don't have anything to say about that",
+      { status: 400 }
+    );
+  }
+
+  // Authenticate
+  // const auth = request.headers.get("authorization");
+  // if (!auth || auth != `Bearer ${process.env.MICROPUB}`) {
+  //   return new Response({
+  //     body: "You need a better auth token",
+  //   }, { status: 401 });
+  // }
+
+  try {
+    // parse the request
+    const params = new URL(request.url).searchParams;
+
+    if (params.get('h') !== 'entry') {
+      return new Response(
+        "We only do entries, that's our whole thing",
+        { status: 400 }
+      );
+    }
+
+    const slug = dateToSlug(currentDate);
+    const permalink = `/micro/${slug}/index.html`;
+    const data = {
+      date: currentDate.toISOString(),
+      permalink,
+    };
+    params.forEach((value, key) => data[key] = value);
+
+    gh.path = `src/micro/${slug.split('-').at(0)}/${slug}.md`;
+    gh.message = `Micro post: ${slug}`;
+    gh.content = mdTemplate(data);
+    console.log({params, data, content: gh.content});
+
+    // Create a new file on GitHub with the octokit library
+    await octokit.request(
+      `PUT /repos/${gh.owner}/${gh.repo}/contents/${gh.path}`, gh
+    );
+
+    return new Response(
+      JSON.stringify(gh),
+      {
+        status: 201,
+        headers: { Location: `${process.env.URL}${permalink}` },
+      }
+    );
+  } catch (error) {
     // Log any errors, so we can debug later.
     console.log({ error })
 
-    return Response.json({
-      body: JSON.stringify(error),
-    }, { status: 400 });
-
-  });
+    return new Response(
+      JSON.stringify(error),
+      { status: 400 }
+    );
+  }
 }
