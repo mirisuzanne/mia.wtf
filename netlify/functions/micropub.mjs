@@ -47,12 +47,12 @@ export default async (request, context) => {
   }
 
   // Authenticate
-  // const auth = request.headers.get("authorization");
-  // if (!auth || auth != `Bearer ${process.env.MICROPUB}`) {
-  //   return new Response({
-  //     body: "You need a better auth token",
-  //   }, { status: 401 });
-  // }
+  const auth = request.headers.get("authorization");
+  if (!auth || auth != `Bearer ${process.env.MICROPUB}`) {
+    return new Response({
+      body: "You need a better auth token",
+    }, { status: 401 });
+  }
 
   try {
     // parse the request
