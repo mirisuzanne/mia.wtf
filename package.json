@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Starting over on a personal site with 11ty 3.0",
   "type": "module",
-  "main": "index.html",
+  "homepage": "https://www.miriamsuzanne.com/",
   "scripts": {
     "dev": "eleventy --serve",
     "build": "eleventy"

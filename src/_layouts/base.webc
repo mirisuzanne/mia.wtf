@@ -16,9 +16,25 @@
       :@desc="description || summary || site.description"
     >
 
+    <link rel="canonical" :href="`https://${site.domain}${page.url}`">
+    <link rel="micropub" :href="`https://${site.domain}/api/micropub`">
+    <link rel="authorization_endpoint" href="https://indieauth.com/auth">
+
     <link
       rel="preload"
       href="/fonts/alegreya-latin-wght-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin>
+    <link
+      rel="preload"
+      href="/fonts/victor-mono-latin-wght-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin>
+    <link
+      rel="preload"
+      href="/fonts/alegreya-sans-latin-700-normal.woff2"
       as="font"
       type="font/woff2"
       crossorigin>

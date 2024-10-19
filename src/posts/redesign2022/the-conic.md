@@ -21,7 +21,6 @@ summary: |
   ---John Milton
 ---
 
-
 ## Playful gradient inspiration
 
 Last week,
