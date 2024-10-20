@@ -10,7 +10,6 @@ tags:
 events:
   - venue: Invisible City
     date: 2018-06-14
-    feature: true
   - venue: GLBT Community Center
     date: 2018-06-13
   - venue: Denver Public Library

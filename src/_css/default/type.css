@@ -14,6 +14,17 @@ blockquote {
   @container (inline-size < calc(100vi - 6ch)) {
     margin-inline-start: calc((var(--gap) + 5px) * -1);
   }
+
+  & > :first-child { margin-block-start: unset; }
+  & > :last-child { margin-block-end: unset; }
+}
+
+[is-quote] {
+  --figure-gap: 0;
+}
+
+[cite-quote] {
+  font-family: var(--ui-font);
 }
 
 ul, ol {
@@ -62,16 +73,32 @@ dd + dt {
 }
 
 dt::after {
-  content: ' –';
-  content: ' –' / '';
+  content: var(--after-dt, ' –');
+  content: var(--after-dt, ' –') / '';
 }
 
 dd {
   margin-inline: unset;
 }
 
+li + li,
 dd + dd {
   margin-block-start: var(--flow-item-space, 0.25lh);
+}
+
+dl[inline-list] {
+  --after-dt: none;
+  display: flex;
+  margin: unset;
+  gap: 1em;
+
+  & :is(d-i, dt, dd) {
+    margin: unset;
+  }
+
+  & :is(dt, dd) {
+    display: inline;
+  }
 }
 
 pre, code, output, samp {
@@ -151,7 +178,7 @@ hr {
 
 figure {
   display: grid;
-  row-gap: 0.5lh;
+  row-gap: var(--figure-gap, 0.5lh);
 }
 
 iframe {

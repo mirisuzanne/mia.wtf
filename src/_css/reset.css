@@ -1,5 +1,9 @@
 /* blocks */
-*, ::before, ::after { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+  text-decoration-color: var(--decoration-color, var(--border));
+}
+
 html { block-size: 100%; }
 body { margin: unset; }
 

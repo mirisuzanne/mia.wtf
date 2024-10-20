@@ -24,7 +24,7 @@ over at [slashpages.net](https://slashpages.net)
 
 But there's one I've had for a decade,
 that I think others might consider adding:
-[/why](/why).
+[`/why`](/why).
 
 It's an opportunity
 to say what you care about,

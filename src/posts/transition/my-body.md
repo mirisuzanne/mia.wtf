@@ -1,5 +1,4 @@
 ---
-feature: true
 title: Body & gender fragments
 date: 2017-03-01
 erasure: true

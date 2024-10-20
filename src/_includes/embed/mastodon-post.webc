@@ -1,0 +1,34 @@
+<slot></slot>
+
+<template id="mastodon-post-template">
+  on <em data-key="hostname"></em>
+  <dl inline-list>
+    <d-i>
+      <dt>
+        <repeat-fill></repeat-fill>
+        <visually-hidden>Reposts</visually-hidden>
+      </dt>
+      <dd data-key="reblogs_count"></dd>
+    </d-i>
+    <d-i>
+      <dt>
+        <message-fill></message-fill>
+        <visually-hidden>Replies</visually-hidden>
+      </dt>
+      <dd data-key="replies_count"></dd>
+    </d-i>
+    <d-i>
+      <dt>
+        <heart-fill></heart-fill>
+        <visually-hidden>Favorites</visually-hidden>
+      </dt>
+      <dd data-key="favourites_count"></dd>
+    </d-i>
+  </dl>
+</template>
+
+<script src="../../../node_modules/@daviddarnes/mastodon-post/mastodon-post.js"></script>
+
+<style>
+  mastodon-post { display: block; }
+</style>

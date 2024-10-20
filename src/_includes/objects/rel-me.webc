@@ -10,7 +10,8 @@
       ></a>
       <clip-board
         webc:else
-      ><span @text="value.name"></span></clip-board>
+        @text="value.name"
+      ></clip-board>
     </dd>
   </d-i>
   <d-i>

@@ -6,7 +6,8 @@
   "homepage": "https://www.miriamsuzanne.com/",
   "scripts": {
     "dev": "eleventy --serve",
-    "build": "eleventy"
+    "build": "eleventy",
+    "webmentions": "node mentions/fetch.js"
   },
   "repository": {
     "type": "git",
@@ -31,23 +32,27 @@
     "@fontsource/alegreya-sans": "^5.0.14",
     "@octokit/rest": "^20.1.1",
     "@sindresorhus/slugify": "^2.2.1",
-    "@terriblemia/eight-ball": "^0.2.0",
-    "@terriblemia/ground-control": "^0.3.0",
-    "baseline-status": "^1.0.4",
     "date-fns": "^2.30.0",
     "date-fns-tz": "^2.0.1",
     "dotenv": "^16.4.5",
+    "fs-extra": "^11.2.0",
     "js-yaml": "^4.1.0",
+    "lodash": "^4.17.21",
     "markdown-it": "^13.0.2",
     "markdown-it-deflist": "^3.0.0",
     "markdown-it-footnote": "^4.0.0",
     "markdown-it-mark": "^4.0.0",
     "netlify-plugin-cache": "^1.0.3",
+    "node-fetch": "^3.3.2",
     "prism-themes": "^1.9.0",
     "remove-markdown": "^0.5.0",
+    "sanitize-html": "^2.13.1",
     "sass": "^1.77.6"
   },
   "dependencies": {
-    "@11ty/is-land": "^4.0.0"
+    "@11ty/is-land": "^4.0.0",
+    "@daviddarnes/mastodon-post": "^1.3.0",
+    "@terriblemia/eight-ball": "^0.2.0",
+    "@terriblemia/ground-control": "^0.3.0"
   }
 }

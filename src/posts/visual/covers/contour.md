@@ -1,5 +1,4 @@
 ---
-feature: true
 title: The Posture of Contour
 sub: by [James Belflower](https://www.pw.org/content/james_belflower)
 venue: SpringGun Press

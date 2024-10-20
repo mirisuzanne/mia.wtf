@@ -1,5 +1,4 @@
 ---
-feature: true
 title: Fuck the muse
 sub: a series of articles on creative process
 venue: The Operating System

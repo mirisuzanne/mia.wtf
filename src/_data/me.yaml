@@ -4,6 +4,10 @@ mastodon:
   name: >
     @mia@front-end.social
   url: https://front-end.social/@mia
+bluesky:
+  name: >
+    @mia.terrible.gay
+  url: https://bsky.app/profile/mia.terrible.gay
 github:
   name: MiriSuzanne
   url: https://github.com/MiriSuzanne

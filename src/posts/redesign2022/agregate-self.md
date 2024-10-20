@@ -3,6 +3,7 @@ title: Aggregating my distributed self
 sub: Where does all this content belong?
 date: 2024-09-22
 series: redesign 2022
+mastodon: https://front-end.social/@mia/113188496142186624
 ---
 
 Most of the content on this site

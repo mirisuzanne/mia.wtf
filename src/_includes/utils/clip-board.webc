@@ -1,8 +1,18 @@
+<slot></slot>
+<button slot="copy-button">
+  copy
+</button>
+
 <style web:bucket="tools">
-  clip-board::part(button) {
-    filter: drop-shadow(1px 1px 0 var(--full-bg, Canvas));
-    font-family: var(--emoji-font);
-    font-synthesis: none;
+  [slot=copy-button] {
+    position: relative;
+
+    &[copy-success]::after {
+      content: '✅';
+      position: absolute;
+      inset: 0 0 auto auto;
+      translate: 50% -50%;
+    }
   }
 </style>
 
@@ -23,9 +33,11 @@ class ClipBoard extends HTMLElement {
     const template = document.createElement("template");
     template.innerHTML = `
       <span part="content"><slot></slot></span>
-      <button part="button" id="copy-button">
-        <span sr-only>Copy to clipboard</span>
-      </button>
+      <slot name="copy-button">
+        <button part="button" id="copy-button">
+          Copy
+        </button>
+      </slot>
     `;
     const shadowRoot = node.attachShadow({ mode: "open" });
     shadowRoot.appendChild(template.content.cloneNode(true));
@@ -34,38 +46,7 @@ class ClipBoard extends HTMLElement {
   static #adoptShadowStyles = (node) => {
     const shadowStyle = new CSSStyleSheet();
     shadowStyle.replaceSync(`
-      [part=content] {
-        user-select: all;
-      }
-      [part=button] {
-        font: inherit;
-        background: transparent;
-        border: none;
-        border-radius: 2px;
-        padding-inline: 0.4ch;
-
-        &::before {
-          content: var(--cb-copy-success, ' 📋 ');
-        }
-
-        &[copy-success] {
-          --cb-copy-success: ' ✅ ';
-        }
-      }
-
-      [sr-only] {
-        border: 0 !important;
-        clip: rect(1px, 1px, 1px, 1px) !important;
-        -webkit-clip-path: inset(50%) !important;
-        clip-path: inset(50%) !important;
-        height: 1px !important;
-        overflow: hidden !important;
-        margin: -1px !important;
-        padding: 0 !important;
-        position: absolute !important;
-        width: 1px !important;
-        white-space: nowrap !important;
-      }
+      [part=content] { user-select: all; }
     `);
     node.shadowRoot.adoptedStyleSheets = [shadowStyle];
   }
@@ -81,7 +62,8 @@ class ClipBoard extends HTMLElement {
 
   connectedCallback() {
     this.#text = this.innerText;
-    this.#btn = this.shadowRoot.getElementById('copy-button');
+    this.#btn = this.querySelector('button[slot=copy-button]')
+      || this.shadowRoot.getElementById('copy-button');
 
     this.#btn.addEventListener('click', (e) => this.#setClipboard());
     this.#btn.addEventListener('blur', (e) => this.#blurAfterCopy());

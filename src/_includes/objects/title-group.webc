@@ -3,27 +3,24 @@
   @html="mdI(this.title)"
 ></h1>
 
-<post-meta
-  webc:if="this.isPost"
->
-  <h-card>Miriam Suzanne</h-card> –
-  <date-time :date="this.date"></date-time>
+<post-meta>
+  <date-time
+    webc:if="this.isPost"
+    :date="this.date"
+  ></date-time>
+  <span webc:if="this.isPost && this.subtitle">–</span>
+  <roll-if
+    :@content="this.subtitle"
+  ></roll-if>
 </post-meta>
 
-<sub-title
-  webc:elseif="this.subtitle"
-><roll-if
-  :@content="this.subtitle"
-></roll-if></sub-title>
-
 <style webc:bucket="layout">
-  sub-title {
-    display: block;
-    font-style: italic;
-  }
-
   post-meta {
     font-family: var(--ui-font);
-    font-size: smaller;
+
+    & p {
+      display: inline;
+      font-style: italic;
+    }
   }
 </style>

@@ -1,6 +1,23 @@
+<script webc:setup>
+  const postsFrom = (data, only) => data
+    .sort((a, b) => b.date - a.date)
+    .filter((post, i) => {
+      if (!only) return true;
+      if (only.includes('featured') && post.data.feature) return true;
+      if (only.includes('recent') && i < 5) return true;
+      return false
+    });
+</script>
+
 <ul webc:root="override">
   <post-item
-    webc:for="post of this.posts.sort((a, b) => b.date - a.date)"
+    webc:for="post of postsFrom(this.posts, this.onlyShow)"
     :@post="post"
   ></post-item>
 </ul>
+
+<p>
+  (<a webc:if="this.onlyShow" href="/everything/">
+    more in the archive »
+  </a>)
+</p>

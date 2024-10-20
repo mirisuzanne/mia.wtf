@@ -1,5 +1,4 @@
 ---
-feature: true
 title: Container queries explainer & proposal
 sub: A path forward, with single-axis containment
 venue: OddBird CSS Sandbox

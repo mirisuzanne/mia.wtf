@@ -43,9 +43,10 @@ eleventyImport:
   collections: [is:post, is:channel, is:org]
 ---
 
-<h2>The live feed</h2>
+<h2>Writing (here)</h2>
 <post-list
   :@posts="$data.collections['is:post']"
+  :@only-show="['featured', 'recent']"
 ></post-list>
 
 <h2>Co-conspirators</h2>

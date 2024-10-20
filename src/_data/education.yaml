@@ -1,0 +1,22 @@
+- slug: goshen
+  title: Goshen College
+  sub: Studying theater, writing, & visual arts
+  url: https://www.goshen.edu/
+  date: 2001-08-15
+  end: 2006-06-15
+  adr: Goshen, IN
+
+- slug: naropa
+  title: Naropa Summer Writing Program
+  url: https://www.naropa.edu/academics/swp/index.php
+  date: 2012-06-11
+  end: 2012-07-08
+  adr: Boulder, CO
+
+- slug: osf
+  title: Oregon Shakespeare Festival
+  sub: Stage management intern
+  url: https://www.osfashland.org/
+  date: 2003-02-06
+  end: 2003-04-26
+  adr: Ashland, OR

@@ -69,19 +69,20 @@ html {
     );
   }
 
-  :is(h1, h2) {
+  h1, h2 {
     font-size: calc(1em + 1cqi);
   }
 
-  :is(h3) {
+  h3 {
     font-size: inherit;
     font-weight: normal;
   }
 
   @supports (background-clip: text) {
-    :is(h1),
+    h1,
     [id=content] hr::before,
     [content-break]::before {
+      --decoration-color: var(--text);
       -webkit-text-fill-color: transparent;
       background: var(--text-gradient);
       background-clip: text;
@@ -129,12 +130,12 @@ html {
     --mark: var(--bg);
   }
 
-  :is(h1, h2, h3, h4, h5, h6) {
+  h1, h2, h3, h4, h5, h6 {
     font-size: inherit;
     font-weight: bold;
   }
 
-  :is(h1, h2) {
+  h1, h2 {
     text-transform: uppercase;
   }
 }
@@ -173,7 +174,7 @@ html {
     --em-shadow: var(--text);
   }
 
-  :is(h1, h2, h3, h4, h5, h6) {
+  h1, h2, h3, h4, h5, h6 {
     --border: currentColor;
     background: var(--text);
     color: var(--bg);

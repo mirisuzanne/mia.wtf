@@ -40,6 +40,13 @@ layout: page
   @raw="splitContent(this.summary, this.content)[1]"
 ></section>
 
+<mastodon-post
+  webc:if="this.mastodon"
+  line-length
+>
+  <a :href="this.mastodon">Join the conversation</a>
+</mastodon-post>
+
 <style webc:bucket="layout">
   #summary {
     --italic: true;
