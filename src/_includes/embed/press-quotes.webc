@@ -1,7 +1,7 @@
 <script webc:setup>
   const cite = (data) => {
-    const src = data.url
-      ? `[${data.venue || data.credit}](${data.url})`
+    const src = data.at
+      ? `[${data.venue || data.credit}](${data.at})`
       : data.venue || data.credit;
 
     return data.venue && data.credit

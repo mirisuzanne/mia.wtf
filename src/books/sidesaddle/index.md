@@ -2,7 +2,7 @@
 type: novel
 title: Riding SideSaddle*
 venue: ridingsidesaddle.com
-url: https://ridingsidesaddle.com
+at: https://ridingsidesaddle.com
 sub: A queer novel, in fragments of memory…
 date: 2015-04-02
 hero:
@@ -17,7 +17,7 @@ events:
   - title: Queer Art
     type: reading
     venue: Charis Books
-    url: https://www.facebook.com/events/737586806673620/
+    at: https://www.facebook.com/events/737586806673620/
     adr: Atlanta, GA
     date: 2019-09-16
   - title: A Leon Affair
@@ -33,18 +33,18 @@ events:
   - title: Fucking Fabulous Fiction Festival
     type: reading
     venue: Oriental Theater
-    url: https://www.theorientaltheater.com/event/214770/fiction-fest
+    at: https://www.theorientaltheater.com/event/214770/fiction-fest
     adr: Denver, CO
     date: 2015-07-31
     with:
       - name: BookBar
-        url: https://bookbardenver.com/
+        at: https://bookbardenver.com/
       - name: High Fiction
-        url: https://highfiction.com/
+        at: https://highfiction.com/
   - title: SideSaddle Book Release
     type: reading
     venue: Syntax Physic Opera
-    url: https://physicopera.com/
+    at: https://physicopera.com/
     date: 2015-04-02
     with:
       - Buntport Theater
@@ -67,7 +67,7 @@ press:
       and the friendship and love they find with each other.
     credit: Ryo Yamaguchi
     venue: Michigan Quarterly Review
-    url: https://www.michiganquarterlyreview.com/2015/06/on-riding-sidesaddle-an-interview-with-eric-suzanne/
+    at: https://www.michiganquarterlyreview.com/2015/06/on-riding-sidesaddle-an-interview-with-eric-suzanne/
     date: 2015-06-01
   - text: |
       The characters, ideas, story are exposed, raw, alive --
@@ -79,21 +79,21 @@ press:
       and didnt want the night to be over.
     credit: Sam O’Daniel
     venue: Your Older Brother
-    url: https://www.yourolderbrother.com/2015/07/riding-sidesaddle-with-teacup-gorilla.html
+    at: https://www.yourolderbrother.com/2015/07/riding-sidesaddle-with-teacup-gorilla.html
     date: 2015-07-21
   - venue: Denver Westword
-    url: https://www.westword.com/arts/music-art-and-words-are-in-the-cards-at-the-riding-sidesaddle-book-launch-6626798
+    at: https://www.westword.com/arts/music-art-and-words-are-in-the-cards-at-the-riding-sidesaddle-book-launch-6626798
     credit: Luke Leavitt
     date: 2015-04-02
   - venue: Colorado Music Buzz
-    url: https://www.colomusicbuzz.com/eric-suzanne-drops-non-linear-novel-in-conjunction-with-teacup-gorilla/
+    at: https://www.colomusicbuzz.com/eric-suzanne-drops-non-linear-novel-in-conjunction-with-teacup-gorilla/
     credit: Tim Wenger
     date: 2015-04-01
 actions:
   - text: buy the novel
-    url: https://miriamsuzanne.square.site/product/ridingsidesaddle/16?cs=true&cst=custom
+    at: https://miriamsuzanne.square.site/product/ridingsidesaddle/16?cs=true&cst=custom
   - text: art from the novel
-    url: https://miriamsuzanne.square.site/
+    at: https://miriamsuzanne.square.site/
 video:
   - iframe: https://player.vimeo.com/video/182858323
     title: Live video

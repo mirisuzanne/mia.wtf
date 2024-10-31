@@ -29,7 +29,10 @@ layout: page
     webc:keep
     :@title="banner || title"
     :@subtitle="org ? `${org} | _${sub}_` : sub"
-    :@date="this.page.date"
+    :@date="this.date"
+    :@rel="this.rel"
+    :@venue="this.venue"
+    :@at="this.at"
     :@is-post="tags?.includes('is:post')"
   ></title-group>
 </header>

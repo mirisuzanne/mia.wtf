@@ -18,11 +18,11 @@ layout: base
 
 <header id="banner" line-length>
   <span>
-    [<a
+    <a
       href="/"
       rel="home"
       :aria-current="this.page.url === '/' ? 'page' : false"
-    >mia</a>]
+    >mia</a>
   </span>
   <dialog-toggle>
     <button

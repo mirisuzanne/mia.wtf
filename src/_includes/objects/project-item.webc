@@ -1,6 +1,6 @@
 <li webc:root="override">
   <a
-    :href="isStub(this.project) ? this.project.data.at : this.project.url"
+    :href="this.project.data.placeholder ? this.project.data.at : this.project.url"
     @text="pageName(this.project)"
   ></a>
 

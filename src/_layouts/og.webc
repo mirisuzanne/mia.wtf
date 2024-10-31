@@ -11,7 +11,7 @@ hero:
     const img = source.data.og?.image
       || source.data.hero
       || this.hero;
-    return imgSrc(img.src, { widths: [1200] });
+    return imgSrc(img.src || this.hero.src, { widths: [1200] });
   }
 
   const subTitle = (source) => {

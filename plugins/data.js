@@ -27,7 +27,6 @@ const pCategory = (tags, prefixList) => {
   return list ? list.join(':') : null;
 }
 
-const isStub = (page) => page.data.at && !page.data.summary;
 const onGoing = (page) => page.data?.end === 'ongoing';
 const pageName = (page) => page.data.banner || page.data.title || page.fileSlug;
 const findIndex = (pages, tag) => pages.find((page) => page.data.index === tag);
@@ -48,7 +47,6 @@ export default (eleventyConfig) => {
   eleventyConfig.addAsyncFilter('findTagType', findTagType);
   eleventyConfig.addAsyncFilter('pCategory', pCategory);
 
-  eleventyConfig.addAsyncFilter('isStub', isStub);
   eleventyConfig.addAsyncFilter('onGoing', onGoing);
   eleventyConfig.addAsyncFilter('pageName', pageName);
   eleventyConfig.addAsyncFilter('findIndex', findIndex);

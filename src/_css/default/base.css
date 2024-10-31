@@ -39,7 +39,7 @@ html {
 }
 
 body {
-  font-size: max(1em, 0.9em + var(--fluid-scale, 0.5vi));
+  font-size: max(1em, 0.9em + var(--fluid-scale, 0.75vi));
   margin: unset;
   padding: var(--gap, 12px);
 }
@@ -53,6 +53,14 @@ section,
 form {
   margin-block: 1lh;
   container: layout / inline-size;
+
+  & > :first-child {
+    margin-block-start: unset;
+  }
+
+  & > :last-child {
+    margin-block-end: unset;
+  }
 }
 
 main {

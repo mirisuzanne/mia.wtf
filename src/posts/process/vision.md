@@ -2,7 +2,7 @@
 title: We don't need a boss, we need a process
 sub: (and our team will probably need some training)
 date: 2024-08-08
-url: https://robinrendle.com/notes/design-aint-a-democracy/
+at: https://robinrendle.com/notes/design-aint-a-democracy/
 rel: reply
 tags:
   - area:web

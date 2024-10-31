@@ -1,7 +1,7 @@
 ---
 title: Underground music showcase
 sub: the largest indie music festival in the Rocky Mountain region
-url: https://theums.com/
+at: https://theums.com/
 date: 2015-07-25
 events:
   - venue: Illegal Pete's

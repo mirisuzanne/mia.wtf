@@ -2,7 +2,7 @@
 title: The Posture of Contour
 sub: by [James Belflower](https://www.pw.org/content/james_belflower)
 venue: SpringGun Press
-url: https://web.archive.org/web/20211018235743/https://www.springgunpress.com/posture/
+at: https://web.archive.org/web/20211018235743/https://www.springgunpress.com/posture/
 date: 2013-01-22
 hero:
   src: art/design/contour.jpg

@@ -16,7 +16,6 @@ v2008to2012:
     My 2008-2012 business-card site. I call this _rainbow brutalism_.
   gallery:
     - img: '2022/2008-e-dirtcircle.jpg'
-      url: true
       alt: |
         Bright watercolor wash in purples and yellows,
         and large sans-serif text
@@ -29,7 +28,6 @@ v2008to2012:
         Countdown to Zero | political theater collective,
         Dirt Circle Network | freelance collective.
     - img: '2022/2012-e-dirtcircle.jpg'
-      url: true
       alt: |
         Same design,
         but some new links --
@@ -40,7 +38,6 @@ v2008to2012:
         OddBird web design and development.
 v2014:
   - img: '2022/2014-e-suzanne.jpg'
-    url: true
     alt: |
       Screenshot project page
       with white background,
@@ -52,14 +49,12 @@ v2014:
       and artifacts.
 v2015to2018:
   - img: '2022/2015-m-suzanne.jpg'
-    url: true
     alt: |
       Black-and-pink Baskerville
       in a centered column
       on a white background.
       The nav is what, why, who, blog.
   - img: '2022/2016-m-suzanne.jpg'
-    url: true
     alt: |
       Same colors, more layout,
       and a big illustration of my face
@@ -68,7 +63,6 @@ v2015to2018:
       press, blog, about, contact.
   - img: '2022/2018-m-suzanne.jpg'
     span: full
-    url: true
     alt: |
       Similar colors,
       but everything at an angle
@@ -78,7 +72,6 @@ v2015to2018:
       web development, art, about, contact.
 v2019to2022:
   - img: '2022/2019-m-suzanne.jpg'
-    url: true
     alt: |
       Nav is art&code, bio, contact, shop.
       Header is my name and a short summary.
@@ -87,7 +80,6 @@ v2019to2022:
       sorted by date,
       with tags for filtering along the top.
   - img: '2022/2019-2-m-suzanne.jpg'
-    url: true
     alt: |
       Similar idea,
       but my name is bigger & angled,
@@ -97,14 +89,12 @@ v2019to2022:
       in the right-hand page margin:
       home, shop, about, contact, art, code, etc.
   - img: '2022/2020-m-suzanne.jpg'
-    url: true
     alt: |
       There's a new top bar
       with disclosure controls for colors and type,
       then nav of my name (for home),
       about, tags, contact.
   - img: '2022/2022-m-suzanne.jpg'
-    url: true
     alt: |
       Nav is still about, tags, contact
       at the top.

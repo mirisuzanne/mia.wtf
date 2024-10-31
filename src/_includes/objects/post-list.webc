@@ -16,8 +16,8 @@
   ></post-item>
 </ul>
 
-<p>
-  (<a webc:if="this.onlyShow" href="/everything/">
+<p webc:if="this.onlyShow">
+  (<a href="/everything/">
     more in the archive »
   </a>)
 </p>

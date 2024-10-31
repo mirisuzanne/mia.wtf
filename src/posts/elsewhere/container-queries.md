@@ -1,8 +1,8 @@
 ---
 title: Container queries explainer & proposal
 sub: A path forward, with single-axis containment
-venue: OddBird CSS Sandbox
-url: https://github.com/oddbird/css-sandbox/blob/main/src/rwd/query/explainer.md
+venue: CSS Sandbox
+at: https://github.com/oddbird/css-sandbox/blob/main/src/rwd/query/explainer.md
 date: 2021-05-02
 hero:
   src: talks/container-query.jpg
@@ -11,6 +11,8 @@ tags:
   - container queries
   - oddbird
   - elsewhere
+  - css
+  - csswg
 callout:
   - date: 2022-09-14
     warn: |

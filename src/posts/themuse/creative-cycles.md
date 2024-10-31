@@ -2,7 +2,7 @@
 title: Creative modes and cycles
 sub: Part 3 of [Fuck the Muse](/2012/10/16/muse-intro/)
 venue: The Operating System
-url: https://medium.com/the-operating-system/coco-process-course-eric-meyers-fuck-the-muse-lesson-3-creative-modes-and-cycles-984e501058e1
+at: https://medium.com/the-operating-system/coco-process-course-eric-meyers-fuck-the-muse-lesson-3-creative-modes-and-cycles-984e501058e1
 date: 2012-11-08
 ---
 

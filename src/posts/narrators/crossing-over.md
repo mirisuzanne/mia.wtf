@@ -4,7 +4,7 @@ sub: Teaching you to see me
 date: 2017-08-16
 hero:
   src: narrators/crossingover.png
-url: https://thenarrators.org/august-2017/
+at: https://thenarrators.org/august-2017/
 tags:
   - trans
 summary: |

@@ -3,7 +3,7 @@ title: A whole cascade of layers
 sub: the path to SBRDFLT
 date: 2022-09-06
 venue: Dave Rupert
-url: https://daverupert.com/2022/08/modern-alternatives-to-bem/
+at: https://daverupert.com/2022/08/modern-alternatives-to-bem/
 rel: reply
 tags:
   - css

@@ -2,7 +2,7 @@
 title: Get curious
 sub: Part 5 of [Fuck the Muse](/2012/10/16/muse-intro/)
 venue: The Operating System
-url: https://medium.com/the-operating-system/coco-process-course-eric-meyers-fuck-the-muse-lesson-5-get-curious-pt-1-b30284155182
+at: https://medium.com/the-operating-system/coco-process-course-eric-meyers-fuck-the-muse-lesson-5-get-curious-pt-1-b30284155182
 date: 2013-02-07
 ---
 

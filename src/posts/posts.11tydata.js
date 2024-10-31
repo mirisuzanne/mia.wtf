@@ -6,11 +6,11 @@ const dateToUrl = (date) => format(
     'yyyy/MM/dd'
   );
 
-const postUrl = (page) => page
-  ? `/${dateToUrl(page.date)}/${page.fileSlug}/index.html`
+const postUrl = (data) => data
+  ? `/${dateToUrl(data.date || data.page.date)}/${data.slug || data.page.fileSlug}/index.html`
   : false;
 
 export default {
   tags: ['is:post'],
-  permalink: (data) => postUrl(data.page),
+  permalink: (data) => postUrl(data),
 }

@@ -2,7 +2,7 @@
 title: Gods on the Lam
 sub: by [Christopher David Rosales](https://www.christopherrosales.com/)
 venue: Perpetual Motion Machine
-url: https://perpetualpublishing.com/product/gods-on-the-lam/
+at: https://perpetualpublishing.com/product/gods-on-the-lam/
 date: 2017-06-02
 hero:
   src: art/design/gotl-cover.jpg

@@ -12,7 +12,7 @@
   ><button
     is-switch
     id="site-texture"
-    aria-pressed="true"
+    aria-pressed="false"
   ><switch-text>Background texture</switch-text></button></switch-control>
 </control-set>
 
@@ -71,8 +71,8 @@
     data-off="0"
   >
     <button data-value="0">off</button>
-    <button data-value="initial" aria-pressed="true">some</button>
-    <button data-value="0.75vi">extra</button>
+    <button data-value="0.5vi">some</button>
+    <button data-value="0.75vi" aria-pressed="true">extra</button>
   </toggle-control>
 </control-set>
 

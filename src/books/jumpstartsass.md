@@ -2,7 +2,7 @@
 title: Jump Start Sass
 sub: Get up to speed with Sass in a weekend…
 venue: SitePoint
-url: https://www.sitepoint.com/premium/books/jump-start-sass
+at: https://www.sitepoint.com/premium/books/jump-start-sass
 date: 2016-03-22
 tags:
   - code
@@ -14,7 +14,7 @@ press:
       that will help you architect a good application.
     credit: Kaelig Deloumeau-Prigent
     venue: SitePoint
-    url: https://www.sitepoint.com/premium/books/jump-start-sass#reviews
+    at: https://www.sitepoint.com/premium/books/jump-start-sass#reviews
     datetime: 2016-03-23
 summary: |
   Using Sass, you can write your stylesheets in a more concise,

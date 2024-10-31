@@ -23,7 +23,7 @@ ul, ol {
 }
 
 ul, ol, p {
-  margin-block: 0.75rlh;
+  margin-block: 1lh;
 }
 
 pre { white-space: pre-wrap; }

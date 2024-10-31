@@ -1,0 +1,19 @@
+---js
+const pagination = {
+  data: 'education',
+  size: 1,
+  alias: 'edu',
+};
+
+const permalink = (data) =>
+  `/education/${data.edu.slug || this.slugify(data.edu.title)}/index.html`;
+
+const eleventyExcludeFromCollections = true
+
+const eleventyComputed = {
+  title: (data) => data.edu.title,
+  sub: (data) => data.edu.sub,
+  date: (data) => data.edu.date,
+  end: (data) => data.edu.end,
+};
+---

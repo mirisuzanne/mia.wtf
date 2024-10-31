@@ -3,8 +3,8 @@
     <dt @text="item"></dt>
     <dd>
       <a
-        webc:if="value.url"
-        :href="value.url"
+        webc:if="value.at"
+        :href="value.at"
         rel="me"
         @text="value.name"
       ></a>

@@ -2,7 +2,7 @@
 title: Stratified design
 sub: The cover art for PRINT! vol. 3
 venue: The Operating System
-url: https://www.theoperatingsystem.org/layer-tennis-live-stream-print-vol-3-ole/
+at: https://www.theoperatingsystem.org/layer-tennis-live-stream-print-vol-3-ole/
 date: 2013-04-18
 hero:
   src: tennis/volley6.jpg

@@ -3,7 +3,7 @@ title: An open CSS notebook
 sub: A scratchpad for new features
 date: 2020-11-17
 venue: css.oddbird.net
-url: https://css.oddbird.net
+at: https://css.oddbird.net
 tags:
   - oddbird
 ---

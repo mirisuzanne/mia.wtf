@@ -11,11 +11,11 @@ events:
     adr: Denver, CO
     with:
       - name: Face Man
-        url: https://www.facebook.com/pages/Face-Man/121419593563
+        at: https://www.facebook.com/pages/Face-Man/121419593563
       - name: Open to the Hound
-        url: https://www.opentothehound.com
+        at: https://www.opentothehound.com
       - name: Carly Howard and the Youthnicorns
-        url: https://www.facebook.com/carly.howard
+        at: https://www.facebook.com/carly.howard
 ---
 
 We're excited to be part of the single release for

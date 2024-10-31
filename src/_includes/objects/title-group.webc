@@ -1,22 +1,40 @@
+<page-rel
+  webc:if="this.rel"
+  @html="mdI(`${this.rel} from [${this.venue}](${this.at})`)"
+></page-rel>
+
 <h1
   id="title"
-  @html="mdI(this.title)"
+  @html="mdI(this.at ? `[${this.title}](${this.at})` : this.title)"
 ></h1>
 
-<post-meta>
+<page-meta>
   <date-time
     webc:if="this.isPost"
     :date="this.date"
   ></date-time>
-  <span webc:if="this.isPost && this.subtitle">–</span>
-  <roll-if
-    :@content="this.subtitle"
-  ></roll-if>
-</post-meta>
+
+  <page-sub webc:if="this.subtitle">
+    <roll-if
+      :@content="this.subtitle"
+    ></roll-if>
+  </page-sub>
+</page-meta>
 
 <style webc:bucket="layout">
-  post-meta {
+  page-rel {
+    font-style: italic;
+  }
+
+  page-rel,
+  page-meta {
     font-family: var(--ui-font);
+  }
+
+  page-sub{
+    &:not(:first-child)::before {
+      content: ' – ';
+    }
 
     & p {
       display: inline;

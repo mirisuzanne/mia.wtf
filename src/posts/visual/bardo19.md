@@ -2,7 +2,7 @@
 title: Not clear to me, an installation
 venue: Bardo Coffee House
 adr: Denver, CO
-url: https://www.bardocoffee.com/
+at: https://www.bardocoffee.com/
 date: 2019-07-05
 end: 2019-07-31
 hero:

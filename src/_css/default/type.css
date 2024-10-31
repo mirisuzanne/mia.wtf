@@ -1,7 +1,12 @@
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--title-font);
   font-weight: normal;
-  text-wrap: pretty;
+  text-wrap: balance;
+  scroll-margin-block-end: unset;
+
+  & + :is(ul, ol, p) {
+    margin-block-start: 0.5lh;
+  }
 }
 
 blockquote {

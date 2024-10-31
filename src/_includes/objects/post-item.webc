@@ -1,4 +1,21 @@
+<script webc:setup>
+  const showVenue = (post) =>
+    ['bookmark', 'repost'].includes(post.data.rel)
+    && post.data.at
+    && post.data.venue;
+</script>
+
 <li page-item="post">
-  <a :href="this.post.url" @text="this.post.data.title"></a>
+  <a
+  :href="this.post.url"
+  @text="this.post.data.title"
+  ></a>
+  <span webc:if="showVenue(this.post)">
+    @
+    <a
+      :href="this.post.data.at"
+      @text="`${this.post.data.venue}`"
+    ></a>
+  </span>
   &ndash; <date-time :@date="this.post.date" @format="recent"></date-time>
 </li>

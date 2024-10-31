@@ -14,7 +14,7 @@ html {
   ) no-repeat fixed;
 
   --theme-texture: var(--bg-gradient);
-  --bg-texture: var(--theme-texture);
+  --bg-texture: var(--bg);
 
   --body-font: serif;
   --ui-font: sans-serif;
@@ -36,7 +36,7 @@ html {
 }
 
 [data-theme=mia] {
-  --font-size-auto: max(1em, 20px);
+  --font-size-auto: clamp(1em, 22px, 5vi);
 
   --body-font: var(--fonts-serif, var(--fonts-serif--));
   --title-font: var(--fonts-serif, var(--fonts-serif--));
@@ -55,22 +55,19 @@ html {
   --border: cadetBlue;
 
   @supports (fill: light-dark(red, red)) {
-    --bg: light-dark(
-      color-mix(in oklch, powderblue, oklch(1 0 none) 75%),
-      color-mix(in oklch, darkSlateGray, oklch(0 0 none) 50%)
-    );
+    --bg: light-dark(oklch(98% 0.01 220), oklch(18% 0.01 220));
     --text: light-dark(#111, lavender);
     --accent: light-dark(mediumVioletRed, hotPink);
     --feature: light-dark(teal, cyan);
-    --mark: color-mix(
-      in oklch,
-      var(--accent),
-      light-dark(oklch(1 0 none), oklch(0 0.2 none)) 75%
-    );
+    --mark: light-dark(oklch(90% 0.08 349.69), oklch(30% 0.14 351.99));
   }
 
-  h1, h2 {
+  h1 {
     font-size: calc(1em + 1cqi);
+  }
+
+  h2 {
+    font-size: calc(1em + 0.5cqi);
   }
 
   h3 {
@@ -128,6 +125,10 @@ html {
     --feature: var(--accent);
     --border: var(--text);
     --mark: var(--bg);
+
+    --em-background: var(--text);
+    --em-color: var(--bg);
+    --em-shadow: var(--text);
   }
 
   h1, h2, h3, h4, h5, h6 {

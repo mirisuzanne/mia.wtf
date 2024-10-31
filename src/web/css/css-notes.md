@@ -1,4 +1,5 @@
 ---
+placeholder: true
 title: CSS Spec Notebook
 sub: scratchpad for new CSS & Sass features
 at: https://css.oddbird.net/

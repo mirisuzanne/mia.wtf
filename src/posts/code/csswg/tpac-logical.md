@@ -1,7 +1,7 @@
 ---
 title: A long-term plan for logical properties?
 date: 2022-09-16
-url: https://adactio.com/journal/19457
+at: https://adactio.com/journal/19457
 venue: Jeremy Keith
 rel: reply
 ---

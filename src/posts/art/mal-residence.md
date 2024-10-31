@@ -4,7 +4,7 @@ title: Media Archeology Lab, Artist in Residence
 sub: The book is dead. Long live the book.
 venue: Media Archeology Lab
 adr: Boulder, CO
-url: https://web.archive.org/web/20190327061344/https://mediaarchaeologylab.com/past-artist-in-residence/miriam-suzanne-2/
+at: https://web.archive.org/web/20190327061344/https://mediaarchaeologylab.com/past-artist-in-residence/miriam-suzanne-2/
 date: 2013-09-25
 end: 2013-10-07
 hero:

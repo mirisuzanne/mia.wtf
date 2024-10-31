@@ -102,7 +102,7 @@ I love when sites use my preference!
 
 ## Inspiration
 
-These sites were _on my mind_
+These opened these sites on occasion,
 while I was working:
 
 [PublicDomainReview.org](https://publicdomainreview.org)
@@ -110,22 +110,19 @@ while I was working:
   but it's also where I first encountered
   (or noticed) the Alegreya fonts.
 
-[FromJason.xyz](https://www.fromjason.xyz/)
-~ Both the typography and voice
-  fit my particular mood.
-  I had already settled on my sparse site banner,
-  with only a home link,
-  but Jason's design helped validate that choice.
-
-[ZachLeat.com](https://www.zachleat.com/)
-~ Scroll down to the footer,
-  where you can turn off web fonts
-  and <abbr>CSS</abbr>
-  with a little switch.
-
 [SlashPages.net](https://slashpages.net)
 ~ The only navigation that I really need,
   and I put it in the footer.
+
+[David Darnes](https://darn.es)
+~ What web components has David built recently,
+  and can I use them?
+
+[ZachLeat.com](https://www.zachleat.com/)
+~ I bet Zach has some good components too.
+  Scroll down to the footer,
+  and you can turn off the <abbr>CSS</abbr>
+  with a little switch.
 
 [MXB.dev](https://mxb.dev)
 ~ What an excellent theme picker

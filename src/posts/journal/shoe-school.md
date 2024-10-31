@@ -2,7 +2,7 @@
 title: 2 days of cordwainery
 sub: A wonderful adventure in shoe-building
 venue: Colorado Shoe School
-url: https://coloradoshoeschool.com/
+at: https://coloradoshoeschool.com/
 date: 2022-07-12
 tags:
   - art

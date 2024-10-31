@@ -2,7 +2,7 @@
 title: Explosive growth
 sub: Part 6 of [Fuck the Muse](/2012/10/16/muse-intro/)
 venue: The Operating System
-url: https://medium.com/the-operating-system/coco-process-course-eric-meyers-fuck-the-muse-lesson-6-explosive-growth-b5e6652af1e1
+at: https://medium.com/the-operating-system/coco-process-course-eric-meyers-fuck-the-muse-lesson-6-explosive-growth-b5e6652af1e1
 date: 2013-02-14
 hoarding:
   - img: muse/explosion/hoarding.jpg

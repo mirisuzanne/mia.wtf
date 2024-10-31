@@ -15,7 +15,7 @@ hero:
     suck out all the marrow of life.
 events:
   - venue: The Narrators (podcast)
-    url: https://thenarrators.org/232-miriam-suzanne-born-to-choose-this-way/
+    at: https://thenarrators.org/232-miriam-suzanne-born-to-choose-this-way/
     date: 2021-05-14
     type: podcast
   - venue: The Narrators (live)

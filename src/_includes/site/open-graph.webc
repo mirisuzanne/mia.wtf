@@ -9,3 +9,4 @@
 <meta property="og:site_name" :content="site.title">
 <meta property="og:description" :content="mdRemove(desc)">
 <meta name="description" :content="mdRemove(desc)">
+<meta name="fediverse:creator" content="@mia@front-end.social" />

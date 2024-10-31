@@ -14,13 +14,13 @@ events:
   - date: 2017-01-13
     adr: Brooklyn, NY
     venue: The Operating System
-    url: https://www.facebook.com/events/306828783046470/
+    at: https://www.facebook.com/events/306828783046470/
     tags:
       - resistance tour
   - date: 2017-01-15
     adr: Washington, DC
     venue: in your ear
-    url: https://www.facebook.com/events/641655696042941/
+    at: https://www.facebook.com/events/641655696042941/
     with:
       - '[Valerie Hsiung](https://flowersintheirmouths.com/)'
     tags:
@@ -48,13 +48,13 @@ events:
   - date: 2017-01-21
     adr: Washington, DC
     venue: Women's March
-    url: https://www.womensmarch.com/
+    at: https://www.womensmarch.com/
     tags:
       - resistance tour
   - date: 2017-01-23
     adr: Charlottesville, VA
     venue: Open Grounds
-    url: https://opengrounds.virginia.edu/
+    at: https://opengrounds.virginia.edu/
     tags:
       - resistance tour
 ---
