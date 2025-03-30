@@ -4,23 +4,25 @@ venue: Sass Blog
 date: 2022-09-21
 at: https://sass-lang.com/blog/request-for-comments-color-spaces
 tags:
-  - sass
+  - org:sass
+  - web:open-source
   - code
   - color
-  - open source
 hero:
   src: 2022/sass-color.jpg
   alt: |
     The Sass logo in black,
     or a bright oklch gradient.
-summary: |
-  Browsers are starting to roll out
-  support for new color spaces in CSS
-  as part of [Interop 2022](https://web.dev/interop-2022/#color-spaces-and-css-color-functions).
-  [My proposal](https://sass-lang.com/blog/request-for-comments-color-spaces)
-  for the Sass implementation is live,
-  and ready for feedback.
 ---
+
+Browsers are starting to roll out
+support for new color spaces in CSS
+as part of [Interop 2022](https://web.dev/interop-2022/#color-spaces-and-css-color-functions).
+[My proposal](https://sass-lang.com/blog/request-for-comments-color-spaces)
+for the Sass implementation is live,
+and ready for feedback.
+
+<!-- intro -->
 
 I'm very excited about this.
 It will allow us to:

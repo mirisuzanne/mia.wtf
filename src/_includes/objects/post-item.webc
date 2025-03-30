@@ -3,19 +3,24 @@
     ['bookmark', 'repost'].includes(post.data.rel)
     && post.data.at
     && post.data.venue;
+
+  const isSelf = (tags) => tags && tagType(tags, 'rel').includes('me');
 </script>
 
-<li page-item="post">
+<li>
   <a
-  :href="this.post.url"
-  @text="this.post.data.title"
+    :href="this.post.url"
+    @text="this.post.data.title"
+    post-title
   ></a>
-  <span webc:if="showVenue(this.post)">
-    @
+  <venue-link webc:if="showVenue(this.post)">
+    <i
+      @text="isSelf(this.post.data.tags) ? '@' : 'from'"
+    ></i>
     <a
       :href="this.post.data.at"
       @text="`${this.post.data.venue}`"
     ></a>
-  </span>
+  </venue-link>
   &ndash; <date-time :@date="this.post.date" @format="recent"></date-time>
 </li>

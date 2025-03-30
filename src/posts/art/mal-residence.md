@@ -1,5 +1,5 @@
 ---
-permalink: /art/mal-residence/
+permalink: /art/mal-residence/index.html
 title: Media Archeology Lab, Artist in Residence
 sub: The book is dead. Long live the book.
 venue: Media Archeology Lab
@@ -11,17 +11,19 @@ hero:
   src: elo14/dancesex.jpg
   caption: Say "ooooooooo" while you dance
 tags:
-  - writing
-  - theater
+  - art:writing
+  - art:theater
   - electronic literature
   - post-obsolete
   - reading
   - show
-summary: |
-  An artist residency at the **Media Archeology Lab**,
-  working on development of
-  [The Post-Obsolete Book](/projects/post-obsolete/).
 ---
+
+An artist residency at the **Media Archeology Lab**,
+working on development of
+[The Post-Obsolete Book](/projects/post-obsolete/).
+
+<!-- intro -->
 
 The piece requires a few props:
 

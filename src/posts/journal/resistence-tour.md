@@ -5,10 +5,11 @@ hero:
   src: 2016/resistence.jpg
 events_index: resistance tour
 tags:
-  - speaking
+  - web:teaching
   - riding sidesaddle
-  - art
-  - code
+  - art:writing
+  - area:art
+  - area:web
   - tour
 events:
   - date: 2017-01-13

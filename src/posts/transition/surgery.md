@@ -9,15 +9,17 @@ carina:
     title: Carina Magyar video
     width: 560
     height: 315
-summary: |
-  Denver Health has started offering vaginoplasty
-  in addition to their other trans medical services.
-  While I've been on the waitlist
-  for various surgeons around the country,
-  Denver Health called me this week
-  to give me a date: **September 10**,
-  less than two months away.
 ---
+
+Denver Health has started offering vaginoplasty
+in addition to their other trans medical services.
+While I've been on the waitlist
+for various surgeons around the country,
+Denver Health called me this week
+to give me a date: **September 10**,
+less than two months away.
+
+<!-- intro -->
 
 I'm excited, and terrified,
 and I might start crying.

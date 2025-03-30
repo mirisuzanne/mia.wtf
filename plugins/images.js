@@ -1,24 +1,40 @@
-import Image from '@11ty/eleventy-img';
+import Image, { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
 import { join } from 'path';
 
 export default function(eleventyConfig, options = {}) {
-  const imgFolder = options.in;
-  const opts = { ...options.out };
+  const imgFolder = options.src;
+  const fullPath = join('./src', imgFolder);
 
-  async function getImageData(src, config) {
-    const imgSrc = imgFolder && !src.includes('://')
-      ? join(imgFolder, src)
-      : src;
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, options.transform);
 
-    const metadata = await Image(imgSrc, { ...opts, ...config});
-    return metadata;
-  }
+  const imgDir = (src, full) => imgFolder && !src.includes('://')
+    ? join(full ? fullPath : imgFolder, src)
+    : src;
 
-  async function imageSrc(src, config) {
-    const metadata = await getImageData(src, config);
-    const img = metadata.jpeg[metadata.jpeg.length - 1];
+  const imgSrc = async (src, config) => {
+    const metadata = await Image(imgDir(src, true), {
+      formats: 'jpeg',
+      widths: ['auto'],
+      outputDir: './_site/img/',
+      urlPath: '/img/',
+      ...config
+    });
+
+    const img = metadata.jpeg.at(-1);
     return img.url;
   }
 
-  eleventyConfig.addAsyncFilter('imgSrc', imageSrc);
+  const ogImg = async (src) => {
+    const api = 'https://v1.screenshot.11ty.dev/';
+    const baseUrl = process.env.URL || 'https://miriamsuzanne.com';
+    const encoded = encodeURIComponent(`${baseUrl}${src}`);
+
+    return await imgSrc(`${api}${encoded}/opengraph/`, {
+      widths: [1200],
+    });
+  }
+
+  eleventyConfig.addAsyncFilter('imgSrc', imgSrc);
+  eleventyConfig.addAsyncFilter('ogImg', ogImg);
+  eleventyConfig.addFilter('imgDir', imgDir);
 };

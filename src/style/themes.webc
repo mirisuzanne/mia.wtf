@@ -11,7 +11,7 @@ colors:
 
 <color-palette>
   <color-swatch
-    webc:for="color of colors"
+    webc:for="color of this.colors"
     :style="`background: var(--${color})`"
   ></color-swatch>
 </color-palette>

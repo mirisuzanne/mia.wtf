@@ -22,9 +22,11 @@ art:
 demo:
   - pen: eYdJvWE
     title: CSS gradient-art decorations
-summary: |
-  "What is one thing you learned about building websites this year?"
 ---
+
+"What is one thing you learned about building websites this year?"
+
+<!-- intro -->
 
 I’ve always enjoyed the CSS art people create,
 but I’ve never ventured into it much myself.

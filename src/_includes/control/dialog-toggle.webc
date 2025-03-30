@@ -16,10 +16,15 @@
     set expanded(to) {
       this.toggle.setAttribute('aria-expanded', to ? 'true' : 'false');
 
-      if (to) {
+      if (!to) {
+        if (this.target.open) this.target.close();
+        return;
+      }
+
+      if (this.toggle.dataset.modal || this.target.dataset.modal) {
+        this.target.showModal();
+      } else {
         this.target.show();
-      } else if (this.target.open) {
-        this.target.close();
       }
     };
 

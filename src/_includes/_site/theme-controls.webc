@@ -1,0 +1,237 @@
+<control-set>
+  <control-label>Vibes</control-label>
+  <toggle-control
+    id="color-scheme"
+    data-prop="color-scheme"
+    data-local="css-scheme"
+  >
+    <button>dark</button>
+    <button>light</button>
+    <button
+      data-value="dark light"
+      aria-pressed="true"
+    >auto</button>
+  </toggle-control>
+
+  <toggle-control
+    id="site-vibes"
+    data-attr="data-theme"
+    data-local="css-theme"
+    data-off="mia"
+  >
+    <button>browser</button>
+    <button aria-pressed="true">mia</button>
+    <button>terminal</button>
+    <button>copier</button>
+  </toggle-control>
+</control-set>
+
+<control-set>
+  <control-label>Base Font Size</control-label>
+  <toggle-control
+    id="font-size"
+    data-prop="--font-size"
+    data-local="css-font-size"
+  >
+    <button
+      data-value="initial"
+      aria-pressed="true"
+    >auto</button>
+    <button>small</button>
+    <button>medium</button>
+    <button>large</button>
+    <button>x-large</button>
+    <button>xx-large</button>
+  </toggle-control>
+
+  <input-control
+    data-prop="--measure"
+    data-local="css-measure"
+  >
+    <label for="measure">Line Length</label>
+    <input-reset-group>
+      <input id="measure" type="range" min="14" value="32" max="60" step="0.5">
+      <button data-btn="emoji" data-reset="measure">
+        <reset-left-line></reset-left-line>
+        <visually-hidden>reset</visually-hidden>
+      </button>
+    </input-reset-group>
+  </input-control>
+</control-set>
+
+<control-set>
+  <control-label>Alignment</control-label>
+  <toggle-control
+    id="alignment"
+    data-attr="data-align"
+    data-local="css-align"
+  >
+    <button>left</button>
+    <button aria-pressed="true">center</button>
+    <button>evil</button>
+  </toggle-control>
+</control-set>
+
+<control-set>
+  <control-label>Filters</control-label>
+
+  <input-control
+    data-prop="--filter-brightness"
+    data-local="css-filter-brightness"
+  >
+    <label for="filter-brightness">Brightness</label>
+    <input-reset-group>
+      <input id="filter-brightness" type="range" min="0.2" value="1" max="2" step="0.1">
+      <button data-btn="emoji" data-reset="filter-brightness">
+        <reset-left-line></reset-left-line>
+        <visually-hidden>reset</visually-hidden>
+      </button>
+    </input-reset-group>
+  </input-control>
+
+  <input-control
+    data-prop="--filter-contrast"
+    data-local="css-filter-contrast"
+  >
+    <label for="filter-contrast">Contrast</label>
+    <input-reset-group>
+      <input id="filter-contrast" type="range" min="0.5" value="1" max="2" step="0.1">
+      <button data-btn="emoji" data-reset="filter-contrast">
+        <reset-left-line></reset-left-line>
+        <visually-hidden>reset</visually-hidden>
+      </button>
+    </input-reset-group>
+  </input-control>
+
+  <input-control
+    data-prop="--filter-hue"
+    data-local="css-filter-hue"
+  >
+    <label for="filter-hue">Hue Shift</label>
+    <input-reset-group>
+      <input id="filter-hue" type="range" min="0" value="0" max="360">
+      <button data-btn="emoji" data-reset="filter-hue">
+        <reset-left-line></reset-left-line>
+        <visually-hidden>reset</visually-hidden>
+      </button>
+    </input-reset-group>
+  </input-control>
+
+  <input-control
+    data-prop="--filter-sepia"
+    data-local="css-filter-sepia"
+  >
+    <label for="filter-sepia">Sepia</label>
+    <input-reset-group>
+      <input id="filter-sepia" type="range" min="0" value="0" max="1" step="0.1">
+      <button data-btn="emoji" data-reset="filter-sepia">
+        <reset-left-line></reset-left-line>
+        <visually-hidden>reset</visually-hidden>
+      </button>
+    </input-reset-group>
+  </input-control>
+
+  <input-control
+    data-prop="--filter-blur"
+    data-local="css-filter-blur"
+  >
+    <label for="filter-blur">blur</label>
+    <input-reset-group>
+      <input id="filter-blur" type="range" min="0" value="0" max="12" step="0.1">
+      <button data-btn="emoji" data-reset="filter-blur">
+        <reset-left-line></reset-left-line>
+        <visually-hidden>reset</visually-hidden>
+      </button>
+    </input-reset-group>
+  </input-control>
+</control-set>
+
+<control-set>
+  <switch-control
+    data-for="body"
+    data-attr="data-scale"
+    data-on="some"
+    data-off="off"
+    data-local="css-fluid-scale"
+  ><button
+    is-switch
+    id="fluid-scale"
+    aria-pressed="true"
+  ><switch-text>Scale fonts</switch-text></button></switch-control>
+
+  <switch-control
+    data-prop="--bg-texture"
+    data-on="var(--theme-texture)"
+    data-off="var(--bg)"
+    data-local="css-texture"
+  ><button
+    is-switch
+    id="site-texture"
+    aria-pressed="true"
+  ><switch-text>Background texture</switch-text></button></switch-control>
+
+  <css-toggle
+    data-local="site-styles"
+    :@id="'site-styles'"
+  >Site styles</css-toggle>
+</control-set>
+
+<control-set table-flip style="display: var(--css-reveal, none);">
+  <switch-control
+    data-prop="--（╯°□°）╯"
+    data-on="︵┻━┻"
+  ><button
+    is-switch
+    id="table-flip"
+  ><switch-text>
+    <emo-ji aria-hidden="true">(╯°□°）╯︵ ┻━┻</emo-ji>
+    <visually-hidden>flip the table</visually-hidden>
+  </switch-text></button></switch-control>
+</control-set>
+
+<button data-reset="*">
+  <reset-left-line></reset-left-line>
+  <btn-text>reset all</btn-text>
+</button>
+
+<style webc:bucket="layout">
+  #theme-controls {
+    margin-block-start: var(--shim);
+    margin-inline-end: var(--shim);
+    position: fixed;
+  }
+
+  theme-controls,
+  more-controls {
+    display: grid;
+    gap: 0.5lh;
+  }
+
+  control-set {
+    display: grid;
+    gap: 0.125lh;
+  }
+
+  control-label {
+    display: block;
+    font-variant-caps: all-small-caps;
+    font-weight: bold;
+  }
+
+  @container style(--gap) {
+    theme-controls * { transition: rotate 350ms ease-out; }
+    [table-flip] { --css-reveal: block; }
+  }
+
+  @container style(--（╯°□°）╯: ︵┻━┻) {
+    theme-controls *:nth-child(1n - 3) { rotate: 0.9turn; }
+    theme-controls *:nth-child(3n + 1) { rotate: -0.7turn; }
+    theme-controls *:nth-child(5n + 7) { rotate: 0.5turn; }
+
+    theme-controls [data-reset],
+    theme-controls [data-reset] * {
+      rotate: 0deg;
+      z-index: 10;
+    }
+  }
+</style>

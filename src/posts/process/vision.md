@@ -7,17 +7,19 @@ rel: reply
 tags:
   - area:web
   - area:art
-  - theater
-  - music
+  - art:theater
+  - art:music
   - process
   - code
-summary: |
-  Robin says
-  [design ain’t a democracy](https://robinrendle.com/notes/design-aint-a-democracy/).
-  "_great design can only thrive
-  with a dictator/director._"
-  I aim to push back.
 ---
+
+Robin says
+[design ain’t a democracy](https://robinrendle.com/notes/design-aint-a-democracy/).
+"_great design can only thrive
+with a dictator/director._"
+I aim to push back.
+
+<!-- intro -->
 
 Everyone can agree that
 _design by committee_ usually fails.

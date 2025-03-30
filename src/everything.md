@@ -9,7 +9,9 @@ I hope you find what you're looking for.
 
 <!-- intro -->
 
+## Articles &c
+
 <ul
   webc:is="post-list"
-  :@posts="$data.collections['is:post']"
+  :@collection="$data.collections.all"
 ></ul>

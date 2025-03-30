@@ -1,0 +1,172 @@
+# albums
+
+- title: Jane/Eyre, No Net Ensnares Me
+  sub: Original score for a stage adaptation of the classic
+  role: bass & vocals
+  area: art
+  type: album
+  tags: [area:art, art:music, org:teacup-gorilla]
+  with: Teacup Gorilla
+  date: 2025-01-10
+  at: https://www.teacupgorilla.com/albums/jane-eyre/
+  feature: true
+  hero:
+    src: art/music/jane-eyre.jpg
+    alt: >
+      A paper cutout fem face silhouette and album title
+      pasted over an illustration from Jane Eyre
+
+- title: Whiskey From Strangers
+  sub: A Denver mythology based on Riding SideSaddle*
+  role: bass, vocals, lyrics
+  area: art
+  type: album
+  tags: [area:art, art:music, org:teacup-gorilla]
+  with: Teacup Gorilla
+  date: 2024-08-20
+  at: https://www.teacupgorilla.com/albums/whiskey-from-strangers/
+  feature: true
+  hero:
+    src: art/music/whiskey.jpg
+    alt: >
+      single-line sketch of reeds around a pond,
+      with mountains in the background -
+      the water and sunset are electrical diagrams,
+      with red arrows forming sun rays pointed in
+
+- title: The Holes They Leave
+  sub: Our debut EP
+  role: bass, vocals, lyrics
+  area: art
+  type: album
+  tags: [area:art, art:music, org:teacup-gorilla]
+  with: Teacup Gorilla
+  date: 2015-07-09
+  at: https://www.teacupgorilla.com/albums/holes-they-leave/
+  feature: true
+  hero:
+    src: art/music/thtl-art.jpg
+    alt: >
+      Profile of a neck and face
+      created from technical schematics
+      white on black album art
+
+- title: Iron City
+  role: bass & mandolin
+  area: art
+  type: album
+  tags: [area:art, art:music]
+  with: Rachel Eisenstat
+  date: 2010-09-13
+  at: https://ironcity.bandcamp.com/album/iron-city
+  hero:
+    src: art/music/iron-city.jpg
+    alt: >
+      rusty red brown subtle album art
+      of trees and maybe a house
+
+- title: Kingdom Come
+  role: bass
+  area: art
+  type: album
+  tags: [area:art, art:music]
+  with: Dirt Circle Dogs
+  date: 2009-05-19
+  at: https://music.apple.com/us/album/kingdom-come/324397610
+  hero:
+    src: art/music/kingdom-come.png
+    alt: >
+      Black on yellow sketched ravens,
+      and scrawled text --
+      one for sorrow,
+      two for sorrow,
+      three for sorrow, and so on
+
+# websites
+
+# - page: riding sidesaddle
+
+- title: Men In Brackets
+  sub: What men daily do, in brackets
+  area: art
+  type: web art
+  tags: [area:art, area:web, as:webart]
+  role: creator
+  date: 2019-07-25
+  end: ongoing
+  at: https://men.mia.wtf/
+  feature: true
+  hero:
+    src: art/web/men.jpg
+    alt: >
+      [men grunting, blades resounding]
+      caption from a tv or movie still
+
+- title: NSA 4 Us
+  sub: If you think something, say something
+  area: art
+  type: web art
+  tags: [area:art, area:web, as:webart]
+  role: creator
+  date: 2024-06-21
+  at: https://nsa4.us/
+  feature: true
+  hero:
+    src: art/web/nsa4us.jpg
+    alt: >
+      a woman clutching a binder,
+      in front of the USA imperial eagle
+
+- title: Monkey Writer
+  sub: Word processing for finite monkeys on a deadline
+  area: art
+  type: web art
+  tags: [area:art, area:web, as:webart]
+  role: creator
+  date: 2021-08-12
+  at: https://monkey.writr.art/
+  feature: true
+  hero:
+    src: art/web/monkey.jpg
+    alt: >
+      Emoji monkey with hands over eyes,
+      and then more with hands covering eyes or mouth
+
+- title: The Post-Obsolete Book
+  sub: A memorial for obsolescence
+  area: art
+  type: web art
+  tags: [area:art, area:web, as:webart]
+  role: creator
+  date: 2012-06-27
+  at: https://post-obsolete.com/
+  feature: true
+
+- title: Business-Business Dot Business
+  sub: Business corporation wage theft, and so can you!
+  area: art
+  type: web art
+  tags: [area:art, area:web, as:webart]
+  role: creator
+  date: 2022-11-04
+  at: https://business-business.business/
+  feature: true
+
+# scripts
+
+# - title: In a Time of War
+#   role: playwright
+#   area: art
+#   type: script
+#   tags: [area:art, art:writing, art:theater]
+#   with: 'Acting Up (anthology of Mennonite playwrights)'
+
+# - title: Every Other Day
+#   sub: Audience Choice Award, ShortFilmFest03
+#   role: playwright
+#   area: art
+#   type: script
+#   tags: [area:art, art:writing, art:theater]
+#   date: 2004-06-14
+#   with: Pinchpenny Press
+#   at: https://www.goshen.edu/academics/english/publishing/pinchpenny-press/pinchpenny-press-titles/

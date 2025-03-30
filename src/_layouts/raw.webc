@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title @text="this.title || this.site.title"></title>
+  <style webc:keep @raw="getBundle('css')"></style>
+</head>
+<body>
+  <main webc:nokeep @html="this.content"></main>
+  <script webc:keep @raw="getBundle('js')"></script>
+</body>
+</html>

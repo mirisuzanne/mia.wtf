@@ -3,8 +3,8 @@ title: Loops in CSS Preprocessors
 at: https://css-tricks.com/loops-css-preprocessors/
 date: 2016-12-02
 tags:
-  - writing
-  - sass
+  - web:teaching
+  - org:sass
 hero:
   src: 2016/trick-loops.jpg
 ---

@@ -1,18 +1,31 @@
 ---
-layout: main
-is: list
+layout: page
 ---
 
-<template
-  webc:nokeep
-  @html="content"
-></template>
+<page-summary
+  :@summary="getSummary(this.content)"
+></page-summary>
 
-<ul webc:if="(listOf || index) && !(autoList === 'hide')">
-  <li webc:for="item of collections[listOf || index]">
-    <a
-      :href="item.url"
-      @text="item.data.banner || item.data.title"
-    ></a>
-  </li>
-</ul>
+<hr aria-hidden="true">
+
+<header id="header">
+  <title-group
+    webc:keep
+    :@title="this.banner || this.title"
+    :@subtitle="this.org ? `${this.org} | _${this.sub}_` : this.sub"
+    :@date="this.date"
+    :@at="this.at"
+    :@is-post="this.tags?.includes('is:post')"
+  ></title-group>
+</header>
+
+<section
+  webc:if="getContent(this.content)"
+  id="content"
+  @html="getContent(this.content)"
+></section>
+
+<list-all
+  webc:if="(listOf || index) && !(autoList === 'hide')"
+  :@collection="$data.collections[listOf || index]"
+></list-all>

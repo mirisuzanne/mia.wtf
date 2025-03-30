@@ -2,14 +2,12 @@
 type: gallery
 title: Riding on the Walls
 sub: art & words from [Riding SideSaddle*](/books/sidesaddle/)
-venue: Miriam's Art Store
-at: https://miriamsuzanne.square.site
 date: 2015-10-10
 hero:
   src: writing/sidesaddle/huck.jpg
   caption: Riding SideSaddle* art installation
 tags:
-  - riding sidesaddle
+  - as:artwork
 events:
   - venue: Buntport Theater
     adr: Denver, CO
@@ -104,10 +102,12 @@ gallery:
         in a collage of diagrams,
         with red arrows
         and text that says "boy on the tv, those eyes, cheeks"
-summary: |
-  [Riding SideSaddle*](/books/sidesaddle/) has gone vertical --
-  all 250 cards displayed in a gallery show.
 ---
+
+[Riding SideSaddle*](/books/sidesaddle/) has gone vertical --
+all 250 cards displayed in a gallery show.
+
+<!-- intro -->
 
 <figure>
   <media-gallery

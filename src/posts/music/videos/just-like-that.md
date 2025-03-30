@@ -8,7 +8,7 @@ date: 2017-02-13
 hero:
   src: art/music/just-like-that.jpg
 tags:
-  - teacup gorilla
+  - org:teacup-gorilla
   - film
 events:
   - title: Just Like That Video Release

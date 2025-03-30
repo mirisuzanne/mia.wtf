@@ -9,11 +9,13 @@ hero:
     with a friend in high school,
     and a more recent color image of Mia more recently
     imposed on top.
-summary: |
-  I wasn't born in the wrong body.
-  *I was born, a body.*
-  Without my body, I don't exist.
 ---
+
+I wasn't born in the wrong body.
+*I was born, a body.*
+Without my body, I don't exist.
+
+<!-- intro -->
 
 Some ==bodies have freckles,==
 while some are six-foot-four and near-sighted.

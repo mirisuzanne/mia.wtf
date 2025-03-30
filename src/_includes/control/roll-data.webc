@@ -1,0 +1,18 @@
+<eight-ball
+  :@content="this.content"
+  view-transition
+>
+  <p
+    webc:for="(item, index) of content"
+    :hidden="index === 0 ? false : ''"
+    @raw="mdI(item)"
+  ></p>
+  <button hidden
+    data-btn="emoji"
+    slot="action"
+  >
+    <dice-fill></dice-fill>
+    <visually-hidden>random</visually-hidden>
+  </button>
+</eight-ball>
+

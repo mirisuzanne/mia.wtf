@@ -9,7 +9,7 @@ events:
   - venue: The Historian
     date: 2015-07-25
 tags:
-  - teacup gorilla
+  - org:teacup-gorilla
 ---
 
 Founded in 2001,

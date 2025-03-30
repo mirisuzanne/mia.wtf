@@ -4,46 +4,8 @@
   @raw="md(this.content)"
 ></template>
 
-<template
-  webc:elseif="this.content"
+<roll-data
+  webc:if="this.content && typeof this.content !== 'string'"
   webc:nokeep
->
-  <eight-ball
-    :@content="this.content"
-    view-transition
-  >
-    <p
-      webc:for="(item, index) of content"
-      :hidden="index === 0 ? false : ''"
-      @raw="mdI(item)"
-    ></p>
-    <button
-      hidden
-      data-btn="emoji"
-      slot="action"
-    >
-      <dice-fill></dice-fill>
-      <visually-hidden>random</visually-hidden>
-    </button>
-  </eight-ball>
-
-  <style webc:bucket="tools">
-    eight-ball [data-current] {
-      display: inline;
-    }
-
-    eight-ball [data-icon] {
-      rotate: var(--rotate);
-      transition: var(--spin);
-    }
-
-    eight-ball button {
-      &:focus,
-      &:hover {
-        --rotate: 2turn;
-        --spin: rotate 300ms ease-out;
-      }
-    }
-  </style>
-</template>
-
+  :@content="this.content"
+></roll-data>

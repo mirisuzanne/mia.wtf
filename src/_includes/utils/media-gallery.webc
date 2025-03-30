@@ -22,24 +22,49 @@
       :data-span="item.span"
       frameborder="0"
     ></iframe>
+    <audio
+      webc:if="item.audio"
+      :src="item.audio"
+      :data-span="item.span"
+      controls
+    ></audio>
+    <video
+      webc:if="item.video"
+      :src="item.video"
+      :data-span="item.span"
+      controls
+    ></video>
   </template>
 </template>
 <slot webc:if="!this.fromData"></slot>
 
 <style webc:bucket="objects">
   media-gallery {
+    align-items: start;
     display: grid;
-    gap: var(--shim);
+    gap: var(--gallery-gap, var(--shim));
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
 
-    & > *, img {
+    & [data-span] {
       grid-row-end: span var(--row-span, 11);
+    }
+
+    & > a {
+      transition: all 150ms;
+      border: medium solid transparent;
+
+      &:focus, &:hover, &:active {
+        border-color: var(--accent);
+        rotate: 1deg;
+        scale: 1.05;
+        z-index: 2;
+      }
     }
   }
 
-  [data-span=shorter] { --row-span: 5; }
-  [data-span=short] { --row-span: 7; }
-  [data-span=tall] { --row-span: 13; }
-  [data-span=taller] { --row-span: 17; }
-  [data-span=full] { grid-column: 1 / -1; }
+  [data-span~=shorter] { --row-span: 5; }
+  [data-span~=short] { --row-span: 7; }
+  [data-span~=tall] { --row-span: 13; }
+  [data-span~=taller] { --row-span: 17; }
+  [data-span~=full] { grid-column: 1 / -1; }
 </style>

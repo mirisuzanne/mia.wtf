@@ -1,8 +1,6 @@
 ---
 title: Gods on the Lam
 sub: by [Christopher David Rosales](https://www.christopherrosales.com/)
-venue: Perpetual Motion Machine
-at: https://perpetualpublishing.com/product/gods-on-the-lam/
 date: 2017-06-02
 hero:
   src: art/design/gotl-cover.jpg
@@ -18,9 +16,13 @@ hero:
 <figure>
   <img
     webc:is="u-img"
-    :src="hero.src"
-    :alt="hero.alt"
+    :src="$data.hero.src"
+    :alt="$data.hero.alt"
   >
+  <figcaption>
+    Cover art commissioned by
+    <a href="https://perpetualpublishing.com/product/gods-on-the-lam/">Perpetual Motion Machine</a>
+  </figcaption>
 <figure>
 
 <!-- intro -->
@@ -29,7 +31,7 @@ hero:
 and
 [Perpetual Motion Machine](https://perpetualpublishing.com/product/gods-on-the-lam/)
 commissioned me
-to provide custom artwork
+to create custom artwork
 for the cover of this great new book.
 They were particularly drawn
 to imagery and style

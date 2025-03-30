@@ -5,7 +5,7 @@ date: 2020-11-17
 venue: css.oddbird.net
 at: https://css.oddbird.net
 tags:
-  - oddbird
+  - org:oddbird
 ---
 
 As I spend more of my time

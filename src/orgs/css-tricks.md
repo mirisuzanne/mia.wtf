@@ -12,3 +12,7 @@ tags:
   - web:teaching
   - as:publication
 ---
+
+I was a staff writer,
+before the site was sold
+to Digital Oceans.

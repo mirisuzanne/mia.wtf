@@ -1,0 +1,307 @@
+---
+layout: raw
+---
+
+<header id="banner">
+  <h1>Miriam Eric Suzanne</h1>
+  <ul role="list" inline-list>
+    <li>574.975.3620</li>
+    <li>miriam@<a href="https://miriamsuzanne.com">miriamsuzanne.com</a></li>
+    <li>Denver, CO</li>
+  </ul>
+</header>
+
+<main>
+  <p>
+    Miriam is a hybrid artist based in Denver, CO.
+    She's a published novelist, musician, and playwright;
+    an experienced lighting designer, performer, and educator;
+    and an Invited Expert to the World Wide Web Consortium.
+  </p>
+
+  <section id="collab">
+    <h2>Collaborators</h2>
+    <article webc:for="org of this.orgs.sort((a, b) => b.end - a.end)">
+      <header>
+        <h-group>
+          <h3 @text="org.title"></h3>
+          <item-adr @text="`[${org.adr}]`"></item-adr>
+        </h-group>
+
+        <date-range
+          webc:keep
+          :@date="org.date"
+          :@end="org.end"
+        ></date-range>
+      </header>
+      <p>
+        <strong @text="org.role"></strong>:
+        <span @html="mdI(org.sub)"></span>
+      </p>
+    </article>
+  </section>
+
+  <section id="productions">
+    <h2>Selected Productions</h2>
+    <article webc:for="show of this.shows.sort((a, b) => b.date - a.date)">
+      <header>
+        <h-group>
+          <h3 @text="show.title"></h3>
+          <by-line
+            webc:if="show.by"
+            @text="`[${show.by}]`"
+          ></by-line>
+        </h-group>
+        <date-time
+          :@date="show.date"
+          @format="rough"
+        ></date-time>
+      </header>
+      <p>
+        <strong @text="show.role"></strong>:
+        with
+        <span @text="show.with"></span>
+      </p>
+      <p webc:if="show.note" @text="`(${show.note})`"></p>
+    </article>
+  </section>
+
+  <section id="pub" webc:if="this.publications">
+    <h2>Selected Publications</h2>
+    <article webc:for="pub of this.publications.sort((a, b) => b.date - a.date)">
+      <header>
+        <h-group>
+          <h3 @text="pub.title"></h3>
+          <by-line
+            @text="`[${pub.type}]`"
+          ></by-line>
+        </h-group>
+
+        <time
+          webc:if="pub.future"
+        >forthcoming</time>
+        <date-time
+          webc:else
+          :@date="pub.date"
+          @format="rough"
+        ></date-time>
+      </header>
+      <p>
+        <strong @text="pub.role"></strong>:
+        with
+        <span @text="pub.with"></span>
+      </p>
+      <p webc:if="pub.note" @text="`(${pub.note})`"></p>
+    </article>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <article webc:for="edu of this.education.sort((a, b) => b.end - a.end)">
+      <header>
+        <h-group>
+          <h3 @text="edu.title"></h3>
+          <item-adr @text="`[${edu.adr}]`"></item-adr>
+        </h-group>
+
+        <date-range
+          webc:keep
+          :@date="edu.date"
+          :@end="edu.end"
+        ></date-range>
+      </header>
+      <p @html="mdI(edu.sub)"></p>
+    </article>
+  </section>
+</main>
+
+<style>
+@layer reset, props, base;
+
+item-adr,
+by-line {
+  font-variant-caps: all-small-caps;
+}
+
+date-range,
+time {
+  font-style: italic;
+}
+
+main {
+  display: grid;
+  gap: 1lh;
+}
+
+section {
+  display: grid;
+  gap: 0.5lh;
+
+}
+
+article {
+  break-inside: avoid;
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+}
+h-group {
+  display: flex;
+  gap: 1ch;
+}
+
+p {
+  font-style: italic;
+
+  em { text-decoration: underline; }
+}
+
+@layer base {
+  html {
+    font-family: var(--serif);
+    color-scheme: light dark;
+  }
+
+  body {
+    display: grid;
+    font-size: var(--text-normal);
+    gap: 1lh;
+    padding: var(--gap);
+  }
+
+  h1 {
+    font-size: var(--text-large);
+  }
+
+  h1, h2 { font-weight: normal; }
+  h1, h2, h3, h4, h5, h6 { margin: unset; }
+  h2, h3, h4, h5, h6 { font-size: inherit; }
+
+  h2 {
+    break-after: avoid;
+    border-block-end: thin dotted;
+    font-variant-caps: all-small-caps;
+  }
+
+  p { margin: unset; }
+
+  [role=list] {
+    list-style: none;
+    padding-inline: unset;
+  }
+
+  [inline-list] {
+    display: flex;
+    margin: unset;
+
+    li + li::before {
+      content: '|';
+      padding-inline: 1ch;
+    }
+  }
+
+  code:not(pre *) {
+    background: linear-gradient(
+      -80deg,
+      transparent 0.5ch,
+      var(--pink-bg) 0.5ch calc(100% - 0.5ch),
+      transparent calc(100% - 0.5ch)
+    ) no-repeat 0 1ex;
+    text-shadow: 2px 2px 0 Canvas;
+  }
+
+  a:any-link {
+    color: currentColor;
+  }
+
+  @container style(--style: italic) {
+    em { font-style: normal; }
+  }
+}
+
+@layer props {
+  html {
+    --pink-dark-: #B6236C;
+    --pink-light-: #FE84B4;
+    --blue-dark-: #205769;
+    --blue-light-: #8EC6DA;
+
+    --pink: light-dark(var(--pink-dark-), var(--pink-light-));
+    --pink-bg: color-mix(in oklab,
+      light-dark(var(--pink-light-), var(--pink-dark-)),
+      Canvas
+    );
+
+    --blue: light-dark(var(--blue-dark-), var(--blue-light-));
+    --blue-bg: color-mix(in oklab,
+      light-dark(var(--blue-light-), var(--blue-dark-)),
+      Canvas
+    );
+
+    @supports not (fill: color-mix(in hsl, light-dark(red, red), red)) {
+      --pink: var(--pink-dark-);
+      --blue: var(--blue-dark-);
+      --pink-bg: var(--pink-light-);
+      --blue-bg: var(--blue-light-);
+
+      @media (prefers-color-scheme: dark) {
+        --pink: var(--pink-light-);
+        --blue: var(--blue-light-);
+        --pink-bg: var(--pink-dark-);
+        --blue-bg: var(--blue-dark-);
+      }
+    }
+
+    /* from https://modernfontstacks.com/ */
+    /* old style, industrial, slab */
+    --serif: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
+    --sans: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+    --slab: Rockwell, 'Rockwell Nova', 'Roboto Slab', 'DejaVu Serif', 'Sitka Small', serif;
+  }
+
+  body {
+    --text-small: clamp(0.938rem, 0.824rem + 0.568cqi, 1.25rem);
+    --text-normal: clamp(1.25rem, 1.023rem + 1.136cqi, 1.875rem);
+    --text-large: clamp(1.35rem, 0.818rem + 2.659cqi, 2.813rem);
+    --text-xlarge: clamp(1.7rem, 0.784rem + 4.58cqi, 4.219rem);
+    --gap: clamp(2cqi, 0.5lh, 5cqi);
+
+    @media print {
+      --text-normal: 12pt;
+    }
+  }
+}
+
+@layer reset {
+  * { box-sizing: border-box; }
+  html { block-size: 100%; }
+  body { margin: unset; }
+
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+
+  p, li {
+    text-wrap: pretty;
+  }
+
+  picture { display: contents; }
+  img { display: block; }
+
+  img,
+  svg {
+    max-inline-size: 100%;
+    block-size: auto;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+}
+
+</style>

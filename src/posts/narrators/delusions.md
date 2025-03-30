@@ -2,12 +2,14 @@
 title: My theatrical delusions
 date: 2022-04-20
 tags:
-  - theater
+  - art:theater
   - pity+fear
-summary: >
-  Reflections on making theater,
-  and my family reacting to it.
 ---
+
+Reflections on making theater,
+and my family reacting to it.
+
+<!-- intro -->
 
 My grandpa --
 my dad’s dad --

@@ -5,7 +5,7 @@ venue: Colorado Shoe School
 at: https://coloradoshoeschool.com/
 date: 2022-07-12
 tags:
-  - art
+  - area:art
   - visual
 hero:
   src: 2022/shoes/hero.jpg

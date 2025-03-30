@@ -2,77 +2,26 @@
 layout: page
 ---
 
-<script webc:setup>
-  const splitString = '<!-- intro -->';
-  const splitContent = (summary, content) => {
-    if (content?.includes(splitString)) return content.split(splitString);
-    if (summary && content) return [summary, content];
-    if (content.length < 400) return [content, null];
-    return [null, content];
-  }
-</script>
+<page-summary
+  :@summary="getSummary(this.content)"
+  :@at="this.at"
+  :@rel="this.rel"
+  :@venue="this.venue"
+></page-summary>
 
-<section
-  webc:if="splitContent(this.summary, this.content)[0]"
-  id="summary"
-  aria-label="page summary"
-  line-length
-  :class="micro.summary"
-><roll-if
-  :@content="splitContent(this.summary, this.content)[0]"
-></roll-if></section>
-
-<hr aria-hidden="true">
-
-<header id="header" line-length>
+<header id="header">
   <title-group
     webc:keep
-    :@title="banner || title"
-    :@subtitle="org ? `${org} | _${sub}_` : sub"
+    :@title="this.banner || this.title"
+    :@subtitle="this.org ? `${this.org} | _${this.sub}_` : this.sub"
     :@date="this.date"
-    :@rel="this.rel"
-    :@venue="this.venue"
     :@at="this.at"
-    :@is-post="tags?.includes('is:post')"
+    :@is-post="this.tags?.includes('is:post')"
   ></title-group>
 </header>
 
 <section
+  webc:if="getContent(this.content)"
   id="content"
-  line-length
-  @raw="splitContent(this.summary, this.content)[1]"
+  @html="getContent(this.content)"
 ></section>
-
-<mastodon-post
-  webc:if="this.mastodon"
-  line-length
->
-  <a :href="this.mastodon">Join the conversation</a>
-</mastodon-post>
-
-<style webc:bucket="layout">
-  #summary {
-    --italic: true;
-    font-size: min(1em + 0.5vi, 1.5em);
-    font-style: italic;
-    margin-block: var(--spacer);
-    text-wrap: pretty;
-
-    code { font-style: normal; }
-  }
-
-  #header {
-    margin-block: 2lh;
-  }
-
-  hr[aria-hidden=true] {
-    border-image: linear-gradient(
-      to right,
-      transparent,
-      var(--accent),
-      var(--border),
-      transparent
-    ) 1;
-    rotate: -1.5deg;
-  }
-</style>

@@ -1,0 +1,57 @@
+<script webc:setup>
+  const bookmarkImg = (at) =>
+    `https://v1.screenshot.11ty.dev/${encodeURIComponent(at)}/`
+</script>
+
+
+<img
+  webc:is="u-img"
+  webc:if="this.item.data.hero"
+  :src="this.item.data.hero.src"
+  :alt="this.item.data.hero.alt || ''"
+  :sizes="$data.image.gallery"
+>
+<img
+  webc:is="u-img"
+  webc:elseif="this.item.data['bookmark-of']"
+  :src="bookmarkImg(this.item.data['bookmark-of'])"
+  alt=""
+  :sizes="$data.image.gallery"
+  :width="640"
+>
+
+<h3>
+  <a
+    :href="this.item.data['bookmark-of'] || this.item.page.url"
+    @text="this.item.data.title"
+  ></a>
+</h3>
+<artifact-type @text="this.item.data.type"></artifact-type>
+
+<style webc:bucket="objects">
+artifact-item {
+  position: relative;
+
+  & h3 {
+    font-size: unset;
+    margin: unset;
+  }
+
+  & img {
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+}
+
+artifact-type {
+  background: Canvas;
+  color: CanvasText;
+  font-family: var(--ui-font);
+  font-style: italic;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+  margin: 0;
+  padding: 0 var(--shim);
+  position: absolute;
+}
+</style>

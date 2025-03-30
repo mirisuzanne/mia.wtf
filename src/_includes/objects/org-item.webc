@@ -7,14 +7,8 @@
     class="p-name u-url"
     @text="pageName(this.org)"
   ></a>
-
-  <date-range
-    :@date="this.org.date"
-    :@end="this.org.data.end"
-  ></date-range>
-
   <p-note
     class="p-note"
-    @html="`(${mdI(this.org.data.sub)})`"
+    @html="mdI(`-- ${this.org.data.sub}`)"
   ></p-note>
 </div>

@@ -1,25 +1,9 @@
-[data-flow] {
-  display: grid;
-  gap: var(--flow-gap, 0);
-}
-
-[data-flow=block] {
-  --flow-gap: 0.5lh;
-}
-
-[flow-item] {
-  display: block;
-
-  * { margin: unset; }
-
-  :is(h2, h3, h4) {
-    display: inline-block;
-    font-weight: normal;
-  }
-}
-
-[page-item=post] :any-link {
+[post-title] {
   font-style: italic;
+}
+
+li:has(venue-link) {
+  --list-marker: ' » ';
 }
 
 item-meta {

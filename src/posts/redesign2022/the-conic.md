@@ -12,14 +12,16 @@ hero:
     CSS is Rad(ial)
 tags:
   - css
-  - colors
-summary: |
-  [As] a flame,
-  Which oft, they say, some evil Spirit attends,
-  Hovering and blazing with delusive light--
-
-  ---John Milton
+  - color
 ---
+
+> [As] a flame,
+> Which oft, they say, some evil Spirit attends,
+> Hovering and blazing with delusive light--
+>
+> ---John Milton
+
+<!-- intro -->
 
 ## Playful gradient inspiration
 

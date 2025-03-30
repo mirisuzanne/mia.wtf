@@ -2,11 +2,19 @@
 title: Jump Start Sass
 sub: Get up to speed with Sass in a weekend…
 venue: SitePoint
-at: https://www.sitepoint.com/premium/books/jump-start-sass
+bookmark-of: https://www.sitepoint.com/premium/books/jump-start-sass
 date: 2016-03-22
 tags:
-  - code
-  - sass
+  - org:sass
+  - web:teaching
+  - as:book
+hero:
+   src: writing/jssass.png
+   alt: >
+      pink book cover,
+      Jump Start Sass
+      by Kitty Giraudel
+      and Miriam Suzanne
 press:
   - text: |
       This is hands down the best book on Sass
@@ -16,17 +24,19 @@ press:
     venue: SitePoint
     at: https://www.sitepoint.com/premium/books/jump-start-sass#reviews
     datetime: 2016-03-23
-summary: |
-  Using Sass, you can write your stylesheets in a more concise,
-  dynamic, and readable way, and cut down many of
-  the repetitive tasks that come with writing vanilla CSS.
-  This book provides a thorough introduction to
-  Sass for the beginner.
-  Co-writen with my friend
-  [Kitty Giraudel](https://kittygiraudel.com/).
 ---
 
-[buy a copy](https://shop.oreilly.com/product/9780994182678.do)
+Using Sass, you can write your stylesheets in a more concise,
+dynamic, and readable way, and cut down many of
+the repetitive tasks that come with writing vanilla CSS.
+This book provides a thorough introduction to
+Sass for the beginner.
+Co-writen with my friend
+[Kitty Giraudel](https://kittygiraudel.com/).
+
+<!-- intro -->
+
+[Buy a copy](https://shop.oreilly.com/product/9780994182678.do)
 or [download the e-book](https://www.sitepoint.com/premium/books/jump-start-sass)
 
 <figure

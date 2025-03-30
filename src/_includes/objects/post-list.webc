@@ -1,23 +1,30 @@
 <script webc:setup>
-  const postsFrom = (data, only) => data
-    .sort((a, b) => b.date - a.date)
-    .filter((post, i) => {
-      if (!only) return true;
-      if (only.includes('featured') && post.data.feature) return true;
-      if (only.includes('recent') && i < 5) return true;
-      return false
-    });
+  const postsFrom = (data, only) => {
+    const pages = withTag(data, 'is:post')
+      .sort((a, b) => b.date - a.date)
+      .filter((item, i) => {
+        if (item.data.private) return false;
+        if (!only) return true;
+        if (only.includes('featured') && item.data.feature) return true;
+        if (only.includes('recent') && i < 6) return true;
+      });
+
+    return only && only.includes('top')
+      ? pages.slice(0,6)
+      : pages;
+  };
 </script>
 
-<ul webc:root="override">
-  <post-item
-    webc:for="post of postsFrom(this.posts, this.onlyShow)"
+<ul>
+  <li
+    webc:is="post-item"
+    webc:for="post of postsFrom(this.collection, this.onlyShow)"
     :@post="post"
-  ></post-item>
+  ></li>
 </ul>
 
 <p webc:if="this.onlyShow">
-  (<a href="/everything/">
-    more in the archive »
+  (<a href="/tags/is:post/">
+    more posts »
   </a>)
 </p>

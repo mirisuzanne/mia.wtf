@@ -1,0 +1,26 @@
+---
+title: All the tags
+eleventyExcludeFromCollections: true
+nonTag:
+  - all
+  - index
+  - area
+---
+
+I'm not sure if these are the right labels,
+but these are the labels that I used.
+
+<!-- intro -->
+
+<ul>
+  <li
+    webc:for="item of Object.keys(collections).sort()"
+    webc:if="!nonTag.includes(item)"
+  >
+    <a
+      :href="tagLink(item, collections)"
+      @text="item"
+    ></a>
+    <span @text="`(${collections[item].length})`"></span>
+  </li>
+</ul>

@@ -39,6 +39,12 @@ hr {
   pointer-events: none;
 }
 
+::selection {
+  -webkit-text-fill-color: currentColor !important;
+  background: Highlight !important;
+  color: HighlightText !important;
+}
+
 header * {
   margin: unset;
 }
@@ -76,7 +82,7 @@ select {
 }
 
 :focus-visible {
-  outline: medium dashed var(--accent, currentColor);
+  outline: medium solid var(--accent, currentColor);
   outline-offset: 6px;
   position: relative;
   z-index: 2;

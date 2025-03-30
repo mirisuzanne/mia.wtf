@@ -1,0 +1,4 @@
+default: '(min-width: 65em) 40em, 95vw'
+hero: '(min-width: 75em) 50em, 95vw'
+gallery: '20em'
+og: '1200px'

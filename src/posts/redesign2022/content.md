@@ -3,14 +3,9 @@ title: This content won't architect itself
 sub: What can a site be, and what can it be afraid of?
 date: 2022-08-25
 og:
-  img: '2022/2008-e-dirtcircle.jpg'
+  src: '2022/2008-e-dirtcircle.jpg'
 tags:
   - process
-summary: |
-  Continuing the slow redesign process,
-  I spent a weekend
-  rearranging the ~~deck chairs~~ ++content files++
-  on ~~the Titanic~~ ++this website++.
 v2008to2012:
   caption: >
     My 2008-2012 business-card site. I call this _rainbow brutalism_.
@@ -103,6 +98,13 @@ v2019to2022:
       followed by a list of my top tags:
       art & code & writing & music & speaking & theater & more.
 ---
+
+Continuing the slow redesign process,
+I spent a weekend
+rearranging the ~~deck chairs~~ content files
+on ~~the Titanic~~ this website.
+
+<!-- intro -->
 
 Can I really call it
 a ['no-demo' reno](/2022/08/07/minimal/),

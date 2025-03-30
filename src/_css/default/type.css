@@ -1,12 +1,23 @@
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--title-font);
   font-weight: normal;
+  line-height: 1.25;
   text-wrap: balance;
   scroll-margin-block-end: unset;
 
   & + :is(ul, ol, p) {
     margin-block-start: 0.5lh;
   }
+}
+
+h1 {
+  font-family: var(--h1-font, var(--title-font));
+  font-size: var(--step-3);
+}
+h2 { font-size: var(--step-2); }
+h3 { font-size: var(--step-1); }
+
+h2, h3, h4, h5, h6 {
+  font-family: var(--title-font);
 }
 
 blockquote {
@@ -44,20 +55,16 @@ ul, ol {
   }
 }
 
-::marker {
+li::marker {
   color: var(--border);
+  content: var(--list-marker);
+  content: var(--list-marker) / '';
   font-family: var(--ui-font);
-}
-
-@container style(--list-marker) {
-  ul:not([role]) ::marker {
-    content: var(--list-marker);
-    content: var(--list-marker) / '';
-  }
 }
 
 [role=list] {
   --list-indent: 0;
+  --list-marker: none;
   --flow-item-space: 0;
   list-style: none;
   margin-block: unset;
@@ -201,6 +208,13 @@ small,
 .footnotes,
 .footnote-ref {
   font-family: var(--ui-font);
+}
+
+caption,
+figcaption {
+  background: Canvas;
+  color: CanvasText;
+  font-style: italic;
 }
 
 .footnote-ref {

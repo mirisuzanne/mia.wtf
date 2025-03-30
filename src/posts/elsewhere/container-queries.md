@@ -9,10 +9,10 @@ hero:
   position: top
 tags:
   - container queries
-  - oddbird
+  - org:oddbird
   - elsewhere
   - css
-  - csswg
+  - org:csswg
 callout:
   - date: 2022-09-14
     warn: |

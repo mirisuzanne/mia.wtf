@@ -1,8 +1,8 @@
 ---
-is: list
+# layout: is/freeform
 title: Miriam Eric Suzanne
 sub:
-  - is a.k.a. [terrible mia](https://front-end.social/@mia/)
+  - is a.k.a. [Mia](https://front-end.social/@mia/)
   - has three first names, but only one comes first
   - wants to sell you something ([anything](/tip/))
 description: Art & code & other digital artifacts of my life.
@@ -28,10 +28,8 @@ summary:
   - >
     I was told that
     _every home page should be selling something_.
-    But I have a
-    <a href="https://business-business.business" aria-label="business website">
-    bu$ine$$ web$ite</a>
-    for that.
+    But I don't want
+    to be [a business](https://business-business.business/).
   - >
     `» Hello. `**`I am a Miriam`**`(Bot).
     Beep boop boop beep.
@@ -43,19 +41,35 @@ eleventyImport:
   collections: [is:post, is:channel, is:org]
 ---
 
-<h2>Articles &c.</h2>
-<post-list
-  :@posts="$data.collections['is:post']"
-  :@only-show="['featured', 'recent']"
-></post-list>
+<roll-data
+  webc:nokeep
+  :@content="$data.summary"
+></roll-data>
 
-<h2>Co-conspirators</h2>
-<org-list
-  @time="current"
-  @founder="true"
-></org-list>
+<!-- intro -->
 
-<h2>Other channels</h2>
-<project-list
-  :@projects="$data.collections['is:channel']"
-></project-list>
+<section>
+  <h2>Articles &c.</h2>
+  <post-list
+    :@collection="$data.collections.all"
+    :@only-show="['featured', 'recent']"
+  ></post-list>
+
+  <h2>Co-conspirators</h2>
+  <org-list
+    @time="current"
+    @founder="true"
+  ></org-list>
+</section>
+
+<artifact-list
+  :@collection="$data.collections.all"
+  :@only-show="['featured', 'recent', 'top']"
+><h2>Featured Artifacts</h2></artifact-list>
+
+<section>
+  <h2>Other channels</h2>
+  <project-list
+    :@projects="$data.collections['is:channel']"
+  ></project-list>
+</section>

@@ -3,8 +3,8 @@ title: Introducing Sass Modules
 at: https://css-tricks.com/introducing-sass-modules/
 date: 2019-10-07
 tags:
-  - writing
-  - sass
+  - web:teaching
+  - org:sass
 ---
 
 Sass recently launched a new module system.

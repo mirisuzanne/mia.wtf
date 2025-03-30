@@ -1,10 +1,16 @@
+<script webc:setup>
+  const sameYear = (start, end) => (
+    dateFormat(start, 'year') === dateFormat(end, 'year')
+  );
+</script>
+
 <i webc:if="this.end === 'ongoing'">since</i>
 <date-time
   :@date="this.date"
   @format="year"
 ></date-time>
 <date-time
-  webc:if="this.end !== 'ongoing'"
+  webc:if="this.end !== 'ongoing' && !sameYear(this.date, this.end)"
   :@date="this.end"
   @format="year"
   @prefix="--"

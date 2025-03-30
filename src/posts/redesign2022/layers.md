@@ -8,15 +8,17 @@ rel: reply
 tags:
   - css
   - cascade layers
-summary: |
-  I really enjoyed Dave Rupert's
-  [Modern alternatives to BEM](https://daverupert.com/2022/08/modern-alternatives-to-bem/),
-  which concludes with a link to my redesign.
-  So let's talk about my
-  seven-layer burrito of styles --
-  what he calls _SBRDFLT_.
-  What's that all about?
 ---
+
+I really enjoyed Dave Rupert's
+[Modern alternatives to BEM](https://daverupert.com/2022/08/modern-alternatives-to-bem/),
+which concludes with a link to my redesign.
+So let's talk about my
+seven-layer burrito of styles --
+what he calls _SBRDFLT_.
+What's that all about?
+
+<!-- intro -->
 
 TL;DR _I don't know yet._
 

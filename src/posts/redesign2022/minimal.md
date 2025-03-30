@@ -3,12 +3,14 @@ title: No demo [website] reno
 sub: A slow remodel of my HTML & CSS
 date: 2022-08-07T14:57:46-06:00
 series: redesign 2022
-summary: |
-  I want to re-think the front-end of my site,
-  without too much change to
-  the (Eleventy/Markdown) content that drives it.
-  And I want to do it slowly.
 ---
+
+I want to re-think the front-end of my site,
+without too much change to
+the (Eleventy/Markdown) content that drives it.
+And I want to do it slowly.
+
+<!-- intro -->
 
 Erin & I had a lovely vacation last month,
 driving around southwest Colorado --

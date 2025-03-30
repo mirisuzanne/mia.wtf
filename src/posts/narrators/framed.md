@@ -27,11 +27,13 @@ podcast:
     title: Audio embed
     height: 200
     width: 100%
-summary: |
-  A reflection on change,
-  desire, choice,
-  and the stories we tell about ourselves
 ---
+
+A reflection on change,
+desire, choice,
+and the stories we tell about ourselves
+
+<!-- intro -->
 
 <figure>
   <media-gallery

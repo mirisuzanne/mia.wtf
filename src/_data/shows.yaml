@@ -1,0 +1,71 @@
+- title: JANE/EYRE
+  role: playwright, musician, and actor (Narrator Jane)
+  with: Grapefruit Lab and Teacup Gorilla
+  tags: [org:teacup-gorilla, org:grapefruit-lab, as:theater]
+  date: 2025-01-17
+
+- title: Whiskey From Strangers
+  role: playwright, musician, and actor (self)
+  sub: a live theater album release
+  with: Grapefruit Lab and Teacup Gorilla
+  tags: [org:teacup-gorilla, org:grapefruit-lab, as:theater]
+  date: 2024-05-10
+
+- title: Letters of Suresh
+  by: Rajiv Joseph
+  role: lighting design
+  with: Curious Theatre Company, directed by Julie Rada
+  date: 2023-11-11
+
+- title: Strange Bird, Queer Bird
+  by: verbatim letters
+  role: playwright & musician
+  with: Lars Reid, Grapefruit Lab, and Teacup Gorilla
+  tags: [org:teacup-gorilla, org:grapefruit-lab, as:theater]
+  date: 2023-04-07
+
+- title: Pity+Fear (a travesty)
+  role: playwright & actor (self)
+  with: Grapefruit Lab and Josselyn Cool
+  tags: [org:grapefruit-lab, as:theater]
+  date: 2022-04-08
+
+- title: Celebration, Florida
+  by: Greg Wohead
+  role: actor
+  with: Square Product Theatre
+  date: 2019-02-02
+  tags: [as:theater]
+
+- title: JANE/EYRE
+  role: playwright, musician, and actor (Narrator Jane)
+  with: Grapefruit Lab and Teacup Gorilla
+  tags: [org:teacup-gorilla, org:grapefruit-lab, as:theater]
+  date: 2018-02-23
+
+- title: 10 Myths on the Proper Application of Beauty Products
+  by: co-authored
+  role: playwright & musician
+  sub: >
+    stage adaptation of my novel
+    _Riding SideSaddle*_,
+    weaving fluid genders and identities
+    through myth and everyday ritual
+  with: Buntport Theater and Teacup Gorilla
+  tags: [org:teacup-gorilla, as:theater]
+  date: 2016-03-04
+  note: 2016 True West Award
+
+- title: Missa Populi
+  by: co-authored
+  role: playwright, director, and musician
+  date: 2010-03-12
+  with: Grapefruit Lab & Teacup Gorilla
+  tags: [org:teacup-gorilla, org:grapefruit-lab, as:theater]
+
+- title: RAIN/ of terror
+  role: lighting design
+  by: Julie Rada
+  with: The LIDA project
+  date: 2009-02-27
+  tags: [org:lida, as:theater]

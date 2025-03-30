@@ -2,21 +2,17 @@
 layout: base
 ---
 
-<dialog
-  in-flow
-  line-length="wide"
-  id="theme-controls"
->
+<dialog id="theme-controls">
   <form method="dialog">
-    <button>
+    <button data-btn="emoji">
       <close-line></close-line>
-      <btn-text>close</btn-text>
+      <visually-hidden>close</visually-hidden>
     </button>
   </form>
   <theme-controls></theme-controls>
 </dialog>
 
-<header id="banner" line-length>
+<header id="banner">
   <span>
     <a
       href="/"
@@ -27,10 +23,10 @@ layout: base
   <dialog-toggle>
     <button
       aria-controls="theme-controls"
-      data-btn="emoji"
+      data-modal="true"
     >
       <paint-fill></paint-fill>
-      <visually-hidden>style</visually-hidden>
+      <btn-text>style</btn-text>
     </button>
   </dialog-toggle>
 </header>
@@ -41,7 +37,7 @@ layout: base
   @raw="content"
 ></main>
 
-<footer id="content-info" line-length content-break>
+<footer id="content-info" content-break>
   <slash-nav></slash-nav>
   <rel-me id="footer-contact"></rel-me>
 
@@ -66,12 +62,37 @@ layout: base
     [rel=home] { font-style: italic; }
   }
 
-  [line-length] {
-    margin-inline: auto;
-    max-inline-size: var(--line-length, 26em);
+  #header {
+    margin-block: 2lh;
   }
 
-  [line-length=wide] {
-    --line-length: 32em;
+  hr[aria-hidden=true] {
+    border-image: linear-gradient(
+      to right,
+      transparent,
+      var(--accent),
+      var(--border),
+      transparent
+    ) 1;
+    rotate: -1.5deg;
+  }
+</style>
+
+<style webc:bucket="tools">
+  eight-ball [data-current] {
+    display: inline;
+  }
+
+  eight-ball [data-icon] {
+    rotate: var(--rotate);
+    transition: var(--spin);
+  }
+
+  eight-ball button {
+    &:focus,
+    &:hover {
+      --rotate: 2turn;
+      --spin: rotate 300ms ease-out;
+    }
   }
 </style>

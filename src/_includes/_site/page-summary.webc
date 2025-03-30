@@ -1,0 +1,30 @@
+<template
+  webc:root
+  webc:if="this.summary"
+  id="summary"
+  aria-label="page summary"
+  :class="$data.micro.summary"
+>
+  <template
+    webc:nokeep
+    @html="this.summary"
+  ></template>
+
+  <page-rel webc:if="$data.at && $data.venue">
+    <span webc:if="$data.rel" @text="$data.rel"></span>
+    from
+    <a :href="$data.at" @html="mdI($data.venue)"></a>
+  </page-rel>
+</template>
+
+<style webc:bucket="layout">
+page-summary {
+  --italic: true;
+  font-size: var(--step-2);
+  font-style: italic;
+  grid-column: wide;
+  text-wrap: pretty;
+
+  & code { font-style: normal; }
+}
+</style>

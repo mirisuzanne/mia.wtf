@@ -1,6 +1,6 @@
 - slug: goshen
   title: Goshen College
-  sub: Studying theater, writing, & visual arts
+  sub: Studied theater, writing, & visual arts
   at: https://www.goshen.edu/
   date: 2001-08-15
   end: 2006-06-15
@@ -8,6 +8,10 @@
 
 - slug: naropa
   title: Naropa Summer Writing Program
+  sub: >
+    Studied with **E. Tracy Grinnell**,
+    **Michelle Ellsworth**,
+    and **Caroline Bergvall**
   at: https://www.naropa.edu/academics/swp/index.php
   date: 2012-06-11
   end: 2012-07-08
@@ -15,7 +19,10 @@
 
 - slug: osf
   title: Oregon Shakespeare Festival
-  sub: Stage management intern
+  sub: >
+    Stage management intern
+    for _Antony & Cleopatra_
+    with director **Penny Metropulos**
   at: https://www.osfashland.org/
   date: 2003-02-06
   end: 2003-04-26

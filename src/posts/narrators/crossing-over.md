@@ -7,10 +7,10 @@ hero:
 at: https://thenarrators.org/august-2017/
 tags:
   - trans
-summary: |
-  I used excerpts from
-  [Body & Gender Fragments](/2017/03/01/my-body/)
-  to talk about the contradictions
-  of transition --
-  a sort of "crossing over" without going anywhere.
 ---
+
+I used excerpts from
+[Body & Gender Fragments](/2017/03/01/my-body/)
+to talk about the contradictions
+of transition --
+a sort of "crossing over" without going anywhere.

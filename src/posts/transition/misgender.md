@@ -3,14 +3,16 @@ title: (Mis)gender
 date: 2017-07-11
 hero:
   src: '2017/herm.jpg'
-summary: |
-  At the family vacation in Moab,
-  everyone is doing their best.
-  It’s not enough,
-  and my day is peppered with the wrong name and pronouns.
-  I hide in my room through dinner
-  so they won’t see me crying.
 ---
+
+At the family vacation in Moab,
+everyone is doing their best.
+It’s not enough,
+and my day is peppered with the wrong name and pronouns.
+I hide in my room through dinner
+so they won’t see me crying.
+
+<!-- intro -->
 
 Gender is strange and elusive.
 Sometime we attach it to genitals,

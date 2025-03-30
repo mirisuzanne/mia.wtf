@@ -9,10 +9,12 @@ tags:
   - writing
   - productivity
   - SuperYesMore
-summary: |
-  A reflection on the nature and value of productivity for the
-  SuperYesMore series: *The Human in the Machine*.
 ---
+
+A reflection on the nature and value of productivity for the
+SuperYesMore series: *The Human in the Machine*.
+
+<!-- intro -->
 
 Every Christmas, my dad’s family rents a lodge
 with space for 30-some people to play board-games (and occasionally sleep).

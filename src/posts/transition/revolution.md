@@ -4,17 +4,19 @@ sub: An apology to the revolution
 date: 2018-08-01
 venue: Journal of Mennonite Writing
 at: https://mennonitewriting.org/journal/10/3/rejecting-maleness-apology-revolution/
-summary: |
-  The **Journal of Mennonite Writing**
-  asked me to submit
-  for their queer issue.
-  I don't identify as Mennonite,
-  but I did grow up in the church,
-  so I asked my friends what to write about.
-  They suggested the common question:
-  *In a world without rigid gender roles,
-  would anyone need to be trans?*
 ---
+
+The **Journal of Mennonite Writing**
+asked me to submit
+for their queer issue.
+I don't identify as Mennonite,
+but I did grow up in the church,
+so I asked my friends what to write about.
+They suggested the common question:
+*In a world without rigid gender roles,
+would anyone need to be trans?*
+
+<!-- intro -->
 
 Thanksgiving with friends and strangers.
 I still wear a beard, but my nails are iridescent.

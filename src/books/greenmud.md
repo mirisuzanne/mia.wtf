@@ -1,15 +1,15 @@
 ---
-type: novel
+private: true
+type: web novel
 title: Into the Green Green Mud
 sub: an animated graphic novel (in progress)
 date: 2012-02-21
-venue: greengreenmud.com
-at: https://greengreenmud.com/
+bookmark-of: https://greengreenmud.com/
 tags:
-  - art
-  - design
-  - code
-  - electronic literature
+  - area:art
+  - area:web
+  - art:writing
+  - as:webart
 hero:
   src: writing/greenmud/cover.jpg
 press:
@@ -25,13 +25,15 @@ press:
     venue: I ♥ E-Poetry
     at: https://iloveepoetry.com/?p=2571
     date: 2013-05-02
-summary: |
-  A novel about new love,
-  moving apart,
-  and what comes next.
-  A love story, and an after-love story --
-  told wiith poetry and pictures.
 ---
+
+A novel about new love,
+moving apart,
+and what comes next.
+A love story, and an after-love story --
+told with poetry and pictures.
+
+<!-- intro -->
 
 [Read the novel online](https://greengreenmud.com/)
 

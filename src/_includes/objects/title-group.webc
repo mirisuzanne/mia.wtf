@@ -1,8 +1,3 @@
-<page-rel
-  webc:if="this.rel"
-  @html="mdI(`${this.rel} from [${this.venue}](${this.at})`)"
-></page-rel>
-
 <h1
   id="title"
   @html="mdI(this.at ? `[${this.title}](${this.at})` : this.title)"

@@ -7,12 +7,9 @@ hero:
 ---
 
 <script webc:setup>
-  const pageHero = (source) => {
-    const img = source.data.og?.image
-      || source.data.hero
-      || this.hero;
-    return imgSrc(img.src || this.hero.src, { widths: [1200] });
-  }
+  const pageHero = (source) => source.data.og?.src
+    || source.data.hero?.src
+    || this.hero.src;
 
   const subTitle = (source) => {
     if (source.data.sub) {
@@ -24,17 +21,22 @@ hero:
   }
 </script>
 
-<img :src="pageHero(source)">
+<img
+  webc:is="u-img"
+  :src="pageHero(source)"
+  alt=""
+  sizes="auto"
+>
 
 <header>
-  <h1><inline-text @html="mdI(source.data.title)"></inline-text></h1>
+  <h1><inline-bg @html="mdI(source.data.title)"></inline-bg></h1>
   <h2 webc:if="subTitle(source)">
-    <inline-text @html="mdI(subTitle(source))"></inline-text>
+    <inline-bg @html="mdI(subTitle(source))"></inline-bg>
   </h2>
 </header>
 
 <footer>
-  <inline-text><a :href="source.url">MiriamSuzanne.com</a></inline-text>
+  <inline-bg><a :href="source.url">MiriamSuzanne.com</a></inline-bg>
 </footer>
 
 <style>
@@ -85,7 +87,7 @@ hero:
     font-style: italic;
   }
 
-  inline-text {
+  inline-bg {
     background-color: mediumVioletRed;
   }
 

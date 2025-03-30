@@ -11,3 +11,7 @@ tags:
   - as:open-source
   - org:oddbird
 ---
+
+After developing the popular
+Susy layout tools,
+I became a member of the Sass core team.

@@ -4,7 +4,7 @@ sub: concert & live stream
 type: music video
 date: 2015-07-10
 tags:
-  - teacup gorilla
+  - org:teacup-gorilla
 events:
   - venue: The Bakery
     date: 2015-07-10

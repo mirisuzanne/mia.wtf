@@ -1,6 +1,4 @@
 html {
-  --font-size-auto: initial;
-
   --text-gradient--: linear-gradient(
     to bottom right,
     var(--accent),
@@ -14,7 +12,7 @@ html {
   ) no-repeat fixed;
 
   --theme-texture: var(--bg-gradient);
-  --bg-texture: var(--bg);
+  --bg-texture: var(--theme-texture);
 
   --body-font: serif;
   --ui-font: sans-serif;
@@ -36,10 +34,10 @@ html {
 }
 
 [data-theme=mia] {
-  --font-size-auto: clamp(1em, 22px, 5vi);
-
+  --theme-base-size: 20px;
   --body-font: var(--fonts-serif, var(--fonts-serif--));
-  --title-font: var(--fonts-serif, var(--fonts-serif--));
+  --h1-font: var(--fonts-serif, var(--fonts-serif--));
+  --title-font: var(--fonts-sans, var(--fonts-sans--));
   --code-font: var(--fonts-code, var(--fonts-code--));
   --ui-font: var(--fonts-sans, var(--fonts-sans--));
   --theme-texture:
@@ -48,7 +46,7 @@ html {
   ;
 
   --hr: '~ & & & ~';
-  --list-marker: '~ ';
+  --list-marker: '→ ';
 
   --link-color: currentColor;
   ---link-line-color: var(--accent);
@@ -62,18 +60,7 @@ html {
     --mark: light-dark(oklch(90% 0.08 349.69), oklch(30% 0.14 351.99));
   }
 
-  h1 {
-    font-size: calc(1em + 1cqi);
-  }
-
-  h2 {
-    font-size: calc(1em + 0.5cqi);
-  }
-
-  h3 {
-    font-size: inherit;
-    font-weight: normal;
-  }
+  h3 { font-weight: normal; }
 
   @supports (background-clip: text) {
     h1,
@@ -89,7 +76,6 @@ html {
 }
 
 [data-theme=terminal] {
-  --line-length: 30em;
   --body-font: var(--fonts-code, var(--fonts-code--));
   --title-font: var(--fonts-code, var(--fonts-code--));
   --code-font: var(--fonts-code, var(--fonts-code--));
@@ -142,7 +128,7 @@ html {
 }
 
 [data-theme=copier] {
-  --line-length: 30em;
+  --theme-base-size: 20px;
   --body-font: var(--fonts-sans, var(--fonts-sans--));
   --title-font: var(--fonts-sans, var(--fonts-sans--));
   --code-font: var(--fonts-code, var(--fonts-code--));

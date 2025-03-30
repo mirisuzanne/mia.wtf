@@ -11,7 +11,7 @@ hero:
 tags:
   - writing
   - tour
-  - teacup gorilla
+  - org:teacup-gorilla
   - riding sidesaddle
 events:
   - adr: Iowa City, IA

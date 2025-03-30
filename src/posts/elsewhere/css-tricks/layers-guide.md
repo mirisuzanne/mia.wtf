@@ -4,8 +4,8 @@ title: A Complete Guide to CSS Cascade Layers
 at: https://css-tricks.com/css-cascade-layers/
 date: 2022-02-21
 tags:
-  - csswg
-  - oddbird
+  - org:csswg
+  - org:oddbird
   - cascade layers
   - cascade
   - writing

@@ -1,13 +1,15 @@
 ---
 title: Notes towards a queer art
 sub: and a queer web, world wide
-summary:
-  People are ==queer==.
-  People are edge cases.
-  ==We fall== between meanings,
-  and explore outside them.
-  That, to me, is ==beautiful.==
 ---
+
+People are ==queer==.
+People are edge cases.
+==We fall== between meanings,
+and explore outside them.
+That, to me, is ==beautiful.==
+
+<!-- intro -->
 
 We string together ==our best== recollections
 and call them a matter of time.

@@ -27,7 +27,10 @@ I first noticed it on a Netlify deploy preview.
 A faceless mention from 'admin'
 at 'imoneyhub'.
 
-<img webc:is="u-img" src="2022/mention-spam.jpg" alt="screenshot: admin, June 9, 2022, mentioned this in imoneyhub.com">
+<img
+  webc:is="u-img"
+  src="2022/mention-spam.jpg"
+  alt="screenshot: admin, June 9, 2022, mentioned this in imoneyhub.com">
 
 I assumed right away it must be spam,
 but I'm glad I clicked through.
@@ -49,7 +52,10 @@ all (web)mentioning my original post.
 The webmention.io dashboard shows me all of them
 (with a few legit mentions scattered through):
 
-<img webc:is="u-img" src="2022/mention-spam-list.jpg" alt="screenshot: Recent Webmentions, and a small-print list of faceless random urls, and a few blurred-out legit mentions">
+<img
+  webc:is="u-img"
+  src="2022/mention-spam-list.jpg"
+  alt="screenshot: Recent Webmentions, and a small-print list of faceless random urls, and a few blurred-out legit mentions">
 
 All of these mentions made it into my local cache,
 but only one made it into a build.

@@ -1,0 +1,12 @@
+<link
+  href="https://v1.screenshot.11ty.dev/"
+  rel="preconnect"
+  crossorigin>
+<meta property="og:type" content="website" />
+<meta property="og:title" :content="title">
+<meta property="og:image" :content="ogImg($data.ogSrc)">
+<meta property="og:url" :content="`https://${site.domain}${page.url}`">
+<meta property="og:site_name" :content="site.title">
+<meta property="og:description" :content="mdRemove(desc)">
+<meta name="description" :content="mdRemove(desc)">
+<meta name="fediverse:creator" content="@mia@front-end.social" />

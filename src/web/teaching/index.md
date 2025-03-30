@@ -5,10 +5,10 @@ subtitle: talks, workshops, podcasts, and videos
 index: web:teaching
 eleventyImport:
   collections: ["web:teaching"]
-summary: >
-  Communicating design through language
-  is a _poetic exercise_.
-  Understanding the _subtext of CSS_,
-  and _the flow of a cascading style_,
-  can make all the difference.
 ---
+
+Communicating design through language
+is a _poetic exercise_.
+Understanding the _subtext of CSS_,
+and _the flow of a cascading style_,
+can make all the difference.

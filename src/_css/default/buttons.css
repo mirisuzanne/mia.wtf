@@ -9,6 +9,9 @@ button {
   color: var(---btn-state-text, var(---btn-text));
   border: thin solid var(---btn-state-border, var(---btn-border));
   border-radius: 0.125em;
+  font-family: var(--ui-font);
+  font-variant-caps: all-small-caps;
+  justify-self: start;
 
   &:focus,
   &:hover,
@@ -69,5 +72,35 @@ button {
 
 switch-text {
   align-self: baseline;
-  font-style: italic;
+}
+
+/* controls */
+
+input-control {
+  column-gap: var(--shim);
+  display: flex;
+  flex-flow: wrap;
+
+  & input { flex: 1; }
+
+  & input-reset-group {
+    display: flex;
+    flex: auto;
+    gap: var(--shim);
+  }
+}
+
+toggle-control {
+  display: flex;
+  flex-flow: wrap;
+
+  > button:not(:last-of-type) {
+    border-start-end-radius: 0;
+    border-end-end-radius: 0;
+  }
+
+  > button:not(:first-of-type) {
+    border-start-start-radius: 0;
+    border-end-start-radius: 0;
+  }
 }

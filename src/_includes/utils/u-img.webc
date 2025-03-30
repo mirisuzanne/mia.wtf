@@ -1,6 +1,6 @@
 <img
-  webc:is="eleventy-image"
-  :src="this.src.includes('://') ? this.src : `./src/_images/${this.src}`"
+  :src="imgDir(this.src)"
   :alt="this.alt?.trim()"
-  :sizes="$data.site.sizes[this.sizes] || this.sizes || $data.site.sizes.default"
+  :sizes="$data.image[this.sizes] || this.sizes || $data.image.default"
+  :width="this.width"
 >

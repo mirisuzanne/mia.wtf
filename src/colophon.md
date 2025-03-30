@@ -1,16 +1,18 @@
 ---
 title: What's in a website?
 sub: The nerds call this a [colophon](https://en.wikipedia.org/wiki/Colophon_(publishing))
-summary:
-  This site relies on the
-  [Remix Icon](https://remixicon.com) set --
-  which is free,
-  and doesn't require any attribution.
-  That sentence was entirely discretionary,
-  and literally _uncalled for_ --
-  but I have to write it down somewhere,
-  or I'll forget.
 ---
+
+This site relies on the
+[Remix Icon](https://remixicon.com) set --
+which is free,
+and doesn't require any attribution.
+That sentence was entirely discretionary,
+and literally _uncalled for_ --
+but I have to write it down somewhere,
+or I'll forget.
+
+<!-- intro -->
 
 To build this site,
 I used more than my share of
@@ -20,6 +22,12 @@ Don't tell anyone,
 but I invented a new <abbr>CSS</abbr> feature,
 _and then used it here_!
 That feels like cheating. Is that cheating?
+
+I wish I had used [Sass](https://sass-lang.com),
+but this was an experiment
+in raw, untamed, _pure_ CSS.
+But purity is for suckers.
+If you like Sass, just use Sass.
 
 ## Design
 
@@ -126,9 +134,6 @@ while I was working:
 
 [MXB.dev](https://mxb.dev)
 ~ What an excellent theme picker
-
-[Tink.uk](https://tink.uk) & [BaldurBjarnason.com](https://www.baldurbjarnason.com)
-~ Simple, elegant typography
 
 [HeydonWorks.com](https://heydonworks.com)
 ~ Black and white and bold

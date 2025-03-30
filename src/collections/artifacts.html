@@ -1,0 +1,27 @@
+---js
+const layout = 'is/artifact';
+
+const pagination = {
+  data: "artifacts",
+  size: 1,
+  alias: 'fromItem',
+  addAllPagesToCollections: true,
+};
+
+const permalink = function (data) {
+  return `/${data.fromItem.area}/${this.slugify(data.fromItem.title)}/index.html`;
+}
+
+const eleventyComputed = {
+  title: (data) => data.fromItem.title,
+  sub: (data) => data.fromItem.sub,
+  type: (data) => data.fromItem.type,
+  date: (data) => data.fromItem.date,
+  end: (data) => data.fromItem.end,
+  feature: (data) => data.fromItem.feature,
+  with: (data) => data.fromItem.with,
+  tags: (data) => [...data.fromItem.tags, 'is:artifact'],
+  hero: (data) => data.fromItem.hero,
+  'bookmark-of': (data) => data.fromItem.at,
+};
+---

@@ -7,8 +7,7 @@ logo: teacup
 date: 2010-03-13
 index: org:teacup-gorilla
 og:
-  image:
-    src: _orgs/tg.jpg
+  src: _orgs/tg.jpg
 tags:
   - area:art
   - as:music

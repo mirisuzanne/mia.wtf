@@ -10,20 +10,22 @@ hero:
     comforting her chosen daughter Angel
     ([Indya Moore](https://www.imdb.com/name/nm8360867/))
     in an episode of Pose.
-summary: |
-  Yesterday,
-  I shared an [article about my impending surgery][surgery],
-  and a request for help --
-  both social and financial --
-  as I go through this.
-  I was embarrassed to ask,
-  and not sure what to expect,
-  but your response has been swift and overwhelming.
-  I can't thank you enough,
-  but I'll keep trying.
-
-  [surgery]: /2018/07/17/surgery/
 ---
+
+Yesterday,
+I shared an [article about my impending surgery][surgery],
+and a request for help --
+both social and financial --
+as I go through this.
+I was embarrassed to ask,
+and not sure what to expect,
+but your response has been swift and overwhelming.
+I can't thank you enough,
+but I'll keep trying.
+
+[surgery]: /2018/07/17/surgery/
+
+<!-- intro -->
 
 Wow, you all are so wonderful and generous.
 Thank you so much.
