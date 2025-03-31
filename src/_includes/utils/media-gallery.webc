@@ -22,12 +22,13 @@
       :data-span="item.span"
       frameborder="0"
     ></iframe>
-    <audio
-      webc:if="item.audio"
-      :src="item.audio"
-      :data-span="item.span"
-      controls
-    ></audio>
+    <div webc:if="item.audio">
+      <audio
+        :src="item.audio"
+        :data-span="item.span"
+        controls
+      ></audio>
+    </div>
     <video
       webc:if="item.video"
       :src="item.video"

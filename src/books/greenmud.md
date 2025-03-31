@@ -37,7 +37,7 @@ told with poetry and pictures.
 
 [Read the novel online](https://greengreenmud.com/)
 
-<figure
+<blockquote
   webc:is="press-quotes"
   :@from-data="press"
-></figure>
+></blockquote>

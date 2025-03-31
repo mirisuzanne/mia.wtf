@@ -1,0 +1,30 @@
+---js
+const layout = 'is/stub';
+
+const pagination = {
+  data: "shows",
+  size: 1,
+  alias: 'fromItem',
+  addAllPagesToCollections: true,
+};
+
+const permalink = function (data) {
+  const root = `shows/${data.fromItem.date}`;
+  const title = this.slugify(data.fromItem.title);
+  return `/${root}/${title}/index.html`;
+}
+
+const eleventyComputed = {
+  title: (data) => data.fromItem.title,
+  sub: (data) => data.fromItem.sub,
+  type: (data) => data.fromItem.type,
+  date: (data) => data.fromItem.date,
+  end: (data) => data.fromItem.end,
+  feature: (data) => data.fromItem.feature,
+  with: (data) => data.fromItem.with,
+  tags: (data) => [...(data.fromItem.tags || []), 'is:show'],
+  hero: (data) => data.fromItem.hero,
+  venue: (data) => data.fromItem.venue,
+  'bookmark-of': (data) => data.fromItem.at,
+};
+---

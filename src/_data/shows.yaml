@@ -1,47 +1,69 @@
 - title: JANE/EYRE
-  role: playwright, musician, and actor (Narrator Jane)
-  with: Grapefruit Lab and Teacup Gorilla
-  tags: [org:teacup-gorilla, org:grapefruit-lab, as:theater]
+  role: creator/performer
+  venue: Grapefruit Lab
+  with: Teacup Gorilla
+  tags: [org:teacup-gorilla, org:grapefruit-lab, art:theater]
   date: 2025-01-17
+  at: https://grapefruitlab.com/shows/jane-eyre-2025/
 
 - title: Whiskey From Strangers
-  role: playwright, musician, and actor (self)
+  role: creator/performer
   sub: a live theater album release
-  with: Grapefruit Lab and Teacup Gorilla
-  tags: [org:teacup-gorilla, org:grapefruit-lab, as:theater]
+  venue: Grapefruit Lab
+  with: Teacup Gorilla
+  tags: [org:teacup-gorilla, org:grapefruit-lab, art:theater]
   date: 2024-05-10
+  at: https://grapefruitlab.com/shows/whiskey-2024/
 
 - title: Letters of Suresh
   by: Rajiv Joseph
   role: lighting design
-  with: Curious Theatre Company, directed by Julie Rada
+  venue: Curious Theatre Company
   date: 2023-11-11
+  at: https://www.curioustheatre.org/event/lettersofsuresh/
+  tags: [art:theater]
 
 - title: Strange Bird, Queer Bird
   by: verbatim letters
   role: playwright & musician
-  with: Lars Reid, Grapefruit Lab, and Teacup Gorilla
-  tags: [org:teacup-gorilla, org:grapefruit-lab, as:theater]
+  venue: Grapefruit Lab
+  with: Lars Reid & Teacup Gorilla
+  tags: [org:teacup-gorilla, org:grapefruit-lab, art:theater]
   date: 2023-04-07
+  at: https://grapefruitlab.com/shows/queer-bird/
 
 - title: Pity+Fear (a travesty)
-  role: playwright & actor (self)
-  with: Grapefruit Lab and Josselyn Cool
-  tags: [org:grapefruit-lab, as:theater]
+  role: creator/performer
+  venue: Grapefruit Lab
+  with: Josselyn Cool
+  tags: [org:grapefruit-lab, art:theater]
   date: 2022-04-08
+  at: https://grapefruitlab.com/shows/pity-fear/
 
 - title: Celebration, Florida
   by: Greg Wohead
-  role: actor
-  with: Square Product Theatre
+  role: performer
+  venue: Square Product Theatre
+  with: Laura Kruegel
   date: 2019-02-02
-  tags: [as:theater]
+  tags: [art:theater]
+  at: http://www.squareproducttheatre.org/news/2018/12/28/cast-announced-for-celebration-florida
 
-- title: JANE/EYRE
-  role: playwright, musician, and actor (Narrator Jane)
-  with: Grapefruit Lab and Teacup Gorilla
-  tags: [org:teacup-gorilla, org:grapefruit-lab, as:theater]
-  date: 2018-02-23
+# - title: JANE/EYRE
+#   role: creator/performer
+#   venue: Grapefruit Lab
+#   with: Teacup Gorilla
+#   tags: [org:teacup-gorilla, org:grapefruit-lab, art:theater]
+#   date: 2018-02-23
+#   at: https://grapefruitlab.com/shows/jane-eyre/
+
+- title: The In-Between
+  by: Julie Rada
+  role: writer/performer
+  venue: Grapefruit Lab
+  date: 2016-05-21
+  at: https://grapefruitlab.com/shows/in-between/
+  tags: [org:grapefruit-lab, art:theater]
 
 - title: 10 Myths on the Proper Application of Beauty Products
   by: co-authored
@@ -51,21 +73,117 @@
     _Riding SideSaddle*_,
     weaving fluid genders and identities
     through myth and everyday ritual
-  with: Buntport Theater and Teacup Gorilla
-  tags: [org:teacup-gorilla, as:theater]
+  venue: Buntport Theater
+  with: Teacup Gorilla
+  tags: [org:teacup-gorilla, art:theater]
   date: 2016-03-04
   note: 2016 True West Award
+  at: https://buntport.com/2016/03/10-myths-proper-application-beauty-products/
+  feature: true
 
 - title: Missa Populi
   by: co-authored
   role: playwright, director, and musician
   date: 2010-03-12
-  with: Grapefruit Lab & Teacup Gorilla
-  tags: [org:teacup-gorilla, org:grapefruit-lab, as:theater]
+  venue: Grapefruit Lab
+  with: Teacup Gorilla
+  tags: [org:teacup-gorilla, org:grapefruit-lab, art:theater]
+  at: https://grapefruitlab.com/shows/missa-populi/
+
+- title: Roller Skating with my Cousin
+  role: ensemble
+  venue: The LIDA Project
+  date: 2010-01-15
+  tags: [org:lida, art:theater]
+  at: https://lida.org/roller-skating-with-my-cousin/
+
+- title: A Murder One Less
+  by: Julie Rada
+  role: lighting design
+  venue: Grapefruit Lab
+  date: 2009-09-27
+  tags: [org:grapefruit-lab, art:theater]
+  at: https://grapefruitlab.com/shows/murder/
 
 - title: RAIN/ of terror
   role: lighting design
   by: Julie Rada
-  with: The LIDA project
+  venue: The LIDA Project
   date: 2009-02-27
-  tags: [org:lida, as:theater]
+  tags: [org:lida, art:theater]
+  at: http://lida.org/rain-of-terror/
+
+- title: 'Untitled #39'
+  role: creator/performer
+  venue: The Dresden Dolls
+  date: 2008-05-16
+  with: Julie Rada & The LIDA Project
+  tags: [org:lida, art:theater]
+
+- title: The Resistible Rise of Arturo Ui
+  by: Bertolt Brecht
+  role: technical director
+  date: 2008-05-16
+  venue: Countdown To Zero
+  at: https://countdowntozero.org/arturo-ui/
+  tags: [org:countdown, art:theater]
+
+- title: My Name is Rachel Corrie
+  role: tour manager
+  date: 2008-01-24
+  venue: Countdown To Zero
+  at: https://countdowntozero.org/rachel-corrie/
+  tags: [org:countdown, art:theater]
+
+- title: Bigger Guns III
+  sub: Revenge of the Apocalypse, Again
+  date: 2007-04-20
+  role: creator/director
+  venue: New World Arts
+  tags: [org:new-world-arts, art:theater]
+
+- title: Hello and Goodbye
+  by: Athol Fugard
+  date: 2006-11-25
+  role: director
+  venue: New World Arts
+  tags: [org:new-world-arts, art:theater]
+
+- title: Fear/Falling
+  by: Michelle Milne
+  date: 2006-10-20
+  role: director
+  venue: New World Arts
+  tags: [org:new-world-arts, art:theater]
+
+- title: Danny and the Deep Blue Sea
+  date: 2006-09-15
+  role: director
+  venue: New World Arts
+  tags: [org:new-world-arts, art:theater]
+
+- title: Sadomasochism
+  date: 2005-09-13
+  role: writer/director
+  venue: New World Arts
+  tags: [org:new-world-arts, art:theater]
+
+- title: In a Time of War
+  sub: What are you willing to die for? What are you willing to forgive?
+  date: 2005-04-22
+  role: writer
+  venue: New World Arts
+  tags: [org:new-world-arts, art:theater]
+
+- title: Criminal Hearts
+  date: 2004-10-14
+  role: director
+  venue: New World Arts
+  tags: [org:new-world-arts, art:theater]
+
+- title: Antony & Cleopatra
+  role: stage management intern
+  venue: Oregon Shakespeare Festival
+  date: 2003-02-06
+  tags: [art:theater]
+  feature: true

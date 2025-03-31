@@ -5,6 +5,9 @@
     && post.data.venue;
 
   const isSelf = (tags) => tags && tagType(tags, 'rel').includes('me');
+  const thisPost = (post, page) => (post.url === page.url)
+    ? {'aria-current': 'page'}
+    : {};
 </script>
 
 <li>
@@ -12,6 +15,7 @@
     :href="this.post.url"
     @text="this.post.data.title"
     post-title
+    @attributes="thisPost(this.post, $data.page)"
   ></a>
   <venue-link webc:if="showVenue(this.post)">
     <i

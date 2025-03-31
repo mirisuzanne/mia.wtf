@@ -9,9 +9,7 @@ I hope you find what you're looking for.
 
 <!-- intro -->
 
-## Articles &c
-
-<ul
+<section
   webc:is="post-list"
   :@collection="$data.collections.all"
-></ul>
+></section>

@@ -1,7 +1,6 @@
 <script webc:setup>
-  const getOrgs = (time, founder) => {
-    const all = $data.collections['is:org'];
-
+  const getOrgs = (data, time, founder) => {
+    const all = withTag(data, 'is:org');
     let collect = founder
       ? all.filter((page) => {
         isFounder = hasTag(page, 'role:founder')
@@ -19,13 +18,34 @@
       ).sort((a, b) => b.data.end - a.data.end);
     }
 
-    return collect.sort((a, b) => a.date - b.date);
+
+    return collect.sort((a, b) => {
+      if (a.data.end !== b.data.end) {
+        if (a.data.end === 'ongoing') return -1;
+        if (b.data.end === 'ongoing') return 1;
+      }
+
+      return a.data.date - b.data.date;
+    });
   }
 </script>
 
-<ul webc:root="override">
-  <org-item
-    webc:for="org of getOrgs(this.time, this.founder)"
-    :@org="org"
-  ></org-item>
-</ul>
+<section
+  webc:if="getOrgs(this.collection, this.time, this.founder).length > 0"
+>
+  <slot>
+    <h-
+      webc:nokeep
+      :@level="this.h || 2"
+      @text="this.heading || 'Co-conspirators…'"
+    ></h->
+  </slot>
+
+  <ul>
+    <org-item
+      webc:for="org of getOrgs(this.collection, this.time, this.founder)"
+      :@org="org"
+    ></org-item>
+  </ul>
+</section>
+

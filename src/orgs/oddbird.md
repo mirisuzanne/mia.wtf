@@ -12,6 +12,7 @@ tags:
   - role:founder
 ---
 
-OddBird is an influential web development agency --
+I co-founded OddBird with my brothers --
+an influential web development agency
 helping clients plan, design, and develop
 tailor-made web applications.

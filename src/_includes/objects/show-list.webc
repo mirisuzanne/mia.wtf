@@ -1,0 +1,53 @@
+<script webc:setup>
+  // returns featured AND recent
+  const showsFrom = (data, only) => {
+    if (data?.length === 0) return {};
+    const pages = withTag(data, 'is:show')
+      .sort((a, b) => b.data.date - a.data.date)
+      .filter((item, i) => {
+        if (item.data.private) return false;
+        if (!only) return true;
+        if (only.includes('featured') && item.data.feature) return true;
+        if (only.includes('recent') && i < 8) return true;
+        if (only === 'top') return true;
+      });
+
+    return only && (only.includes('top') || only === 'top')
+      ? pages.slice(0,10)
+      : pages;
+  };
+</script>
+
+<section
+  webc:if="showsFrom(this.collection, this.onlyShow).length > 0"
+>
+  <slot>
+    <h-
+      webc:nokeep
+      :@level="this.h || 2"
+      @html="this.heading || 'Selected Productions…'"
+    ></h->
+  </slot>
+
+  <ul>
+    <li
+      webc:for="show of showsFrom(this.collection, this.onlyShow)"
+    >
+      <em @text="show.data.title"></em>
+      @
+      <a
+        webc:if="show.data['bookmark-of']"
+        :href="show.data['bookmark-of']"
+        @text="show.data.venue"
+      ></a><span
+        webc:else
+        webc:nokeep
+        @text="show.data.venue"
+      ></span>,
+      <date-time
+        :@date="show.data.date"
+        @format="year"
+      ></date-time>
+    </li>
+  </ul>
+</section>

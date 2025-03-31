@@ -10,14 +10,16 @@
   };
 </script>
 
-<figure
+<blockquote
   webc:for="item of this.fromData"
   webc:if="item.text"
-  is-quote
 >
-  <blockquote @html="md(item.text)"></blockquote>
-  <figcaption
-    cite-quote
+  <template
+    webc:nokeep
+    @html="md(item.text)"
+  ></template>
+
+  <footer
     @html="mdI(`---${cite(item)}`)"
-  ></figcaption>
-</figure>
+  ></footer>
+</blockquote>

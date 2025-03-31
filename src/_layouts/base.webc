@@ -64,3 +64,8 @@
     ) top left / 100% var(--gap) no-repeat;
   }
 </style>
+
+<script>
+  const needsJS = [...document.querySelectorAll('[hidden=until-js]')];
+  needsJS.forEach((item) => item.removeAttribute('hidden'));
+</script>

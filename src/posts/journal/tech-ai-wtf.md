@@ -2,6 +2,7 @@
 title: Tech continues to be political
 sub: And the politics aren't looking great
 date: 2025-02-12
+mastodon: https://front-end.social/@mia/114000730215089155
 ---
 
 Being "in tech" in 2025 is depressing,

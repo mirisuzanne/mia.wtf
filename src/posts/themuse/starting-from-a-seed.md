@@ -22,7 +22,9 @@ the "seed" of a project.
     src="muse/seed/specimen.jpg"
     alt="pinned insects"
   >
-  <figcaption>What do we have against these cute little insects?</figcaption>
+  <figcaption>
+    What do we have against these cute little insects?
+  </figcaption>
 </figure>
 
 There are many ways to find,
@@ -44,7 +46,9 @@ starting with a question and related hypothesis.
     src="muse/seed/golden-circle.jpg"
     alt="concentric circles with 'why' in the center, then 'what', and 'how'"
   >
-  <figcaption @html="mdI(`Simon Sinek's *golden circle*`)"></figcaption>
+  <figcaption>
+    Simon Sinek's 'golden circle'
+  </figcaption>
 </figure>
 
 [Simon Sinek][sinek] starts his projects with
@@ -99,7 +103,9 @@ started with a quote I found on the internet:
     src="muse/seed/science.jpg"
     alt="One person sitting with a VR set, while another pokes at a camera"
   >
-  <figcaption>Out-of-body studies are super weird, y'all</figcaption>
+  <figcaption>
+    Out-of-body studies are super weird, y'all
+  </figcaption>
 </figure>
 
 I combined that with an article
@@ -127,7 +133,7 @@ the other pieces fell into place.
     alt="Statue of hermaphroditus lifting her dress"
   >
   <figcaption>
-    a herm (named for Hermes)
+    A herm (named for Hermes)
     is a statue with carved genitals
     on un-carved block legs
   </figcaption>

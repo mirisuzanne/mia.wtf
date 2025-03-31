@@ -1,8 +1,7 @@
 ---
 title: Theater & performance
+sub: Mostly with [Grapefruit Lab](https://grapefruitlab.com)
 index: art:theater
-eleventyImport:
-  collections: ['art:theater']
 ---
 
 For what it's worth

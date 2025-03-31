@@ -1,6 +1,5 @@
 ---
 feature: true
-layout: is/artifact
 type: novel
 role: author
 title: Riding SideSaddle*

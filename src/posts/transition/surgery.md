@@ -158,7 +158,9 @@ Laugh break!
   <media-gallery
     :@from-data="carina"
   ></media-gallery>
-  <figcaption>Carina Magyar performs in the FPIA 2017 finals</figcaption>
+  <figcaption>
+    Carina Magyar performs in the FPIA 2017 finals
+  </figcaption>
 </figure>
 
 Over the course of my transition,

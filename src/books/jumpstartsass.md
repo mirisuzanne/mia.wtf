@@ -39,10 +39,10 @@ Co-writen with my friend
 [Buy a copy](https://shop.oreilly.com/product/9780994182678.do)
 or [download the e-book](https://www.sitepoint.com/premium/books/jump-start-sass)
 
-<figure
+<blockquote
   webc:is="press-quotes"
   :@from-data="press"
-></figure>
+></blockquote>
 
 ------
 

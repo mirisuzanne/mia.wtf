@@ -3,8 +3,6 @@ layout: is/list
 title: Teaching CSS
 subtitle: talks, workshops, podcasts, and videos
 index: web:teaching
-eleventyImport:
-  collections: ["web:teaching"]
 ---
 
 Communicating design through language

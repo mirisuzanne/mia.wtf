@@ -25,9 +25,9 @@ and leave the drafting for later.*
     src="muse/curious/bullshit.jpg"
     alt="the rear end of a steer"
   >
-  <figcaption
-    @html="mdI('I often refer to this as the fertilizer or *bullshit* stage')"
-  ></figcaption>
+  <figcaption>
+    I often refer to this as the fertilizer or bullshit stage
+  </figcaption>
 </figure>
 
 Drafting is an organizational problem.
@@ -61,9 +61,10 @@ and understand my constraints.
     src="contour/final.png"
     alt="The Posture of Contour by James Belflower"
   >
-  <figcaption
-    @html="mdI('Final cover design for *The Posture of Contour*')"
-  ></figcaption>
+  <figcaption>
+    Final cover design
+    for <em>The Posture of Contour</em>
+  </figcaption>
 </figure>
 
 I start with three questions:

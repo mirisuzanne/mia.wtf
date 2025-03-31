@@ -1,5 +1,6 @@
 <script webc:setup>
   const postsFrom = (data, only) => {
+    if (data?.length === 0) return {};
     const pages = withTag(data, 'is:post')
       .sort((a, b) => b.date - a.date)
       .filter((item, i) => {
@@ -15,16 +16,28 @@
   };
 </script>
 
-<ul>
-  <li
-    webc:is="post-item"
-    webc:for="post of postsFrom(this.collection, this.onlyShow)"
-    :@post="post"
-  ></li>
-</ul>
+<section
+  webc:if="postsFrom(this.collection, this.onlyShow)?.length > 0"
+>
+  <slot>
+    <h-
+      webc:nokeep
+      :@level="this.h || 2"
+      @html="this.heading || 'Articles &c.'"
+    ></h->
+  </slot>
 
-<p webc:if="this.onlyShow">
-  (<a href="/tags/is:post/">
-    more posts »
-  </a>)
-</p>
+  <ul>
+    <li
+      webc:is="post-item"
+      webc:for="post of postsFrom(this.collection, this.onlyShow)"
+      :@post="post"
+    ></li>
+  </ul>
+
+  <p webc:if="this.onlyShow">
+    (<a href="/tags/is:post/">
+      more posts »
+    </a>)
+  </p>
+</section>

@@ -1,19 +1,22 @@
-<section
-  webc:if="this.collection && withTag(this.collection, 'is:post').length > 0"
-  list-of="posts"
+<template
+  webc:nokeep
+  webc:if="this.collection?.length > 0"
 >
-  <h2>Articles &c.</h2>
-  <post-list
+  <org-list
+    webc:if="!($data.tags || []).includes('is:org')"
     :@collection="this.collection"
-  ></post-list>
-</section>
+  ></org-list>
 
-<section
-  webc:if="this.collection && withTag(this.collection, 'is:artifact').length > 0"
-  list-of="artifacts"
->
-  <h2>Artifacts</h2>
   <artifact-list
     :@collection="this.collection"
   ></artifact-list>
-</section>
+
+  <post-list
+    :@collection="this.collection"
+  ></post-list>
+
+  <show-list
+    :@collection="this.collection"
+    @only-show="['featured', 'recent']"
+  ></show-list>
+</template>

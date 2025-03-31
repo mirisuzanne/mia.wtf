@@ -1,6 +1,7 @@
 <script webc:setup>
   // returns featured AND recent
   const artifactsFrom = (data, only) => {
+    if (data?.length === 0) return {};
     const pages = withTag(data, 'is:artifact')
       .sort((a, b) => b.data.date - a.data.date)
       .filter((item, i) => {
@@ -16,30 +17,35 @@
   };
 </script>
 
-<slot>
-  <h2
-    webc:if="this.heading"
-    webc:is="h-"
-    :level="this.h || 2"
-    @html="this.heading"
-  ></h2>
-</slot>
+<section
+  webc:root="override"
+  artifact-list
+  webc:if="artifactsFrom(this.collection, this.onlyShow).length > 0"
+>
+  <slot>
+    <h-
+      webc:nokeep
+      :@level="this.h || 2"
+      @html="this.heading || 'Artifacts…'"
+    ></h->
+  </slot>
 
-<media-gallery :@list="artifactsFrom(this.collection, this.onlyShow)">
-  <artifact-item
-    webc:for="item of list"
-    :@item="item"
-  ></artifact-item>
-</media-gallery>
+  <media-gallery :@list="artifactsFrom(this.collection, this.onlyShow)">
+    <artifact-item
+      webc:for="item of list"
+      :@item="item"
+    ></artifact-item>
+  </media-gallery>
 
-<p webc:if="this.onlyShow">
-  (<a href="/artifacts/">
-    all artifacts »
-  </a>)
-</p>
+  <p webc:if="this.onlyShow">
+    (<a href="/artifacts/">
+      all artifacts »
+    </a>)
+  </p>
+</section>
 
 <style webc:bucket="objects">
-artifact-list {
+[artifact-list] {
   --gallery-gap: 1lh var(--shim);
 }
 </style>

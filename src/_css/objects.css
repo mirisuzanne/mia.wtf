@@ -3,7 +3,7 @@
 }
 
 li:has(venue-link) {
-  --list-marker: ' » ';
+  --list-marker: ' 🔗 ';
 }
 
 item-meta {

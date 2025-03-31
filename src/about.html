@@ -57,8 +57,6 @@ photos:
     alt: >
       At a mic wearing flannel,
       with letters on the screen behind
-eleventyImport:
-  collections: [is:org]
 ---
 
 <p>
@@ -79,13 +77,12 @@ eleventyImport:
   </d-i>
 </dl>
 
-<h2>Teams I play with</h2>
 <org-list
   @time="current"
-></org-list>
+  :@collection="collections.all"
+><h2>Teams I play with…</h2></org-list>
 
 <h2>Photos of me</h2>
-
 <figure>
   <figcaption>
     For speaking gigs, etc…
@@ -103,8 +100,8 @@ eleventyImport:
   </media-gallery>
 </figure>
 
-<h2>Team history</h2>
 <org-list
   @time="past"
-></org-list>
+  :@collection="collections.all"
+><h2>Previous teams…</h2></org-list>
 

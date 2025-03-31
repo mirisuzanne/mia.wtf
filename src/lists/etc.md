@@ -3,8 +3,6 @@ title: >
   &c. (anything)
 area: etc
 index: area:etc
-eleventyImport:
-  collections: ['area:etc']
 ---
 
 Plate tectonics.

@@ -1,0 +1,18 @@
+<script webc:setup>
+  const getSeriesPosts = (series) =>
+    withTag($data.collections['is:post'], series)
+    .filter((item) => !item.data.private);
+</script>
+
+<details
+  webc:if="getSeriesPosts(this.series)"
+>
+  <summary>This post is part of a series…</summary>
+  <ul>
+    <li
+      webc:is="post-item"
+      webc:for="post of getSeriesPosts(this.series)"
+      :@post="post"
+    ></li>
+  </ul>
+</details>

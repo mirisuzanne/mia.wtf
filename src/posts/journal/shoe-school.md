@@ -232,11 +232,9 @@ between the two days of our workshop.
     :@from-data="location"
   ></media-gallery>
   <figcaption>
-
-The entrance & yard (notice the log rocking chair) --
-along with some videos about
-the school and the converted train car.
-
+    The entrance & yard (notice the log rocking chair) &ndash;
+    along with some videos about
+    the school and the converted train car.
   </figcaption>
 </figure>
 

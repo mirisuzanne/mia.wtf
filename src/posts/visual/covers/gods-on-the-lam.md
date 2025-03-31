@@ -21,7 +21,9 @@ hero:
   >
   <figcaption>
     Cover art commissioned by
-    <a href="https://perpetualpublishing.com/product/gods-on-the-lam/">Perpetual Motion Machine</a>
+    <a href="https://perpetualpublishing.com/product/gods-on-the-lam/">
+      Perpetual Motion Machine
+    </a>
   </figcaption>
 <figure>
 

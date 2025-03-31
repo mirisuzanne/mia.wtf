@@ -10,7 +10,7 @@ og:
   src: _orgs/tg.jpg
 tags:
   - area:art
-  - as:music
+  - art:music
   - role:founder
 ---
 

@@ -39,7 +39,9 @@ fun blurry-blob background animation:
     title="Moving CSS blur background"
     preview="true"
   ></iframe>
-  <figcaption>It performs ok on my machine, but can get choppy on less powerful devices</figcaption>
+  <figcaption>
+    It performs ok on my machine, but can get choppy on less powerful devices
+  </figcaption>
 </figure>
 
 I made a few small suggestions,
@@ -74,7 +76,9 @@ but with colors based on the site design:
     src="https://codepen.io/miriamsuzanne/embed/mdXzwxr"
     title="Random circles"
   ></iframe>
-  <figcaption>Hit 'rerun' in the bottom right to generate new circles</figcaption>
+  <figcaption>
+    Hit 'rerun' in the bottom right to generate new circles
+  </figcaption>
 </figure>
 
 I like that randomness,

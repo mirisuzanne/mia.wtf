@@ -9,8 +9,6 @@ hero:
   src: inspiration/erin-narrators.jpg
 tags:
   - trans
-  - narrators
-  - podcast
 track:
   - audio: https://media.blubrry.com/narratorspodcast/p/thenarrators.org/wp-content/uploads/174-Narrators-Erin-Rollman.mp3?_=1
 ---

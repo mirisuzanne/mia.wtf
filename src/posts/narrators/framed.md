@@ -1,5 +1,5 @@
 ---
-title: Framed
+title: Framed | Born to choose this way
 sub: Struggles in re-writing the narrative of my life
 erasure: true
 date: 2019-06-19

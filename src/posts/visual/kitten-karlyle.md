@@ -15,5 +15,7 @@ gallery:
   <media-gallery
     :@from-data="gallery"
   ></media-gallery>
-  <figcaption>My good friend, Kitten Karlyle</figcaption>
+  <figcaption>
+    My good friend, Kitten Karlyle
+  </figcaption>
 </figure>

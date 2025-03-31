@@ -4,11 +4,11 @@ sub: The nerds call this a [colophon](https://en.wikipedia.org/wiki/Colophon_(pu
 ---
 
 This site relies on the
-[Remix Icon](https://remixicon.com) set --
-which is free,
+[Remix Icon](https://remixicon.com) set,
+which is free
 and doesn't require any attribution.
-That sentence was entirely discretionary,
-and literally _uncalled for_ --
+That sentence was entirely discretionary --
+literally _uncalled for_ --
 but I have to write it down somewhere,
 or I'll forget.
 
@@ -23,11 +23,10 @@ but I invented a new <abbr>CSS</abbr> feature,
 _and then used it here_!
 That feels like cheating. Is that cheating?
 
-I wish I had used [Sass](https://sass-lang.com),
-but this was an experiment
+This was an experiment
 in raw, untamed, _pure_ CSS.
 But purity is for suckers.
-If you like Sass, just use Sass.
+It would have been simpler with [Sass](https://sass-lang.com).
 
 ## Design
 
@@ -37,13 +36,12 @@ I hope this site has some of both.
 I started the process
 with a few priorities in mind:
 
-- Eliminate all site-wide furniture,
-  especially at the top of the page.
+- Eliminate furniture
+  at the top of the page.
   No navigation, no running header,
   just straight into the content.
   I'm fighting my own instincts
   to tell you _everything I've ever done_
-  all at once
   when you land on an article
   about _the `hwb()` color format_ or whatever.
 - Move the 'cold open' above the title,
@@ -110,7 +108,7 @@ I love when sites use my preference!
 
 ## Inspiration
 
-These opened these sites on occasion,
+I opened these sites on occasion,
 while I was working:
 
 [PublicDomainReview.org](https://publicdomainreview.org)

@@ -20,7 +20,7 @@ layout: base
       :aria-current="this.page.url === '/' ? 'page' : false"
     >mia</a>
   </span>
-  <dialog-toggle>
+  <dialog-toggle hidden="until-js">
     <button
       aria-controls="theme-controls"
       data-modal="true"
@@ -64,6 +64,10 @@ layout: base
 
   #header {
     margin-block: 2lh;
+  }
+
+  #content {
+    margin: unset;
   }
 
   hr[aria-hidden=true] {

@@ -1,8 +1,6 @@
 ---
 title: Writing
 index: art:writing
-eleventyImport:
-  collections: ['art:writing']
 ---
 
 I think it would be wonderful

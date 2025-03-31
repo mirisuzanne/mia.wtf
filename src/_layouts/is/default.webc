@@ -19,6 +19,11 @@ layout: page
   ></title-group>
 </header>
 
+<series-callout
+  webc:if="this.series"
+  :@series="this.series"
+></series-callout>
+
 <section
   webc:if="getContent(this.content)"
   id="content"

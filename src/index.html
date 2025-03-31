@@ -37,8 +37,6 @@ summary:
     Cascading Styles.
     `**`Ned Ludd was right`**`.
     Join a union.`
-eleventyImport:
-  collections: [is:post, is:channel, is:org]
 ---
 
 <roll-data
@@ -48,19 +46,16 @@ eleventyImport:
 
 <!-- intro -->
 
-<section>
-  <h2>Articles &c.</h2>
-  <post-list
-    :@collection="$data.collections.all"
-    :@only-show="['featured', 'recent']"
-  ></post-list>
+<post-list
+  :@collection="$data.collections.all"
+  :@only-show="['featured', 'recent']"
+></post-list>
 
-  <h2>Co-conspirators</h2>
-  <org-list
-    @time="current"
-    @founder="true"
-  ></org-list>
-</section>
+<org-list
+  :@collection="$data.collections.all"
+  @time="current"
+  @founder="true"
+></org-list>
 
 <artifact-list
   :@collection="$data.collections.all"
