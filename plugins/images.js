@@ -29,9 +29,7 @@ export default function(eleventyConfig, options = {}) {
     const baseUrl = process.env.URL || 'https://miriamsuzanne.com';
     const encoded = encodeURIComponent(`${baseUrl}${src}`);
 
-    return await imgSrc(`${api}${encoded}/opengraph/`, {
-      widths: [1200],
-    });
+    return `${api}${encoded}/opengraph/`;
   }
 
   eleventyConfig.addAsyncFilter('imgSrc', imgSrc);

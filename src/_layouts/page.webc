@@ -18,7 +18,7 @@ layout: base
       href="/"
       rel="home"
       :aria-current="this.page.url === '/' ? 'page' : false"
-    >mia</a>
+    >m</a>
   </span>
   <dialog-toggle hidden="until-js">
     <button
@@ -59,11 +59,13 @@ layout: base
     gap: 1ch;
     justify-content: space-between;
 
-    [rel=home] { font-style: italic; }
+    [rel=home] {
+      font-style: italic;
+    }
   }
 
   #header {
-    margin-block: 2lh;
+    margin-block: var(--spacer);
   }
 
   #content {
@@ -79,6 +81,7 @@ layout: base
       transparent
     ) 1;
     rotate: -1.5deg;
+    margin-block: 1lh;
   }
 </style>
 

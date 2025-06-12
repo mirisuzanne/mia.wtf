@@ -13,10 +13,14 @@ through music and performance.
 If you appreciate the work I do,
 you can help make it possible:
 
-- [Open Source](https://opencollective.com/oddbird-open-source) – web standards and tools
-- [Front-End.social](https://buymeacoffee.com/terriblemia) – mastodon server
-- [Grapefruit Lab](https://grapefruitlab.com/donate/) – queer, hybrid performance
-- [Teacup Gorilla](https://www.paypal.com/ncp/payment/DSTNNMNVVGVYG) – pre-apocalyptic post-rock
+- [OddBird Open Source](https://opencollective.com/oddbird-open-source) –
+  _web standards and tools_
+- [Front-End.social](https://buymeacoffee.com/terriblemia) – 
+  _mastodon server_
+- [Grapefruit Lab](https://grapefruitlab.com/donate/) –
+  _hybrid performance, in and out of prisons_
+- [Teacup Gorilla](https://www.paypal.com/ncp/payment/DSTNNMNVVGVYG) –
+  _pre-apocalyptic post-rock_
 
 If you or your company
 are interested in sponsoring specific work

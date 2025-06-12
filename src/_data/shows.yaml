@@ -4,6 +4,7 @@
   with: Teacup Gorilla
   tags: [org:teacup-gorilla, org:grapefruit-lab, art:theater]
   date: 2025-01-17
+  end: 2025-02-02
   at: https://grapefruitlab.com/shows/jane-eyre-2025/
 
 - title: Whiskey From Strangers
@@ -13,6 +14,7 @@
   with: Teacup Gorilla
   tags: [org:teacup-gorilla, org:grapefruit-lab, art:theater]
   date: 2024-05-10
+  end: 2024-06-01
   at: https://grapefruitlab.com/shows/whiskey-2024/
 
 - title: Letters of Suresh
@@ -20,6 +22,7 @@
   role: lighting design
   venue: Curious Theatre Company
   date: 2023-11-11
+  end: 2023-12-09
   at: https://www.curioustheatre.org/event/lettersofsuresh/
   tags: [art:theater]
 
@@ -30,6 +33,7 @@
   with: Lars Reid & Teacup Gorilla
   tags: [org:teacup-gorilla, org:grapefruit-lab, art:theater]
   date: 2023-04-07
+  end: 2023-04-15
   at: https://grapefruitlab.com/shows/queer-bird/
 
 - title: Pity+Fear (a travesty)
@@ -38,6 +42,7 @@
   with: Josselyn Cool
   tags: [org:grapefruit-lab, art:theater]
   date: 2022-04-08
+  end: 2022-05-28
   at: https://grapefruitlab.com/shows/pity-fear/
 
 - title: Celebration, Florida
@@ -49,13 +54,14 @@
   tags: [art:theater]
   at: http://www.squareproducttheatre.org/news/2018/12/28/cast-announced-for-celebration-florida
 
-# - title: JANE/EYRE
-#   role: creator/performer
-#   venue: Grapefruit Lab
-#   with: Teacup Gorilla
-#   tags: [org:teacup-gorilla, org:grapefruit-lab, art:theater]
-#   date: 2018-02-23
-#   at: https://grapefruitlab.com/shows/jane-eyre/
+- title: JANE/EYRE
+  role: creator/performer
+  venue: Grapefruit Lab
+  with: Teacup Gorilla
+  tags: [org:teacup-gorilla, org:grapefruit-lab, art:theater]
+  date: 2018-02-23
+  end: 2018-03-03
+  at: https://grapefruitlab.com/shows/jane-eyre/
 
 - title: The In-Between
   by: Julie Rada
@@ -65,18 +71,25 @@
   at: https://grapefruitlab.com/shows/in-between/
   tags: [org:grapefruit-lab, art:theater]
 
+- title: The In-Between
+  by: Julie Rada
+  role: writer/performer
+  venue: Grapefruit Lab
+  date: 2015-09-06
+  at: https://grapefruitlab.com/shows/in-between/
+  tags: [org:grapefruit-lab, art:theater]
+
 - title: 10 Myths on the Proper Application of Beauty Products
   by: co-authored
   role: playwright & musician
   sub: >
     stage adaptation of my novel
-    _Riding SideSaddle*_,
-    weaving fluid genders and identities
-    through myth and everyday ritual
+    [Riding SideSaddle*](/books/sidesaddle/)
   venue: Buntport Theater
   with: Teacup Gorilla
   tags: [org:teacup-gorilla, art:theater]
   date: 2016-03-04
+  end: 2016-03-26
   note: 2016 True West Award
   at: https://buntport.com/2016/03/10-myths-proper-application-beauty-products/
   feature: true
@@ -85,6 +98,7 @@
   by: co-authored
   role: playwright, director, and musician
   date: 2010-03-12
+  end: 2010-03-14
   venue: Grapefruit Lab
   with: Teacup Gorilla
   tags: [org:teacup-gorilla, org:grapefruit-lab, art:theater]
@@ -94,6 +108,7 @@
   role: ensemble
   venue: The LIDA Project
   date: 2010-01-15
+  end: 2010-02-20
   tags: [org:lida, art:theater]
   at: https://lida.org/roller-skating-with-my-cousin/
 
@@ -101,7 +116,8 @@
   by: Julie Rada
   role: lighting design
   venue: Grapefruit Lab
-  date: 2009-09-27
+  date: 2009-08-14
+  end: 2009-09-27
   tags: [org:grapefruit-lab, art:theater]
   at: https://grapefruitlab.com/shows/murder/
 
@@ -110,6 +126,7 @@
   by: Julie Rada
   venue: The LIDA Project
   date: 2009-02-27
+  end: 2009-03-21
   tags: [org:lida, art:theater]
   at: http://lida.org/rain-of-terror/
 
@@ -124,6 +141,7 @@
   by: Bertolt Brecht
   role: technical director
   date: 2008-05-16
+  end: 2008-06-14
   venue: Countdown To Zero
   at: https://countdowntozero.org/arturo-ui/
   tags: [org:countdown, art:theater]
@@ -131,6 +149,7 @@
 - title: My Name is Rachel Corrie
   role: tour manager
   date: 2008-01-24
+  end: 2008-05-03
   venue: Countdown To Zero
   at: https://countdowntozero.org/rachel-corrie/
   tags: [org:countdown, art:theater]
@@ -138,6 +157,7 @@
 - title: Bigger Guns III
   sub: Revenge of the Apocalypse, Again
   date: 2007-04-20
+  end: 2007-04-28
   role: creator/director
   venue: New World Arts
   tags: [org:new-world-arts, art:theater]
@@ -145,6 +165,7 @@
 - title: Hello and Goodbye
   by: Athol Fugard
   date: 2006-11-25
+  end: 2006-12-04
   role: director
   venue: New World Arts
   tags: [org:new-world-arts, art:theater]
@@ -152,12 +173,14 @@
 - title: Fear/Falling
   by: Michelle Milne
   date: 2006-10-20
+  end: 2006-10-29
   role: director
   venue: New World Arts
   tags: [org:new-world-arts, art:theater]
 
 - title: Danny and the Deep Blue Sea
   date: 2006-09-15
+  end: 2006-09-24
   role: director
   venue: New World Arts
   tags: [org:new-world-arts, art:theater]
@@ -171,12 +194,14 @@
 - title: In a Time of War
   sub: What are you willing to die for? What are you willing to forgive?
   date: 2005-04-22
+  end: 2005-05-23
   role: writer
   venue: New World Arts
   tags: [org:new-world-arts, art:theater]
 
 - title: Criminal Hearts
   date: 2004-10-14
+  end: 2004-10-24
   role: director
   venue: New World Arts
   tags: [org:new-world-arts, art:theater]
@@ -185,5 +210,13 @@
   role: stage management intern
   venue: Oregon Shakespeare Festival
   date: 2003-02-06
+  end: 2003-04-26
   tags: [art:theater]
   feature: true
+
+- title: Danny and the Deep Blue Sea
+  date: 2001-02-04
+  end: 2001-03-04
+  role: assistant director & lighting design
+  venue: New World Arts
+  tags: [org:new-world-arts, art:theater]

@@ -1,0 +1,97 @@
+<track-list
+  webc:if="this.album?.tracks"
+  :@album="this.album"
+>
+  <album-header slot="menu">
+    <h-
+      :@level="this.level || 3"
+      :@album="this.album"
+      class="album-title"
+    ><a :href="this.album.at" @text="this.album.title"></a></h->
+    <img
+      webc:if="this.album.hero"
+      webc:is="u-img"
+      :src="this.album.hero.src"
+      :alt="this.album.hero.alt"
+      :attrs="({class: 'album-art'})"
+    >
+    <button track-part="play">
+      <btn-icon class="play-pause">‣</btn-icon>
+      <btn-text visually-hidden>play</btn-text>
+    </button>
+    <album-meta>
+      <em @html="mdI(this.album.with)"></em>,
+      <date-time :@date="this.album.date" @format="year"></date-time>
+      <button track-part="prev" hidden>prev</button>
+      <button track-part="next" hidden>next</button>
+    </album-meta>
+  </album-header>
+
+  <ol slot="tracks">
+    <li webc:for="song of this.album.tracks">
+      <em @text="song.title"></em>
+      <audio
+        webc:if="song.file"
+        controls
+        :src="`/_files/${song.file}`"
+      ></audio>
+    </li>
+  </ol>
+</track-list>
+
+<style>
+album-tracks {
+  display: block;
+  margin-block: 2lh;
+}
+
+album-header {
+  column-gap: var(--gap);
+  display: grid;
+  grid-template:
+    'art title' auto
+    'art meta' auto
+    / auto 1fr
+  ;
+}
+
+.album-title {
+  align-self: end;
+  margin-block: unset;
+}
+
+.album-art,
+[track-part=play] {
+  grid-area: art;
+}
+
+.album-art {
+  aspect-ratio: 1;
+  inline-size: 3lh;
+}
+
+[track-part=play] {
+  background: oklch(from var(--bg) l c h / var(--play-bg-alpha-, 0.25));
+  border-radius: unset;
+  font-size: 1lh;
+  text-align: center;
+  text-shadow:
+    0 0 1em var(--bg),
+    0 0 2px var(--full-bg)
+  ;
+  transition: background-color 300ms;
+  width: 100%;
+
+  &:focus, &:hover {
+    --play-bg-alpha-: 0.75;
+  }
+}
+
+.play-pause {
+  flex: 1;
+}
+
+[slot=tracks] {
+  font-family: var(--ui-font);
+}
+</style>

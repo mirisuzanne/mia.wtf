@@ -1,0 +1,28 @@
+---js
+const layout = 'is/org';
+const stub = true;
+
+const pagination = {
+  data: "orgs",
+  size: 1,
+  alias: 'fromItem',
+  addAllPagesToCollections: true,
+};
+
+const permalink = function (data) {
+  const root = `orgs`;
+  const title = this.slugify(data.fromItem.title);
+  return `/${root}/${title}/index.html`;
+}
+
+const eleventyComputed = {
+  title: (data) => data.fromItem.title,
+  sub: (data) => data.fromItem.sub,
+  role: (data) => data.fromItem.role,
+  date: (data) => data.fromItem.date,
+  end: (data) => data.fromItem.end,
+  tags: (data) => [...(data.fromItem.tags || []), 'is:org'],
+  logo: (data) => data.fromItem.logo,
+  at: (data) => data.fromItem.at,
+};
+---

@@ -5,6 +5,7 @@
   <p
     webc:for="(item, index) of content"
     :hidden="index === 0 ? false : ''"
+    :data-current="index === 0 && !this.random ?  '' : false"
     @raw="mdI(item)"
   ></p>
   <button hidden

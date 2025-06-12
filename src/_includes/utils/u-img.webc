@@ -3,4 +3,5 @@
   :alt="this.alt?.trim()"
   :sizes="$data.image[this.sizes] || this.sizes || $data.image.default"
   :width="this.width"
+  @attributes="attrs"
 >

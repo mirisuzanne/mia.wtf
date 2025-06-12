@@ -1,6 +1,5 @@
 <template
   webc:root
-  webc:if="this.summary"
   id="summary"
   aria-label="page summary"
   :class="$data.micro.summary"
@@ -20,11 +19,15 @@
 <style webc:bucket="layout">
 page-summary {
   --italic: true;
+  display: block;
   font-size: var(--step-2);
   font-style: italic;
   grid-column: wide;
   text-wrap: pretty;
+  margin-block: 1rlh;
 
+  &:empty { display: none; }
   & code { font-style: normal; }
+  > :only-child { margin-block: unset; }
 }
 </style>

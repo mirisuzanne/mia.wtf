@@ -9,12 +9,14 @@ sub:
 Nothing on this site
 was written, designed,
 or illustrated by
-bullshit generators
-unless specifically noted.
+bullshit generators,
+except that one page
+where I make a depressing joke
+about it.
 
 <!-- intro -->
 
-Any time you have to start by
-_setting aside the ethical
-and environmental considerations_ --
-you're heading the wrong direction.
+Machine learning has many use-cases,
+and _creating stuff_
+is about the worst one I could imagine.
+Up there with _information source_.

@@ -5,8 +5,7 @@ subtitle: talks, workshops, podcasts, and videos
 index: web:teaching
 ---
 
-Communicating design through language
-is a _poetic exercise_.
-Understanding the _subtext of CSS_,
-and _the flow of a cascading style_,
-can make all the difference.
+We can't make a web that's world wide
+by saying _'it works on my machine'_.
+To build resilient web sites and applications,
+we need to understand how and why styles _cascade_.

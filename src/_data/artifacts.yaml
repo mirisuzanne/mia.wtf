@@ -15,6 +15,11 @@
     alt: >
       A paper cutout fem face silhouette and album title
       pasted over an illustration from Jane Eyre
+  tracks:
+    - title: Kind Angels Only
+      file: 2-kind-angels.mp3
+    - title: There in the Darkness she Kindled the Bed
+      file: 8-in-the-darkness.mp3
 
 - title: Whiskey From Strangers
   sub: A Denver mythology based on Riding SideSaddle*
@@ -33,6 +38,11 @@
       with mountains in the background -
       the water and sunset are electrical diagrams,
       with red arrows forming sun rays pointed in
+  tracks:
+    - title: The Garden
+      file: w2-the-garden.mp3
+    - title: The Kitchen
+      file: w3-the-kitchen.mp3
 
 - title: The Holes They Leave
   sub: Our debut EP
@@ -50,6 +60,11 @@
       Profile of a neck and face
       created from technical schematics
       white on black album art
+  tracks:
+    - title: Just Like That
+      file: 02-just-like-that.mp3
+    - title: Pig Sez
+      file: 05-pig-sez.mp3
 
 - title: Iron City
   role: bass & mandolin
@@ -83,8 +98,6 @@
       three for sorrow, and so on
 
 # websites
-
-# - page: riding sidesaddle
 
 - title: Men In Brackets
   sub: What men daily do, in brackets
@@ -136,11 +149,10 @@
   sub: A memorial for obsolescence
   area: art
   type: web art
-  tags: [area:art, area:web, as:webart]
+  tags: [area:art, area:web, as:webart, art:theater]
   role: creator
   date: 2012-06-27
   at: https://post-obsolete.com/
-  feature: true
 
 - title: Business-Business Dot Business
   sub: Business corporation wage theft, and so can you!

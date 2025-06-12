@@ -1,5 +1,5 @@
 ---
-title: A Web that goes world wide
+title: A web that's world wide
 sub: Programming in CSS and other languages
 area: web
 index: area:web

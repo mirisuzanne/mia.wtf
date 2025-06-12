@@ -9,4 +9,5 @@ tags:
   - is:channel
   - as:livestream
   - org:oddbird
+  - web:teaching
 ---

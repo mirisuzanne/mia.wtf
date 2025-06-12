@@ -1,0 +1,663 @@
+# 2025
+
+- venue: CSS Day
+  title: CSS Mixins & Functions
+  adr: Amsterdam, Netherlands
+  date: 2025-06-05
+  url: https://cssday.nl/
+
+- venue: Smashing Conference
+  adr: New York
+  date: 2025-10-06
+  url: https://smashingconf.com/ny-2025
+
+- venue: JS Heroes
+  title: Cascading Layers of Importance
+  adr: Cluj, Romania
+  date: 2025-05-29
+  url: https://jsheroes.io/
+
+- venue: Smashing Meets
+  title: Hints and Suggestions
+  adr: online
+  date: 2025-04-01
+  url: https://smashingconf.com/meets-modern-css
+  youtube: th1q0RyvBcc
+
+# 2024
+
+- venue: Web Directions Developer Summit
+  date: 2024-11-27
+  adr: Sydney, Australia
+  url: https://webdirections.org/dev-summit/
+  slides: https://slides.oddbird.net/cq/web-directions/
+  video: https://conffab.com/in_person_session/keynote-morning-day-2/
+  title: CSS Containers, What Do They Know?
+
+- venue: Camosun College
+  url: https://camosun.ca/
+  date: 2024-11-18
+  adr: Victoria, BC
+  slides: https://slides.oddbird.net/hints/camosun/
+  title: Hints and Suggestions
+
+- venue: Beyond Tellerand
+  title: Hints and Suggestions
+  adr: Berlin, DE
+  url: https://beyondtellerrand.com/events/berlin-2024
+  date: 2024-11-07
+  youtube: s2rqYu6jqWY
+  slides: https://slides.oddbird.net/hints/btconf/
+
+- venue: CMD Amsterdam
+  date: 2024-06-05
+  adr: Amsterdam, Netherlands
+  slides: https://slides.oddbird.net/cq/pre-cssday/
+  title: CSS Containers, What Do They Know?
+
+- venue: 11ty International Symposium on Making Websites Real Good
+  title: Hints and Suggestions
+  url: https://conf.11ty.dev
+  adr: online
+  date: 2024-05-09
+  youtube: uaN9kY8lKPU
+  slides: https://slides.oddbird.net/hints/eleventy/
+
+# 2022
+
+- venue: Jamstack Conf
+  adr: San Francisco, CA (hybrid)
+  url: https://jamstack.org/conf/
+  date: 2022-11-07
+  end: 2022-11-08
+  slides: https://slides.oddbird.net/queries-units/jamstack22/
+  youtube: uumZV98zHt8
+  title: Intrinsic CSS with Container Queries & Units
+
+- venue: W3C Developer Meetup
+  adr: Vancouver, Canada
+  url: https://www.w3.org/2022/09/meetup/
+  date: 2022-09-13
+  slides: https://slides.oddbird.net/queries-units/tpac22/
+  youtube: 1VhCXu-gNAc
+  title: Intrinsic CSS with Container Queries & Units
+
+# 2021
+
+- venue: Jamstack Toronto, 11ties
+  title: 11ty Sliiides in 11ty Sliiides
+  date: 2021-11-11
+  adr: online
+  youtube: JKdF8iqEFbg
+  slides: https://slides.oddbird.net/11ties/jam/
+
+- venue: An Event Apart Spring Summit
+  date: 2021-04-19
+  adr: online
+  slides: https://slides.oddbird.net/variables/aea2104/
+  vimeo: 691514550
+  title: Beyond CSS Variables
+
+- venue: Smashing Meets CSSummer
+  url: https://smashingconf.com/meets-css/
+  date: 2021-07-08
+  adr: online
+  slides: https://slides.oddbird.net/css-next/smashing/
+  vimeo: 574685246
+  title: Container Queries & The Future of CSS
+
+- venue: CSS Café
+  url: https://www.meetup.com/CSS-Cafe/events/278822813/
+  date: 2021-06-24
+  adr: online
+  slides: https://slides.oddbird.net/css-next/css-cafe/
+  youtube: ilR9KlsHMGk
+  title: Container Queries & The Future of CSS
+
+- venue: Front Range Front-End
+  date: 2021-06-03
+  adr: online
+  slides: https://slides.oddbird.net/css-next/front-range/
+  youtube: GuMvZuUrJaY
+  title: Container Queries & The Future of CSS
+
+- venue: Front-end Development South Africa
+  url: https://www.meetup.com/fedsa-community/events/276328093/
+  date: 2021-05-05
+  adr: online
+  slides: https://slides.oddbird.net/css-next/fedsa/
+  youtube: lh1_zKk1qAk
+  title: Container Queries & The Future of CSS
+
+- venue: Web Directions, Hover
+  url: https://webdirections.org/hover/
+  date: 2021-04-23
+  end: 2021-04-30
+  adr: online
+  slides: https://slides.oddbird.net/css-next/hover/
+  title: Container Queries & The Future of CSS
+
+# 2020
+
+- venue: An Event Apart Fall Summit
+  date: 2020-10-26
+  adr: online
+  slides: https://slides.oddbird.net/conventions/aea1020/
+  vimeo: 657632307
+  title: Dissecting the ‘Name-Brand’ CSS Conventions
+
+- venue: Front Range Front End
+  url: https://frontrangefrontend.com/
+  date: 2020-08-06
+  adr: online
+  slides: https://slides.oddbird.net/cascade-aligned/front-range20/
+  youtube: -wlokRJRepY
+  title: Cascade Aligned Programming
+
+# 2018 & older
+
+- venue: Boost Biz Ed
+  adr: Westminster, CO
+  date: 2018-07-11
+  title: Planning Your Web Project
+
+- venue: EdTech Colorado
+  adr: Denver, CO
+  date: 2017-12-12
+  title: Planning Your Web Project
+
+- venue: UVA Scholars’ Lab
+  title: A Practical Guide to Losing Control
+  url: https://cal.lib.virginia.edu/event/3088981
+  adr: Charlottesville, VA
+  date: 2017-01-23
+
+- venue: Bmore Sass
+  url: https://twitter.com/bmoresass
+  adr: Baltimore, MD
+  date: 2014-04-24
+  vimeo: https://vimeo.com/93045089
+  title: Your Own Damn Susy System
+
+- venue: The Mixin
+  url: https://themixin.eventbrite.com/
+  adr: San Francisco, CA
+  date: 2014-04-16
+  vimeo: https://vimeo.com/93045089
+  title: Your Own Damn Susy System
+
+- venue: NYCSass Meetup
+  date: 2013-11-19
+  title: Organizing Sass Partials
+  slides: https://mirisuzanne.github.io/pres/sass-partials/
+
+- venue: SmashingConf Austin/NY
+  url: https://smashingconf.com/austin-2020/
+  date: 2020-10-13
+  end: 2020-10-14
+  adr: online
+  slides: https://slides.oddbird.net/variables/smashing1020/
+  title: When Variables Cascade
+
+# CSS Containers, What Do They Know? (2023-2024)
+
+- venue: Front Conference
+  date: 2023-08-31
+  adr: Zurich, Switzerland
+  url: https://frontconference.com/
+  slides: https://slides.oddbird.net/cq/front/
+
+- venue: Smashing Conf
+  date: 2023-09-04
+  adr: Freiburg, Germany
+  url: https://smashingconf.com/freiburg-2023
+  slides: https://slides.oddbird.net/cq/smashingde/
+  youtube: TxtTXDXcRp8
+
+- venue: CSS Day
+  url: https://cssday.nl/2023
+  adr: Amsterdam, Netherlands
+  date: 2023-06-08
+  slides: https://slides.oddbird.net/cq/cssday/
+  youtube: -Fw8GSksUIo
+
+- venue: Smashing Conf
+  url: https://smashingconf.com/sf-2023/
+  adr: San Francisco
+  date: 2023-05-24
+  slides: https://slides.oddbird.net/cq/smashingsf/
+  youtube: IPyBr289pHY
+
+# Cascading Layers of Importance (2022-2025)
+
+- venue: JS Heroes
+  adr: Cluj, Romania
+  url: https://jsheroes.io/
+  date: 2025-05-29
+  title: Cascading Layers of Importance
+
+- venue: An Event Apart
+  adr: San Francisco, CA
+  date: 2022-12-12
+  slides: https://slides.oddbird.net/layers/aea-sf22/
+  title: Cascading Layers of Importance
+
+- venue: An Event Apart
+  adr: Denver, CO
+  date: 2022-10-10
+  slides: https://slides.oddbird.net/layers/aea-denver22/
+  title: Cascading Layers of Importance
+
+# Styling the Intrinsic Web (2021-2023)
+
+- venue: Camosun College
+  title: Styling the Intrinsic Web
+  url: https://camosun.ca/
+  date: 2023-03-14
+  adr: Victoria, BC
+  slides: https://slides.oddbird.net/css-next/camosun/
+
+- venue: SmashingConf SF
+  title: Styling the Intrinsic Web
+  url: https://smashingconf.com/sf-2022/
+  date: 2022-06-21
+  end: 2022-06-22
+  adr: San Francisco, CA
+  slides: https://slides.oddbird.net/css-next/smashingsf/
+  youtube: QL3tFZLgVxU
+
+- venue: An Event Apart Fall Summit
+  title: Styling the Intrinsic Web
+  date: 2021-10-11
+  end: 2021-10-13
+  adr: online
+  slides: https://slides.oddbird.net/css-next/aea/
+  vimeo: https://player.vimeo.com/video/758121060
+
+- venue: TPAC 6-Minute Summary
+  title: Styling the Intrinsic Web
+  url: https://www.w3.org/2021/10/TPAC/group-updates.html#css-wg
+  date: 2021-10-01
+  adr: online
+  slides: https://slides.oddbird.net/csswg/tpac2021/
+  video: https://watch.videodelivery.net/e886b064fc34148ad6bad80fbf1c34b1
+
+# User UnFriendly (2025-2021)
+
+- venue: General Assembly, Ethics in Design
+  title: User Unfriendly
+  url: https://generalassemb.ly/education/ethics-in-design-what-2020-taught-us
+  adr: online
+  date: 2021-01-21
+  slides: https://slides.oddbird.net/unfriendly/ethics2101/
+  video: https://bit.ly/GAEthicsAccess
+
+- venue: Agnes Scott College
+  title: User Unfriendly
+  url: https://calendar.agnesscott.edu/event/user_unfriendlynotes_toward_a_queer_web
+  adr: Atlanta, GA
+  date: 2019-09-17
+  slides: https://talks.oddbird.net/user-unfriendly/agnesscott19/
+
+- venue: Design 4 Drupal [keynote]
+  title: User Unfriendly
+  url: https://design4drupal.org/
+  adr: Boston, MA
+  date: 2019-06-26
+  slides: https://talks.oddbird.net/user-unfriendly/design4drupal19/
+  youtube: 2MkQBQb43gE
+
+- venue: Open Source Conference
+  title: User Unfriendly
+  adr: Denver, CO
+  date: 2019-06-20
+  slides: https://talks.oddbird.net/user-unfriendly/opensource19/
+
+- venue: Agile Denver
+  title: User Unfriendly
+  url: https://www.meetup.com/Agile-Denver2/events/258957862/
+  adr: Denver, CO
+  date: 2019-03-18
+  slides: https://talks.oddbird.net/user-unfriendly/agiledenver19/
+
+- venue: AIGA Colorado
+  title: User Unfriendly
+  adr: Denver, CO
+  date: 2018-04-26
+  # slides: https://oddbooksapp.com/release/e5bd52de-a9db-4e59-a2af-ffa8a68f9100
+
+- venue: Creative Connections
+  title: User Unfriendly
+  url: https://www.meetup.com/Creative-Connections/events/dcwhhpyxgbjb/
+  adr: Denver, CO
+  date: 2018-04-16
+  # slides: https://oddbooksapp.com/release/650ad542-a9c9-4036-8f91-af34ae449d3c
+
+- venue: Metro State Mobile Prototyping
+  title: User Unfriendly
+  adr: Denver, CO
+  date: 2018-04-05
+
+- venue: SassConf 2015
+  title: User Unfriendly
+  url: https://twitter.com/sassconf
+  adr: Austin, TX
+  date: 2015-11-11
+  # slides: https://oddbooksapp.com/book/user-unfriendly
+
+# CSS is Rad (2019-2020)
+
+- venue: Design 4 Drupal Webinar Series
+  url: https://design4drupal.org/webinar-series
+  date: 2020-09-09
+  adr: online
+  slides: https://slides.oddbird.net/rad/design4drupal/
+  youtube: JTzYGWYjQdg
+  title: CSS is Rad
+
+- venue: SmashingConf Live
+  url: https://smashingconf.com/live/
+  date: 2020-08-20
+  adr: online
+  slides: https://slides.oddbird.net/rad/smashing20/
+  youtube: oV5ddsmqvk0
+  title: CSS is Rad
+
+- venue: Shopify UX Summer Series
+  url: /work/shopify/
+  date: 2020-08-15
+  adr: online
+  slides: https://slides.oddbird.net/rad/shopify/
+  title: CSS is Rad
+
+- venue: Front Range Front End
+  date: 2019-11-07
+  adr: Denver, CO
+  slides: https://slides.oddbird.net/css-is-rad/
+  youtube: bSITeqDKkb8
+  title: CSS is Rad
+
+- venue: Smashing Conf NY
+  url: https://smashingconf.com/ny-2019/
+  date: 2019-10-15
+  adr: New York, NY
+  slides: https://slides.oddbird.net/css-is-rad/
+  vimeo: https://player.vimeo.com/video/367890815
+  title: CSS is Rad
+
+# Dynamic CSS (2018-2020)
+
+- venue: Shift Remote
+  url: https://shift.infobip.com/europe/remote-2020/
+  date: 2020-08-06
+  adr: online
+  youtube: aMBRl35GUrg
+  slides: https://slides.oddbird.net/dynamic-css/shiftremote20/
+  title: Dynamic CSS
+
+- venue: Develop Denver
+  url: https://www.developdenver.org/
+  date: 2019-08-15
+  end: 2019-08-16
+  adr: Denver, CO
+  slides: https://talks.oddbird.net/dynamic-css/dvlpdnvr19/
+  youtube: JnvkjhwcMcM
+  title: Dynamic CSS
+
+- venue: Generate New York
+  adr: San Francisco, CA
+  date: 2019-04-24
+  end: 2019-04-25
+  slides: https://talks.oddbird.net/dynamic-css/generate19/
+  youtube: oXEsYwtTT6I
+  title: Dynamic CSS
+
+- venue: Smashing Conf
+  url: https://smashingconf.com/sf-2019/
+  adr: San Francisco, CA
+  date: 2019-04-16
+  end: 2019-04-17
+  slides: https://talks.oddbird.net/dynamic-css/smashingsf19/
+  vimeo: 331571593
+  title: Dynamic CSS
+
+- venue: VueConf US
+  url: https://vueconf.us/
+  adr: Tampa, FL
+  date: 2019-03-26
+  end: 2019-03-27
+  slides: https://talks.oddbird.net/dynamic-css/vueconf19/
+  title: Dynamic CSS
+
+- venue: Front Range Front-End
+  adr: Denver, CO
+  date: 2018-11-01
+  slides: https://talks.oddbird.net/dynamic-css/frontrange18/
+  title: Dynamic CSS
+
+- venue: Full Stack Fest
+  adr: Barcelona, Spain
+  date: 2018-09-06
+  slides: https://talks.oddbird.net/dynamic-css/fullstack18/
+  youtube: 9fTUeLsR2Hc
+  title: Dynamic CSS
+
+- venue: JSConf US
+  adr: Carlsbad, CA
+  date: 2018-08-21
+  slides: https://talks.oddbird.net/dynamic-css/jsconfus18/
+  youtube: uwgBz748t-g
+
+- venue: CSSConf Argentina
+  url: https://cssconfar.com/
+  adr: Buenos Aires, Argentina
+  date: 2018-08-18
+  slides: https://talks.oddbird.net/dynamic-css/cssconfar18/
+  title: Dynamic CSS
+
+# Agile Design Systems (2018-2019)
+
+- venue: Agile Alliance
+  url: https://agile2019.sched.com/event/OD2f
+  adr: Washington, DC
+  date: 2019-08-06
+  slides: https://talks.oddbird.net/agile-systems/agile19/
+  title: Agile Design Systems
+
+- venue: Agile Denver
+  url: https://www.meetup.com/Agile-Denver2/events/251897187/
+  adr: Denver, CO
+  slides: https://talks.oddbird.net/agile-systems/agiledenver18/
+  date: 2018-10-22
+  title: Agile Design Systems
+
+- venue: Front-End Front Range
+  adr: Denver, CO
+  date: 2018-04-05
+  # slides: https://oddbooksapp.com/book/agile-design-vue
+  title: Agile Design Systems
+
+- venue: VueConf US
+  url: https://vueconf.us/
+  adr: New Orleans, LA
+  # slides: https://oddbooksapp.com/release/9edb34c9-8789-4201-9f14-64bf5ab11b0a
+  date: 2018-03-26
+  vimeo: 264296381
+  title: Agile Design Systems
+
+- venue: Tech Confluence
+  url: https://www.meetup.com/TechConfluence/events/nxcfhlyxfbcc/
+  adr: Denver, CO
+  # slides: https://oddbooksapp.com/book/design-systems-10m
+  date: 2018-03-21
+  title: Agile Design Systems
+
+# Don't Use My Grid System (2017-2019)
+
+- venue: Boulder Python
+  title: Don't Use My Grid System
+  url: https://www.meetup.com/BoulderPython/events/256868153/
+  adr: Boulder, CO
+  date: 2019-02-12
+  slides: https://talks.oddbird.net/no-grid-system/covalence19/
+
+- venue: Covalence Conf
+  title: Don't Use My Grid System
+  adr: San Francisco, CA
+  date: 2019-01-16
+
+- venue: Beyond Tellerand
+  title: Don't Use My Grid System
+  url: https://beyondtellerrand.com/events/dusseldorf-2018
+  adr: Düsseldorf, Germany
+  date: 2018-05-07
+  # slides: https://oddbooksapp.com/release/ce37ef91-8bd8-43e2-932a-66931b4b25ce
+  youtube: iODambgMZhk
+
+- venue: Clarity
+  title: Don't Use My Grid System
+  url: https://www.clarityconf.com/event/2017
+  adr: San Francisco, CA
+  date: 2017-11-28
+  # slides: https://oddbooksapp.com/release/ae641b90-8efa-4b1e-8da8-16940edf420d
+  youtube: DZrDSdTekI4
+
+- venue: CSS Dev Conf
+  title: Don't Use My Grid System
+  adr: New Orleans, LA
+  date: 2017-10-09
+  # slides: https://oddbooksapp.com/release/0434d9c1-4e89-4827-abfc-4d3942fa305d
+
+- venue: DjangoCon US
+  title: Don't Use My Grid System
+  url: https://2017.djangocon.us/
+  adr: Spokane, WA
+  date: 2017-08-14
+  # slides: https://oddbooksapp.com/book/djangocon-layout
+  youtube: mDRfFEcj3-Q
+
+- venue: Women Who Code Fort Collins
+  url: https://www.meetup.com/Women-Who-Code-Fort-Collins/events/242033627/
+  adr: Fort Collins, CO
+  date: 2017-08-30
+  # slides: https://oddbooksapp.com/book/wwc-layout
+  title: Practical Layouts, Past & Future
+
+- venue: Develop Denver
+  url: https://www.developdenver.org/
+  adr: Denver, CO
+  date: 2017-08-10
+  # slides: https://oddbooksapp.com/release/76673f1e-63dc-4271-b326-76047288a10d
+  title: Practical Layouts, Past & Future
+
+- venue: Refresh Denver
+  url: https://www.meetup.com/refreshdenver/events/239219853/
+  adr: Denver, CO
+  date: 2017-06-14
+  # slides: https://oddbooksapp.com/release/543aea12-2264-4794-867d-d01fbf3a79c9
+  title: Practical Layouts, Past & Future
+
+# Code Patterns for Pattern-Making (2016-2017)
+
+- venue: Refresh Denver
+  url: https://www.meetup.com/refreshdenver/events/241230495/
+  adr: Denver, CO
+  date: 2017-09-13
+  title: Code Patterns for Pattern Making
+  # slides: https://oddbooksapp.com/release/7564d481-b132-4636-be3b-0907452955c7
+- venue: Front Range Front End
+  adr: Denver, CO
+  date: 2017-06-01
+  title: Code Patterns for Pattern Making
+  # slides: https://oddbooksapp.com/release/06f61771-0205-4cbc-a478-050ac52cfe92
+- venue: Gotham Sass
+  adr: New York, NY
+  date: 2017-01-12
+  title: Code Patterns for Pattern Making
+  # slides: https://oddbooksapp.com/release/e063d143-df07-4392-a6f3-3ae53e7fa2ca
+- venue: CSSDay.io
+  adr: Chandler, AZ
+  date: 2016-12-03
+  title: Code Patterns for Pattern Making
+  # slides: https://oddbooksapp.com/release/1f08a0cb-198f-4c5f-ac85-93e55daa471d
+  youtube: lK_akjzOUY0
+- venue: CascadiaFest
+  url: https://2016.cascadiajs.com/
+  date: 2016-08-03
+  title: Code Patterns for Pattern Making
+  # slides: https://oddbooksapp.com/release/3964dd55-982a-4171-a46b-6dd0354eac27
+  youtube: cVZreFHgLFw
+- venue: CSS Summit
+  date: 2016-07-26
+  title: Code Patterns for Pattern Making
+  # slides: https://oddbooksapp.com/release/1f76aa54-df02-4f83-8a7b-c54e1c745fbf
+- venue: DublinCSS
+  url: https://www.meetup.com/DublinCSS/events/230011902/
+  date: 2016-05-19
+  title: Code Patterns for Pattern Making
+  # slides: https://oddbooksapp.com/book/sass-patterns
+- venue: Clarity
+  url: https://www.clarityconf.com/
+  adr: San Francisco, CA
+  date: 2016-03-31
+  title: Code Patterns for Pattern Making
+  # slides: https://oddbooksapp.com/release/ab1987b6-7d5f-42e4-b0ff-e7312cb345f6
+  youtube: yM6wfkbZkAY
+
+# Sass Map Magic (2014-2016)
+
+- venue: CSSConf 2016
+  adr: Boston, MA
+  date: 2016-09-26
+  # slides: https://oddbooksapp.com/release/b71e6e5d-e956-42ff-a4dd-b70bf3b13a2a
+  youtube: MdwtoFt2LOI
+  title: Sass Map Magic
+
+- venue: CSS Summit
+  adr: online
+  date: 2015-07-07
+  title: Sass Map Magic
+
+- venue: Future Insights Live
+  adr: Las Vegas, NV
+  date: 2015-06-02
+  title: Sass Map Magic
+
+- venue: SassConf 2014
+  adr: New York, NY
+  date: 2014-10-02
+  title: Sass Map Magic
+
+- venue: BlendConf
+  adr: Charlotte, NC
+  date: 2014-09-12
+  vimeo: 115826194
+  title: Sass Map Magic
+
+# Show Your Work & Share Your Toys (2013-2015)
+
+- venue: Frontend Zurich
+  url: https://frontconference.com/
+  adr: Zurich, Switzerland
+  date: 2015-08-28
+  youtube: 9w0pgUTYy5k
+  title: Show Your Work & Share Your Toys
+
+- venue: WordCamp Denver
+  url: https://denver.wordcamp.org/2015/
+  adr: Denver, CO
+  date: 2015-06-13
+  title: Show Your Work & Share Your Toys
+
+- title: Show Your Work & Share Your Toys
+  venue: Camp Sass
+  adr: San Francisco, CA
+  date: 2014-04-19
+  slides: https://mirisuzanne.github.io/pres/show-yr-work/
+
+- title: Show Your Work & Share Your Toys
+  venue: SassConf 2013
+  adr: New York, NY
+  date: 2013-10-12
+  slides: https://mirisuzanne.github.io/pres/show-yr-work/
+  vimeo: 86306775

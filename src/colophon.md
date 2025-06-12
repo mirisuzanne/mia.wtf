@@ -170,6 +170,11 @@ in case you want to use them:
   because that's what I found.
   Sorry for the mixed metaphor.
 
+[Track-List](https://github.com/mirisuzanne/track-list)
+~ Takes a list of audio files,
+  and provides list
+  play/pause and previous/next controls.
+
 ## Tools
 
 I also used some tools from other people

@@ -100,6 +100,7 @@ nav {
   box-shadow: 1px 1px 0 SelectedItem;
 }
 
+[visually-hidden]:not(:focus-within):not(:active),
 visually-hidden:not(:focus-within):not(:active) {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);

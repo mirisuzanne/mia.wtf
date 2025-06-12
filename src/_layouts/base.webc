@@ -59,7 +59,7 @@
   body {
     background: repeating-linear-gradient(
       -45deg,
-      yellow 0 0.5em,
+      var(--construction, yellow) 0 0.5em,
       black 0.5em 1em
     ) top left / 100% var(--gap) no-repeat;
   }

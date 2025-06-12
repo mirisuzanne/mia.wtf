@@ -1,0 +1,77 @@
+# 2025
+
+- venue: Smashing Workshop
+  title: Modern CSS Architecture
+  date: 2025-10-09
+  adr: New York
+  url: https://smashingconf.com/ny-2025
+
+- venue: OddBird Workshop
+  title: Cascading Layouts
+  date: 2025-04-28
+  end: 2025-04-30
+  adr: online
+  url: https://www.oddbird.net/workshops/cascading-layouts/
+
+# 2024
+
+- venue: Web Directions Workshops
+  title: Cascading Style Systems
+  date: 2024-11-29
+  adr: Sydney, Australia
+  url: https://webdirections.org/dev-summit/speakers/workshop-suzanne.php
+
+- venue: Smashing Workshops
+  title: Cascading Style Systems
+  date: 2024-10-14
+  end: 2024-10-28
+  adr: online
+  url: https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne/
+
+- title: Cascading Styles & Layouts
+  start: 2024-10-07
+  end: 2024-10-10
+  venue: Company Workshop
+  adr: online
+
+- title: CSS Architecture
+  start: 2024-08-19
+  end: 2024-08-22
+  venue: Company Workshop
+  adr: online
+
+- venue: Smashing Workshops
+  title: Cascading Style Systems
+  date: 2024-02-26
+  end: 2024-03-12
+  adr: online
+  url: https://smashingconf.com/online-workshops/workshops/modern-css-miriam-suzanne/
+
+# 2023
+
+- venue: Smashing Workshops
+  title: Cascading Style Systems
+  date: 2023-09-06
+  adr: Freiburg, Germany
+  url: https://smashingconf.com/freiburg-2023/workshops/miriam-suzanne/
+
+# 2020
+
+- venue: Smashing Workshops
+  date: 2020-05-07
+  end: 2020-05-22
+  adr: online
+  title: Resilient Web Systems
+
+# 2019
+
+- venue: Generate New York
+  adr: San Francisco, CA
+  date: 2019-04-24
+  title: Advanced CSS Workshop
+
+- venue: Smashing Conf
+  url: https://smashingconf.com/sf-2019/
+  adr: San Francisco, CA
+  date: 2019-04-18
+  title: Advanced CSS Workshop

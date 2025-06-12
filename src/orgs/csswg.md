@@ -21,7 +21,7 @@ you can re-design any website!
 
 <!-- intro -->
 
-As an editor on several CSS specification modules:
+I'm an editor on several CSS specifications:
 
 - [Cascading & Inheritance](https://www.w3.org/TR/css-cascade/),
   levels 5+

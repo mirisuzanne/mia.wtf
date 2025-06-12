@@ -10,6 +10,7 @@ tags:
   - area:web
   - as:agency
   - role:founder
+  - web:teaching
 ---
 
 I co-founded OddBird with my brothers --

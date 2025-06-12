@@ -3,6 +3,7 @@ layout: page
 ---
 
 <page-summary
+  webc:if="getSummary(this.content)"
   :@summary="getSummary(this.content)"
 ></page-summary>
 

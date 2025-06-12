@@ -12,7 +12,7 @@
       });
 
     return only && only.includes('top')
-      ? pages.slice(0,6)
+      ? pages.slice(0,8)
       : pages;
   };
 </script>

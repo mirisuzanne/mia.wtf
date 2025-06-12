@@ -27,6 +27,7 @@ export default async function (eleventyConfig) {
       'src/_includes/**/*.svg',
       'npm:@terriblemia/ground-control/*.webc',
       'npm:@terriblemia/eight-ball/*.webc',
+      'npm:@terriblemia/track-list/*.webc',
       'npm:@11ty/eleventy-img/*.webc',
     ],
   });
@@ -46,6 +47,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     './src/_fonts': 'fonts',
     './src/_css': 'css',
+    './src/_files': '_files',
     './src/_images/_site': 'img/_site',
     './src/_favicons/*.*': './',
   });

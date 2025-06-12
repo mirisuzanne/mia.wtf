@@ -1,0 +1,70 @@
+
+- title: <Slide-Deck>
+  sub: Web component for presenting
+  url: https://github.com/oddbird/slide-deck/
+  date: 2023-12-22
+  tags: [custom element, open-source]
+
+- title: <Monkey-Write>
+  url: https://github.com/mirisuzanne/monkey-write
+  tags: [custom element, open-source]
+
+- title: <Ground-Control>
+  url: https://github.com/mirisuzanne/ground-control
+  tags: [custom element, open-source]
+
+- title: <Eight-Ball>
+  url: https://github.com/mirisuzanne/eight-ball
+  tags: [custom element, open-source]
+
+- title: <Track-List>
+  url: https://github.com/mirisuzanne/track-list
+  tags: [custom element, open-source]
+
+# oddbird
+
+- title: OddContrast
+  sub: Color contrast checker with Oklch, Oklab, P3, and more
+  date: 2022-12-31
+  url: https://contrast.oddbird.net/
+
+# sass
+
+- title: Sass
+  sub: CSS with superpowers
+  date: 2016-05-20
+  url: https://sass-lang.com/
+  tags: [sass, open-source]
+
+- title: Accoutrement
+  sub: Sass design token tooling
+  url: https://oddbird.net/accoutrement/
+  date: 2014-10-30
+  tags: [sass, design systems, open-source]
+
+- title: Herman
+  sub: Sass design system documentation
+  url: https://oddbird.net/herman/
+  date: 2015-11-18
+  tags: [sass, design systems, open-source]
+
+- title: 'True'
+  sub: Sass unit testing
+  url: https://oddbird.net/true/
+  date: 2013-06-06
+  tags: [sass, open-source]
+
+- title: Susy
+  sub: Build your own layout system
+  url: https://oddbird.net/susy/
+  date: 2009-07-13
+  end: 2020-07-13
+  tags: [sass, open-source]
+
+# other
+
+- title: CSS Remedy
+  sub: Addressing the technical debt of CSS
+  url: https://github.com/jensimmons/cssremedy/
+  date: 2019-07-11
+  tags: [css, open-source]

@@ -30,6 +30,7 @@
 
 <style webc:bucket="objects">
 artifact-item {
+  max-inline-size: 14em;
   position: relative;
 
   & h3 {
@@ -39,6 +40,7 @@ artifact-item {
 
   & img {
     aspect-ratio: 1;
+    inline-size: 100%;
     object-fit: cover;
   }
 }

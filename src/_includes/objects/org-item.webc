@@ -3,10 +3,31 @@
   class="h-card p-org"
 >
   <a
+    webc:if="!this.org.data.stub"
     :href="this.org.url"
+    class="p-name"
+    @text="pageName(this.org)"
+  ></a>
+  <a
+    webc:elseif="this.org.data.at"
+    :href="this.org.data.at"
     class="p-name u-url"
     @text="pageName(this.org)"
   ></a>
+  <em
+    webc:else
+    class="p-name"
+    @text="pageName(this.org)"
+  ></em>
+  <template
+    webc:nokeep
+    webc:if="this.org.data.end !== 'ongoing'"
+  >
+    [<date-range
+      :@date="this.org.data.date"
+      :@end="this.org.data.end"
+    ></date-range>]
+  </template>
   <p-note
     class="p-note"
     @html="mdI(`-- ${this.org.data.sub}`)"

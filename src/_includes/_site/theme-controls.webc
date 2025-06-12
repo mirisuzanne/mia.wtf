@@ -50,7 +50,7 @@
   >
     <label for="measure">Line Length</label>
     <input-reset-group>
-      <input id="measure" type="range" min="14" value="32" max="60" step="0.5">
+      <input id="measure" type="range" min="14" value="30" max="60" step="0.5">
       <button data-btn="emoji" data-reset="measure">
         <reset-left-line></reset-left-line>
         <visually-hidden>reset</visually-hidden>
@@ -219,19 +219,13 @@
   }
 
   @container style(--gap) {
-    theme-controls * { transition: rotate 350ms ease-out; }
+    main * { transition: rotate 350ms ease-out; }
     [table-flip] { --css-reveal: block; }
   }
 
   @container style(--（╯°□°）╯: ︵┻━┻) {
-    theme-controls *:nth-child(1n - 3) { rotate: 0.9turn; }
-    theme-controls *:nth-child(3n + 1) { rotate: -0.7turn; }
-    theme-controls *:nth-child(5n + 7) { rotate: 0.5turn; }
-
-    theme-controls [data-reset],
-    theme-controls [data-reset] * {
-      rotate: 0deg;
-      z-index: 10;
-    }
+    main *:nth-child(1n - 3) { rotate: 0.37turn; }
+    main *:nth-child(3n + 1) { rotate: -0.71turn; }
+    main *:nth-child(5n + 7) { rotate: -0.19turn; }
   }
 </style>

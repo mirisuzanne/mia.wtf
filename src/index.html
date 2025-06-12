@@ -2,20 +2,18 @@
 # layout: is/freeform
 title: Miriam Eric Suzanne
 sub:
-  - is a.k.a. [Mia](https://front-end.social/@mia/)
+  - is a.k.a. Mia
   - has three first names, but only one comes first
   - wants to sell you something ([anything](/tip/))
 description: Art & code & other digital artifacts of my life.
 summary:
   - >
     **I'm [Miriam](/about/)**,
-    a hybrid artist --
-    often creating [music](/music/)
+    a hybrid artist
+    in Denver, CO --
+    often making [music](/music/)
     & [theater](/theater/)
-    & [websites](/web/),
-    or [teaching](/web/teaching/)
-    and [developing new features](/orgs/csswg/)
-    for the <abbr>CSS</abbr> language.
+    & [web stuff](/web/).
     These days, I'm also into
     _yarn_ and _pottery_
     and _mechanical clocks_.
@@ -28,8 +26,9 @@ summary:
   - >
     I was told that
     _every home page should be selling something_.
-    But I don't want
-    to be [a business](https://business-business.business/).
+    But
+    [all this capitalism](https://business-business.business/)
+    just makes me feel tired.
   - >
     `» Hello. `**`I am a Miriam`**`(Bot).
     Beep boop boop beep.
@@ -46,6 +45,18 @@ summary:
 
 <!-- intro -->
 
+<article data-feature="workshop">
+  <header>
+    <p>OddBird Workshop | online</p>
+    <h2>Cascading Layouts</h2>
+    <date-time @date="2025-04-28" @format="MMMM d"></date-time> &ndash;
+    <date-time @date="2025-04-30" @format="d, yyyy"></date-time>
+  </header>
+  <a href="https://www.oddbird.net/workshops/cascading-layouts/">
+    Build better layouts with CSS
+  </a>
+</article>
+
 <post-list
   :@collection="$data.collections.all"
   :@only-show="['featured', 'recent']"
@@ -59,7 +70,7 @@ summary:
 
 <artifact-list
   :@collection="$data.collections.all"
-  :@only-show="['featured', 'recent', 'top']"
+  :@only-show="['featured', 'top']"
 ><h2>Featured Artifacts</h2></artifact-list>
 
 <section>
