@@ -2,8 +2,6 @@
 title: An Interview with Miriam Suzanne
 at: https://css-tricks.com/interview-miriam-suzanne/
 date: 2016-10-15
-hero:
-  svg: css-tricks.svg
 tags:
   - interview
 ---

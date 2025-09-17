@@ -5,8 +5,6 @@ date: 2017-06-05
 tags:
   - writing
   - layout
-hero:
-  svg: css-tricks.svg
 ---
 
 Viewport units have been around for several years now,

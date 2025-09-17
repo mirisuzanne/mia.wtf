@@ -10,7 +10,6 @@ hero:
 tags:
   - container queries
   - org:oddbird
-  - elsewhere
   - css
   - org:csswg
 callout:

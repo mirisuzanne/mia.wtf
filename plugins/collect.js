@@ -12,14 +12,21 @@ const tagLink = (tag, collections) => {
 export default (eleventyConfig) => {
   eleventyConfig.addAsyncFilter('tagLink', tagLink);
 
-  eleventyConfig.addCollection('area', (collection) =>
-    collection
+  eleventyConfig.addCollection('area', (collectionsAPI) =>
+    collectionsAPI
       .getAll()
       .filter((item) => item.data.area),
   );
 
-  eleventyConfig.addCollection('index', (collection) =>
-    collection
+  eleventyConfig.addCollection('_public-posts', (collectionsAPI) =>
+    collectionsAPI
+      .getFilteredByTag('is:post')
+      .filter((item) => !item.data.private)
+      .sort((a, b) => a.date - b.date),
+  );
+
+  eleventyConfig.addCollection('index', (collectionsAPI) =>
+    collectionsAPI
       .getAll()
       .filter((item) => item.data.index),
   );

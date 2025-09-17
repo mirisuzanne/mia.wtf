@@ -3,8 +3,6 @@ type: video
 title: Getting Started with CSS Grid
 at: https://css-tricks.com/video-screencasts/153-getting-started-with-css-grid/
 date: 2017-02-20
-hero:
-  svg: css-tricks.svg
 tags:
   - interview
   - video

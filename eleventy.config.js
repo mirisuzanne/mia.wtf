@@ -3,9 +3,10 @@ import 'dotenv/config';
 // External Plugins
 import { EleventyRenderPlugin } from '@11ty/eleventy';
 import pluginWebc from '@11ty/eleventy-plugin-webc';
-import pluginRss from '@11ty/eleventy-plugin-rss';
+import pluginRss from "@11ty/eleventy-plugin-rss";
 import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
 import { exec } from 'child_process';
+import { RenderPlugin } from "@11ty/eleventy";
 
 // Internal Plugins
 import collect from './plugins/collect.js';
@@ -19,8 +20,9 @@ export default async function (eleventyConfig) {
   eleventyConfig.setServerOptions({ port: 8010 });
 
   eleventyConfig.addPlugin(EleventyRenderPlugin);
-  eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(RenderPlugin);
   eleventyConfig.addPlugin(pluginWebc, {
     components: [
       'src/_includes/**/*.webc',
@@ -59,10 +61,19 @@ export default async function (eleventyConfig) {
       formats: ['avif', 'jpeg'],
       widths: [640, 960, 1600],
 
-      defaultAttributes: {
-        loading: 'lazy',
-        decoding: 'async',
-      },
+      htmlOptions: {
+        imgAttributes: {
+          alt : "", // required
+          loading: "lazy",
+          decoding: "async",
+        },
+
+        // HTML attributes added to `<picture>` (omitted when <img> used)
+        pictureAttributes: {},
+
+        // Which source to use for `<img width height src>` attributes
+        fallback: "largest", // or "smallest"
+      }
     }
   });
 

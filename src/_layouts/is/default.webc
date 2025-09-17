@@ -18,6 +18,13 @@ layout: page
     :@at="this.at"
     :@is-post="this.tags?.includes('is:post')"
   ></title-group>
+
+  <img
+    webc:is="u-img"
+    webc:if="this.hero?.src"
+    :src="`${this.hero.src}`"
+    :alt="`${this.hero.alt}`"
+  >
 </header>
 
 <series-callout

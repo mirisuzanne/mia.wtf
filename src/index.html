@@ -4,18 +4,19 @@ title: Miriam Eric Suzanne
 sub:
   - is a.k.a. Mia
   - has three first names, but only one comes first
-  - wants to sell you something ([anything](/tip/))
+  - wants to sell you something ([anything](https://art.miriamsuzanne.com/))
 description: Art & code & other digital artifacts of my life.
 summary:
   - >
     **I'm [Miriam](/about/)**,
-    a hybrid artist
+    a [hybrid artist](/art/)
     in Denver, CO --
     often making [music](/music/)
     & [theater](/theater/)
     & [web stuff](/web/).
     These days, I'm also into
-    _yarn_ and _pottery_
+    [pottery](/pottery/)
+    and _yarn_
     and _mechanical clocks_.
   - >
     _People are queer_.
@@ -30,12 +31,42 @@ summary:
     [all this capitalism](https://business-business.business/)
     just makes me feel tired.
   - >
-    `» Hello. `**`I am a Miriam`**`(Bot).
+    `» Hello. `**`I am Miriam`**`Bot.
     Beep boop boop beep.
     Clock Escapement.
     Cascading Styles.
     `**`Ned Ludd was right`**`.
     Join a union.`
+merch:
+  - img: art/pottery/bowls-bw.jpg
+    at: https://art.miriamsuzanne.com/
+    alt: >
+      Two stacks of large black-clay ramen bowls
+      with a deep foot
+      and grooved texture around the bare clay base,
+      then a frosty white glaze at the rim and inside --
+      and notches cut out for chopsticks.
+  - img: art/pottery/ice-jar.jpg
+    at: https://art.miriamsuzanne.com/product/lidded-jar-winter-woods
+    alt: >
+      A small jar with a slightly wide base
+      and angular walls sloping in slightly
+  - img: writing/sidesaddle/box.jpg
+    at: https://art.miriamsuzanne.com/product/riding-sidesaddle
+    alt: >
+      A small box containing my novel
+      Riding SideSaddle,
+      the art is a collage face and neck
+      made from technical drawings
+      and wiring diagrams,
+      with the lips colored a deep red.
+  - img: writing/sidesaddle/moths.jpg
+    at: https://art.miriamsuzanne.com/product/sunset-burns-print
+    alt: |
+      Sketch of two moths
+      in a collage of bones and electrical diagrams
+      with red arrows
+      and text that says "sunset burns, the corner of a movement, now gone"
 ---
 
 <roll-data
@@ -45,17 +76,17 @@ summary:
 
 <!-- intro -->
 
-<article data-feature="workshop">
-  <header>
-    <p>OddBird Workshop | online</p>
-    <h2>Cascading Layouts</h2>
-    <date-time @date="2025-04-28" @format="MMMM d"></date-time> &ndash;
-    <date-time @date="2025-04-30" @format="d, yyyy"></date-time>
-  </header>
-  <a href="https://www.oddbird.net/workshops/cascading-layouts/">
-    Build better layouts with CSS
-  </a>
-</article>
+<figure>
+  <figcaption>
+    Get pottery,
+    art prints,
+    and more in
+    <a href="https://art.miriamsuzanne.com/">my new shop</a>
+  </figcaption>
+  <media-gallery
+    :@from-data="merch"
+  ></media-gallery>
+</figure>
 
 <post-list
   :@collection="$data.collections.all"
