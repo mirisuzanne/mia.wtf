@@ -1,6 +1,6 @@
 <script webc:setup>
-  const range = [...Array(11).keys()];
-  const channels = (format, n) => {
+  export const range = [...Array(11).keys()];
+  export const channels = (format, n) => {
     const arr = format.split('');
     return n ? arr[n] : arr;
   }

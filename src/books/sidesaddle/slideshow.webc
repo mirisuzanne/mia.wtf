@@ -1,0 +1,63 @@
+---
+layout: raw
+title: Sidesaddle slideshow
+eleventyExcludeFromCollections: true
+
+gallery:
+  - svg: <neck-art></neck-art>
+  - svg: <reeds-art></neck-art>
+  - svg: <house-art></neck-art>
+  - svg: <divers-art></neck-art>
+  - svg: <dancers-art></neck-art>
+  - svg: <boxer-art></neck-art>
+  - svg: <denver-art></neck-art>
+---
+
+<style>
+  html {
+    scroll-snap-type: y mandatory;
+  }
+
+  svg {
+    &, & * {
+      animation-play-state: var(--play-state, paused) !important;
+    }
+  }
+
+  figure {
+    scroll-snap-align: start;
+    &:hover { --play-state: running; }
+  }
+
+  @layer reset {
+    * { box-sizing: border-box; }
+    html {
+      block-size: 100%;
+      interpolate-size: allow-keywords;
+    }
+    body {
+      margin: 0;
+      min-block-size: 100%;
+      display: grid;
+      grid-auto-rows: 100svh;
+    }
+
+    figure { margin: unset; }
+    picture { display: contents; }
+    img { display: block; }
+    img, svg {
+      block-size: auto;
+      max-inline-size: 100%;
+    }
+
+    input, button, textarea, select {
+      font: inherit;
+    }
+  }
+</style>
+
+<figure webc:for="art of gallery">
+  <template
+    webc:nokeep
+    @html="art.svg">
+</figure>

@@ -1,41 +1,18 @@
-<script webc:setup>
-  const postsFrom = (data, only) => {
-    if (data?.length === 0) return {};
-    const pages = withTag(data, 'is:post')
-      .sort((a, b) => b.date - a.date)
-      .filter((item, i) => {
-        if (item.data.private) return false;
-        if (!only) return true;
-        if (only.includes('featured') && item.data.feature) return true;
-        if (only.includes('recent') && i < 6) return true;
-      });
-
-    return only && only.includes('top')
-      ? pages.slice(0,6)
-      : pages;
-  };
-</script>
-
 <section
-  webc:if="postsFrom(this.collection, this.onlyShow)?.length > 0"
+  webc:root="override"
+  webc:if="this.pages?.length > 0"
 >
-  <slot>
-    <h-
-      webc:nokeep
-      :@level="this.h || 2"
-      @html="this.heading || 'Articles &c.'"
-    ></h->
-  </slot>
+  <slot><h2>Articles &c.</h2></slot>
 
   <ul>
     <li
       webc:is="post-item"
-      webc:for="post of postsFrom(this.collection, this.onlyShow)"
+      webc:for="post of this.pages"
       :@post="post"
     ></li>
   </ul>
 
-  <p webc:if="this.onlyShow">
+  <p webc:if="this.more">
     (<a href="/tags/is:post/">
       more posts »
     </a>)

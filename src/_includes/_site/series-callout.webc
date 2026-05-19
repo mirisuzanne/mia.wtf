@@ -1,5 +1,5 @@
 <script webc:setup>
-  const getSeriesPosts = (series) =>
+  export const getSeriesPosts = (series) =>
     withTag($data.collections['is:post'], series)
     .filter((item) => !item.data.private);
 </script>
@@ -16,3 +16,10 @@
     ></li>
   </ul>
 </details>
+
+<style>
+  series-callout {
+    display: block;
+    margin-block-end: 1lh;
+  }
+</style>

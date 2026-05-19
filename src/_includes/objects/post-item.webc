@@ -1,11 +1,11 @@
 <script webc:setup>
-  const showVenue = (post) =>
+  export const showVenue = (post) =>
     ['bookmark', 'repost'].includes(post.data.rel)
     && post.data.at
     && post.data.venue;
 
-  const isSelf = (tags) => tags && tagType(tags, 'rel').includes('me');
-  const thisPost = (post, page) => (post.url === page.url)
+  export const isSelf = (tags) => tags && tagType(tags, 'rel').includes('me');
+  export const thisPost = (post, page) => (post.url === page.url)
     ? {'aria-current': 'page'}
     : {};
 </script>

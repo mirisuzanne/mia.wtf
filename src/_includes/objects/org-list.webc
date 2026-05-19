@@ -1,49 +1,11 @@
-<script webc:setup>
-  const getOrgs = (data, time, founder) => {
-    const all = withTag(data, 'is:org');
-    let collect = founder
-      ? all.filter((page) => {
-        isFounder = hasTag(page, 'role:founder')
-        return founder === 'no'
-          ? !isFounder
-          : isFounder;
-      })
-      : all;
-
-    if (time === 'current') {
-      collect = collect.filter((page) => page.data.end === 'ongoing');
-    } else if (time === 'past') {
-      return collect.filter(
-        (page) => page.data.end && page.data.end !== 'ongoing'
-      ).sort((a, b) => b.data.end - a.data.end);
-    }
-
-
-    return collect.sort((a, b) => {
-      if (a.data.end !== b.data.end) {
-        if (a.data.end === 'ongoing') return -1;
-        if (b.data.end === 'ongoing') return 1;
-      }
-
-      return a.data.date - b.data.date;
-    });
-  }
-</script>
-
 <section
-  webc:if="getOrgs(this.collection, this.time, this.founder).length > 0"
+  webc:if="this.pages?.length > 0"
 >
-  <slot>
-    <h-
-      webc:nokeep
-      :@level="this.h || 2"
-      @text="this.heading || 'Co-conspirators…'"
-    ></h->
-  </slot>
+  <slot><h2>Co-conspirators…</h2></slot>
 
   <ul>
     <org-item
-      webc:for="org of getOrgs(this.collection, this.time, this.founder)"
+      webc:for="org of this.pages"
       :@org="org"
     ></org-item>
   </ul>

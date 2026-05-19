@@ -1,21 +1,42 @@
 html {
+  --minor-second: calc(16/15);
+  --major-second: calc(9/8);
+  --minor-third: calc(6/5);
+  --major-third: calc(5/4);
+  --perfect-fourth: calc(4/3);
+  --augmented-fourth: sqrt(2);
+  --perfect-fifth: calc(3/2);
+  --major-sixth: calc(5/3);
+
+  --font-scale-ratio: var(
+    --user-scale-ratio,
+    var(--theme-scale-ratio, var(--minor-third))
+  );
+  --fluid-raw: var(--user-fluid, 0.3);
+  --font-fluid: calc(var(--fluid-raw) * 1vi);
+  --font-fluid-base-factor: calc(var(--fluid-raw) * 3px);
+  --scale-medium: calc(1rem - var(--font-fluid-base-factor));
+  --font-fluid-ratio: 1.5;
+
   --gap: clamp(8px, 1em, 3vi);
   --shim: calc(var(--gap) / 2);
   --spacer: 3lh;
 
   @supports (gap: round(1px, 1em)) {
+    --gap: round(up, 2cqi, 0.25lh);
     --spacer: min(round(down, 2lh + 1vi, 0.5lh), 5lh);
   }
 
   --bg: Canvas;
   --text: CanvasText;
-  --accent: LinkText;
-  --accent-text: var(--bg);
+  --accent: AccentColor;
+  --accent-text: AccentColorText;
   --feature: ActiveText;
   --border: gray;
   --shadow: black;
   --full-bg: var(--bg);
-  --mark: Highlight;
+  --mark: AccentColor;
+  --mark-text: AccentColorText;
 
   /* from https://modernfontstacks.com/ */
   --fonts-serif--: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
@@ -32,24 +53,54 @@ html {
   color: var(--text);
   color-scheme: var(--color-scheme, light dark);
   font-family: var(--body-font);
-  font-size: var(--font-size, max(1em, var(--theme-base-size, 16px)));
+  font-size: var(
+    --font-size,
+    clamp(1em, var(--theme-base-size, 16px), 1.25em)
+  );
+  font-size-adjust: from-font;
   font-variant-numeric: oldstyle-nums;
   line-height: 1.5;
   text-shadow: 1px 1px 0 var(--full-bg);
 }
 
 body {
-  /* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1240,20,1.25,3,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-  --step--1: clamp(0.8333rem, 0.7754rem + 0.2899vw, 1rem);
-  --step-0: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
-  --step-1: clamp(1.2rem, 1.0739rem + 0.6304vw, 1.5625rem);
-  --step-2: clamp(1.44rem, 1.2615rem + 0.8924vw, 1.9531rem);
-  --step-3: clamp(1.728rem, 1.4799rem + 1.2407vw, 2.4414rem);
+  --scale-small: calc(
+    var(--scale-medium) * pow(var(--font-scale-ratio), -0.125)
+  );
+  --scale-large: calc(
+    var(--scale-medium) * pow(var(--font-scale-ratio), 1)
+  );
+  --scale-x-large: calc(
+    var(--scale-medium) * pow(var(--font-scale-ratio), 2)
+  );
+  --scale-xx-large: calc(
+    var(--scale-medium) * pow(var(--font-scale-ratio), 3)
+  );
+
+  --fluid-small: calc(
+    var(--font-fluid) * pow(var(--font-fluid-ratio), -0.125)
+  );
+  --fluid-medium: var(--font-fluid);
+  --fluid-large: calc(
+    var(--font-fluid) * pow(var(--font-fluid-ratio), 1)
+  );
+  --fluid-x-large: calc(
+    var(--font-fluid) * pow(var(--font-fluid-ratio), 2)
+  );
+  --fluid-xx-large: calc(
+    var(--font-fluid) * pow(var(--font-fluid-ratio), 3)
+  );
+
+	--small: calc(var(--scale-small) + var(--fluid-small));
+  --medium: calc(var(--scale-medium) + var(--fluid-medium));
+  --large: calc(var(--scale-large) + var(--fluid-large));
+  --x-large: calc(var(--scale-x-large) + var(--fluid-x-large));
+  --xx-large: calc(var(--scale-xx-large) + var(--fluid-xx-large));
 
   --line-length: calc(var(--measure, 30) * 1em);
   --wide-column: minmax(0, clamp(0px, var(--wide-slope, 10vi) - 60px, var(--wide-max, 4em)));
 
-  font-size: var(--step-0);
+  font-size: var(--medium);
   margin: unset;
   padding: var(--gap, 12px);
   display: grid;
@@ -62,23 +113,6 @@ body {
   ;
 
   > * { grid-column: content; }
-}
-
-[data-scale=off] {
-  --step--1: 0.8333rem;
-  --step-0: 1rem;
-  --step-1: 1.2rem;
-  --step-2: 1.44rem;
-  --step-3: 1.728rem;
-}
-
-[data-scale=extra] {
-  /* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1240,24,1.25,3,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-  --step--1: clamp(0.8333rem, 0.7058rem + 0.6377vw, 1.2rem);
-  --step-0: clamp(1rem, 0.8261rem + 0.8696vw, 1.5rem);
-  --step-1: clamp(1.2rem, 0.9652rem + 1.1739vw, 1.875rem);
-  --step-2: clamp(1.44rem, 1.1257rem + 1.5717vw, 2.3438rem);
-  --step-3: clamp(1.728rem, 1.31rem + 2.0899vw, 2.9297rem);
 }
 
 [data-align=left] {

@@ -1,0 +1,29 @@
+<org-list
+  webc:if="!($data.tags || []).includes('is:org')"
+  :@collection="getList($data.collections['is:org'], {
+    tags: this.listOf
+  })"
+></org-list>
+
+<artifact-list
+  :@pages="getList($data.collections['is:artifact'], {
+    tags: this.listOf
+  })"
+></artifact-list>
+
+<post-list
+  :@pages="getList($data.collections['is:post'], {
+    tags: this.listOf
+  })"
+></post-list>
+
+<channel-list
+  :@pages="getList($data.collections['is:channel'], {
+    tags: this.listOf
+  })"
+></channel-list>
+
+<!-- <show-list
+  :@collection="$data.collections.all"
+  :@only-show="['featured', 'recent']"
+></show-list> -->

@@ -9,9 +9,10 @@ sub:
 Nothing on this site
 was written, designed,
 or illustrated by
-bullshit generators,
+language machines,
 except that one page
-where I make a depressing joke
+where I include generative art
+to make a depressing joke
 about it.
 
 <!-- intro -->

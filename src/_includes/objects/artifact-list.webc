@@ -1,43 +1,18 @@
-<script webc:setup>
-  // returns featured AND recent
-  const artifactsFrom = (data, only) => {
-    if (data?.length === 0) return {};
-    const pages = withTag(data, 'is:artifact')
-      .sort((a, b) => b.data.date - a.data.date)
-      .filter((item, i) => {
-        if (item.data.private) return false;
-        if (!only) return true;
-        if (only.includes('featured') && item.data.feature) return true;
-        if (only.includes('recent') && i < 6) return true;
-      });
-
-    return only && only.includes('top')
-      ? pages.slice(0,8)
-      : pages;
-  };
-</script>
-
 <section
   webc:root="override"
-  artifact-list
-  webc:if="artifactsFrom(this.collection, this.onlyShow).length > 0"
+  :artifact-list="this.pages?.length > 2 ? 'wide' : 'narrow'"
+  webc:if="this.pages?.length > 0"
 >
-  <slot>
-    <h-
-      webc:nokeep
-      :@level="this.h || 2"
-      @html="this.heading || 'Artifacts…'"
-    ></h->
-  </slot>
+  <slot><h2>Artifacts…</h2></slot>
 
-  <media-gallery :@list="artifactsFrom(this.collection, this.onlyShow)">
+  <media-gallery :@list="this.pages">
     <artifact-item
       webc:for="item of list"
       :@item="item"
     ></artifact-item>
   </media-gallery>
 
-  <p webc:if="this.onlyShow">
+  <p webc:if="this.more">
     (<a href="/artifacts/">
       all artifacts »
     </a>)
@@ -46,6 +21,11 @@
 
 <style webc:bucket="objects">
 [artifact-list] {
-  --gallery-gap: 1lh var(--shim);
+  --gallery-gap: var(--gap);
+  --gallery-fit: 25ch;
+}
+
+[artifact-list=wide] {
+  grid-column: full;
 }
 </style>

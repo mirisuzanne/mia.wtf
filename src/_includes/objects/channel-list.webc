@@ -1,0 +1,10 @@
+<section
+  webc:root="override"
+  webc:if="this.pages?.length > 0"
+>
+  <slot><h2>Other channels…</h2></slot>
+
+  <project-list
+    :@projects="this.pages"
+  ></project-list>
+</section>

@@ -1,7 +1,18 @@
 ---
+templateEngineOverride: webc
+feature: true
 title: Pottery
 sub: Touching grass is good, shaping mud is even better
 index: art:pottery
+type: art
+hero:
+  src: art/pottery/bowls-bw.jpg
+  alt: >
+    Two stacks of large black-clay ramen bowls
+    with a deep foot
+    and grooved texture around the bare clay base,
+    then a frosty white glaze at the rim and inside --
+    and notches cut out for chopsticks.
 pots:
   - img: art/pottery/bowls-bw.jpg
     at: https://art.miriamsuzanne.com/
@@ -18,22 +29,25 @@ pots:
       and angular walls sloping in slightly
 ---
 
-What could be more fun
-than making beautiful and functional artwork --
-playing in the intersection
-of form and utility?
-There is no boundary between art and craft.
-It is all _just fine_.
+I love making art that people interact with
+as part of their daily routine.
+There is no boundary between art and craft,
+both are _fine_.
 
 <!-- intro -->
 
+Sometimes pieces are available
+<a href="https://art.miriamsuzanne.com/">in my shop</a>,
+or you can
+<a href="/contact/">reach out</a>
+any time
+if you see something you like.
+
 <figure>
-  <figcaption>
-    A few of my pieces…
-    Find more in
-    <a href="https://art.miriamsuzanne.com/">my art shop</a>!
-  </figcaption>
   <media-gallery
     :@from-data="pots"
   ></media-gallery>
+  <figcaption>
+    A few of my favorites.
+  </figcaption>
 </figure>

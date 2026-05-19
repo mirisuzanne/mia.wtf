@@ -1,5 +1,5 @@
 email:
-  name: hello@miriam.codes
+  name: miriam@miriamSuzanne.com
 mastodon:
   name: >
     @mia@front-end.social
@@ -8,9 +8,9 @@ bluesky:
   name: >
     @miriam.codes
   at: https://bsky.app/profile/miriam.codes
-github:
-  name: MiriSuzanne
-  at: https://github.com/MiriSuzanne
-codepen:
-  name: MiriamSuzanne
-  at: https://codepen.io/MiriamSuzanne
+# github:
+#   name: MiriSuzanne
+#   at: https://github.com/MiriSuzanne
+# codepen:
+#   name: MiriamSuzanne
+#   at: https://codepen.io/MiriamSuzanne

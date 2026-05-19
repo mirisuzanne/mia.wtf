@@ -1,4 +1,5 @@
 ---
+templateEngineOverride: webc
 title: The gray areas of HWB color
 banner: The gray areas of `hwb` color
 sub: White and black channels are clamped, and then scaled

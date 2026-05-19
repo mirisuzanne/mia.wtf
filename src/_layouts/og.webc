@@ -7,15 +7,15 @@ hero:
 ---
 
 <script webc:setup>
-  const pageHero = (source) => source.data.og?.src
-    || source.data.hero?.src
-    || this.hero.src;
+  export const pageHero = (srcDoc) => srcDoc.data.og?.src
+    || srcDoc.data.hero?.src
+    || $data.hero.src;
 
-  const subTitle = (source) => {
-    if (source.data.sub) {
-      return typeof source.data.sub === 'string'
-        ? source.data.sub
-        : source.data.sub[0]
+  export const subTitle = (srcDoc) => {
+    if (srcDoc.data.sub) {
+      return typeof srcDoc.data.sub === 'string'
+        ? srcDoc.data.sub
+        : srcDoc.data.sub[0]
     }
     return null;
   }
@@ -23,20 +23,20 @@ hero:
 
 <img
   webc:is="u-img"
-  :src="pageHero(source)"
+  :src="pageHero(srcDoc)"
   alt=""
   sizes="auto"
 >
 
 <header>
-  <h1><inline-bg @html="mdI(source.data.title)"></inline-bg></h1>
-  <h2 webc:if="subTitle(source)">
-    <inline-bg @html="mdI(subTitle(source))"></inline-bg>
+  <h1><inline-bg @html="mdI(srcDoc.data.title)"></inline-bg></h1>
+  <h2 webc:if="subTitle(srcDoc)">
+    <inline-bg @html="mdI(subTitle(srcDoc))"></inline-bg>
   </h2>
 </header>
 
 <footer>
-  <inline-bg><a :href="source.url">MiriamSuzanne.com</a></inline-bg>
+  <inline-bg><a :href="srcDoc.url">MiriamSuzanne.com</a></inline-bg>
 </footer>
 
 <style>

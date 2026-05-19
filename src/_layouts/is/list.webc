@@ -23,10 +23,17 @@ layout: page
 <section
   webc:if="getContent(this.content)"
   id="content"
-  @html="getContent(this.content)"
+  @raw="getContent(this.content)"
 ></section>
 
-<list-all
-  webc:if="(listOf || index) && !(autoList === 'hide')"
-  :@collection="$data.collections[listOf || index]"
-></list-all>
+<template
+  webc:nokeep
+  webc:if="!this.hideAutoList">
+
+  <list-from
+    webc:if="this.listOf"
+    :@list-of="this.listOf"
+  ></list-from>
+
+  <list-all webc:else></list-all>
+</template>

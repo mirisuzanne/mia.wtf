@@ -1,4 +1,5 @@
 ---
+templateEngineOverride: webc
 title: A web component for CodePen embeds?
 sub: It's not essential, but it took me down a path…
 date: 2024-09-09

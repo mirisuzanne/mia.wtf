@@ -1,4 +1,5 @@
 ---
+templateEngineOverride: webc
 title: Speaking of pride
 sub: Minimalist music with fragments of memoir
 date: 2018-06-09

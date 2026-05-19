@@ -4,7 +4,21 @@
     @text="pageName(this.project)"
   ></a>
 
-  &ndash; <p-note
+  <div
+    webc:nokeep
+    webc:if="!onGoing(this.project)"
+  >
+    [<date-range
+      :@date="this.project.data.date"
+      :@end="this.project.data.end"
+    ></date-range>]
+  </div>
+  <span webc:nokeep webc:else>
+    &ndash;
+  </span>
+
+
+  <p-note
     @html="mdI(this.project.data.sub)"
   ></p-note>
 </li>

@@ -1,5 +1,5 @@
 <script webc:setup>
-  const rangeFormat = (start, end, get) => {
+  export const rangeFormat = (start, end, get) => {
     const startYear = start.getFullYear();
 
     if (end === 'ongoing') {

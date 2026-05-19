@@ -1,0 +1,30 @@
+---
+layout: is/org
+placeholder: true
+tags: is:org
+pagination:
+  data: orgs
+  size: 1
+  alias: src
+  addAllPagesToCollections: true
+permalink: /orgs/{{ src.title | slugify }}/index.html
+---
+
+<p>
+  {{ src.role }},
+  {{ src.date | dateFormat: 'year' }}
+  {% if src.end %}
+    – {{ src.end | dateFormat: 'year' }}
+  {% endif %}
+</p>
+
+<!-- intro -->
+
+{% if src.at %}
+  <p>
+    Find out more
+    <a href="{{ src.at }}">on their website</a>.
+  </p>
+{% else %}
+  <p>This page is a placeholder.</p>
+{% endif %}

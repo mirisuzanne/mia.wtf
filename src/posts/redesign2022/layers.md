@@ -1,4 +1,5 @@
 ---
+templateEngineOverride: webc
 title: A whole cascade of layers
 sub: the path to SBRDFLT
 date: 2022-09-06
@@ -21,6 +22,12 @@ What's that all about?
 <!-- intro -->
 
 TL;DR _I don't know yet._
+
+_NOTE: This post refers
+to an exposed layer-toggling feature
+that no longer exists on my site.
+But the thought process is still relevant
+to writing CSS with cascade layers._
 
 Some day I hope to write a longer post
 about my overall approach to CSS.

@@ -1,4 +1,5 @@
 ---
+templateEngineOverride: webc
 title: Custom element, two ways
 date: 2024-01-24
 tags:

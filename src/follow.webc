@@ -18,8 +18,8 @@ sub: Wherever it goes
   <link-text>rss</link-text>
 </a>
 
-<h2>Other Channels</h2>
-<project-list
-  :@projects="$data.collections['is:channel']"
-  @time="current"
-></project-list>
+<channel-list
+  :@pages="getList($data.collections['is:channel'], {
+    current: true,
+  })"
+></channel-list>

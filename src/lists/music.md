@@ -1,4 +1,5 @@
 ---
+templateEngineOverride: webc
 title: Music
 sub: I like getting quiet and then loud
 index: art:music
@@ -14,8 +15,8 @@ or tell stories over rolling soundscapes.
 <!-- intro -->
 
 <template webc:nokeep webc:for="name of albums">
-  <album-tracks
+  <album-embed
     :@album="this.artifacts.find((item) => item.title.includes(name))"
     :@level="2"
-  ></album-tracks>
+  ></album-embed>
 </template>

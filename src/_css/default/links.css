@@ -17,19 +17,21 @@ a {
   &:active {
     ---link-line-color: var(--feature);
     ---link-line-style: wavy;
-    ---go-go-go: -3px;
+    ---go-go-go: 3px -3px;
   }
 
   &:is([href*='://'], [href^=mailto]):not(:has(img)) {
     &::after {
-      content: '↑';
-      content: '↑' / '';
+      content: '↗';
+      content: '↗' / '';
       display: inline-block;
-      font-family: var(--fonts-sans, var(--fonts-sans--));
+      font-family: var(--ui-font, var(--fonts-sans--));
+      font-size: smaller;
       font-style: normal;
+      padding-inline: 0.2ch;
       margin-inline-start: 0.1ch;
-      transform: rotate(0.1turn) translateY(var(---go-go-go, 0));
-      transition: transform 150ms ease-out;
+      translate: var(---go-go-go, 0);
+      transition: translate 150ms ease-out;
     }
   }
 

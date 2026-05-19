@@ -1,4 +1,5 @@
 ---
+templateEngineOverride: webc
 title: Hybrid art
 subtitle: pottery & music & theater & writing & etc
 area: art

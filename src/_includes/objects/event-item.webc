@@ -1,0 +1,27 @@
+<a
+  webc:if="this.at || this.show.data['bookmark-of']"
+  :href="this.at || this.show.data['bookmark-of']"
+  @text="this.title || this.show.data.title"
+></a>
+<em
+  webc:else
+  @text="this.title || this.show.data.title"
+></em>
+—
+<date-range
+  webc:if="this.end || this.show.data.end"
+  :@date="this.date || this.show.data.date"
+  :@end="this.end || this.show.data.end"
+></date-range>
+<date-time
+  webc:else
+  :@date="this.date || this.show.data.date"
+  :@format="isFuture(this.date || this.show.data.date)
+    ? 'default'
+    : 'year'"
+></date-time>
+@
+<span
+  webc:nokeep
+  @text="this.show.data.venue"
+></span>

@@ -1,22 +1,25 @@
-<template
-  webc:nokeep
-  webc:if="this.collection?.length > 0"
->
-  <org-list
-    webc:if="!($data.tags || []).includes('is:org')"
-    :@collection="this.collection"
-  ></org-list>
+<post-list
+  :@pages="getList($data.collections['is:post'], {latest: 8})"
+  :@more="true"
+></post-list>
 
-  <artifact-list
-    :@collection="this.collection"
-  ></artifact-list>
+<artifact-list
+  :@pages="getList($data.collections['is:artifact'], {
+    feature: true,
+    limit: 8
+  })"
+  :@more="true"
+><h2>Featured Artifacts…</h2></artifact-list>
 
-  <post-list
-    :@collection="this.collection"
-  ></post-list>
+<org-list
+  :@pages="getList($data.collections['is:org'], {
+    tags: ['role:founder'],
+    current: true,
+  })"
+></org-list>
 
-  <show-list
-    :@collection="this.collection"
-    @only-show="['featured', 'recent']"
-  ></show-list>
-</template>
+<channel-list
+  :@pages="getList($data.collections['is:channel'], {
+    current: true,
+  })"
+></channel-list>

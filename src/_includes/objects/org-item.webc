@@ -3,7 +3,7 @@
   class="h-card p-org"
 >
   <a
-    webc:if="!this.org.data.stub"
+    webc:if="!this.org.data.placeholder"
     :href="this.org.url"
     class="p-name"
     @text="pageName(this.org)"

@@ -1,0 +1,38 @@
+---
+layout: is/stub
+tags: is:artifact
+pagination:
+  data: artifacts
+  size: 1
+  alias: src
+  addAllPagesToCollections: true
+permalink: /{{ src.area }}/{{ src.title | slugify }}/index.html
+---
+
+<p>
+  {{ src.date | dateFormat: 'year' }} –
+  {{ src.type }}
+  {% if src.with %}
+    with
+    <a href="{{ src.at }}">{{ src.with }}</a>
+  {% endif %}
+</p>
+
+<!-- intro -->
+
+{% if src.hero %}
+  <img
+    src="{{ src.hero.src | imgDir }}"
+    alt="{{ src.hero.alt }}"
+    sizes="{{ image.default }}"
+  >
+{% endif %}
+
+{% if src.type == 'album' %}
+  {% assign data = src | wrapData: 'album' %}
+  {% renderTemplate "webc", data %}
+    <album-tracks
+      :@album="album"
+    ></album-tracks>
+  {% endrenderTemplate %}
+{% endif %}

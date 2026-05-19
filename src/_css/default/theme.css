@@ -15,16 +15,25 @@ html {
   --theme-texture: var(--bg-gradient);
   --bg-texture: var(--theme-texture);
 
-  --body-font: serif;
-  --ui-font: sans-serif;
+  --body-font: var(--user-body-font, var(--theme-body-font, serif));
+  --ui-font: var(--theme-ui-font, sans-serif);
   --code-font: monospace;
 
   --hr: '<!-- horizontal rule -->';
+
+  @container style(--italic) {
+    em {
+      background: var(--em-background, var(--mark, transparent));
+      color: var(--em-color, var(--mark-text, currentColor));
+      text-shadow: 1px 1px 0 var(--em-shadow, var(--bg));
+    }
+  }
 
   filter:
     brightness(var(--filter-brightness))
     contrast(var(--filter-contrast))
     hue-rotate(calc(var(--filter-hue, 0) * 1deg))
+    grayscale(var(--filter-grayscale))
     sepia(var(--filter-sepia))
     blur(calc(var(--filter-blur, 0) * 1px))
   ;
@@ -36,11 +45,11 @@ html {
 
 [data-theme=mia] {
   --theme-base-size: 20px;
-  --body-font: var(--fonts-serif, var(--fonts-serif--));
-  --h1-font: var(--fonts-serif, var(--fonts-serif--));
+  --theme-body-font: var(--fonts-serif, var(--fonts-serif--));
+  --h1-font: var(--body-font);
   --title-font: var(--fonts-sans, var(--fonts-sans--));
-  --code-font: var(--fonts-code, var(--fonts-code--));
   --ui-font: var(--fonts-sans, var(--fonts-sans--));
+  --code-font: var(--fonts-code, var(--fonts-code--));
   --theme-texture:
     var(--bg-gradient),
     url('/img/_site/paint.jpg') no-repeat fixed
@@ -53,12 +62,21 @@ html {
   ---link-line-color: var(--accent);
   --border: cadetBlue;
 
+  --em-background: linear-gradient(
+      100deg,
+      transparent calc(0.5ch - 1px),
+      var(--mark, var(--bg)) 0.5ch calc(100% - 0.2ch),
+      transparent calc(100% - 0.2ch + 1px)
+    ) bottom / 100% 1cap no-repeat;
+
   @supports (fill: light-dark(red, red)) {
     --bg: light-dark(oklch(98% 0.01 220), oklch(18% 0.01 220));
     --text: light-dark(#111, azure);
     --accent: light-dark(mediumVioletRed, hotPink);
+    --accent-text: var(--bg);
     --feature: light-dark(teal, cyan);
     --mark: light-dark(powderBlue, oklch(from teal calc(l - 0.3) c h));
+    --mark-text: var(--text);
   }
 
   h3 { font-weight: normal; }
@@ -78,10 +96,12 @@ html {
 
 [data-theme=terminal] {
   --construction: lime;
-  --body-font: var(--fonts-code, var(--fonts-code--));
+  --theme-body-font: var(--fonts-code, var(--fonts-code--));
   --title-font: var(--fonts-code, var(--fonts-code--));
   --code-font: var(--fonts-code, var(--fonts-code--));
   --ui-font: var(--fonts-code, var(--fonts-code--));
+
+  --theme-scale-ratio: 1;
 
   --hr: '>>>>>>>>> _';
   --list-marker: '> ';
@@ -109,10 +129,12 @@ html {
       color-mix(in oklch, darkGreen, oklch(0 0 none) 65%)
     );
     --accent: light-dark(forestGreen, lime);
+    --accent-text: var(--bg);
     --text: light-dark(darkGreen, limeGreen);
     --feature: var(--accent);
     --border: var(--text);
     --mark: var(--bg);
+    --mark-text: var(--text);
 
     --em-background: var(--text);
     --em-color: var(--bg);
@@ -120,7 +142,6 @@ html {
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-size: inherit;
     font-weight: bold;
   }
 
@@ -132,7 +153,7 @@ html {
 [data-theme=copier] {
   --construction: white;
   --theme-base-size: 20px;
-  --body-font: var(--fonts-sans, var(--fonts-sans--));
+  --theme-body-font: var(--fonts-sans, var(--fonts-sans--));
   --title-font: var(--fonts-sans, var(--fonts-sans--));
   --code-font: var(--fonts-code, var(--fonts-code--));
   --ui-font: var(--fonts-sans, var(--fonts-sans--));
@@ -154,6 +175,7 @@ html {
 
     --bg: light-dark(#eee, #111);
     --accent: var(--text);
+    --accent-text: var(--bg);
     --text: light-dark(black, white);
     --feature: var(--accent);
     --border: var(--text);

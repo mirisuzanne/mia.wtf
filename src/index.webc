@@ -1,8 +1,8 @@
 ---
-# layout: is/freeform
+layout: is/list
 title: Miriam Eric Suzanne
 sub:
-  - is a.k.a. Mia
+  - is a.k.a. (Terrible) Mia
   - has three first names, but only one comes first
   - wants to sell you something ([anything](https://art.miriamsuzanne.com/))
 description: Art & code & other digital artifacts of my life.
@@ -29,7 +29,7 @@ summary:
     _every home page should be selling something_.
     But
     [all this capitalism](https://business-business.business/)
-    just makes me feel tired.
+    just bums me out.
   - >
     `» Hello. `**`I am Miriam`**`Bot.
     Beep boop boop beep.
@@ -76,37 +76,12 @@ merch:
 
 <!-- intro -->
 
-<figure>
-  <figcaption>
-    Get pottery,
-    art prints,
-    and more in
-    <a href="https://art.miriamsuzanne.com/">my new shop</a>
-  </figcaption>
-  <media-gallery
-    :@from-data="merch"
-  ></media-gallery>
-</figure>
-
-<post-list
-  :@collection="$data.collections.all"
-  :@only-show="['featured', 'recent']"
-></post-list>
-
-<org-list
-  :@collection="$data.collections.all"
-  @time="current"
-  @founder="true"
-></org-list>
-
-<artifact-list
-  :@collection="$data.collections.all"
-  :@only-show="['featured', 'top']"
-><h2>Featured Artifacts</h2></artifact-list>
-
-<section>
-  <h2>Other channels</h2>
-  <project-list
-    :@projects="$data.collections['is:channel']"
-  ></project-list>
-</section>
+<template webc:type="11ty" 11ty:type="md">
+  This new design sat in a folder untouched
+  for the last year,
+  blocked by an obscure technical issue.
+  The design isn't done,
+  and pages are still missing or broken --
+  but the under-construction stripes
+  free me from all responsibility.
+</template>

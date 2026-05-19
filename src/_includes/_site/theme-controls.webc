@@ -17,7 +17,6 @@
     id="site-vibes"
     data-attr="data-theme"
     data-local="css-theme"
-    data-off="mia"
   >
     <button>browser</button>
     <button aria-pressed="true">mia</button>
@@ -27,7 +26,23 @@
 </control-set>
 
 <control-set>
-  <control-label>Base Font Size</control-label>
+  <control-label>Fonts & Sizes</control-label>
+  <toggle-control
+    id="font-style"
+    data-attr="data-font"
+    data-local="css-font-style"
+  >
+    <button
+      data-value="initial"
+      aria-pressed="true"
+    >theme</button>
+    <button>default</button>
+    <button>serif</button>
+    <button>sans</button>
+    <button>slab</button>
+    <button>code</button>
+  </toggle-control>
+
   <toggle-control
     id="font-size"
     data-prop="--font-size"
@@ -36,27 +51,13 @@
     <button
       data-value="initial"
       aria-pressed="true"
-    >auto</button>
+    >theme</button>
     <button>small</button>
     <button>medium</button>
     <button>large</button>
     <button>x-large</button>
     <button>xx-large</button>
   </toggle-control>
-
-  <input-control
-    data-prop="--measure"
-    data-local="css-measure"
-  >
-    <label for="measure">Line Length</label>
-    <input-reset-group>
-      <input id="measure" type="range" min="14" value="30" max="60" step="0.5">
-      <button data-btn="emoji" data-reset="measure">
-        <reset-left-line></reset-left-line>
-        <visually-hidden>reset</visually-hidden>
-      </button>
-    </input-reset-group>
-  </input-control>
 </control-set>
 
 <control-set>
@@ -73,92 +74,158 @@
 </control-set>
 
 <control-set>
-  <control-label>Filters</control-label>
 
-  <input-control
-    data-prop="--filter-brightness"
-    data-local="css-filter-brightness"
-  >
-    <label for="filter-brightness">Brightness</label>
-    <input-reset-group>
-      <input id="filter-brightness" type="range" min="0.2" value="1" max="2" step="0.1">
-      <button data-btn="emoji" data-reset="filter-brightness">
-        <reset-left-line></reset-left-line>
-        <visually-hidden>reset</visually-hidden>
-      </button>
-    </input-reset-group>
-  </input-control>
+  <details>
+    <summary control-label>More typography</summary>
+    <control-set>
+      <control-label>Type Scale</control-label>
+      <toggle-control
+        id="type-scale"
+        data-prop="--user-scale-ratio"
+        data-local="css-type-scale"
+        data-group
+      >
+        <toggle-group>
+          <button
+            data-value="initial"
+            aria-pressed="true"
+          >theme</button>
+          <button data-value="1">none</button>
+          <button data-value="var(--minor-second)">minor 2nd</button>
+          <button data-value="var(--minor-third)">minor 3rd</button>
+        </toggle-group>
+        <toggle-group>
+          <button data-value="var(--major-second)">2nd</button>
+          <button data-value="var(--major-third)">3rd</button>
+          <button data-value="var(--perfect-fourth)">4th</button>
+          <button data-value="var(--augmented-fourth)">4th+</button>
+          <button data-value="var(--perfect-fifth)">5th</button>
+          <button data-value="var(--major-sixth)">6th</button>
+        </toggle-group>
+      </toggle-control>
+    </control-set>
+    <control-set>
+      <input-control
+        data-prop="--user-fluid"
+        data-local="css-fluid-type"
+      >
+        <label for="fluid-type">Fluid type</label>
+        <input-reset-group>
+          <input id="fluid-type" type="range" min="0" value="0.3" max="1" step="0.01">
+          <button data-btn="emoji" data-reset="fluid-type">
+            <reset-left-line></reset-left-line>
+            <visually-hidden>reset</visually-hidden>
+          </button>
+        </input-reset-group>
+      </input-control>
 
-  <input-control
-    data-prop="--filter-contrast"
-    data-local="css-filter-contrast"
-  >
-    <label for="filter-contrast">Contrast</label>
-    <input-reset-group>
-      <input id="filter-contrast" type="range" min="0.5" value="1" max="2" step="0.1">
-      <button data-btn="emoji" data-reset="filter-contrast">
-        <reset-left-line></reset-left-line>
-        <visually-hidden>reset</visually-hidden>
-      </button>
-    </input-reset-group>
-  </input-control>
+      <input-control
+        data-prop="--measure"
+        data-local="css-measure"
+      >
+        <label for="measure">Line Length</label>
+        <input-reset-group>
+          <input id="measure" type="range" min="14" value="30" max="60" step="0.5">
+          <button data-btn="emoji" data-reset="measure">
+            <reset-left-line></reset-left-line>
+            <visually-hidden>reset</visually-hidden>
+          </button>
+        </input-reset-group>
+      </input-control>
+    </control-set>
+  </details>
 
-  <input-control
-    data-prop="--filter-hue"
-    data-local="css-filter-hue"
-  >
-    <label for="filter-hue">Hue Shift</label>
-    <input-reset-group>
-      <input id="filter-hue" type="range" min="0" value="0" max="360">
-      <button data-btn="emoji" data-reset="filter-hue">
-        <reset-left-line></reset-left-line>
-        <visually-hidden>reset</visually-hidden>
-      </button>
-    </input-reset-group>
-  </input-control>
+  <details>
+    <summary control-label>Colors, contrast, and blur</summary>
+    <control-set>
+      <input-control
+        data-prop="--filter-blur"
+        data-local="css-filter-blur"
+      >
+        <label for="filter-blur">blur</label>
+        <input-reset-group>
+          <input id="filter-blur" type="range" min="0" value="0" max="12" step="0.1">
+          <button data-btn="emoji" data-reset="filter-blur">
+            <reset-left-line></reset-left-line>
+            <visually-hidden>reset</visually-hidden>
+          </button>
+        </input-reset-group>
+      </input-control>
 
-  <input-control
-    data-prop="--filter-sepia"
-    data-local="css-filter-sepia"
-  >
-    <label for="filter-sepia">Sepia</label>
-    <input-reset-group>
-      <input id="filter-sepia" type="range" min="0" value="0" max="1" step="0.1">
-      <button data-btn="emoji" data-reset="filter-sepia">
-        <reset-left-line></reset-left-line>
-        <visually-hidden>reset</visually-hidden>
-      </button>
-    </input-reset-group>
-  </input-control>
+      <input-control
+        data-prop="--filter-brightness"
+        data-local="css-filter-brightness"
+      >
+        <label for="filter-brightness">Brightness</label>
+        <input-reset-group>
+          <input id="filter-brightness" type="range" min="0.2" value="1" max="2" step="0.1">
+          <button data-btn="emoji" data-reset="filter-brightness">
+            <reset-left-line></reset-left-line>
+            <visually-hidden>reset</visually-hidden>
+          </button>
+        </input-reset-group>
+      </input-control>
 
-  <input-control
-    data-prop="--filter-blur"
-    data-local="css-filter-blur"
-  >
-    <label for="filter-blur">blur</label>
-    <input-reset-group>
-      <input id="filter-blur" type="range" min="0" value="0" max="12" step="0.1">
-      <button data-btn="emoji" data-reset="filter-blur">
-        <reset-left-line></reset-left-line>
-        <visually-hidden>reset</visually-hidden>
-      </button>
-    </input-reset-group>
-  </input-control>
+      <input-control
+        data-prop="--filter-contrast"
+        data-local="css-filter-contrast"
+      >
+        <label for="filter-contrast">Contrast</label>
+        <input-reset-group>
+          <input id="filter-contrast" type="range" min="0.5" value="1" max="2" step="0.1">
+          <button data-btn="emoji" data-reset="filter-contrast">
+            <reset-left-line></reset-left-line>
+            <visually-hidden>reset</visually-hidden>
+          </button>
+        </input-reset-group>
+      </input-control>
+
+      <input-control
+        data-prop="--filter-grayscale"
+        data-local="css-grayscale"
+      >
+        <label for="grayscale">Grayscale</label>
+        <input-reset-group>
+          <input id="grayscale" type="range" min="0" value="0" max="1" step="0.1">
+          <button data-btn="emoji" data-reset="grayscale">
+            <reset-left-line></reset-left-line>
+            <visually-hidden>reset</visually-hidden>
+          </button>
+        </input-reset-group>
+      </input-control>
+
+      <input-control
+        data-prop="--filter-hue"
+        data-local="css-filter-hue"
+      >
+        <label for="filter-hue">Hue Shift</label>
+        <input-reset-group>
+          <input id="filter-hue" type="range" min="0" value="0" max="360">
+          <button data-btn="emoji" data-reset="filter-hue">
+            <reset-left-line></reset-left-line>
+            <visually-hidden>reset</visually-hidden>
+          </button>
+        </input-reset-group>
+      </input-control>
+
+      <input-control
+        data-prop="--filter-sepia"
+        data-local="css-filter-sepia"
+      >
+        <label for="filter-sepia">Sepia</label>
+        <input-reset-group>
+          <input id="filter-sepia" type="range" min="0" value="0" max="1" step="0.1">
+          <button data-btn="emoji" data-reset="filter-sepia">
+            <reset-left-line></reset-left-line>
+            <visually-hidden>reset</visually-hidden>
+          </button>
+        </input-reset-group>
+      </input-control>
+    </control-set>
+  </details>
 </control-set>
 
 <control-set>
-  <switch-control
-    data-for="body"
-    data-attr="data-scale"
-    data-on="some"
-    data-off="off"
-    data-local="css-fluid-scale"
-  ><button
-    is-switch
-    id="fluid-scale"
-    aria-pressed="true"
-  ><switch-text>Scale fonts</switch-text></button></switch-control>
-
   <switch-control
     data-prop="--bg-texture"
     data-on="var(--theme-texture)"
@@ -184,7 +251,7 @@
     is-switch
     id="table-flip"
   ><switch-text>
-    <emo-ji aria-hidden="true">(╯°□°）╯︵ ┻━┻</emo-ji>
+    <span aria-hidden="true">(╯°□°）╯︵ ┻━┻</span>
     <visually-hidden>flip the table</visually-hidden>
   </switch-text></button></switch-control>
 </control-set>
@@ -199,6 +266,12 @@
     margin-block-start: var(--shim);
     margin-inline-end: var(--shim);
     position: fixed;
+
+    & details,
+    & summary {
+      border: unset;
+      padding: unset;
+    }
   }
 
   theme-controls,
@@ -214,6 +287,10 @@
 
   control-label {
     display: block;
+  }
+
+  [control-label],
+  control-label {
     font-variant-caps: all-small-caps;
     font-weight: bold;
   }

@@ -1,3 +1,19 @@
+- title: Pity+Fear
+  role: creator/performer
+  venue: Westminster Library, College Hill
+  with: Grapefruit Lab & Teacup Gorilla
+  tags: [org:teacup-gorilla, org:grapefruit-lab, art:theater]
+  date: 2026-06-27
+  end: 2026-06-27
+
+- title: Liberty by Any Means
+  role: scenographer
+  venue: Grapefruit Lab
+  tags: [org:grapefruit-lab, art:theater]
+  date: 2026-03-27
+  end: 2026-03-29
+  at: https://grapefruitlab.com/shows/liberty/
+
 - title: JANE/EYRE
   role: creator/performer
   venue: Grapefruit Lab

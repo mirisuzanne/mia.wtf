@@ -1,5 +1,5 @@
 <script webc:setup>
-  const cite = (data) => {
+  export const cite = (data) => {
     const src = data.at
       ? `[${data.venue || data.credit}](${data.at})`
       : data.venue || data.credit;

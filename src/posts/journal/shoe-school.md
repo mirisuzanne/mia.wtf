@@ -1,4 +1,5 @@
 ---
+templateEngineOverride: webc
 title: 2 days of cordwainery
 sub: A wonderful adventure in shoe-building
 venue: Colorado Shoe School

@@ -4,10 +4,7 @@
   aria-label="page summary"
   :class="$data.micro.summary"
 >
-  <template
-    webc:nokeep
-    @html="this.summary"
-  ></template>
+  <render-as :@content="this.summary"></render-as>
 
   <page-rel webc:if="$data.at && $data.venue">
     <span webc:if="$data.rel" @text="$data.rel"></span>
@@ -20,7 +17,7 @@
 page-summary {
   --italic: true;
   display: block;
-  font-size: var(--step-2);
+  font-size: var(--x-large);
   font-style: italic;
   grid-column: wide;
   text-wrap: pretty;

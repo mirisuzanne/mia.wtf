@@ -65,7 +65,7 @@ layout: base
   }
 
   #header {
-    margin-block: var(--spacer);
+    margin-block: 0 var(--spacer);
   }
 
   #content {

@@ -1,29 +1,58 @@
+- title: Mia Culpa
+  sub: pottery, art, and other things that are my fault
+  at: https://buttondown.com/MiaCulpa
+  date: 2025-09-01
+  end: ongoing
+  tags:
+    - as:newsletter
+    - art:pottery
+
 - title: OddBird Blog
   sub: web development articles, videos, podcasts, and case studies
   at: https://www.oddbird.net/blog/
   date: 2012-08-14
   end: ongoing
+  tags:
+    - as:blog
+    - org:oddbird
+    - web:teaching
 
 - title: CSS Spec Notebook
   sub: scratchpad for new CSS & Sass features
   at: https://css.oddbird.net/
   date: 2020-11-09
   end: ongoing
+  tags:
+    - as:notebook
+    - org:oddbird
+    - org:csswg
 
 - title: Winging It
   sub: live and cross-discipline chats between web experts
   at: https://www.oddbird.net/wingingit/
   date: 2023-07-20
   end: ongoing
+  tags:
+    - as:livestream
+    - org:oddbird
+    - web:teaching
 
 - title: CSS Tricks
   sub: for people who make websites
   at: https://css-tricks.com/author/miriam/
   date: 2016-10-15
   end: 2022-03-01
+  tags:
+    - as:blog
+    - org:css-tricks
+    - web:teaching
 
 - title: Mozilla Developer Channel
   sub: videos for web developers and designers
   at: https://www.youtube.com/@MozillaDeveloper
   date: 2019-08-19
   end: 2020-01-06
+  tags:
+    - as:videos
+    - org:oddbird
+    - web:teaching

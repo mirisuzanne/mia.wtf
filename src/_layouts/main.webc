@@ -31,5 +31,5 @@ layout: page
 <section
   webc:if="getContent(this.content)"
   id="content"
-  @html="getContent(this.content)"
+  @raw="getContent(this.content)"
 ></section>

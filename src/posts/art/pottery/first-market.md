@@ -1,6 +1,7 @@
 ---
+templateEngineOverride: webc
 title: I've been making pots
-sub: And my website isn't ready for them
+sub: And my website isn't ready
 date: 2025-06-22
 hero:
   src: art/pottery/2025/moon.jpg

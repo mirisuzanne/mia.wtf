@@ -1,5 +1,5 @@
 <script webc:setup>
-  const sameYear = (start, end) => (
+  export const sameYear = (start, end) => (
     dateFormat(start, 'year') === dateFormat(end, 'year')
   );
 </script>

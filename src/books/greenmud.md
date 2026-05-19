@@ -1,4 +1,5 @@
 ---
+templateEngineOverride: webc
 private: true
 type: web novel
 title: Into the Green Green Mud

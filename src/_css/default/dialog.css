@@ -1,5 +1,6 @@
 dialog {
   background-color: var(--bg, Canvas);
+  color: var(--text, CanvasText);
   border: thin solid var(--border);
   opacity: 0;
   transition:

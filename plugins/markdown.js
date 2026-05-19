@@ -37,4 +37,13 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter('getContent', getContent);
 
   eleventyConfig.setLibrary('md', mdIt);
+  eleventyConfig.addPreprocessor(
+    "webMD",
+    "md,webc",
+    (data, content) => (
+      data.templateEngineOverride === 'webc' || data.parse === 'md'
+      ? block(content)
+      : content
+    )
+  );
 };

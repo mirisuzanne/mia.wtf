@@ -1,12 +1,18 @@
 <script webc:setup>
+  const now = new Date();
+  const endOf = (show) => show.data.end || show.data.date;
+
   // returns featured AND recent
-  const showsFrom = (data, only) => {
-    if (data?.length === 0) return {};
+  export const showsFrom = (data, only) => {
+    if (!data || data?.length === 0) return {};
     const pages = withTag(data, 'is:show')
       .sort((a, b) => b.data.date - a.data.date)
       .filter((item, i) => {
+        const date = new Date(item.data.end || item.data.date);
+
         if (item.data.private) return false;
         if (!only) return true;
+        if (only.includes('future') && isFuture(endOf(item))) return true;
         if (only.includes('featured') && item.data.feature) return true;
         if (only.includes('recent') && i < 8) return true;
         if (only === 'top') return true;
@@ -21,33 +27,11 @@
 <section
   webc:if="showsFrom(this.collection, this.onlyShow).length > 0"
 >
-  <slot>
-    <h-
-      webc:nokeep
-      :@level="this.h || 2"
-      @html="this.heading || 'Selected Productions…'"
-    ></h->
-  </slot>
+  <slot><h2>Selected Productions…</h2></slot>
 
   <ul>
-    <li
-      webc:for="show of showsFrom(this.collection, this.onlyShow)"
-    >
-      <em @text="show.data.title"></em>
-      @
-      <a
-        webc:if="show.data['bookmark-of']"
-        :href="show.data['bookmark-of']"
-        @text="show.data.venue"
-      ></a><span
-        webc:else
-        webc:nokeep
-        @text="show.data.venue"
-      ></span>,
-      <date-time
-        :@date="show.data.date"
-        @format="year"
-      ></date-time>
+    <li webc:for="show of showsFrom(this.collection, this.onlyShow)">
+      <event-item :@show="show"></event-item>
     </li>
   </ul>
 </section>

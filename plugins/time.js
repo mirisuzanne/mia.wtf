@@ -18,7 +18,6 @@ export default function (eleventyConfig, options = {}) {
   const applyFormat = (date, style) => format(date, formats[style] || style);
   const year = () => applyFormat(today, 'year');
 
-
   const recentDate = (date) => {
     const zoned = zoneDate(date);
     const nowParts = applyFormat(today, 'iso').split('-');
@@ -37,7 +36,10 @@ export default function (eleventyConfig, options = {}) {
       : applyFormat(zoneDate(date), style);
   };
 
+  const isFuture = (date) => zoneDate(date) > today;
+
   eleventyConfig.addShortcode('year', year);
   eleventyConfig.addFilter('year', year);
   eleventyConfig.addFilter('dateFormat', formatDate);
+  eleventyConfig.addFilter('isFuture', isFuture);
 };

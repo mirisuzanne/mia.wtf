@@ -1,0 +1,18 @@
+---js
+export default {
+  pagination: {
+    data: 'education',
+    size: 1,
+    alias: 'edu',
+  },
+  permalink: (data) =>
+    `/education/${data.edu.slug || this.slugify(data.edu.title)}/index.html`,
+  eleventyExcludeFromCollections: true,
+  eleventyComputed: {
+    title: (data) => data.edu.title,
+    sub: (data) => data.edu.sub,
+    date: (data) => data.edu.date,
+    end: (data) => data.edu.end,
+  },
+}
+---

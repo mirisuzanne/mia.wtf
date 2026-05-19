@@ -1,4 +1,5 @@
 ---
+templateEngineOverride: webc
 title: Custom Property “Stacks"
 at: https://css-tricks.com/using-custom-property-stacks-to-tame-the-cascade/
 date: 2020-06-22

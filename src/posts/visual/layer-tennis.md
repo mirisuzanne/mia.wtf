@@ -1,4 +1,5 @@
 ---
+templateEngineOverride: webc
 title: Stratified design
 sub: The cover art for PRINT! vol. 3
 venue: The Operating System

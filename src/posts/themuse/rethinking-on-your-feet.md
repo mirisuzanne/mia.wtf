@@ -1,4 +1,5 @@
 ---
+templateEngineOverride: webc
 title: (re)Thinking on your feet
 sub: Part 7 of [Fuck the Muse](/2012/10/16/muse-intro/)
 venue: The Operating System

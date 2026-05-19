@@ -1,7 +1,7 @@
 ---
-date: 2016-08-17
+templateEngineOverride: webc
 title: Miriam, a how-to guide
-erasure: yes
+date: 2016-08-17
 hero:
   src: 2016/mia-wtf.jpg
 ---

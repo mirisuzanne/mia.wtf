@@ -1,5 +1,6 @@
 ---
-type: board game
+templateEngineOverride: webc
+type: existential game
 title: Roller of Ephyra
 banner: |
   ~~Ruler~~ Roller of Ephyra

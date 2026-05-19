@@ -1,4 +1,5 @@
 ---
+templateEngineOverride: webc
 title: Creative modes and cycles
 sub: Part 3 of [Fuck the Muse](/2012/10/16/muse-intro/)
 venue: The Operating System

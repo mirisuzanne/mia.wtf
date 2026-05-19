@@ -1,24 +1,6 @@
-<script webc:setup>
-  const getProjects = (all, time) => {
-    let collect = (all || []).filter((page) => !page.data.draft);
-
-    if (time === 'current') {
-      collect = collect.filter(
-        (page) => page.data.end === 'ongoing' || page.data.end >= new Date()
-      );
-    } else if (time === 'past') {
-      collect = collect.filter(
-        (page) => page.data.end && page.data.end !== 'ongoing'
-      );
-    }
-
-    return collect.sort((a, b) => a.date - b.date);
-  }
-</script>
-
 <ul webc:root="override">
   <project-item
-    webc:for="project of getProjects(this.projects, this.time)"
+    webc:for="project of this.projects"
     :@project="project"
   ></project-item>
 </ul>

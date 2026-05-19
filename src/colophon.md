@@ -93,8 +93,8 @@ variable and
 [Alegreya Sans](https://www.huertatipografica.com/en/fonts/alegreya-sans-ht)
 by _Juan Pablo del Peral_,
 along with
-[Victor Mono](https://rubjo.github.io/victor-mono/) variable
-by _Rune Bjørnerås_.
+[Chivo Mono](https://www.omnibus-type.com/variable-fonts/#chivo-mono)
+variable by _Héctor Gatti_ at _Omnibus-Type_.
 
 I was really tempted by the
 [Volume TC](https://tomchalky.com/product/volume-handcrafted-trio-font-family/)
@@ -105,6 +105,9 @@ and Tom Chalky does nice work.
 I bought it anyway,
 and set it as my browser default.
 I love when sites use my preference!
+
+If you like that too,
+check out the options in the style dialog.
 
 ## Inspiration
 

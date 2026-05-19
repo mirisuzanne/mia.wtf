@@ -1,23 +1,23 @@
 <script webc:setup>
-const filterObject = (obj) => {
-  Object
-    .keys(obj)
-    .forEach((key) => obj[key] === undefined && delete obj[key]);
-  return obj;
-}
+  const filterObject = (obj) => {
+    Object
+      .keys(obj)
+      .forEach((key) => obj[key] === undefined && delete obj[key]);
+    return obj;
+  }
 
-const buildSrc = (pen, options) => {
-  const opts = new URLSearchParams({
-    'embed-version': 2,
-    'default-tab': 'result',
-    user: 'miriamsuzanne',
-    editable: 'true',
-    ...filterObject(options),
-  });
+  export const buildSrc = (pen, options) => {
+    const opts = new URLSearchParams({
+      'embed-version': 2,
+      'default-tab': 'result',
+      user: 'miriamsuzanne',
+      editable: 'true',
+      ...filterObject(options),
+    });
 
-  const embed = pen.replace('/pen/', '/embed/');
-  return `${embed}?${opts.toString()}`;
-}
+    const embed = pen.replace('/pen/', '/embed/');
+    return `${embed}?${opts.toString()}`;
+  }
 </script>
 
 <iframe

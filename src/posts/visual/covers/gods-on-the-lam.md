@@ -1,4 +1,5 @@
 ---
+templateEngineOverride: webc
 title: Gods on the Lam
 sub: by [Christopher David Rosales](https://www.christopherrosales.com/)
 date: 2017-06-02

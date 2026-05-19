@@ -11,10 +11,10 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-family: var(--h1-font, var(--title-font));
-  font-size: var(--step-3);
+  font-size: var(--xx-large);
 }
-h2 { font-size: var(--step-2); }
-h3 { font-size: var(--step-1); }
+h2 { font-size: var(--x-large); }
+h3 { font-size: var(--large); }
 
 h2, h3, h4, h5, h6 {
   font-family: var(--title-font);
@@ -25,7 +25,7 @@ blockquote {
   border-inline-start: thick solid var(--feature);
   border-image: linear-gradient(to bottom, var(--feature), var(--accent)) 1;
   font-style: italic;
-  font-size: var(--step-1);
+  font-size: var(--large);
   padding-inline-start: var(--gap);
 
   @container (inline-size < calc(100vi - 6ch)) {
@@ -37,7 +37,7 @@ blockquote {
 
   & > footer {
     font-family: var(--ui-font);
-    font-size: var(--step-0);
+    font-size: var(--medium);
   }
 }
 
@@ -241,18 +241,4 @@ emo-ji {
   font-style: normal;
   font-synthesis: none;
   font-weight: normal;
-}
-
-@container style(--italic) {
-  em {
-    background: var(--em-background,
-      linear-gradient(
-        100deg,
-        transparent calc(0.5ch - 1px),
-        var(--mark, var(--bg)) 0.5ch calc(100% - 0.2ch),
-        transparent calc(100% - 0.2ch + 1px)
-      ) bottom / 100% 1cap no-repeat);
-    color: var(--em-color, currentColor);
-    text-shadow: 1px 1px 0 var(--em-shadow, var(--bg));
-  }
 }

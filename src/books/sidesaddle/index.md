@@ -1,4 +1,5 @@
 ---
+templateEngineOverride: webc
 feature: true
 type: novel
 role: author

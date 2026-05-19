@@ -1,4 +1,5 @@
 ---
+templateEngineOverride: webc
 type: gallery
 title: SideSaddle* Art
 sub: art & words from [Riding SideSaddle*](/books/sidesaddle/)
@@ -102,7 +103,7 @@ gallery:
 
 <figure>
   <media-gallery
-    :@from-data="$data.gallery"
+    :@from-data="gallery"
   ></media-gallery>
   <figcaption>
     Prints of my art are

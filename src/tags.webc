@@ -1,4 +1,5 @@
 ---
+templateEngineOverride: webc
 title: All the tags
 eleventyExcludeFromCollections: true
 nonTag:

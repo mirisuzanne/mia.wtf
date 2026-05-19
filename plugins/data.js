@@ -7,7 +7,14 @@ const shuffle = (items) => items
 
 const merge = (...args) => Object.assign({}, ...args);
 
-const hasTag = (page, tag) => (page.data.tags || []).includes(tag);
+const hasTag = (page, tag) => {
+  const pageTags = [];
+
+  if (page.data.tags) pageTags.push(...page.data.tags);
+  if (page.data.src?.tags) pageTags.push(...page.data.src?.tags);
+
+  return pageTags.includes(tag)
+};
 const everyTag = (page, tags) => (tags || []).every((tag) => hasTag(page, tag));
 const anyTag = (page, tags) => (tags || []).every((tag) => hasTag(page, tag));
 
@@ -31,6 +38,54 @@ const onGoing = (page) => page.data?.end === 'ongoing';
 const pageName = (page) => page.data.banner || page.data.title || page.fileSlug;
 const findIndex = (pages, tag) => pages.find((page) => page.data.index === tag);
 
+const wrapData = (item, key) => {
+  const data = {};
+  data[key] = item;
+  return data;
+};
+
+const getList = (collection, opts = {}) => {
+  const pages = collection || [];
+  if (pages.length === 0) return pages;
+
+  const tags = (typeof opts.tags === 'string') ? [opts.tags] : opts.tags;
+  const subSet = tags ? withEveryTag(pages, tags) : pages;
+
+  const filterOptions = ['feature', 'latest', 'current', 'past'];
+  const hasFilters = Object.keys(opts).some(
+    (filter) => filterOptions.includes(filter) && opts[filter]
+  );
+
+  const sorted = subSet
+    .sort((a, b) => {
+      if (onGoing(b)) {
+        if (onGoing(a)) return b.data.date - a.data.date;
+        return !opts.reverse;
+      }
+      if (onGoing(a)) return opts.reverse;
+
+      const bEnd = b.data.end || b.data.date;
+      const aEnd = a.data.end || a.data.date;
+
+      return opts.reverse ? aEnd - bEnd : bEnd - aEnd;
+    });
+
+  const result = sorted
+    .filter((item, i) => {
+      if (item.data.private) return false;
+      if (!hasFilters) return true;
+      if (opts.current && onGoing(item)) return true;
+      if (opts.past && !onGoing(item)) return true;
+      if (opts.feature && item.data.feature) return true;
+      if (opts.latest && i < opts.latest) return true;
+      return false;
+    });
+
+  return opts.limit
+    ? result.slice(0, opts.limit)
+    : result;
+}
+
 export default (eleventyConfig) => {
   eleventyConfig.addAsyncFilter('shuffle', shuffle);
   eleventyConfig.addAsyncFilter('merge', merge);
@@ -50,6 +105,10 @@ export default (eleventyConfig) => {
   eleventyConfig.addAsyncFilter('onGoing', onGoing);
   eleventyConfig.addAsyncFilter('pageName', pageName);
   eleventyConfig.addAsyncFilter('findIndex', findIndex);
+
+  eleventyConfig.addAsyncFilter('getList', getList);
+
+  eleventyConfig.addAsyncFilter('wrapData', wrapData);
 
   eleventyConfig.addDataExtension('yml, yaml', (contents) =>
     load(contents),
