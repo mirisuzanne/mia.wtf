@@ -1,4 +1,5 @@
 import { load } from 'js-yaml';
+import { isFuture} from './time-utils.js';
 
 const shuffle = (items) => items
   .map(value => ({ value, sort: Math.random() }))
@@ -34,7 +35,12 @@ const pCategory = (tags, prefixList) => {
   return list ? list.join(':') : null;
 }
 
-const onGoing = (page) => page.data?.end === 'ongoing';
+const onGoing = (page) => {
+  if (!page.data?.end) return false;
+  if (page.data.end === 'ongoing') return true;
+  return isFuture(page.data.end);
+}
+
 const pageName = (page) => page.data.banner || page.data.title || page.fileSlug;
 const findIndex = (pages, tag) => pages.find((page) => page.data.index === tag);
 
@@ -56,18 +62,24 @@ const getList = (collection, opts = {}) => {
     (filter) => filterOptions.includes(filter) && opts[filter]
   );
 
+  const compare = (a, b) => {
+    if (b.data.end === a.data.end) {
+      return b.data.date - a.data.date;
+    }
+
+    if (a.data.date === 'ongoing') return 1;
+    if (b.data.date === 'ongoing') return -1;
+
+    const aDate = a.data.end || a.data.date;
+    const bDate = b.data.end || b.data.date;
+
+    return bDate - aDate;
+  }
+
   const sorted = subSet
     .sort((a, b) => {
-      if (onGoing(b)) {
-        if (onGoing(a)) return b.data.date - a.data.date;
-        return !opts.reverse;
-      }
-      if (onGoing(a)) return opts.reverse;
-
-      const bEnd = b.data.end || b.data.date;
-      const aEnd = a.data.end || a.data.date;
-
-      return opts.reverse ? aEnd - bEnd : bEnd - aEnd;
+      const result = compare(a, b);
+      return opts.reverse ? result * -1 : result;
     });
 
   const result = sorted

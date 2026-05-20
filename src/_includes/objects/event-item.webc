@@ -1,27 +1,23 @@
 <a
-  webc:if="this.at || this.show.data['bookmark-of']"
-  :href="this.at || this.show.data['bookmark-of']"
-  @text="this.title || this.show.data.title"
+  webc:if="this.show.data['bookmark-of']"
+  :href="this.show.data['bookmark-of']"
+  @text="this.show.data.title"
 ></a>
 <em
   webc:else
-  @text="this.title || this.show.data.title"
+  @html="mdI(this.show.data.title)"
 ></em>
-—
-<date-range
-  webc:if="this.end || this.show.data.end"
-  :@date="this.date || this.show.data.date"
-  :@end="this.end || this.show.data.end"
-></date-range>
+&ndash;
 <date-time
-  webc:else
-  :@date="this.date || this.show.data.date"
-  :@format="isFuture(this.date || this.show.data.date)
-    ? 'default'
-    : 'year'"
+  :@date="this.show.data.date"
+  @format="recent"
 ></date-time>
 @
 <span
   webc:nokeep
   @text="this.show.data.venue"
+></span>
+<span
+  webc:if="this.show.data.adr && onGoing(this.show)"
+  @text="`[${show.data.adr}]`"
 ></span>

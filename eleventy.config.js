@@ -76,7 +76,7 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addPlugin(feedPlugin, {
     collection: {
-      name: "is:post",
+      name: "feed:posts",
       limit: 10,
     },
     metadata: {

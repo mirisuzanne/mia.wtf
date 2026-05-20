@@ -64,14 +64,6 @@ layout: base
     }
   }
 
-  #header {
-    margin-block: 0 var(--spacer);
-  }
-
-  #content {
-    margin: unset;
-  }
-
   hr[aria-hidden=true] {
     border-image: linear-gradient(
       to right,

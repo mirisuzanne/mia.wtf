@@ -1,36 +1,8 @@
-<script webc:setup>
-  const now = new Date();
-  const endOf = (show) => show.data.end || show.data.date;
-
-  // returns featured AND recent
-  export const showsFrom = (data, only) => {
-    if (!data || data?.length === 0) return {};
-    const pages = withTag(data, 'is:show')
-      .sort((a, b) => b.data.date - a.data.date)
-      .filter((item, i) => {
-        const date = new Date(item.data.end || item.data.date);
-
-        if (item.data.private) return false;
-        if (!only) return true;
-        if (only.includes('future') && isFuture(endOf(item))) return true;
-        if (only.includes('featured') && item.data.feature) return true;
-        if (only.includes('recent') && i < 8) return true;
-        if (only === 'top') return true;
-      });
-
-    return only && (only.includes('top') || only === 'top')
-      ? pages.slice(0,10)
-      : pages;
-  };
-</script>
-
-<section
-  webc:if="showsFrom(this.collection, this.onlyShow).length > 0"
->
+<section webc:if="this.pages?.length > 0">
   <slot><h2>Selected Productions…</h2></slot>
 
   <ul>
-    <li webc:for="show of showsFrom(this.collection, this.onlyShow)">
+    <li webc:for="show of this.pages">
       <event-item :@show="show"></event-item>
     </li>
   </ul>

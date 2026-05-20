@@ -1,5 +1,5 @@
-import { format } from "date-fns";
-import { utcToZonedTime } from 'date-fns-tz';
+import { format } from 'date-fns';
+import { zoneDate, today, isFuture} from './time-utils.js';
 
 export default function (eleventyConfig, options = {}) {
   // https://date-fns.org/v2.21.2/docs/format
@@ -13,8 +13,6 @@ export default function (eleventyConfig, options = {}) {
     ...options,
   };
 
-  const zoneDate = (date) => utcToZonedTime(date || new Date(), '+00:00');
-  const today = zoneDate();
   const applyFormat = (date, style) => format(date, formats[style] || style);
   const year = () => applyFormat(today, 'year');
 
@@ -35,8 +33,6 @@ export default function (eleventyConfig, options = {}) {
       ? recentDate(date)
       : applyFormat(zoneDate(date), style);
   };
-
-  const isFuture = (date) => zoneDate(date) > today;
 
   eleventyConfig.addShortcode('year', year);
   eleventyConfig.addFilter('year', year);

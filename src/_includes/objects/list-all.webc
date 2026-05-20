@@ -1,3 +1,10 @@
+<show-list
+  :@pages="getList($data.collections['is:show'], {
+    current: true,
+    reverse: true,
+  })"
+><h2>Upcoming events…</h2></show-list>
+
 <post-list
   :@pages="getList($data.collections['is:post'], {latest: 8})"
   :@more="true"

@@ -1,6 +1,14 @@
+<show-list
+  :@pages="getList($data.collections['is:show'], {
+    tags: this.listOf,
+    current: true,
+    reverse: true,
+  })"
+><h2>Upcoming events…</h2></show-list>
+
 <org-list
   webc:if="!($data.tags || []).includes('is:org')"
-  :@collection="getList($data.collections['is:org'], {
+  :@pages="getList($data.collections['is:org'], {
     tags: this.listOf
   })"
 ></org-list>
@@ -23,7 +31,9 @@
   })"
 ></channel-list>
 
-<!-- <show-list
-  :@collection="$data.collections.all"
-  :@only-show="['featured', 'recent']"
-></show-list> -->
+<show-list
+  :@pages="getList($data.collections['is:show'], {
+    tags: this.listOf,
+    past: true,
+  })"
+></show-list>

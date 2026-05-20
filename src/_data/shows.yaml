@@ -1,10 +1,20 @@
 - title: Pity+Fear
   role: creator/performer
-  venue: Westminster Library, College Hill
+  venue: College Hill Library
+  adr: Westminster, CO
   with: Grapefruit Lab & Teacup Gorilla
   tags: [org:teacup-gorilla, org:grapefruit-lab, art:theater]
   date: 2026-06-27
   end: 2026-06-27
+  at: https://westminsterco.librarycalendar.com/event/library-stage-pity-fear-ch-27076
+
+- title: Pride Market & Drag Show
+  venue: Glazed Ceramics
+  adr: 1520 Teller St
+  tags: [art:pottery]
+  date: 2026-05-30
+  end: 2026-05-30
+  at: https://glazedceramicsstudio.com/party
 
 - title: Liberty by Any Means
   role: scenographer

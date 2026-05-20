@@ -77,11 +77,10 @@ merch:
 <!-- intro -->
 
 <template webc:type="11ty" 11ty:type="md">
-  This new design sat in a folder untouched
-  for the last year,
+  **Note**: This re-design sat in a folder untouched
+  for over a year,
   blocked by an obscure technical issue.
-  The design isn't done,
-  and pages are still missing or broken --
-  but the under-construction stripes
-  free me from all responsibility.
+  It might still be broken,
+  but the under-construction stripes up top
+  excuse me from all responsibility.
 </template>

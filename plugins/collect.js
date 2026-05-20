@@ -18,7 +18,7 @@ export default (eleventyConfig) => {
       .filter((item) => item.data.area),
   );
 
-  eleventyConfig.addCollection('_public-posts', (collectionsAPI) =>
+  eleventyConfig.addCollection('feed:posts', (collectionsAPI) =>
     collectionsAPI
       .getFilteredByTag('is:post')
       .filter((item) => !item.data.private)
