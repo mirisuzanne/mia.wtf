@@ -1,3 +1,11 @@
+<script webc:setup>
+  export const relations = {
+    'reply': 'to',
+    'repost': 'of',
+    'bookmark': 'of',
+  };
+</script>
+
 <template
   webc:root
   id="summary"
@@ -8,7 +16,7 @@
 
   <page-rel webc:if="$data.at && $data.venue">
     <span webc:if="$data.rel" @text="$data.rel"></span>
-    from
+    <span webc:nokeep @text="relations[$data.rel] || 'of'"></span>
     <a :href="$data.at" @html="mdI($data.venue)"></a>
   </page-rel>
 </template>
