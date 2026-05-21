@@ -1,6 +1,11 @@
+main:
 - about
 - contact
-- colophon
+- follow
+
+more:
 - why
+- colophon
 - tip
 - ai
+- blank

@@ -1,6 +1,5 @@
 /* blocks */
 * {
-  box-sizing: border-box;
   text-decoration-color: var(--decoration-color, var(--border));
 }
 

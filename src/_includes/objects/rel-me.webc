@@ -14,16 +14,6 @@
       ></clip-board>
     </dd>
   </d-i>
-  <d-i>
-    <dt><abbr>RSS</abbr></dt>
-    <dd>
-      <a
-        :href="$data.site.feed"
-        rel="alternate"
-        @text="$data.site.feed"
-      ></a>
-    </dd>
-  </d-i>
 </dl>
 
 <style webc:bucket="objects">

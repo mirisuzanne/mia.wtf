@@ -5,9 +5,18 @@
         href="/"
         :aria-current="$data.page.url === `/` ? 'page' : false"
         rel="home"
-      >home</a>
+      >/index</a>
     </li>
-    <li webc:for="item of $data.slash">
+    <li webc:for="item of $data.slash.main">
+      <a
+        :href="`/${item}/`"
+        :aria-current="$data.page.url === `/${item}/` ? 'page' : false"
+        @text="`/${item}`"
+      ></a>
+    </li>
+  </ul>
+  <ul role="list">
+    <li webc:for="item of $data.slash.more">
       <a
         :href="`/${item}/`"
         :aria-current="$data.page.url === `/${item}/` ? 'page' : false"
