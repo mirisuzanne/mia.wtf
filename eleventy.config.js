@@ -82,7 +82,7 @@ export default async function (eleventyConfig) {
     metadata: {
       language: "en",
       title: "Miriam Suzanne",
-      subtitle: "Art & CSS & other digital artifacts of my life",
+      sub: "Art & CSS & other digital artifacts of my life",
       base: "https://www.miriamsuzanne.com/",
       author: {
         name: "Miriam Suzanne",

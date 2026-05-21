@@ -86,7 +86,7 @@ Based on their answers, I ended up with these lists:
 - SpringGun Press wordmarks
 - ISBN & bar code (on white background)
 - Title: The Posture of Contour
-- Subtitle: A Public Primer
+- sub: A Public Primer
 - Author: James Belflower
 - The content of the book itself
 

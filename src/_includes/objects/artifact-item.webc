@@ -66,8 +66,8 @@ artifact-item {
 
   & h3,
   & artifact-type {
-    background: Canvas;
-    color: CanvasText;
+    background: var(--bg);
+    color: var(--text);
     padding: var(--shim);
   }
 }

@@ -3,7 +3,7 @@
   venue: College Hill Library
   adr: Westminster, CO
   with: Grapefruit Lab & Teacup Gorilla
-  tags: [org:teacup-gorilla, org:grapefruit-lab, art:theater]
+  tags: [org:teacup-gorilla, org:grapefruit-lab, art:theater, area:art]
   date: 2026-06-27
   end: 2026-06-27
   at: https://westminsterco.librarycalendar.com/event/library-stage-pity-fear-ch-27076
@@ -11,7 +11,7 @@
 - title: Pride Market & Drag Show
   venue: Glazed Ceramics
   adr: 1520 Teller St
-  tags: [art:pottery]
+  tags: [art:pottery, area:art]
   date: 2026-05-30
   end: 2026-05-30
   at: https://glazedceramicsstudio.com/party
@@ -19,7 +19,7 @@
 - title: Liberty by Any Means
   role: scenographer
   venue: Grapefruit Lab
-  tags: [org:grapefruit-lab, art:theater]
+  tags: [org:grapefruit-lab, art:theater, area:art]
   date: 2026-03-27
   end: 2026-03-29
   at: https://grapefruitlab.com/shows/liberty/
@@ -28,7 +28,7 @@
   role: creator/performer
   venue: Grapefruit Lab
   with: Teacup Gorilla
-  tags: [org:teacup-gorilla, org:grapefruit-lab, art:theater]
+  tags: [org:teacup-gorilla, org:grapefruit-lab, art:theater, area:art]
   date: 2025-01-17
   end: 2025-02-02
   at: https://grapefruitlab.com/shows/jane-eyre-2025/
@@ -38,7 +38,7 @@
   sub: a live theater album release
   venue: Grapefruit Lab
   with: Teacup Gorilla
-  tags: [org:teacup-gorilla, org:grapefruit-lab, art:theater]
+  tags: [org:teacup-gorilla, org:grapefruit-lab, art:theater, area:art]
   date: 2024-05-10
   end: 2024-06-01
   at: https://grapefruitlab.com/shows/whiskey-2024/
@@ -50,14 +50,14 @@
   date: 2023-11-11
   end: 2023-12-09
   at: https://www.curioustheatre.org/event/lettersofsuresh/
-  tags: [art:theater]
+  tags: [art:theater, area:art]
 
 - title: Strange Bird, Queer Bird
   by: verbatim letters
   role: playwright & musician
   venue: Grapefruit Lab
   with: Lars Reid & Teacup Gorilla
-  tags: [org:teacup-gorilla, org:grapefruit-lab, art:theater]
+  tags: [org:teacup-gorilla, org:grapefruit-lab, art:theater, area:art]
   date: 2023-04-07
   end: 2023-04-15
   at: https://grapefruitlab.com/shows/queer-bird/
@@ -66,7 +66,7 @@
   role: creator/performer
   venue: Grapefruit Lab
   with: Josselyn Cool
-  tags: [org:grapefruit-lab, art:theater]
+  tags: [org:grapefruit-lab, art:theater, area:art]
   date: 2022-04-08
   end: 2022-05-28
   at: https://grapefruitlab.com/shows/pity-fear/
@@ -77,14 +77,14 @@
   venue: Square Product Theatre
   with: Laura Kruegel
   date: 2019-02-02
-  tags: [art:theater]
+  tags: [art:theater, area:art]
   at: http://www.squareproducttheatre.org/news/2018/12/28/cast-announced-for-celebration-florida
 
 - title: JANE/EYRE
   role: creator/performer
   venue: Grapefruit Lab
   with: Teacup Gorilla
-  tags: [org:teacup-gorilla, org:grapefruit-lab, art:theater]
+  tags: [org:teacup-gorilla, org:grapefruit-lab, art:theater, area:art]
   date: 2018-02-23
   end: 2018-03-03
   at: https://grapefruitlab.com/shows/jane-eyre/
@@ -95,7 +95,7 @@
   venue: Grapefruit Lab
   date: 2016-05-21
   at: https://grapefruitlab.com/shows/in-between/
-  tags: [org:grapefruit-lab, art:theater]
+  tags: [org:grapefruit-lab, art:theater, area:art]
 
 - title: The In-Between
   by: Julie Rada
@@ -103,7 +103,7 @@
   venue: Grapefruit Lab
   date: 2015-09-06
   at: https://grapefruitlab.com/shows/in-between/
-  tags: [org:grapefruit-lab, art:theater]
+  tags: [org:grapefruit-lab, art:theater, area:art]
 
 - title: 10 Myths on the Proper Application of Beauty Products
   by: co-authored
@@ -113,7 +113,7 @@
     [Riding SideSaddle*](/books/sidesaddle/)
   venue: Buntport Theater
   with: Teacup Gorilla
-  tags: [org:teacup-gorilla, art:theater]
+  tags: [org:teacup-gorilla, art:theater, area:art]
   date: 2016-03-04
   end: 2016-03-26
   note: 2016 True West Award
@@ -127,7 +127,7 @@
   end: 2010-03-14
   venue: Grapefruit Lab
   with: Teacup Gorilla
-  tags: [org:teacup-gorilla, org:grapefruit-lab, art:theater]
+  tags: [org:teacup-gorilla, org:grapefruit-lab, art:theater, area:art]
   at: https://grapefruitlab.com/shows/missa-populi/
 
 - title: Roller Skating with my Cousin
@@ -135,7 +135,7 @@
   venue: The LIDA Project
   date: 2010-01-15
   end: 2010-02-20
-  tags: [org:lida, art:theater]
+  tags: [org:lida, art:theater, area:art]
   at: https://lida.org/roller-skating-with-my-cousin/
 
 - title: A Murder One Less
@@ -144,7 +144,7 @@
   venue: Grapefruit Lab
   date: 2009-08-14
   end: 2009-09-27
-  tags: [org:grapefruit-lab, art:theater]
+  tags: [org:grapefruit-lab, art:theater, area:art]
   at: https://grapefruitlab.com/shows/murder/
 
 - title: RAIN/ of terror
@@ -153,7 +153,7 @@
   venue: The LIDA Project
   date: 2009-02-27
   end: 2009-03-21
-  tags: [org:lida, art:theater]
+  tags: [org:lida, art:theater, area:art]
   at: http://lida.org/rain-of-terror/
 
 - title: 'Untitled #39'
@@ -161,7 +161,7 @@
   venue: The Dresden Dolls
   date: 2008-05-16
   with: Julie Rada & The LIDA Project
-  tags: [org:lida, art:theater]
+  tags: [org:lida, art:theater, area:art]
 
 - title: The Resistible Rise of Arturo Ui
   by: Bertolt Brecht
@@ -170,7 +170,7 @@
   end: 2008-06-14
   venue: Countdown To Zero
   at: https://countdowntozero.org/arturo-ui/
-  tags: [org:countdown, art:theater]
+  tags: [org:countdown, art:theater, area:art]
 
 - title: My Name is Rachel Corrie
   role: tour manager
@@ -178,7 +178,7 @@
   end: 2008-05-03
   venue: Countdown To Zero
   at: https://countdowntozero.org/rachel-corrie/
-  tags: [org:countdown, art:theater]
+  tags: [org:countdown, art:theater, area:art]
 
 - title: Bigger Guns III
   sub: Revenge of the Apocalypse, Again
@@ -186,7 +186,7 @@
   end: 2007-04-28
   role: creator/director
   venue: New World Arts
-  tags: [org:new-world-arts, art:theater]
+  tags: [org:new-world-arts, art:theater, area:art]
 
 - title: Hello and Goodbye
   by: Athol Fugard
@@ -194,7 +194,7 @@
   end: 2006-12-04
   role: director
   venue: New World Arts
-  tags: [org:new-world-arts, art:theater]
+  tags: [org:new-world-arts, art:theater, area:art]
 
 - title: Fear/Falling
   by: Michelle Milne
@@ -202,20 +202,20 @@
   end: 2006-10-29
   role: director
   venue: New World Arts
-  tags: [org:new-world-arts, art:theater]
+  tags: [org:new-world-arts, art:theater, area:art]
 
 - title: Danny and the Deep Blue Sea
   date: 2006-09-15
   end: 2006-09-24
   role: director
   venue: New World Arts
-  tags: [org:new-world-arts, art:theater]
+  tags: [org:new-world-arts, art:theater, area:art]
 
 - title: Sadomasochism
   date: 2005-09-13
   role: writer/director
   venue: New World Arts
-  tags: [org:new-world-arts, art:theater]
+  tags: [org:new-world-arts, art:theater, area:art]
 
 - title: In a Time of War
   sub: What are you willing to die for? What are you willing to forgive?
@@ -223,21 +223,21 @@
   end: 2005-05-23
   role: writer
   venue: New World Arts
-  tags: [org:new-world-arts, art:theater]
+  tags: [org:new-world-arts, art:theater, area:art]
 
 - title: Criminal Hearts
   date: 2004-10-14
   end: 2004-10-24
   role: director
   venue: New World Arts
-  tags: [org:new-world-arts, art:theater]
+  tags: [org:new-world-arts, art:theater, area:art]
 
 - title: Antony & Cleopatra
   role: stage management intern
   venue: Oregon Shakespeare Festival
   date: 2003-02-06
   end: 2003-04-26
-  tags: [art:theater]
+  tags: [art:theater, area:art]
   feature: true
 
 - title: Danny and the Deep Blue Sea
@@ -245,4 +245,4 @@
   end: 2001-03-04
   role: assistant director & lighting design
   venue: New World Arts
-  tags: [org:new-world-arts, art:theater]
+  tags: [org:new-world-arts, art:theater, area:art]

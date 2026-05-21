@@ -3,7 +3,7 @@
     current: true,
     reverse: true,
   })"
-><h2>Upcoming events…</h2></show-list>
+><h2 webc:if="pages.length > 0">Upcoming events…</h2></show-list>
 
 <post-list
   :@pages="getList($data.collections['is:post'], {latest: 8})"
@@ -16,7 +16,7 @@
     limit: 8
   })"
   :@more="true"
-><h2>Featured Artifacts…</h2></artifact-list>
+><h2 webc:if="pages.length > 0">Featured Artifacts…</h2></artifact-list>
 
 <org-list
   :@pages="getList($data.collections['is:org'], {

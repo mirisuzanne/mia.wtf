@@ -19,7 +19,8 @@ html {
   --font-fluid-ratio: 1.5;
 
   --gap: clamp(8px, 1em, 3vi);
-  --shim: calc(var(--gap) / 2);
+  --half-gap: calc(var(--gap) / 2);
+  --shim: calc(var(--gap) / 4);
   --spacer: 3lh;
 
   @supports (gap: round(1px, 1em)) {

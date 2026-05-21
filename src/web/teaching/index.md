@@ -1,7 +1,7 @@
 ---
 layout: is/list
 title: Teaching CSS
-subtitle: talks, workshops, podcasts, and videos
+sub: talks, workshops, podcasts, and videos
 index: web:teaching
 ---
 

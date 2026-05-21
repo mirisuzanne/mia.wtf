@@ -48,6 +48,10 @@ if you see something you like.
     :@from-data="pots"
   ></media-gallery>
   <figcaption>
-    A few of my favorites.
+    A few of my 2025 favorites.
   </figcaption>
 </figure>
+
+I really should post more pictures (and videos) here.
+Now that I have the new site in place,
+I'll start working on those details.

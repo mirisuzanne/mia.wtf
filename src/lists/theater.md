@@ -32,6 +32,12 @@ I bring to anything else I do.
 
 <!-- intro -->
 
+These days
+I'm mostly working with [Grapefruit Lab](/orgs/grapefruit-lab/)
+to create original performances.
+But I also collaborate with other companies in town
+as a writer or lighting designer.
+
 <figure>
   <media-gallery
     :@from-data="this.gallery"

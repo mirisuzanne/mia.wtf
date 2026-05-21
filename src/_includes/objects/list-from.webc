@@ -4,14 +4,21 @@
     current: true,
     reverse: true,
   })"
-><h2>Upcoming events…</h2></show-list>
+><h2 webc:if="pages.length > 0">Upcoming events…</h2></show-list>
 
 <org-list
   webc:if="!($data.tags || []).includes('is:org')"
   :@pages="getList($data.collections['is:org'], {
-    tags: this.listOf
+    tags: this.listOf,
+    current: true
   })"
 ></org-list>
+
+<channel-list
+  :@pages="getList($data.collections['is:channel'], {
+    tags: this.listOf
+  })"
+></channel-list>
 
 <artifact-list
   :@pages="getList($data.collections['is:artifact'], {
@@ -25,15 +32,17 @@
   })"
 ></post-list>
 
-<channel-list
-  :@pages="getList($data.collections['is:channel'], {
-    tags: this.listOf
+<org-list
+  webc:if="!($data.tags || []).includes('is:org')"
+  :@pages="getList($data.collections['is:org'], {
+    tags: this.listOf,
+    past: true
   })"
-></channel-list>
+><h2 webc:if="pages.length > 0">Past collaborators…</h2></org-list>
 
 <show-list
   :@pages="getList($data.collections['is:show'], {
     tags: this.listOf,
     past: true,
   })"
-></show-list>
+><h2 webc:if="pages.length > 0">Past productions…</h2></show-list>

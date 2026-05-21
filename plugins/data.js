@@ -67,8 +67,8 @@ const getList = (collection, opts = {}) => {
       return b.data.date - a.data.date;
     }
 
-    if (a.data.date === 'ongoing') return 1;
-    if (b.data.date === 'ongoing') return -1;
+    if (a.data.end === 'ongoing') return -1;
+    if (b.data.end === 'ongoing') return 1;
 
     const aDate = a.data.end || a.data.date;
     const bDate = b.data.end || b.data.date;
