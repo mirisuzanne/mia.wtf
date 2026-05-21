@@ -29,7 +29,7 @@ layout: page
 
 <series-callout
   webc:if="this.series"
-  :@series="this.series"
+  :@pages="getList($data.collections['is:post'], { tag: this.series })"
 ></series-callout>
 
 <section

@@ -25,12 +25,14 @@ gallery:
     alt: >
       One of the arms is attached to the frame
       using a bat pin and wing nut.
-summary: |
-  I designed a pottery throwing gauge
-  that I could laser cut with scrap material,
-  and assemble using only friction
-  and bat pins.
 ---
+
+I designed a pottery throwing gauge
+that I could laser cut with scrap material,
+and assemble using only friction
+and bat pins.
+
+<!-- intro -->
 
 Choose a format to download the design templates:
 

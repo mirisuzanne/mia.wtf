@@ -9,12 +9,8 @@
     <meta webc:is="color-scheme" webc:nokeep>
 
     <meta webc:nokeep webc:is="fav-icons" :@theme="theme">
-    <meta webc:nokeep webc:is="open-graph" webc:if="!isOg"
-      :@page="page"
-      :@site="site"
-      :@og="og"
-      :@desc="description || summary || site.description"
-    >
+    <meta webc:nokeep webc:is="open-graph"
+      :@desc="this.description || site.description">
 
     <meta name="generator" :content="eleventy.generator">
 

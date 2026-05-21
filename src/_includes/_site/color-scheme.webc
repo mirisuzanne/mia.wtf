@@ -1,8 +1,11 @@
 <meta
+  name="color-scheme"
+  content="light dark">
+<meta
   name="theme-color"
   media="(prefers-color-scheme: light)"
-  content="hotpink">
+  content="#FF69B4">
 <meta
   name="theme-color"
   media="(prefers-color-scheme: dark)"
-  content="mediumvioletred">
+  content="#C71585">

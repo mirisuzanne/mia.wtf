@@ -11,14 +11,16 @@ hero:
   caption: >
     Decorated by Erin, and
     [available to you](https://art.miriamsuzanne.com/product/lidded-porcelain-jar)
-summary: >
-  Selling things stresses me out.
-  But making things is fun, so here we are.
-  If you’re looking for holiday gifts --
-  for yourself or others --
-  I’d love to help out.
-  [Take my pots, please](https://art.miriamsuzanne.com/)!
 ---
+
+Selling things stresses me out.
+But making things is fun, so here we are.
+If you’re looking for holiday gifts --
+for yourself or others --
+I’d love to help out.
+[Take my pots, please](https://art.miriamsuzanne.com/)!
+
+<!-- intro -->
 
 Erin offered to decorate
 some of the pieces I made this fall, if…
