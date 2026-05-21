@@ -5,7 +5,7 @@
   "type": "module",
   "homepage": "https://www.miriamsuzanne.com/",
   "scripts": {
-    "dev": "eleventy --serve",
+    "serve": "eleventy --serve",
     "build": "eleventy",
     "webmentions": "node mentions/fetch.js"
   },

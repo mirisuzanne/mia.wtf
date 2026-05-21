@@ -1,7 +1,9 @@
 <img
   :src="imgDir(this.src)"
   :alt="this.alt?.trim()"
-  :sizes="$data.image[this.sizes] || this.sizes || $data.image.default"
+  :sizes="$data.image[this.sizes] || this.sizes || 'auto'"
   :width="this.width"
-  @attributes="attrs"
+  :loading="this.loading || 'lazy'"
+  :decoding="this.decoding || 'async'"
+  @attributes="this.attrs"
 >

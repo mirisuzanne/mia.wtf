@@ -25,7 +25,9 @@ hero:
   webc:is="u-img"
   :src="pageHero(srcDoc)"
   alt=""
-  sizes="auto"
+  sizes="og"
+  loading="eager"
+  decoding="sync"
 >
 
 <header>
