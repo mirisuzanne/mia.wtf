@@ -60,7 +60,7 @@
   </toggle-control>
 </control-set>
 
-<control-set>
+<control-set data-media="wide">
   <control-label>Alignment</control-label>
   <toggle-control
     id="alignment"
@@ -122,8 +122,9 @@
       <input-control
         data-prop="--measure"
         data-local="css-measure"
+        data-media="mid"
       >
-        <label for="measure">Line Length</label>
+        <label for="measure">Max Line Length</label>
         <input-reset-group>
           <input id="measure" type="range" min="14" value="30" max="60" step="0.5">
           <button data-btn="emoji" data-reset="measure">

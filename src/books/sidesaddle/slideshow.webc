@@ -1,7 +1,9 @@
 ---
 layout: raw
-title: Sidesaddle slideshow
-eleventyExcludeFromCollections: true
+title: Sidesaddle SVG
+tags:
+  - is:artifact
+  - art:svg
 
 gallery:
   - svg: <neck-art></neck-art>

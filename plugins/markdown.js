@@ -2,7 +2,6 @@ import markdownIt from 'markdown-it';
 import mdMark from 'markdown-it-mark';
 import mdDefList from 'markdown-it-deflist';
 import mdFootNote from 'markdown-it-footnote';
-import removeMd from 'remove-markdown';
 
 const mdIt = markdownIt({
   html: true,
@@ -14,7 +13,6 @@ const mdIt = markdownIt({
 
 const block = (content) => (content ? mdIt.render(content.trim()) : '');
 const inline = (content) => (content ? mdIt.renderInline(content.trim()) : '');
-const mdRemove = (content) => (content ? removeMd(content.trim()) : '');
 
 const splitString = '<!-- intro -->';
 const splitContent = (content) => {
@@ -29,7 +27,6 @@ const getContent = (content) => splitContent(content)[1];
 export default function (eleventyConfig) {
   eleventyConfig.addFilter('md', block);
   eleventyConfig.addFilter('mdI', inline);
-  eleventyConfig.addFilter('mdRemove', mdRemove);
 
   eleventyConfig.addGlobalData('splitString', splitString);
   eleventyConfig.addFilter('splitContent', splitContent);
