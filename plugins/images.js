@@ -24,15 +24,6 @@ export default function(eleventyConfig, options = {}) {
     return img.url;
   }
 
-  const ogImg = async (src) => {
-    const api = 'https://v1.screenshot.11ty.dev/';
-    const baseUrl = process.env.URL || 'https://miriamsuzanne.com';
-    const encoded = encodeURIComponent(`${baseUrl}${src}`);
-
-    return `${api}${encoded}/opengraph/`;
-  }
-
   eleventyConfig.addAsyncFilter('imgSrc', imgSrc);
-  eleventyConfig.addAsyncFilter('ogImg', ogImg);
   eleventyConfig.addFilter('imgDir', imgDir);
 };
