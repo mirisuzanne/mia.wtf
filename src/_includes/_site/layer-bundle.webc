@@ -8,5 +8,5 @@
   webc:keep
   webc:else
   data-layer="raw"
-  @raw="getBundle('css')"
+  @raw="`@import url('${getBundleFileUrl('css')}');`"
 ></style>

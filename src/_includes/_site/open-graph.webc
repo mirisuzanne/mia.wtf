@@ -7,10 +7,6 @@
   export const ogImgAlt = (data) => data.hero?.alt || data.site.og.alt;
 </script>
 
-<link
-  href="https://v1.screenshot.11ty.dev/"
-  rel="preconnect"
-  crossorigin>
 <meta property="og:type" content="website" />
 <meta property="og:title" :content="$data.title">
 <meta property="og:author" :content="$data.site.author">

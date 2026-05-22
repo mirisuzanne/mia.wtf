@@ -6,16 +6,7 @@
     <title @text="this.title"></title>
 
     <meta webc:is="site-styles" webc:nokeep>
-    <meta webc:is="color-scheme" webc:nokeep>
-
-    <meta webc:nokeep webc:is="fav-icons" :@theme="this.theme">
-    <meta webc:nokeep webc:is="open-graph" :@desc="this.description">
-
-    <meta name="generator" :content="eleventy.generator">
-
-    <link rel="canonical" :href="`https://${site.domain}${this.page.url}`">
-    <link rel="micropub" :href="`https://${site.domain}/api/micropub`">
-    <link rel="authorization_endpoint" href="https://indieauth.com/auth">
+    <script webc:keep type="module" defer @raw="getBundle('js')"></script>
 
     <link
       rel="preload"
@@ -29,6 +20,17 @@
       as="font"
       type="font/woff2"
       crossorigin>
+
+    <meta webc:is="color-scheme" webc:nokeep>
+    <meta webc:nokeep webc:is="fav-icons" :@theme="this.theme">
+    <meta webc:nokeep webc:is="open-graph" :@desc="this.description">
+
+    <meta name="generator" :content="eleventy.generator">
+
+    <link rel="canonical" :href="`https://${site.domain}${this.page.url}`">
+    <link rel="micropub" :href="`https://${site.domain}/api/micropub`">
+    <link rel="authorization_endpoint" href="https://indieauth.com/auth">
+
   </head>
   <body>
     <skip-links>
@@ -39,8 +41,6 @@
       webc:nokeep
       @raw="this.content"
     ></template>
-
-    <script webc:keep type="module" @raw="getBundle('js')"></script>
   </body>
 </html>
 
