@@ -1,0 +1,19 @@
+---
+layout: is/list
+sub: '[see all tags](/tags/)'
+pagination:
+  data: collections
+  size: 1
+  alias: tagName
+permalink: /tags/{{ tagName }}/
+eleventyExcludeFromCollections: true
+eleventyComputed:
+  title: 'Everything tagged `{{ tagName }}`'
+  listOf: '{{ tagName }}'
+---
+
+This page was automatically generated
+by a computer program (aka algorithm)
+that is fully under my control.
+
+<!-- intro -->

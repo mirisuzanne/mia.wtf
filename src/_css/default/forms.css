@@ -21,6 +21,10 @@ textarea {
 }
 
 textarea {
-  min-block-size: 4lh;
+  display: block;
   field-sizing: content;
+  inline-size: -webkit-fill-available;
+  inline-size: -moz-available;
+  inline-size: stretch;
+  min-block-size: 4lh;
 }

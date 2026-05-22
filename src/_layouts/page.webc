@@ -48,8 +48,6 @@ layout: base
     <br>
     <em>protect trans kids</em>
   </p>
-
-  <a webc:if="$data.ogSrc" :href="$data.ogSrc">(social image)</a>
 </footer>
 
 <style webc:bucket="layout">

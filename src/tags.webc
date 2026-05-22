@@ -16,12 +16,12 @@ but these are the labels that I used.
 <ul>
   <li
     webc:for="item of Object.keys(collections).sort()"
-    webc:if="!nonTag.includes(item)"
+    webc:if="getList(collections[item]).length > 0 && !nonTag.includes(item)"
   >
     <a
       :href="tagLink(item, collections)"
       @text="item"
     ></a>
-    <span @text="`(${collections[item].length})`"></span>
+    <span @text="`(${getList(collections[item]).length})`"></span>
   </li>
 </ul>

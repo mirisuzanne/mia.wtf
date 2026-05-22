@@ -1,10 +1,10 @@
 export default {
   eleventyComputed: {
-    title: (data) => data.src.title,
-    sub: (data) => data.src.sub,
-    date: (data) => data.src.date,
-    end: (data) => data.src.end,
-    hero: (data) => data.src.hero,
-    at: (data) => data.src.at,
+    title: (data) => data.src?.title || data.title,
+    sub: (data) => data.src?.sub || data.sub,
+    date: (data) => data.src?.date || data.date,
+    end: (data) => data.src?.end || data.end,
+    hero: (data) => data.src?.hero || data.hero,
+    at: (data) => data.src?.at || data.at,
   },
 }

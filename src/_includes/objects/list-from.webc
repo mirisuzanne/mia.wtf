@@ -27,6 +27,12 @@
 ></artifact-list>
 
 <post-list
+  :@pages="getList($data.collections['is:micro'], {
+    tags: this.listOf
+  })"
+><h2>Micro posts…</h2></post-list>
+
+<post-list
   :@pages="getList($data.collections['is:post'], {
     tags: this.listOf
   })"
