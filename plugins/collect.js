@@ -22,7 +22,7 @@ export default (eleventyConfig) => {
     collectionsAPI
       .getFilteredByTag('is:post')
       .filter((item) => !item.data.private)
-      .sort((a, b) => a.date - b.date),
+      .sort((a, b) => b.date - a.date),
   );
 
   eleventyConfig.addCollection('index', (collectionsAPI) =>
