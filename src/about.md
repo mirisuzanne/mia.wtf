@@ -1,4 +1,5 @@
 ---
+templateEngineOverride: webc
 title: Miriam's build-a-bio workshop (fun)
 sub: >
   ~~My~~ Her least favorite page
@@ -63,12 +64,10 @@ photos:
       with letters on the screen behind
 ---
 
-<p>
-  Miriam is a human person
-  with skin that covers a wide array of emotions.
-  She wrote this in <em>third person, past-tense</em>,
-  but regrets that as an aesthetic choice.
-</p>
+Miriam is a human person
+with skin that covers a wide array of emotions.
+She wrote this in _third person, past-tense_,
+but regrets that as an aesthetic choice.
 
 <!-- intro -->
 
@@ -80,11 +79,9 @@ photos:
     <dd @html="mdI(text)"></dd>
   </div>
 </dl>
-
 <org-list
   :@pages="getList(collections['is:org'], { current: true })"
 ><h2>Teams I play with…</h2></org-list>
-
 <h2>Photos of me</h2>
 <figure>
   <figcaption>
@@ -102,7 +99,6 @@ photos:
       sizes="gallery"></a>
   </media-gallery>
 </figure>
-
 <org-list
   :@pages="getList(collections['is:org'], { past: true })"
 ><h2>Previous teams…</h2></org-list>
