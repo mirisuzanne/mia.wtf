@@ -9,7 +9,6 @@
 <template
   webc:root
   id="summary"
-  aria-label="page summary"
   :class="$data.micro.summary"
 >
   <div webc:nokeep @raw="this.summary"></div>

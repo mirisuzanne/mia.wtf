@@ -1,16 +1,15 @@
 ---
+templateEngineOverride: webc
 title: What's on your mind?
 sub: Leave me a note, or [find me online](#footer-contact)
 ---
 
-<p>
-  If you contact me
-  through my website,
-  then this becomes a
-  <em>Social Media Platform</em> &ndash;
-  and I become a billionaire
-  (derogatory).
-</p>
+If you contact me
+through my website,
+then this becomes a
+Social Media Platform --
+and I become a billionaire
+(derogatory).
 
 <!-- intro -->
 
