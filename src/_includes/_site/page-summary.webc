@@ -28,7 +28,7 @@ page-summary {
   font-size: var(--x-large);
   font-style: italic;
   grid-column: wide;
-  /* text-wrap: pretty; */
+  text-wrap: pretty;
   margin-block: 1rlh;
   view-transition-name: cold-open;
 
