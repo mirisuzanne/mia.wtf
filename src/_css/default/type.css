@@ -73,7 +73,7 @@ p, li {
   text-wrap: pretty;
 }
 
-d-i {
+[d-i] {
   display: block;
   margin-block: 0.5lh;
 }
@@ -102,7 +102,7 @@ dl[inline-list] {
   margin: unset;
   gap: 1em;
 
-  & :is(d-i, dt, dd) {
+  & :is([d-i], dt, dd) {
     margin: unset;
   }
 

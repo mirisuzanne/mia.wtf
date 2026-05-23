@@ -1,5 +1,5 @@
 <dl>
-  <d-i webc:for="(item, value) in $data.me">
+  <div d-i webc:for="(item, value) in $data.me">
     <dt @text="item"></dt>
     <dd>
       <a
@@ -13,7 +13,7 @@
         @text="value.name"
       ></clip-board>
     </dd>
-  </d-i>
+  </div>
 </dl>
 
 <style webc:bucket="objects">
@@ -21,7 +21,7 @@
     display: block;
     font-family: var(--ui-font);
 
-    :is(d-i) {
+    :is(div) {
       margin: unset;
     }
 

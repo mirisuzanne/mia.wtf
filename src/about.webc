@@ -73,12 +73,12 @@ photos:
 <!-- intro -->
 
 <dl>
-  <d-i
+  <div d-i
     webc:for="(key, text) in bios"
   >
     <dt @raw="key"></dt>
     <dd @html="mdI(text)"></dd>
-  </d-i>
+  </div>
 </dl>
 
 <org-list
