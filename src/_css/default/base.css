@@ -149,7 +149,6 @@ form {
 
 main {
   display: grid;
-  font-size-adjust: from-font;
   grid-column: full;
   grid-template-columns: inherit;
 
