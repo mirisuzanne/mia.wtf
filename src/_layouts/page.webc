@@ -75,8 +75,8 @@ layout: base
       var(--border),
       transparent
     ) 1;
-    rotate: -1.5deg;
     margin-block: 1lh;
+    rotate: -1.5deg;
     view-transition-name: horizon;
   }
 </style>
