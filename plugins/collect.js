@@ -18,11 +18,10 @@ export default (eleventyConfig) => {
       .filter((item) => item.data.area),
   );
 
-  eleventyConfig.addCollection('feed:posts', (collectionsAPI) =>
+  eleventyConfig.addCollection('feed', (collectionsAPI) =>
     collectionsAPI
       .getFilteredByTag('is:post')
-      .filter((item) => !item.data.private)
-      .sort((a, b) => b.date - a.date),
+      .filter((item) => !item.data.private),
   );
 
   eleventyConfig.addCollection('index', (collectionsAPI) =>

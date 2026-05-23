@@ -2,7 +2,7 @@ import 'dotenv/config';
 
 // External Plugins
 import pluginWebc from '@11ty/eleventy-plugin-webc';
-import { feedPlugin } from "@11ty/eleventy-plugin-rss";
+import pluginRss from "@11ty/eleventy-plugin-rss";
 import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
 import { exec } from 'child_process';
 import { RenderPlugin } from "@11ty/eleventy";
@@ -20,6 +20,7 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(RenderPlugin);
+  eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginWebc, {
     components: [
       'src/_includes/**/*.webc',
@@ -70,23 +71,6 @@ export default async function (eleventyConfig) {
 
         // Which source to use for `<img width height src>` attributes
         fallback: "largest", // or "smallest"
-      }
-    }
-  });
-
-  eleventyConfig.addPlugin(feedPlugin, {
-    collection: {
-      name: "feed:posts",
-      limit: 10,
-    },
-    metadata: {
-      language: "en",
-      title: "Miriam Suzanne",
-      sub: "Art & CSS & other digital artifacts of my life",
-      base: "https://www.miriamsuzanne.com/",
-      author: {
-        name: "Miriam Suzanne",
-        email: "miriam@miriamsuzanne.com",
       }
     }
   });
