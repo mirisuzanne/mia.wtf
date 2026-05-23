@@ -51,11 +51,16 @@ layout: base
 </footer>
 
 <style webc:bucket="layout">
+  @view-transition {
+    navigation: auto;
+  }
+
   #banner {
     align-items: baseline;
     display: flex;
     gap: 1ch;
     justify-content: space-between;
+    view-transition-name: banner;
 
     [rel=home] {
       font-style: italic;
@@ -72,6 +77,7 @@ layout: base
     ) 1;
     rotate: -1.5deg;
     margin-block: 1lh;
+    view-transition-name: horizon;
   }
 </style>
 

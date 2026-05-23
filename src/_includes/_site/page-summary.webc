@@ -12,7 +12,7 @@
   aria-label="page summary"
   :class="$data.micro.summary"
 >
-  <render-as :@content="this.summary"></render-as>
+  <div webc:nokeep @raw="this.summary"></div>
 
   <page-rel webc:if="$data.at && $data.venue">
     <span webc:if="$data.rel" @text="$data.rel"></span>
@@ -28,8 +28,9 @@ page-summary {
   font-size: var(--x-large);
   font-style: italic;
   grid-column: wide;
-  text-wrap: pretty;
+  /* text-wrap: pretty; */
   margin-block: 1rlh;
+  view-transition-name: cold-open;
 
   &:empty { display: none; }
   & code { font-style: normal; }
