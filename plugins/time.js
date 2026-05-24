@@ -1,23 +1,12 @@
-import { format } from 'date-fns';
-import { zoneDate, today, isFuture} from './time-utils.js';
+import { UTCDate } from "@date-fns/utc";
+import { formatDate, today, isFuture, isRecent } from './time-utils.js';
 
 export default function (eleventyConfig, options = {}) {
-  // https://date-fns.org/v2.21.2/docs/format
-  const formats = {
-    day: 'd',
-    month: 'MMMM',
-    year: 'y',
-    iso: 'yyyy-MM-dd',
-    url: 'yyyy/MM/dd',
-    default: 'yyyy/MM/dd',
-    ...options,
-  };
-
-  const applyFormat = (date, style) => format(date, formats[style] || style);
+  const applyFormat = (date, style) => formatDate(date, style, options);
   const year = () => applyFormat(today, 'year');
 
   const recentDate = (date) => {
-    const zoned = zoneDate(date);
+    const zoned = new UTCDate(date);
     const nowParts = applyFormat(today, 'iso').split('-');
     const postParts = applyFormat(zoned, 'iso').split('-');
 
@@ -28,14 +17,15 @@ export default function (eleventyConfig, options = {}) {
     return applyFormat(zoned, 'MMM dd');
   };
 
-  const formatDate = (date, style = 'default') => {
+  const recentOrFullFormat = (date, style = 'default') => {
     return style === 'recent'
       ? recentDate(date)
-      : applyFormat(zoneDate(date), style);
+      : applyFormat(new UTCDate(date), style);
   };
 
   eleventyConfig.addShortcode('year', year);
   eleventyConfig.addFilter('year', year);
-  eleventyConfig.addFilter('dateFormat', formatDate);
+  eleventyConfig.addFilter('dateFormat', recentOrFullFormat);
   eleventyConfig.addFilter('isFuture', isFuture);
+  eleventyConfig.addFilter('isRecent', isRecent);
 };

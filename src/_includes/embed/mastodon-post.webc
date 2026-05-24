@@ -1,7 +1,7 @@
 <slot></slot>
 
 <template id="mastodon-post-template">
-  on <em data-key="hostname"></em>
+  (<em data-key="hostname"></em>)
   <dl inline-list>
     <div d-i>
       <dt>

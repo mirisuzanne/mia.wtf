@@ -1,5 +1,24 @@
-import { utcToZonedTime } from 'date-fns-tz';
+import { UTCDate } from "@date-fns/utc";
+import { format, subMonths } from 'date-fns';
 
-export const zoneDate = (date) => utcToZonedTime(date || new Date(), '+00:00');
-export const today = zoneDate();
-export const isFuture = (date) => zoneDate(date) > today;
+const knownFormats = {
+  day: 'd',
+  month: 'MMMM',
+  year: 'y',
+  iso: 'yyyy-MM-dd',
+  url: 'yyyy/MM/dd',
+  default: 'yyyy/MM/dd',
+};
+
+export const formatDate = (date, style, opts = {}) => {
+  const formats = {
+    ...knownFormats,
+    ...opts,
+  };
+
+  return format(date, formats[style] || style);
+}
+
+export const today = new UTCDate();
+export const isFuture = (date) => new UTCDate(date) > today;
+export const isRecent = (date) => new UTCDate(date) > subMonths(today, 1);

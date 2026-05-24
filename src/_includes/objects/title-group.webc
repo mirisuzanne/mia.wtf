@@ -1,11 +1,19 @@
+<script webc:setup>
+  export const isPost = (tags) => tags?.includes('is:post');
+  export const isShare = (tags) => tags && tagType(tags, 'rel').includes('share');
+  export const titleMD = (title, at, tags) => at && isShare(tags)
+    ? `[${title}](${at})`
+    : title;
+</script>
+
 <h1
   id="title"
-  @html="mdI(this.at ? `[${this.title}](${this.at})` : this.title)"
+  @html="mdI(titleMD(this.title, this.at, this.tags))"
 ></h1>
 
 <page-meta>
   <date-time
-    webc:if="this.isPost"
+    webc:if="isPost(this.tags)"
     :date="this.date"
   ></date-time>
 

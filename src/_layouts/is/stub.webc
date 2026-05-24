@@ -17,7 +17,7 @@ placeholder: true
     :@subtitle="this.org ? `${this.org} | _${this.sub}_` : this.sub"
     :@date="this.date"
     :@at="this.at"
-    :@is-post="this.tags?.includes('is:post')"
+    :@tags="this.tags"
   ></title-group>
 </header>
 

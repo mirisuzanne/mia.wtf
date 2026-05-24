@@ -68,6 +68,13 @@ li::marker {
   margin-block: unset;
 }
 
+[inline-list] {
+  display: flex;
+  flex-flow: wrap;
+  margin: unset;
+  column-gap: 1ch;
+}
+
 p, li {
   hanging-punctuation: first last;
   text-wrap: pretty;
@@ -98,9 +105,6 @@ dd + dd {
 
 dl[inline-list] {
   --after-dt: none;
-  display: flex;
-  margin: unset;
-  gap: 1em;
 
   & :is([d-i], dt, dd) {
     margin: unset;

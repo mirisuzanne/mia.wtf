@@ -16,7 +16,7 @@ layout: page
     :@subtitle="this.org ? `${this.org} | _${this.sub}_` : this.sub"
     :@date="this.date"
     :@at="this.at"
-    :@is-post="this.tags?.includes('is:post')"
+    :@tags="this.tags"
   ></title-group>
 
   <img
@@ -38,8 +38,16 @@ layout: page
   @raw="getContent(this.content)"
 ></section>
 
-<mastodon-post
-  webc:if="this.mastodon"
->
-  <a :href="this.mastodon">Join the conversation</a>
-</mastodon-post>
+<div webc:if="this.tags || this.mastodon" content-break>
+  <ul webc:if="this.tags" role="list" inline-list>
+    <li webc:for="tag of this.tags">
+      <a :href="tagLink(tag, $data.collections)" @text="tag"></a>
+    </li>
+  </ul>
+
+  <mastodon-post
+    webc:if="this.mastodon"
+  >
+    <a :href="this.mastodon">this post is on mastodon</a>
+  </mastodon-post>
+</div>

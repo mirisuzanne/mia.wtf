@@ -2,16 +2,18 @@
 templateEngineOverride: webc
 title: Follow my website
 sub: Wherever it goes
+listOf: feed
 ---
 
-
-At this point there's only a single
-<a :href="this.site.feed" rel="alternate">
-  <rss-fill></rss-fill>
-  <link-text>rss</link-text></a>,
+At this point there's only a single RSS feed,
 but maybe I'll add more in the future.
 
 <!-- intro -->
+
+<a :href="$data.site.feed" rel="alternate">
+  <rss-fill></rss-fill>
+  <link-text>RSS feed</link-text>
+</a>
 
 <div webc:nokeep>
 <channel-list

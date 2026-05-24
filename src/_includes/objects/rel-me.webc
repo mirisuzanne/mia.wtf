@@ -1,3 +1,10 @@
+<p>
+  <a :href="$data.site.feed" rel="alternate">
+    <rss-fill></rss-fill>
+    <link-text>rss</link-text>
+  </a>
+</p>
+
 <dl>
   <div d-i webc:for="(item, value) in $data.me">
     <dt @text="item"></dt>
@@ -21,9 +28,7 @@
     display: block;
     font-family: var(--ui-font);
 
-    :is(div) {
-      margin: unset;
-    }
+    [d-i] { margin: unset; }
 
     :is(dt, dd) {
       display: inline;

@@ -1,5 +1,5 @@
 import { load } from 'js-yaml';
-import { isFuture} from './time-utils.js';
+import { isFuture, isRecent} from './time-utils.js';
 
 const shuffle = (items) => items
   .map(value => ({ value, sort: Math.random() }))
@@ -17,11 +17,12 @@ const hasTag = (page, tag) => {
   return pageTags.includes(tag)
 };
 const everyTag = (page, tags) => (tags || []).every((tag) => hasTag(page, tag));
-const anyTag = (page, tags) => (tags || []).every((tag) => hasTag(page, tag));
+const anyTag = (page, tags) => (tags || []).some((tag) => hasTag(page, tag));
 
 const withTag = (pages, tag) => pages.filter((page) => hasTag(page, tag));
 const withEveryTag = (pages, tags) => pages.filter((page) => everyTag(page, tags));
 const withAnyTag = (pages, tags) => pages.filter((page) => anyTag(page, tags));
+const withNoTag = (pages, tags) => pages.filter((page) => !anyTag(page, tags));
 
 const tagType = (tags, prefix) => tags
   .filter((tag) => tag.startsWith(prefix))
@@ -51,13 +52,16 @@ const wrapData = (item, key) => {
 };
 
 const getList = (collection, opts = {}) => {
-  const pages = collection || [];
+  let pages = collection || [];
   if (pages.length === 0) return pages;
 
   const tags = (typeof opts.tags === 'string') ? [opts.tags] : opts.tags;
-  const subSet = tags ? withEveryTag(pages, tags) : pages;
+  const not = (typeof opts.not === 'string') ? [opts.not] : opts.not;
 
-  const filterOptions = ['feature', 'latest', 'current', 'past'];
+  pages = tags ? withEveryTag(pages, tags) : pages;
+  pages = not ? withNoTag(pages, not) : pages;
+
+  const filterOptions = ['feature', 'latest', 'current', 'past', 'recent'];
   const hasFilters = Object.keys(opts).some(
     (filter) => filterOptions.includes(filter) && opts[filter]
   );
@@ -76,7 +80,7 @@ const getList = (collection, opts = {}) => {
     return bDate - aDate;
   }
 
-  const sorted = subSet
+  const sorted = pages
     .sort((a, b) => {
       const result = compare(a, b);
       return opts.reverse ? result * -1 : result;
@@ -89,6 +93,7 @@ const getList = (collection, opts = {}) => {
       if (opts.current && onGoing(item)) return true;
       if (opts.past && !onGoing(item)) return true;
       if (opts.feature && item.data.feature) return true;
+      if (opts.recent && isRecent(item.data.date)) return true;
       if (opts.latest && i < opts.latest) return true;
       return false;
     });

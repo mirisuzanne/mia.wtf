@@ -6,7 +6,14 @@
 ><h2 webc:if="pages.length > 0">Upcoming events…</h2></show-list>
 
 <post-list
-  :@pages="getList($data.collections['is:post'], {latest: 8})"
+  :@pages="getList($data.collections['is:micro'], { recent: true })"
+><h2 webc:if="pages.length > 0">Micro posts…</h2></post-list>
+
+<post-list
+  :@pages="getList($data.collections['is:post'], {
+    not: 'is:micro',
+    latest: 8
+  })"
   :@more="true"
 ></post-list>
 

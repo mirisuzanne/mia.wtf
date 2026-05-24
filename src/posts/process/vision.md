@@ -4,6 +4,7 @@ sub: (and our team will probably need some training)
 date: 2024-08-08
 at: https://robinrendle.com/notes/design-aint-a-democracy/
 rel: reply
+venue: Robin Rendle
 tags:
   - area:web
   - area:art
