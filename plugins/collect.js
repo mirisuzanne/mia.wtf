@@ -14,7 +14,7 @@ export default (eleventyConfig) => {
 
   eleventyConfig.addCollection('area', (collectionsAPI) =>
     collectionsAPI
-      .getAll()
+      .getAllSorted()
       .filter((item) => item.data.area),
   );
 
@@ -26,7 +26,7 @@ export default (eleventyConfig) => {
 
   eleventyConfig.addCollection('index', (collectionsAPI) =>
     collectionsAPI
-      .getAll()
+      .getAllSorted()
       .filter((item) => item.data.index),
   );
 }

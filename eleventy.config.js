@@ -2,7 +2,7 @@ import 'dotenv/config';
 
 // External Plugins
 import pluginWebc from '@11ty/eleventy-plugin-webc';
-import pluginRss from "@11ty/eleventy-plugin-rss";
+import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
 import { exec } from 'child_process';
 import { RenderPlugin } from "@11ty/eleventy";
@@ -20,7 +20,6 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(RenderPlugin);
-  eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginWebc, {
     components: [
       'src/_includes/**/*.webc',
@@ -74,6 +73,25 @@ export default async function (eleventyConfig) {
       }
     }
   });
+
+  eleventyConfig.addPlugin(feedPlugin, {
+		type: "atom", // or "rss", "json"
+		outputPath: "/feed.xml",
+		collection: {
+			name: "feed", // iterate over `collections.posts`
+			limit: 15,     // 0 means no limit
+		},
+		metadata: {
+			language: "en",
+			title: "Miriam Eric Suzanne",
+			subtitle: "Art & CSS & other digital artifacts of my life as a hybrid creator/teacher based in Denver.",
+			base: "https://www.miriamsuzanne.com/",
+			author: {
+				name: "Miriam Suzanne",
+				email: "hello@miriamsuzanne.com",
+			}
+		}
+	});
 
   // config
   eleventyConfig.on('eleventy.beforeWatch', (changedFiles) => {

@@ -16,7 +16,7 @@ but these are the labels that I used.
 
 <ul>
   <li
-    webc:for="item of Object.keys(collections).sort()"
+    webc:for="item of Object.keys(collections).toSorted()"
     webc:if="getList(collections[item]).length > 0 && !nonTag.includes(item)"
   >
     <a

@@ -81,7 +81,7 @@ const getList = (collection, opts = {}) => {
   }
 
   const sorted = pages
-    .sort((a, b) => {
+    .toSorted((a, b) => {
       const result = compare(a, b);
       return opts.reverse ? result * -1 : result;
     });
