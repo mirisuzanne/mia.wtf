@@ -29,19 +29,18 @@ pots:
       and angular walls sloping in slightly
 ---
 
-I love making art that people interact with
-as part of their daily routine.
 There is no boundary between art and craft,
-both are _fine_.
+I enjoy making _fine objects_ that people interact with.
 
 <!-- intro -->
 
 Sometimes pieces are available
 <a href="https://art.miriamsuzanne.com/">in my shop</a>,
+and announcements go out to
+<a href="https://buttondown.com/MiaCulpa">my newsletter</a> --
 or you can
 <a href="/contact/">reach out</a>
-any time
-if you see something you like.
+any time for commissions.
 
 <figure>
   <media-gallery

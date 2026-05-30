@@ -1,5 +1,5 @@
 import { UTCDate } from "@date-fns/utc";
-import { format, subMonths } from 'date-fns';
+import { format, subMonths, subDays } from 'date-fns';
 
 const knownFormats = {
   day: 'd',
@@ -20,5 +20,5 @@ export const formatDate = (date, style, opts = {}) => {
 }
 
 export const today = new UTCDate();
-export const isFuture = (date) => new UTCDate(date) > today;
+export const isFuture = (date) => new UTCDate(date) > subDays(today, 1);
 export const isRecent = (date) => new UTCDate(date) > subMonths(today, 1);

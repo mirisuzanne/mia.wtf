@@ -1,4 +1,5 @@
 <section webc:if="this.pages?.length > 0">
+  <slot><h2>Shows & events…</h2></slot>
   <ul>
     <li webc:for="show of this.pages">
       <event-item :@show="show"></event-item>

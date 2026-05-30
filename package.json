@@ -50,6 +50,7 @@
     "@daviddarnes/mastodon-post": "^1.3.0",
     "@terriblemia/eight-ball": "^0.2.0",
     "@terriblemia/ground-control": "^0.3.0",
-    "@terriblemia/track-list": "^1.2.0"
+    "@terriblemia/track-list": "^1.2.0",
+    "lite-youtube-embed": "^0.3.4"
   }
 }

@@ -1,5 +1,5 @@
 import { load } from 'js-yaml';
-import { isFuture, isRecent} from './time-utils.js';
+import { isFuture, isRecent, today } from './time-utils.js';
 
 const shuffle = (items) => items
   .map(value => ({ value, sort: Math.random() }))
@@ -37,9 +37,9 @@ const pCategory = (tags, prefixList) => {
 }
 
 const onGoing = (page) => {
-  if (!page.data?.end) return false;
-  if (page.data.end === 'ongoing') return true;
-  return isFuture(page.data.end);
+  if (isFuture(page.data.end || page.data.date)) return true;
+  if (!page.data.end) return false;
+  return page.data.end === 'ongoing';
 }
 
 const pageName = (page) => page.data.banner || page.data.title || page.fileSlug;

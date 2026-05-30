@@ -6,5 +6,5 @@ pagination:
   size: 1
   alias: src
   addAllPagesToCollections: true
-permalink: /shows/{{ src.date }}/{{ src.title | slugify }}/index.html
+permalink: "/shows/{{ src.date | dateFormat: 'url' }}/{{ src.title | slugify }}/index.html"
 ---

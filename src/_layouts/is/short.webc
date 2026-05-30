@@ -1,0 +1,7 @@
+---
+layout: is/default
+---
+
+<youtube-short
+  :@src="this.youtube"
+></youtube-short>

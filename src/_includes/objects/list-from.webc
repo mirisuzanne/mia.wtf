@@ -53,4 +53,4 @@
     tags: this.listOf,
     past: true,
   })"
-><h2 webc:if="pages.length > 0">Past productions…</h2></show-list>
+><h2 webc:if="pages.length > 0">Past events…</h2></show-list>
