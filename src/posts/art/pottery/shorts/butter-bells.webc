@@ -4,3 +4,8 @@ title: Butter bells, fresh from the kiln
 sub: and all the finishing touches
 youtube: https://www.youtube.com/embed/1DQQf8jUfxw
 ---
+
+<youtube-short
+  webc:nokeep
+  :@src="this.youtube"
+></youtube-short>
