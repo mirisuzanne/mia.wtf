@@ -5,6 +5,15 @@
 />
 <style>
   lite-youtube {
+    aspect-ratio: var(--yt-ratio, 16/9);
     max-width: unset;
+
+    &[yt-short] {
+      --yt-ratio: 9/16;
+      inline-size: clamp(var(--gallery-fit, 250px), 75svh * var(--yt-ratio), 100%);
+      place-self: safe center;
+    }
+
+    &::after { content: none; }
   }
 </style>

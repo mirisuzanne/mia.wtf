@@ -1,0 +1,26 @@
+---
+tags:
+  - is:micro
+  - as:video
+pagination:
+  data: shorts
+  size: 1
+  alias: src
+  addAllPagesToCollections: true
+---
+
+<figure media-gallery>
+  <lite-youtube
+    :videoid="this.src?.youtube"
+    yt-short
+    @text="this.src?.title"
+  ></lite-youtube>
+</figure>
+
+<!-- intro -->
+
+<div
+  webc:if="this.src?.caption"
+  webc:no-keep
+  @html="md(this.src?.caption)"
+></div>

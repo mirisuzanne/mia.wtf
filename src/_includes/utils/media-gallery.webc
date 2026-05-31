@@ -40,7 +40,8 @@
 <slot webc:if="!this.fromData"></slot>
 
 <style webc:bucket="objects">
-  media-gallery {
+  media-gallery,
+  [media-gallery] {
     align-items: start;
     display: grid;
     gap: var(--gallery-gap, var(--shim));
