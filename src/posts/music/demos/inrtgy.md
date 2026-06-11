@@ -24,7 +24,7 @@ we're excited to have him in the band!
   <media-gallery
     :@from-data="track"
   ></media-gallery>
-  <figcaption @html="mdI(caption)"></figcaption>
+  <figcaption @html="mdInline(caption)"></figcaption>
 </figure>
 
 Hear studio recording of this track

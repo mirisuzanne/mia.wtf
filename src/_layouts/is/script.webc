@@ -1,8 +1,146 @@
 ---
 layout: base
+noStyle: true
+size: 13
+step: 0.5
 ---
 
-<template
-  webc:nokeep
-  @html="this.content"
-></template>
+<nav>
+  <a href="/scripts/">« back to list</a>
+  <input-control data-prop="--fs-print">
+    <label for="print-size">Font size (pt)</label>
+    <input id="print-size"
+      type="number"
+      name="print-size"
+      :value="this.size"
+      :step="this.step">
+  </input-control>
+</nav>
+
+<header>
+  <h1 @html="title"></h1>
+  <p @html="mdInline(byline)"></p>
+  <time :datetime="dateFormat(date, 'iso')" @html="dateFormat(date)"></time>
+</header>
+
+<main id="content" @raw="content"></main>
+
+<style>
+  /* screen only */
+  @media screen {
+    body {
+      margin: 2em auto;
+      max-width: 75ch;
+    }
+  }
+
+  /* both */
+  html {
+    font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+    font-size: calc(var(--fs-print, 12) * 1pt);
+    line-height: 1.6;
+  }
+
+  header {
+    border-block: thin dotted;
+    margin-block: 3em;
+    padding-block: 3em;
+    display: grid;
+    gap: 1lh;
+
+    * { margin: 0; }
+  }
+
+  h1, h2, h3 {
+    text-wrap: balance;
+
+    a:any-link {
+      color: unset;
+      text-decoration: none;
+    }
+  }
+
+  main {
+    counter-reset: h2 h3;
+  }
+
+  h2 {
+    counter-increment: h2;
+    counter-set: h3 0;
+    break-after: avoid;
+    font-size: 1.2em;
+    margin-bottom: 0;
+
+    &::before {
+      content: counter(h2) '. ';
+    }
+  }
+
+  h2 + h3 {
+    margin-top: 0;
+  }
+
+  h3 {
+    counter-increment: h3;
+    break-after: avoid;
+    font-size: 1em;
+    font-style: italic;
+
+    &::before {
+      content: counter(h2) '.' counter(h3) ' – ';
+    }
+  }
+
+  blockquote {
+    border-inline-start: solid;
+    padding-inline: 1ch;
+    margin-inline: unset;
+  }
+
+  pre,
+  code {
+    font: inherit;
+  }
+
+  hr {
+    border: none;
+    block-size: auto;
+    margin-block: 1.5lh;
+
+    &::after {
+      content: '* * *';
+    }
+  }
+
+  /* print styles */
+  @page {
+    margin: 0.5in;
+
+    @bottom-right {
+      content: counter(page);
+    }
+  }
+
+  @page :right {
+    margin-left: 0.75in;
+  }
+
+  @media print {
+    nav {
+      display: none;
+    }
+
+    header {
+      place-content: center;
+      block-size: 100vh;
+      border: unset;
+      margin: unset;
+      padding: unset;
+      max-inline-size: 60ch;
+    }
+
+    h1 {
+      font-size: inherit;
+    }
+  }
+</style>

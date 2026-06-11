@@ -31,9 +31,9 @@ hero:
 >
 
 <header>
-  <h1><inline-bg @html="mdI(srcDoc.data.title)"></inline-bg></h1>
+  <h1><inline-bg @html="mdInline(srcDoc.data.title)"></inline-bg></h1>
   <h2 webc:if="subTitle(srcDoc)">
-    <inline-bg @html="mdI(subTitle(srcDoc))"></inline-bg>
+    <inline-bg @html="mdInline(subTitle(srcDoc))"></inline-bg>
   </h2>
 </header>
 

@@ -151,7 +151,7 @@ _aesthetic choices_:
   <media-gallery
     :@from-data="v2008to2012.gallery"
   ></media-gallery>
-  <figcaption @html="mdI(v2008to2012.caption)"></figcaption>
+  <figcaption @html="mdInline(v2008to2012.caption)"></figcaption>
 </figure>
 
 There's something refreshing about

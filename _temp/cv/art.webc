@@ -36,7 +36,7 @@ layout: raw
       </header>
       <p>
         <strong @text="org.role"></strong>:
-        <span @html="mdI(org.sub)"></span>
+        <span @html="mdInline(org.sub)"></span>
       </p>
     </article>
   </section>
@@ -110,7 +110,7 @@ layout: raw
           :@end="edu.end"
         ></date-range>
       </header>
-      <p @html="mdI(edu.sub)"></p>
+      <p @html="mdInline(edu.sub)"></p>
     </article>
   </section>
 </main>

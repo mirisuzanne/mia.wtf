@@ -8,7 +8,7 @@
       <btn-text visually-hidden>play</btn-text>
     </button>
     <album-meta>
-      <em @html="mdI(this.album.with)"></em>,
+      <em @html="mdInline(this.album.with)"></em>,
       <date-time :@date="this.album.date" @format="year"></date-time>
     </album-meta>
     <prev-next>

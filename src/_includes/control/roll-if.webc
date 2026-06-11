@@ -1,7 +1,7 @@
 <template
   webc:nokeep
   webc:if="typeof this.content === 'string'"
-  @raw="md(this.content)"
+  @raw="mdBlock(this.content)"
 ></template>
 
 <roll-data

@@ -70,7 +70,7 @@ using my iPad as a light table.
   <media-gallery
     :@from-data="process.items"
   ></media-gallery>
-  <figcaption @html="mdI(process.caption)"></figcaption>
+  <figcaption @html="mdInline(process.caption)"></figcaption>
 </figure>
 
 ## Final(ish) Design
@@ -82,5 +82,5 @@ James decided on the abstract jawbone pattern in red arrows.
   <media-gallery
     :@from-data="final.items"
   ></media-gallery>
-  <figcaption @html="mdI(final.caption)"></figcaption>
+  <figcaption @html="mdInline(final.caption)"></figcaption>
 </figure>

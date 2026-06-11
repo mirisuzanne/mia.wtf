@@ -86,5 +86,5 @@ contributions from myself and many others.
   <media-gallery
     :@from-data="gallery"
   ></media-gallery>
-  <figcaption @html="mdI(caption)"></figcaption>
+  <figcaption @html="mdInline(caption)"></figcaption>
 </figure>

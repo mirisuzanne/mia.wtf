@@ -16,7 +16,7 @@
   <page-rel webc:if="$data.at && $data.venue">
     <span webc:if="$data.rel" @text="$data.rel"></span>
     <span webc:nokeep @text="relations[$data.rel] || 'of'"></span>
-    <a :href="$data.at" @html="mdI($data.venue)"></a>
+    <a :href="$data.at" @html="mdInline($data.venue)"></a>
   </page-rel>
 </template>
 

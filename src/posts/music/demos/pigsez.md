@@ -22,7 +22,7 @@ The last demo of new material (for now):
   <media-gallery
     :@from-data="track"
   ></media-gallery>
-  <figcaption @html="mdI(caption)"></figcaption>
+  <figcaption @html="mdInline(caption)"></figcaption>
 </figure>
 
 Hear studio recording of this track

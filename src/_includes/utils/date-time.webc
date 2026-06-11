@@ -1,7 +1,7 @@
 <script webc:setup>
   export const formatText = (prefix, date, format) => {
     const dateText = dateFormat(date, format);
-    return prefix ? `${mdI(prefix)} ${dateText}` : dateText;
+    return prefix ? `${mdInline(prefix)} ${dateText}` : dateText;
   }
 </script>
 

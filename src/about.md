@@ -76,7 +76,7 @@ but regrets that as an aesthetic choice.
     webc:for="(key, text) in bios"
   >
     <dt @raw="key"></dt>
-    <dd @html="mdI(text)"></dd>
+    <dd @html="mdInline(text)"></dd>
   </div>
 </dl>
 <org-list

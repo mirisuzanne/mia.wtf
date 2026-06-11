@@ -1,8 +1,8 @@
 import removeMd from 'remove-markdown';
 
 const shorter = (string, max) => {
-  const dot = string.lastIndexOf('.');
-  const fade = string.lastIndexOf('…');
+  const dot = string.lastIndexOf('. ');
+  const fade = string.lastIndexOf('… ');
 
   if (dot || fade) {
     const end = Math.max(dot, fade);

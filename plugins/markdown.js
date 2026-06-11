@@ -25,8 +25,8 @@ const getSummary = (content) => splitContent(content)[0];
 const getContent = (content) => splitContent(content)[1];
 
 export default function (eleventyConfig) {
-  eleventyConfig.addFilter('md', block);
-  eleventyConfig.addFilter('mdI', inline);
+  eleventyConfig.addFilter('mdBlock', block);
+  eleventyConfig.addFilter('mdInline', inline);
 
   eleventyConfig.addGlobalData('splitString', splitString);
   eleventyConfig.addFilter('splitContent', splitContent);

@@ -30,6 +30,6 @@
   </template>
   <p-note
     class="p-note"
-    @html="mdI(`-- ${this.org.data.sub}`)"
+    @html="mdInline(`-- ${this.org.data.sub}`)"
   ></p-note>
 </div>

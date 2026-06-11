@@ -17,5 +17,5 @@ caption: Demo recording of *I See Rockets*
   <media-gallery
     :@from-data="track"
   ></media-gallery>
-  <figcaption @html="mdI(caption)"></figcaption>
+  <figcaption @html="mdInline(caption)"></figcaption>
 </figure>

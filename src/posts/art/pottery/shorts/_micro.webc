@@ -22,5 +22,5 @@ pagination:
 <div
   webc:if="this.src?.caption"
   webc:no-keep
-  @html="md(this.src?.caption)"
+  @html="mdBlock(this.src?.caption)"
 ></div>

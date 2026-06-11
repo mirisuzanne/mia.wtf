@@ -248,7 +248,7 @@ a trinket tray for Rae…
   <media-gallery
     :@from-data="commission.data"
   ></media-gallery>
-  <figcaption @html="mdI(commission.caption)"></figcaption>
+  <figcaption @html="mdInline(commission.caption)"></figcaption>
 </figure>
 
 I have a lot more that I'm excited to learn,
@@ -277,7 +277,7 @@ I participated in my first market!
   <media-gallery
     :@from-data="market.data"
   ></media-gallery>
-  <figcaption @html="mdI(market.caption)"></figcaption>
+  <figcaption @html="mdInline(market.caption)"></figcaption>
 </figure>
 
 I'm aware of the dangers that come
@@ -291,7 +291,7 @@ I've promised to local shops and also to family.
   <media-gallery
     :@from-data="progress.data"
   ></media-gallery>
-  <figcaption @html="mdI(progress.caption)"></figcaption>
+  <figcaption @html="mdInline(progress.caption)"></figcaption>
 </figure>
 
 At some point I also need to find time

@@ -5,7 +5,7 @@
 ></a>
 <em
   webc:else
-  @html="mdI(this.show.data.title)"
+  @html="mdInline(this.show.data.title)"
 ></em>
 &ndash;
 <date-time

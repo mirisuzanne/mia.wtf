@@ -1,0 +1,22 @@
+---
+title: Scripts
+sub: Often with collaborators
+---
+
+<p>
+  I don't usually introduce myself as a <em>playwright</em>,
+  but I've written a lot of things
+  for the stage.
+</p>
+
+<!-- intro -->
+
+<ul>
+  <li webc:for="script of collections.script.toReversed()">
+    <a :href="script.url" @text="script.data.title"></a> &ndash;
+    <time
+      :datetime="dateFormat(script.date, 'iso')"
+      @text="dateFormat(script.date, 'year')"
+    ></time>
+  </li>
+</ul>

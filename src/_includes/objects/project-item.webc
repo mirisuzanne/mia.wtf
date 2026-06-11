@@ -19,6 +19,6 @@
 
 
   <p-note
-    @html="mdI(this.project.data.sub)"
+    @html="mdInline(this.project.data.sub)"
   ></p-note>
 </li>

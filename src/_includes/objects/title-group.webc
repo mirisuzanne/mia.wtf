@@ -8,7 +8,7 @@
 
 <h1
   id="title"
-  @html="mdI(titleMD(this.title, this.at, this.tags))"
+  @html="mdInline(titleMD(this.title, this.at, this.tags))"
 ></h1>
 
 <page-meta>
