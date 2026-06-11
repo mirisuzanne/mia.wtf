@@ -37,6 +37,7 @@
     "fs-extra": "^11.2.0",
     "js-yaml": "^4.1.0",
     "lodash": "^4.17.21",
+    "luxon": "^3.7.2",
     "markdown-it": "^14.1.1",
     "markdown-it-deflist": "^3.0.0",
     "markdown-it-footnote": "^4.0.0",

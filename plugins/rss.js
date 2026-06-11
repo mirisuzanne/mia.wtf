@@ -5,5 +5,6 @@ const rssItemTitle = (post) => post.data.venue
   : post.data.title;
 
 export default function (eleventyConfig) {
+  eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addFilter('rssItemTitle', rssItemTitle);
 }

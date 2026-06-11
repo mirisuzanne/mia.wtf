@@ -3,7 +3,8 @@ command = "npm run build"
 publish = "_site"
 
 [dev]
-command = "npm run dev"
+command = "npm run serve"
+targetPort = 8010
 
 [[plugins]]
 package = "netlify-plugin-cache"

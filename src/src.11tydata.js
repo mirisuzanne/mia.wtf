@@ -39,9 +39,11 @@ const description = (data) => {
   return data.site.description;
 }
 
+const baseURL = (data) => process.env.URL || `https://${data.site.domain}`;
+
 export default {
   eleventyComputed: {
-    baseURL: (data) => process.env.URL || `https://${data.site.domain}`,
+    baseURL,
     listOf: (data) => data.listOf || data.index,
     title: (data) => data.title || data.site.title,
     description,

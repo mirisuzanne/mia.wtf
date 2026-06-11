@@ -1,20 +1,19 @@
-email:
-  name: miriam@miriamSuzanne.com
+email: miriam@miriamSuzanne.com
 mastodon:
-  name: >
+  text: >
     @mia@front-end.social
-  at: https://front-end.social/@mia
+  url: https://front-end.social/@mia
 bluesky:
-  name: >
+  text: >
     @miriam.codes
-  at: https://bsky.app/profile/miriam.codes
+  url: https://bsky.app/profile/miriam.codes
 instagram:
-  name: >
+  text: >
     terribleMia
-  at: https://www.instagram.com/terriblemia/
+  url: https://www.instagram.com/terriblemia/
 # github:
-#   name: MiriSuzanne
-#   at: https://github.com/MiriSuzanne
+#   text: MiriSuzanne
+#   url: https://github.com/MiriSuzanne
 # codepen:
-#   name: MiriamSuzanne
-#   at: https://codepen.io/MiriamSuzanne
+#   text: MiriamSuzanne
+#   url: https://codepen.io/MiriamSuzanne

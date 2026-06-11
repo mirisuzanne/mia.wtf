@@ -9,16 +9,16 @@
   <div d-i webc:for="(item, value) in $data.me">
     <dt @text="item"></dt>
     <dd>
-      <a
-        webc:if="value.at"
-        :href="value.at"
-        rel="me"
-        @text="value.name"
-      ></a>
       <clip-board
-        webc:else
-        @text="value.name"
+        webc:if="typeof value === 'string'"
+        @text="value"
       ></clip-board>
+      <a
+        webc:else
+        :href="value.url"
+        rel="me"
+        @text="value.text"
+      ></a>
     </dd>
   </div>
 </dl>
