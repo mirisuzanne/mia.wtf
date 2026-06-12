@@ -3,6 +3,15 @@ layout: false
 permalink: feed.xml
 eleventyExcludeFromCollections: true
 ---
+{%- set runningFooter -%}
+  <hr />
+  <p>
+    Reply via
+    <a href="mailto:{{ me.email }}">Email</a>
+    | <a href="{{ me.mastodon.url }}">Mastodon</a>
+    | <a href="{{ me.bluesky.url }}">Bluesky</a>
+  </p>
+{%- endset -%}
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ site.language or page.lang }}">
   <title>{{ site.title }}</title>
@@ -23,15 +32,8 @@ eleventyExcludeFromCollections: true
     <updated>{{ post.data.date | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
     <content type="html">
-      {{ post.content | renderTransforms(post.data.page, baseURL) | safe }}
-
-      <hr />
-      <p>
-        Reply via
-        <a href="mailto:{{ me.email }}">Email</a>
-        | <a href="{{ me.mastodon.url }}">Mastodon</a>
-        | <a href="{{ me.bluesky.url }}">Bluesky</a>
-      </p>
+      {{ post.content | renderTransforms(post.data.page, baseURL) }}
+      {{ runningFooter }}
     </content>
   </entry>
   {%- endfor %}
