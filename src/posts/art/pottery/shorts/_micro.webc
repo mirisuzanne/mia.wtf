@@ -9,18 +9,18 @@ pagination:
   addAllPagesToCollections: true
 ---
 
-<figure media-gallery>
-  <lite-youtube
-    :videoid="this.src?.youtube"
-    yt-short
-    @text="this.src?.title"
-  ></lite-youtube>
-</figure>
+<lite-youtube :videoid="this.src.youtube" yt-short>
+  <a :href="`https://youtube.com/watch?v=${this.src.youtube}`" class="lyt-playbtn" title="Play Video">
+    <span class="lyt-visually-hidden">Play Video:
+      <span webc:nokeep @text="this.src.title"></span>
+    </span>
+  </a>
+</lite-youtube>
 
 <!-- intro -->
 
 <div
-  webc:if="this.src?.caption"
+  webc:if="this.src.caption"
   webc:no-keep
-  @html="mdBlock(this.src?.caption)"
+  @html="mdBlock(this.src.caption)"
 ></div>
