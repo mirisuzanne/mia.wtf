@@ -1,5 +1,6 @@
 ---
 title: Artificial "Intelligence"
+index: ai
 sub:
   - is a barrage of bullshit
   - is some fascist bullshit

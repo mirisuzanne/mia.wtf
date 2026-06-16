@@ -4,7 +4,6 @@ title: Hybrid art
 sub: pottery & music & theater & writing &c
 area: art
 index: area:art
-
 ---
 
 I enjoy art that bleeds across genres and forms.
