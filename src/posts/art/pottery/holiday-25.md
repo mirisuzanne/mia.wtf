@@ -40,11 +40,11 @@ inspired by the decorations around our home:
 
 <figure>
   <media-gallery>
+    <img
+      webc:is="u-img"
+      src="2025/wall.jpg"
+      alt="A blue couch with yellow pillows, an old console tv converted to hold records, various artworks on the counter, plants, and a white wall painted with two orange pillars and large lighter orange swirls that match the fabric of a yellow & orange curtain.">
   </media-gallery>
-  <img
-    webc:is="u-img"
-    src="2025/wall.jpg"
-    alt="A blue couch with yellow pillows, an old console tv converted to hold records, various artworks on the counter, plants, and a white wall painted with two orange pillars and large lighter orange swirls that match the fabric of a yellow & orange curtain.">
   <figcaption>
     The wall, as inspiration.
   </figcaption>

@@ -6,7 +6,7 @@ at: https://css-tricks.com/video-screencasts/153-getting-started-with-css-grid/
 date: 2017-02-20
 tags:
   - interview
-  - video
+  - as:video
   - layout
 video:
   - iframe: https://www.youtube.com/embed/5fkC6AG3XWU

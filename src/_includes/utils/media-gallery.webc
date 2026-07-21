@@ -13,6 +13,16 @@
       :alt="item.alt"
       :data-span="item.span"
     >
+    <lite-youtube
+      webc:if="item.youtube"
+      :videoid="item.youtube"
+    >
+      <a :href="`https://youtube.com/watch?v=${item.youtube}`" class="lyt-playbtn" title="Play Video">
+        <span class="lyt-visually-hidden">Play Video:
+          <span webc:if="item.title" webc:nokeep @text="item.title"></span>
+        </span>
+      </a>
+    </lite-youtube>
     <iframe
       webc:if="item.iframe"
       webc:is="ratio-frame"

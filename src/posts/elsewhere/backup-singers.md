@@ -9,7 +9,7 @@ hero:
   src: 2020/alcohol.jpg
   alt: close up of eyes, black and white
 tags:
-  - video
+  - as:video
   - poem
 media:
   - iframe: https://player.vimeo.com/video/402379601
